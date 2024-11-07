@@ -15,7 +15,7 @@
   body {
     @extend .base-font;
     background: #FAFAFA;
-
+    color: #222;
 
   }
   .secondary-font{
@@ -26,22 +26,68 @@
     font-weight: 400;
   }
   .fs-1{
-    font-size: clamp(40px, 3dvw, 90px);
+    font-size: clamp(44px, 5dvw, 96px);
     line-height: normal;
   }
   .fs-20{
-    font-size: clamp(16px, 3dvw, 20px);
+    font-size: clamp(16px, 5dvw, 20px);
 
+  }
+  .fs-28{
+   font-size: clamp(18px, 5dvw, 28px); 
+  }
+  .fs-32{
+   font-size: clamp(20px, 5dvw, 2rem); 
+   line-height: normal;
+  }
+  .secondary-color{
+    color: #FF8413;
+  }
+  .font-italic{
+    font-style: italic;
   }
   .img-fluid{
     max-width: 100%;
     height: auto;
   }
+  .mt-8{
+    margin-top: clamp(.4rem, 4dvw, .8rem);
+  }
+  .mt-16{
+    margin-top: clamp(.8rem, 4dvw, 1rem);
+  }
   .mt-32{
     margin-top: clamp(1rem, 4dvw, 2rem);
   }
+  .mt-64{
+    margin-top: clamp(2rem, 4dvw, 4rem);
+  }
   .text-center{
     text-align: center;
+  }
+  .text-uppercase{
+    text-transform: uppercase;
+  }
+  .p-1{
+    padding: 1rem;
+  }
+  .p-2{
+    padding: 2rem;
+  }
+  .rounded{
+    border-radius: 20px;
+  }
+  .rounded-12{
+    border-radius: 12px !important;
+  }
+  .shadow{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+  }
+  .bg-white2{
+    background: #FAFAFA;
+  }
+  .bg-white{
+    background: #fff;
   }
   .d-flex{
     display: flex;
@@ -52,11 +98,24 @@
   .justify-center{
     justify-content: center;
   }
+  .flex-wrap{
+    flex-wrap: wrap;
+  }
   .gap1{
     gap: 16px;
   }
+  .flex-auto > *{
+    flex: auto;
+  }
+  .flex-1 > *{
+    flex:  1 1;
+  }
   header{
     padding: 32px 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    z-index: 1;
+    position: relative;
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -72,6 +131,10 @@
           text-decoration: none;
           color: #80655A; 
           font-weight: 500;
+          &:hover{
+            text-decoration: underline;
+            text-underline-offset: 8px;
+          }
         }
       }
     }
@@ -81,8 +144,15 @@
     font-size: 1.5rem;
     font-weight: bold;
   }
-  
-  
+  .hero-inner-content{
+    .femininity-asset{
+      margin-top: 0;
+      padding-block: clamp(2rem, 4dvw, 5rem);
+    }
+  }
+  .bg{
+    background-image: url(../img/bg.webp);
+  }
   .menu-toggle {
     display: none;
     font-size: 1.5rem;
