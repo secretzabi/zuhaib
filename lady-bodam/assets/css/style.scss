@@ -20,13 +20,18 @@
   }
   .secondary-font{
     font-family: "Bubblegum Sans", sans-serif;
+    font-weight: normal;
   }
   .teritary-font{
     font-family: "Bonheur Royale", cursive;
     font-weight: 400;
   }
   .fs-1{
-    font-size: clamp(44px, 5dvw, 96px);
+    font-size: clamp(44px, 5dvw, 80px);
+    line-height: normal;
+  }
+  .fs-2{
+    font-size: clamp(30px, 5dvw, 60px);
     line-height: normal;
   }
   .fs-20{
@@ -35,6 +40,9 @@
   }
   .fs-28{
    font-size: clamp(18px, 5dvw, 28px); 
+  }
+  .fs-24{
+   font-size: clamp(16px, 5dvw, 24px); 
   }
   .fs-32{
    font-size: clamp(20px, 5dvw, 2rem); 
@@ -55,6 +63,9 @@
   }
   .mt-16{
     margin-top: clamp(.8rem, 4dvw, 1rem);
+  }
+  .mt-24{
+    margin-top: clamp(1rem, 4dvw, 1.5rem);
   }
   .mt-32{
     margin-top: clamp(1rem, 4dvw, 2rem);
@@ -94,6 +105,9 @@
   }
   .algin-center{
     align-items: center;
+  }
+  .algin-start{
+    align-items: start !important;
   }
   .justify-center{
     justify-content: center;
@@ -223,10 +237,17 @@
     font-size: clamp(14px, 4dvw, 16px);
     color: #363535;
     @extend .secondary-font;
+    border: 0;
     text-decoration: none;
     transition: .3s;
     &:hover{
       opacity: .8;
+    }
+  }
+  .topics{
+    margin-top: -16rem;
+    @media screen and (max-width:767px) {
+      margin-top: 0;
     }
   }
   .lead-holistically{
@@ -326,6 +347,41 @@
     }
     .secondary-font{
       font-size: clamp(20px, 3dvw, 40px);
+    }
+  }
+  .list{
+    ul{
+      display: grid;
+      grid-template-columns: 1fr;
+      @media screen and (min-width:768px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      margin-bottom: 2rem;
+      li{
+        margin: 1rem 0;
+      }
+    }
+  }
+  input, textarea{
+     grid-template-columns: 1fr;
+     border-radius: 12px;
+    background: rgba(254, 170, 93, 0.09);
+    border: 0;
+    padding-inline:clamp(.8rem, 4dvw, 1rem);
+    padding-block:clamp(1rem, 4dvw, 1.4rem);
+    width: 100%;
+    font-style: italic;
+    font-size: 1rem;
+      @media screen and (min-width:768px) {
+        grid-template-columns: 1fr 1fr;
+      }
+  }
+  .form-fields{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 3dvw, 2rem);
+    @media screen and (min-width:768px) {
+      grid-template-columns: 1fr 1fr;
     }
   }
   @media (max-width: 768px) {
