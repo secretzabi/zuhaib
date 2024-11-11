@@ -384,6 +384,47 @@
       grid-template-columns: 1fr 1fr;
     }
   }
+  .refined-lady-slider{
+    .slick-slide{
+      position: relative;
+    }
+    .slick-dots{
+      bottom: 14px;
+      li {
+        button{
+          &:before{
+            color: #fff;
+            font-size: 50px;
+          }
+        }
+      }
+    }
+    .refined-lady-content{
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      height: fit-content;
+      z-index: 11;
+      color: #fff;
+      max-width: 100%;
+      line-height: 1.6;
+      text-align: center;
+      padding-inline: 1rem;
+      @media screen and (min-width:900px) {
+        max-width: 814px;
+        
+      }
+    }
+    img{
+      width: 100%;
+      @media screen and (max-width:660px) {
+        height: 46dvh;
+        object-fit: cover;
+        object-position: right;
+      }
+    }
+
+  }
   @media (max-width: 768px) {
     .femininity-asset{
       flex-direction: column;
