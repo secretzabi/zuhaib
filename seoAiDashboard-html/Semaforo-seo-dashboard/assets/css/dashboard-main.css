@@ -1,0 +1,162 @@
+.dashboard-content header {
+    overflow: initial
+}
+
+.search-content-dashboard {
+    max-width: 70%
+}
+
+.search-content-dashboard form {
+    position: relative
+}
+
+.search-content-dashboard form input {
+    padding-left: clamp(20px, 3dvw, 40px)
+}
+
+.search-content-dashboard form svg {
+    position: absolute;
+    left: 10px;
+    top: 20px
+}
+
+.indToolsHeading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 36px
+}
+
+.indToolsHeading .indToolsHeadingLeft {
+    max-width: 80%
+}
+
+.ingToolsWrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px
+}
+
+.ingToolsWrap .singleIndTool {
+    min-height: 245px;
+    padding: 20px;
+    border: 1px solid #f3f3fb;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, .0509803922);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.ingToolsWrap .singleToolHeading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px
+}
+
+.ingToolsWrap .singleToolHeading h3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #292d32;
+    text-transform: capitalize
+}
+
+.dashboard-content .tools-listing .tools-item .title {
+    margin-bottom: 0;
+    font-size: clamp(1rem, 2dvw, 1.2rem)
+}
+
+.dashboard-content .tools-listing .tools-item a {
+    color: #151516
+}
+
+.dashboard-content .tools-listing .tools-item a .d-flex {
+    gap: 10px;
+    margin-bottom: 1rem
+}
+
+@media screen and (max-width: 680px) {
+    .dashboard-content .tools-listing .tools-item a .d-flex {
+        align-items: center
+    }
+}
+
+.dashboard-content .tools-listing .tools-item .star-icon {
+    position: initial;
+    margin-left: auto
+}
+
+.dashboard-content .tools-listing .tools-item .star-icon svg path {
+    fill: #81807f
+}
+
+.dashboard-content .tools-listing .tools-item p {
+    color: #81807f
+}
+
+.title-section {
+    gap: 1rem;
+    row-gap: 0;
+    grid-template-columns: 48px auto 60px;
+    grid-template-areas: "backBtn title icon" "backBtn shortDescription icon"
+}
+
+@media screen and (max-width: 660px) {
+    .title-section {
+        grid-template-columns: 30px auto 30px;
+        grid-template-areas: "backBtn title icon" "shortDescription shortDescription shortDescription";
+        -moz-column-gap: .5rem;
+        column-gap: .5rem;
+        align-items: center
+    }
+}
+
+.title-section .back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: backBtn
+}
+
+.title-section>div {
+    grid-area: title
+}
+
+.title-section>p {
+    grid-area: shortDescription
+}
+
+.title-section>.ms-auto {
+    grid-area: icon;
+    display: flex;
+    align-items: center
+}
+
+.title-section>.ms-auto svg {
+    width: 100%;
+    height: auto
+}
+
+@media screen and (max-width: 680px) {
+    .search-content-dashboard {
+        max-width: 100%
+    }
+
+    .search-content-dashboard form input {
+        padding-left: clamp(40px, 3dvw, 40px)
+    }
+
+    .indToolsHeading .indToolsHeadingLeft {
+        max-width: 100%
+    }
+
+    .indToolsHeading .indToolsHeadingLeft ul {
+        overflow-x: auto;
+        flex-wrap: nowrap
+    }
+
+    .dashboard-content .tools-listing {
+        grid-template-columns: 1fr
+    }
+}

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Video Description</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/dashboard-main.css">
+
+</head>
+<body>
+    <div class="overlay"></div>
+    <aside>
+        <div class="logo">
+            <img src="assets/img/logo.svg" alt="">
+        </div>
+        <div class="headerRight">
+            <div class="headerNoti">
+                <div class="headerNotiBell">
+                    <img src="assets/img/notify-icon.svg" alt="">
+                </div>
+                <div class="headerNotiLang">
+                    <img src="assets/img/globe.png" alt="">
+                    <div class="headerNotiLangDrop">
+                        <div class="headerNotiLangDropItem">
+                            <p>DE Deutsch</p>
+                        </div>
+                        <div class="headerNotiLangDropItem">
+                            <p>US English</p>
+                        </div>
+                        <div class="headerNotiLangDropItem">
+                            <p>ES Espanol</p>
+                        </div>
+                        <div class="headerNotiLangDropItem">
+                            <p>FR Francais</p>
+                        </div>
+                        <div class="headerNotiLangDropItem">
+                            <p>AE العربية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerPro">
+                <img src="assets/img/man.jpg" alt="">
+                <div class="headerProDet">
+                    <div class="headerProDetText">
+                        <h3>Musfiq</h3>
+                        <p>Admin</p>
+                    </div>
+                    <img src="assets/img/arrow-down.svg" alt="">
+                </div>
+                <div class="headerProDrop">
+                    <div class="headerProDropItem">
+                        <a href="#">
+                            <img src="assets/img/user.png" alt="">
+                            <span>My Profile</span>
+                        </a>
+                    </div>
+                    <div class="headerProDropItem">
+                        <a href="#">
+                            <img src="assets/img/pricing.png" alt="">
+                            <span>Plan &amp; Pricing</span>
+                        </a>
+                    </div>
+                    <div class="headerProDropItem">
+                        <a href="#">
+                            <img src="assets/img/payments.png" alt="">
+                            <span>Payments</span>
+                        </a>
+                    </div>
+                    <div class="headerProDropItem">
+                        <a href="#">
+                            <img src="assets/img/contact.png" alt="">
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                    <div class="headerProDropItem">
+                        <a href="#">
+                            <img src="assets/img/logout.png" alt="">
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li class="active">
+                    <a href="#">
+                        <img src="assets/img/dashboard-icon.svg" alt="">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/reports-icon.svg" alt="">
+                        <span>Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/keyword-research-icon.svg" alt="">
+                        <span>Keyword Research</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/serp-icon.svg" alt="">
+                        <span>SERPs www</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/serp-evolution-icon.svg" alt="">
+                        <span>SERPs Evolution</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/back-links-icon.svg" alt="">
+                        <span>Web Backlinks </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/web-authority-icon.svg" alt="">
+                        <span>Web Authority</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/analytics-icon.svg" alt="">
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/tools-icon.svg" alt="">
+                        <span>Tools</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/ai-chat-icon.svg" alt="">
+                        <span>AI Chat</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/super-ai-writer-icon.svg" alt="">
+                        <span>Super AI Writer</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/fast-ai-writer-icon.svg" alt="">
+                        <span>Fast AI Writer</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/ai-img-icon.svg" alt="">
+                        <span>AI img</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </aside>
+
+    <main class="dashboard-content">
+        <header>
+            <div class="headerTitle">
+                <h2><img src="assets/img/menu-icon.png" alt="" class="menuImg">Semaforo SEO</h2>
+            </div>
+            <div class="headerRight">
+                <div class="headerNoti">
+                    <div class="headerNotiBell">
+                        <img src="assets/img/notify-icon.svg" alt="">
+                    </div>
+                    <div class="headerNotiLang">
+                        <img src="assets/img/globe.png" alt="">
+                        <div class="headerNotiLangDrop">
+                            <div class="headerNotiLangDropItem">
+                                <p>DE Deutsch</p>
+                            </div>
+                            <div class="headerNotiLangDropItem">
+                                <p>US English</p>
+                            </div>
+                            <div class="headerNotiLangDropItem">
+                                <p>ES Espanol</p>
+                            </div>
+                            <div class="headerNotiLangDropItem">
+                                <p>FR Francais</p>
+                            </div>
+                            <div class="headerNotiLangDropItem">
+                                <p>AE العربية</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="headerPro">
+                    <img src="assets/img/man.jpg" alt="">
+                    <div class="headerProDet">
+                        <div class="headerProDetText">
+                            <h3>Musfiq</h3>
+                            <!-- <p>Admin</p> -->
+                        </div>
+                        <img src="assets/img/arrow-down.svg" alt="">
+                    </div>
+                    <div class="headerProDrop">
+                        <div class="headerProDropItem">
+                            <a href="#">
+                                <img src="assets/img/user.png" alt="">
+                                <span>My Profile</span>
+                            </a>
+                        </div>
+                        <div class="headerProDropItem">
+                            <a href="#">
+                                <img src="assets/img/pricing.png" alt="">
+                                <span>Plan &amp; Pricing</span>
+                            </a>
+                        </div>
+                        <div class="headerProDropItem">
+                            <a href="#">
+                                <img src="assets/img/payments.png" alt="">
+                                <span>Payments</span>
+                            </a>
+                        </div>
+                        <div class="headerProDropItem">
+                            <a href="#">
+                                <img src="assets/img/contact.png" alt="">
+                                <span>Contact</span>
+                            </a>
+                        </div>
+                        <div class="headerProDropItem">
+                            <a href="#">
+                                <img src="assets/img/logout.png" alt="">
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="d-flex yt-desc-tabInRow">
+
+            <img src="assets/img/info-small.svg" class=" pl-4" alt="">
+            <p class="color-grey">
+                Search Engine Results Pages that display links and content relevant to the user's query.
+            </p>
+
+
+        </section>
+       <section>
+      
+           
+                <div>
+                    <div class="SmSeoGeneralHeading d-flex justify-between align-center my-30">
+                        <div class="fs-24 font-weight-semibold ">
+                          <p class="fs-24 bold"> 3/10 - Speed</p>
+                         
+
+                        </div>
+                       <div class="d-flex gap1">
+                        <button class="button rounded-12 button-form serpwwwbtn">
+                            Continue to 4/10
+                        </button>
+                        <button class="link">Security</button>
+                       </div>   
+                    </div>
+                </dv>
+         
+       </section>
+
+       <section>
+        
+        <div class="ytvediogeneralvediorap d-flex">
+            <div class="ytvideoSeotable" >
+                <p class="mb-30 fs-20 bold ml-2">Speed Test</p>
+
+                <div class="repPerChartWrap">
+                    <div class="repPerSingleChart">
+                        <div class="repPerChartText">
+                            <h4>82</h4>
+                         
+                        </div>
+                        <div class="repPerSingleChartIn" id="repPerSingleChartIn1"></div>
+                    </div>
+                    <div class="repPerSingleChart">
+                        <div class="repPerChartText">
+                            <h4>82</h4>
+                          
+                        </div>
+                        <div class="repPerSingleChartIn" id="repPerSingleChartIn2"></div>
+                    </div>
+                    <div class="repPerSingleChart">
+                        <div class="repPerChartText">
+                            <h4>82</h4>
+                           
+                        </div>
+                        <div class="repPerSingleChartIn" id="repPerSingleChartIn3"></div>
+                    </div>
+                </div>
+                <h2 class="mb-10">Response Code</h2>
+                <div class="resCodeTable mb-30">
+                    <div class="resCodeTabRow heading">
+                        <div class="resCodeTabItem">
+                            <p>Response code</p>
+                        </div>
+                        <div class="resCodeTabItem">
+                            <p>Responses</p>
+                        </div>
+                    </div>
+                    <div class="resCodeTabRow">
+                        <div class="resCodeTabItem resCodeTabItemRed">
+                            <span>200</span>
+                            <p>OK</p>
+                        </div>
+                        <div class="resCodeTabItem">
+                            <p>6 days ago</p>
+                        </div>
+                    </div>
+                    <div class="resCodeTabRow">
+                        <div class="resCodeTabItem resCodeTabItemGreen">
+                            <span>200</span>
+                            <p>No Content</p>
+                        </div>
+                        <div class="resCodeTabItem">
+                            <p>1 week ago</p>
+                        </div>
+                    </div>
+                    <div class="resCodeTabRow">
+                        <div class="resCodeTabItem resCodeTabItemPink">
+                            <span>200</span>
+                            <p>Moved Permanently</p>
+                        </div>
+                        <div class="resCodeTabItem">
+                            <p>1 week ago</p>
+                        </div>
+                    </div>
+                    <div class="resCodeTabRow">
+                        <div class="resCodeTabItem resCodeTabItemBlue">
+                            <span>200</span>
+                            <p>Found</p>
+                        </div>
+                        <div class="resCodeTabItem">
+                            <p>1 week ago</p>
+                        </div>
+                    </div>
+                    <div class="resCodeTabRow">
+                        <div class="resCodeTabItem resCodeTabItemYellow">
+                            <span>200</span>
+                            <p>Unauthorized</p>
+                        </div>
+                        <div class="resCodeTabItem">
+                            <p>1 week ago</p>
+                        </div>
+                    </div>
+                    <div class="resCodeTabRow">
+                        <div class="resCodeTabItem resCodeTabItemYellow">
+                            <span>200</span>
+                            <p>Access Denied</p>
+                        </div>
+                        <div class="resCodeTabItem">
+                            <p>2 weeks ago</p>
+                        </div>
+                    </div>
+                    <div class="resCodeTabRow">
+                        <div class="resCodeTabItem resCodeTabItemYellow">
+                            <span>200</span>
+                            <p>Not Found</p>
+                        </div>
+                        <div class="resCodeTabItem">
+                            <p>2 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Heading -->
+
+                <div class="repPerConItem mb-30">
+                    <div class="repWebInfoInHeading">
+                        <h3 class="repWebChartLeftheading ">Content Text</h3>
+                    </div>
+                    <div class="repPerConTable">
+                        <div class="resCodeTabRow heading" >
+                            <div class="repPerConTabItem">
+                                <p>Content Request</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>Percent</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>Size</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Image</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>50%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>1.1 MB</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Script</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>30%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>411.8 KB</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Font</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>20%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>319.5 KB</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Stylesheet</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>70%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>117.9 KB</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Document</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>60%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>21.5 KB</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Other</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>50%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>21.5 KB</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Fetch</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>50%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>21.5 KB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="repPerConItem">
+                    <div class="repWebInfoInHeading">
+                        <h3 class="repWebChartLeftheading">Content Text</h3>
+                    </div>
+                    <div class="repPerConTable">
+                        <div class="resCodeTabRow heading">
+                            <div class="repPerConTabItem">
+                                <p>Content type</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>Percent</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>Size</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Image</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>50%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>22</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Script</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>30%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>27</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Font</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>20%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>12</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Stylesheet</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>70%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>1</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Document</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>60%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>43</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Other</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>50%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>15</p>
+                            </div>
+                        </div>
+                        <div class="repPerConTabRow">
+                            <div class="repPerConTabItem">
+                                <p>Fetch</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>50%</p>
+                            </div>
+                            <div class="repPerConTabItem">
+                                <p>20</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+             
+              
+             
+              
+    
+            <!-- col 2 -->
+            <div class="smSEOGeneral justify-between align-center smSeoCd">
+
+                <div class="smSEOGeneral-Left">
+                 <h2 class=" bold repWebChartLeftheading fs-20">Speed and Continuous in Security</h2>
+                 <div class="ytvideogeneraltrafficlights">
+                     <p class="fs-24 yt-yellow text-center bold">Meduim</p>
+                     <div class="yt-traffic-lights">
+                         <div class="yt-bg-grey"></div>
+                         <div class="yt-bg-yellow"></div>
+                         <div class="yt-bg-grey"></div>
+                       </div>
+                       
+                   </div>
+                </div>
+                 
+                   <div>
+                     <h2 class="repWebChartLeftheading padding-block fs-20">Total Score Step 3</h2>
+                 <div class="repWebChartLeft">
+                     
+                     <div class="repWebChartWrap" id="repWebChartWrap">
+                         <div class="repWebChartMain" id="repWebChartMain" data-highcharts-chart="0" aria-hidden="false" role="region" aria-label="Chart. Highcharts interactive chart." style="overflow: hidden;"><div id="highcharts-screen-reader-region-before-0" aria-hidden="false" style="position: relative;"><div aria-hidden="false" style="position: absolute; width: 1px; height: 1px; overflow: hidden; white-space: nowrap; clip: rect(1px, 1px, 1px, 1px); margin-top: -3px; opacity: 0.01;"><h5>Chart</h5><div>Chart with 2 data points.</div><div><button id="hc-linkto-highcharts-data-table-0" tabindex="-1" aria-expanded="false">View as data table, Chart</button></div></div></div><div aria-hidden="false" class="highcharts-announcer-container" style="position: relative;"><div aria-hidden="false" aria-live="polite" aria-atomic="true" style="position: absolute; width: 1px; height: 1px; overflow: hidden; white-space: nowrap; clip: rect(1px, 1px, 1px, 1px); margin-top: -3px; opacity: 0.01;"></div><div aria-hidden="false" aria-live="assertive" aria-atomic="true" style="position: absolute; width: 1px; height: 1px; overflow: hidden; white-space: nowrap; clip: rect(1px, 1px, 1px, 1px); margin-top: -3px; opacity: 0.01;"></div><div aria-hidden="false" aria-live="polite" aria-atomic="true" style="position: absolute; width: 1px; height: 1px; overflow: hidden; white-space: nowrap; clip: rect(1px, 1px, 1px, 1px); margin-top: -3px; opacity: 0.01;"></div><div aria-hidden="false" aria-live="polite" aria-atomic="true" style="position: absolute; width: 1px; height: 1px; overflow: hidden; white-space: nowrap; clip: rect(1px, 1px, 1px, 1px); margin-top: -3px; opacity: 0.01;"></div></div><div id="highcharts-n6mv7vp-0" dir="ltr" style="position: relative; overflow: hidden; width: 600px; height: 230px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; touch-action: manipulation; outline: none; padding: 0px;" class="highcharts-container " aria-hidden="false" tabindex="0"><div aria-hidden="false" class="highcharts-a11y-proxy-container-before" style="top: 0px; left: 0px; white-space: nowrap; position: absolute;"></div><svg version="1.1" class="highcharts-root" style="font-family: Helvetica, Arial, sans-serif; font-size: 1rem;" xmlns="http://www.w3.org/2000/svg" width="600" height="230" viewBox="0 0 600 230" aria-hidden="false" aria-label="Interactive chart"><desc aria-hidden="true">Created with Highcharts 11.4.8</desc><defs aria-hidden="true"><filter id="highcharts-drop-shadow-0"><feDropShadow dx="1" dy="1" flood-color="#000000" flood-opacity="0.75" stdDeviation="2.5"></feDropShadow></filter></defs><rect fill="#ffffff" class="highcharts-background" filter="none" x="0" y="0" width="600" height="230" rx="0" ry="0" aria-hidden="true"></rect><rect fill="none" class="highcharts-plot-background" x="10" y="10" width="580" height="205" filter="none" aria-hidden="true"></rect><rect fill="none" class="highcharts-plot-border" data-z-index="1" stroke="#cccccc" stroke-width="0" x="10" y="10" width="580" height="205" aria-hidden="true"></rect><g class="highcharts-series-group" data-z-index="3" filter="none" aria-hidden="false"><g class="highcharts-series highcharts-series-0 highcharts-variablepie-series highcharts-tracker" data-z-index="0.1" opacity="1" transform="translate(10,10) scale(1 1)" filter="none" style="cursor: pointer;" aria-hidden="false" clip-path="none"><path fill="#4BCC83" d="M 289.9825862388544 17.001463774162062 A 0.5 0.5 0 0 1 290.4854083701708 16.501369902107356 A 86 86 0 1 1 205.42912478525085 86.88695848300772 A 0.5 0.5 0 0 1 206.01446325199174 86.48658009203042 L 206.01446325199174 86.48658009203042 A 0.5 0.5 0 0 1 206.4125070551898 87.06850547739134 A 85 85 0 1 0 290.4797640867967 17.50135397301308 A 0.5 0.5 0 0 1 289.9825862388544 17.001463774162062 Z" class="highcharts-halo highcharts-color-0" data-z-index="-1" fill-opacity="0.25" visibility="hidden"></path><path fill="rgb(75,204,131)" d="M 289.983533931549 21.65446995121752 A 5 5 0 0 1 295.2911593727706 16.66292390527306 A 86 86 0 1 1 204.68869603529416 91.63807494771001 A 5 5 0 0 1 210.5851288858404 87.35806333650085 L 235.3339729568268 92.0768952650825 A 5 5 0 0 1 239.37311488393448 97.48162093453439 A 50.875 50.875 0 1 0 294.54225230877535 51.82817776156629 A 5 5 0 0 1 289.98866541580173 46.84916445795983 Z" transform="translate(0,0)" stroke="#ffffff" stroke-width="1" opacity="1" stroke-linejoin="round" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="Issues, y: 39, z: 92. Status." style="outline: none;"></path><path fill="#0080EF" d="M 204.18886342309656 86.13849519817863 A 5 5 0 0 1 200.27535598314313 80.01137496314391 A 92.5 92.5 0 0 1 284.67836422149634 10.153206917397767 A 5 5 0 0 1 289.96601983125925 15.142980560528898 L 289.97835291667946 46.84916751382973 A 5 5 0 0 1 285.42771765333805 51.830878642486766 A 50.875 50.875 0 0 0 241.0784600307345 88.53760221038094 A 5 5 0 0 1 235.3339729568268 92.0768952650825 Z" transform="translate(0,0)" stroke="#ffffff" stroke-width="1" opacity="1" stroke-linejoin="round" class="highcharts-point highcharts-color-1" tabindex="-1" role="img" aria-label="Test Passed, y: 11, z: 150. Status." style="outline: none;"></path></g><g class="highcharts-markers highcharts-series-0 highcharts-variablepie-series" data-z-index="0.1" opacity="1" transform="translate(10,10) scale(1 1)" aria-hidden="true" clip-path="none"></g></g><text x="10" text-anchor="start" class="highcharts-title" data-z-index="4" style="font-size: 1.2em; color: rgb(51, 51, 51); font-weight: bold; fill: rgb(51, 51, 51);" y="25" aria-hidden="true"></text><text x="300" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color: rgb(102, 102, 102); font-size: 0.8em; fill: rgb(102, 102, 102);" y="24" aria-hidden="true"></text><text x="10" text-anchor="start" class="highcharts-caption" data-z-index="4" style="color: rgb(102, 102, 102); font-size: 0.8em; fill: rgb(102, 102, 102);" y="227" aria-hidden="true"></text><g class="highcharts-legend highcharts-no-tooltip" data-z-index="7" visibility="hidden" aria-hidden="true"><rect fill="none" class="highcharts-legend-box" rx="0" ry="0" stroke="#999999" stroke-width="0" filter="none" x="0" y="0" width="8" height="8"></rect><g data-z-index="1"><g></g></g></g><g class="highcharts-label highcharts-tooltip highcharts-color-0" data-z-index="8" filter="url(#highcharts-drop-shadow-0)" style="cursor: default; pointer-events: none;" transform="translate(311,88)" opacity="0" aria-hidden="true" visibility="hidden"><path fill="#ffffff" class="highcharts-label-box highcharts-tooltip-box" d="M 3 0 L 70 0 A 3 3 0 0 1 73 3 L 73 59 A 3 3 0 0 1 70 62 L 3 62 A 3 3 0 0 1 0 59 L 0 3 A 3 3 0 0 1 3 0 Z" stroke-width="0" stroke="#4BCC83"></path><text x="8" data-z-index="1" y="20" style="color: rgb(51, 51, 51); font-size: 0.8em; fill: rgb(51, 51, 51);"><tspan style="color: rgb(75, 204, 131); fill: rgb(75, 204, 131);">●</tspan> Status<tspan class="highcharts-br" dy="15" x="8">&ZeroWidthSpace;</tspan>Value: 39<tspan class="highcharts-br" dy="15" x="8">&ZeroWidthSpace;</tspan>Size: 92<tspan class="highcharts-br">&ZeroWidthSpace;</tspan></text></g></svg><div aria-hidden="false" class="highcharts-a11y-proxy-container-after" style="top: 0px; left: 0px; white-space: nowrap; position: absolute;"><div class="highcharts-a11y-proxy-group highcharts-a11y-proxy-group-zoom"></div><div class="highcharts-a11y-proxy-group highcharts-a11y-proxy-group-chartMenu"></div></div></div><div id="highcharts-screen-reader-region-after-0" aria-hidden="false" style="position: relative;"><div aria-hidden="false" style="position: absolute; width: 1px; height: 1px; overflow: hidden; white-space: nowrap; clip: rect(1px, 1px, 1px, 1px); margin-top: -3px; opacity: 0.01;"><div id="highcharts-end-of-chart-marker-0" class="highcharts-exit-anchor" tabindex="0" aria-hidden="false">End of interactive chart.</div></div></div></div>
+                         <div class="repWebChartMainText">
+                             <h5>89%</h5>
+                             <p>Total Statistics</p>
+                         </div>
+                     </div>
+                     <!-- <canvas class="repWebChartWrap" id="repWebChartWrap"></canvas> -->
+                     <div class="repWebChartScoreWrap">
+                         <div class="repWebChartScore">
+                             <div class="repWebChartScoreLeft">
+                                 <div class="repWebChartScDot repWebChartScDotBlue"></div>
+                                 <p class="color-grey">Issues</p>
+                             </div>
+                             <div class="d-flex align-center">
+                                 <span>5</span>
+                             <div class="chartpoint chartpoint-SC-dark"></div>
+                             </div>
+                         </div>
+                         <div class="repWebChartScore">
+                             <div class="repWebChartScoreLeft">
+                                 <div class="repWebChartScDot repWebChartScDotGreen"></div>
+                                 <p class="color-grey">Lost</p>
+                             </div>
+                             <div class="d-flex align-center">
+                                 <span>11</span> 
+                                 <div class="chartpoint chartpoint-SC-light"></div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                   </div>
+                 </div>    
+             </div>
+       </section>
+                       
+        <!--  -->
+        <footer>
+            <ul>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">BLOG</a>
+                </li>
+                <li>
+                    <a href="#">API</a>
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+            </ul>
+
+            <div class="footerSocial">
+                <a href="#">
+                    <img src="assets/img/facebook-dark.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="assets/img/x-dark.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="assets/img/instagram-dark.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="assets/img/youtube-dark.svg" alt="">
+                </a>
+            </div>
+        </footer>
+    </main>
+
+
+
+
+
+    <script src="https://cdn.tiny.cloud/1/2ajq41h0kapxqv98zqthmv3awu50pgjm99n2qlmr323s53yg/tinymce/7/tinymce.min.js"
+        referrerpolicy="origin"></script>
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+        <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="./assets/js/report-overview-chart.js"></script>
+        <script src="./assets/js/report-performance-chart.js"></script>
+
+</body>
+
+</html> 

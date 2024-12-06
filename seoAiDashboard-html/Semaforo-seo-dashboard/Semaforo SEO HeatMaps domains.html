@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Video Description</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/dashboard-main.css">
+
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <aside>
+        <div class="logo">
+            <img src="assets/img/logo.svg" alt="">
+        </div>
+        <div class="headerRight">
+            <div class="headerNoti">
+                <div class="headerNotiBell">
+                    <img src="assets/img/notify-icon.svg" alt="">
+                </div>
+                <div class="headerNotiLang">
+                    <img src="assets/img/globe.png" alt="">
+                    <div class="headerNotiLangDrop">
+                        <div class="headerNotiLangDropItem">
+                            <p>DE Deutsch</p>
+                        </div>
+                        <div class="headerNotiLangDropItem">
+                            <p>US English</p>
+                        </div>
+                        <div class="headerNotiLangDropItem">
+                            <p>ES Espanol</p>
+                        </div>
+                        <div class="headerNotiLangDropItem">
+                            <p>FR Francais</p>
+                        </div>
+                        <div class="headerNotiLangDropItem">
+                            <p>AE العربية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerPro">
+                <img src="assets/img/man.jpg" alt="">
+                <div class="headerProDet">
+                    <div class="headerProDetText">
+                        <h3>Musfiq</h3>
+                        <p>Admin</p>
+                    </div>
+                    <img src="assets/img/arrow-down.svg" alt="">
+                </div>
+                <div class="headerProDrop">
+                    <div class="headerProDropItem">
+                        <a href="#">
+                            <img src="assets/img/user.png" alt="">
+                            <span>My Profile</span>
+                        </a>
+                    </div>
+                    <div class="headerProDropItem">
+                        <a href="#">
+                            <img src="assets/img/pricing.png" alt="">
+                            <span>Plan &amp; Pricing</span>
+                        </a>
+                    </div>
+                    <div class="headerProDropItem">
+                        <a href="#">
+                            <img src="assets/img/payments.png" alt="">
+                            <span>Payments</span>
+                        </a>
+                    </div>
+                    <div class="headerProDropItem">
+                        <a href="#">
+                            <img src="assets/img/contact.png" alt="">
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                    <div class="headerProDropItem">
+                        <a href="#">
+                            <img src="assets/img/logout.png" alt="">
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li class="active">
+                    <a href="#">
+                        <img src="assets/img/dashboard-icon.svg" alt="">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/reports-icon.svg" alt="">
+                        <span>Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/keyword-research-icon.svg" alt="">
+                        <span>Keyword Research</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/serp-icon.svg" alt="">
+                        <span>SERPs www</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/serp-evolution-icon.svg" alt="">
+                        <span>SERPs Evolution</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/back-links-icon.svg" alt="">
+                        <span>Web Backlinks </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/web-authority-icon.svg" alt="">
+                        <span>Web Authority</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/analytics-icon.svg" alt="">
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/tools-icon.svg" alt="">
+                        <span>Tools</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/ai-chat-icon.svg" alt="">
+                        <span>AI Chat</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/super-ai-writer-icon.svg" alt="">
+                        <span>Super AI Writer</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/fast-ai-writer-icon.svg" alt="">
+                        <span>Fast AI Writer</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/img/ai-img-icon.svg" alt="">
+                        <span>AI img</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </aside>
+
+    <main class="dashboard-content">
+        <header>
+            <div class="headerTitle">
+                <h2><img src="assets/img/menu-icon.png" alt="" class="menuImg">Heat Maps</h2>
+            </div>
+            <div class="headerRight">
+                <div class="headerNoti">
+                    <div class="headerNotiBell">
+                        <img src="assets/img/notify-icon.svg" alt="">
+                    </div>
+                    <div class="headerNotiLang">
+                        <img src="assets/img/globe.png" alt="">
+                        <div class="headerNotiLangDrop">
+                            <div class="headerNotiLangDropItem">
+                                <p>DE Deutsch</p>
+                            </div>
+                            <div class="headerNotiLangDropItem">
+                                <p>US English</p>
+                            </div>
+                            <div class="headerNotiLangDropItem">
+                                <p>ES Espanol</p>
+                            </div>
+                            <div class="headerNotiLangDropItem">
+                                <p>FR Francais</p>
+                            </div>
+                            <div class="headerNotiLangDropItem">
+                                <p>AE العربية</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="headerPro">
+                    <img src="assets/img/man.jpg" alt="">
+                    <div class="headerProDet">
+                        <div class="headerProDetText">
+                            <h3>Musfiq</h3>
+                            <!-- <p>Admin</p> -->
+                        </div>
+                        <img src="assets/img/arrow-down.svg" alt="">
+                    </div>
+                    <div class="headerProDrop">
+                        <div class="headerProDropItem">
+                            <a href="#">
+                                <img src="assets/img/user.png" alt="">
+                                <span>My Profile</span>
+                            </a>
+                        </div>
+                        <div class="headerProDropItem">
+                            <a href="#">
+                                <img src="assets/img/pricing.png" alt="">
+                                <span>Plan &amp; Pricing</span>
+                            </a>
+                        </div>
+                        <div class="headerProDropItem">
+                            <a href="#">
+                                <img src="assets/img/payments.png" alt="">
+                                <span>Payments</span>
+                            </a>
+                        </div>
+                        <div class="headerProDropItem">
+                            <a href="#">
+                                <img src="assets/img/contact.png" alt="">
+                                <span>Contact</span>
+                            </a>
+                        </div>
+                        <div class="headerProDropItem">
+                            <a href="#">
+                                <img src="assets/img/logout.png" alt="">
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="d-flex yt-desc-tabInRow">
+            <img src="assets/img/info-small.svg" class=" pl-4" alt="">
+            <p class="color-grey">
+                Search Engine Results Pages that display links and content relevant to the user's query.
+            </p>
+
+
+        </section>
+
+        <section>
+            <a href="" class="SmSeoHeatMapArrow" style="display: inline-block; margin-left: 0;">
+                <img src="./assets/img/arrow-left.svg" alt="">
+            </a>
+        </section>
+        <section class="smSeo d-flex">
+            <div class="smSEOTab">
+                <section class="indTools">
+                    <div class="mb-30">
+                        <div>
+                            <div class="fs-28 font-weight-semibold bold">
+                                List domains action HeatMaps (Max 5 url)</div>
+                        </div>
+                    </div>
+                   <div class="mx-auto">
+
+                   </div>
+
+                </section>
+            </div>
+            <div class="d-flex gap1">
+              <a href="#">  <img src="./assets/img/refresh-icon.svg" alt=""></a>
+              <a class="csv-icon" href="#">  <img src="./assets/img/csv-icon.svg" alt=""></a>
+              <a href="#">  <img src="./assets/img/pdf-icon.svg" alt=""></a>
+              <a href="#">  <img src="./assets/img/printer-icon.svg" alt=""></a>
+              <a href="#">  <img src="./assets/img/more-gray-icon.svg" alt=""></a>
+
+            </div>
+              
+        </section>
+        <section>
+            <div class="custom-table">
+                <table class="SmSeoHeatmapTable"> 
+                    <thead> 
+                      <tr class="SmSeoHeatmapTableRow"> 
+                        <th class="color-grey ">
+                            <img src="./assets/img/arrow-down-small.svg" alt="">
+                            Url
+                        </th> 
+                        <th class="color-grey d-flex align-center gap2">
+                            <img src="./assets/img/arrow-down-small.svg" alt="">
+                            Records</th> 
+                        <th class="color-grey ">
+                            <img src="./assets/img/arrow-down-small.svg" alt="">
+                            Days of recordings</th> 
+                       <th></th>
+                      </tr> 
+                    </thead> 
+                    <tbody> 
+                      <tr> 
+                        <td class="d-flex align-center gap2">
+                            <img src="./assets/img/Rocket_Icon.svg" alt="">
+                            <a href="#" class="color-grey">lxstore.com.co</a>
+                        </td> 
+                        <td>
+                            <div class="repWebInfoProgItem  SmSeoHeatmapTableItem d-flex align-center gap1">
+                                          
+                                <div class="repWebInfoProgTrack SmSeoHeatmapTableTrack">
+                                    <div class="repWebInfoProgInner " style="width: 30%;"></div>
+                                </div> <span class="color-grey SmSeoHeatmapTableText">0/5000 Chats</span>
+                                <p class="SmSeoHeatmapTablegreen yt-bg-green">200</p>
+                            </div>
+                        </td>
+                        <td class="color-grey">27 days (25-5-2024)</td> 
+                        <td class="icons-left">
+                            <a href="#">
+                                <img src="./assets/img/eye-logo.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/edit-icon.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/Trash.svg" alt="">
+                            </a>
+                        </td>
+                      </tr> 
+                      <tr> 
+                        <td class="d-flex align-center gap2">
+                            <img src="./assets/img/Rocket_Icon.svg" alt="">
+                            <a href="#" class="color-grey">lxstore.com.co</a>
+                        </td>
+                        <td>
+                            <div class="repWebInfoProgItem  SmSeoHeatmapTableItem d-flex align-center gap1">
+                                          
+                                <div class="repWebInfoProgTrack SmSeoHeatmapTableTrack">
+                                    <div class="repWebInfoProgInner " style="width: 50%;"></div>
+                                </div> <span class="color-grey SmSeoHeatmapTableText">0/5000 Chats</span>
+                                <p class="SmSeoHeatmapTablegreen yt-bg-green">200</p>
+                            </div>
+                        </td> 
+                        <td class="color-grey">27 days (25-5-2024)</td> 
+                        <td class="icons-left">
+                            <a href="#">
+                                <img src="./assets/img/eye-logo.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/edit-icon.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/Trash.svg" alt="">
+                            </a>
+                        </td>
+                        
+                      </tr> 
+                      <tr> 
+                        <td class="d-flex align-center gap2">
+                            <img src="./assets/img/Rocket_Icon.svg" alt="">
+                            <a href="#" class="color-grey">lxstore.com.co</a>
+                        </td> 
+                        <td>
+                            <div class="repWebInfoProgItem  SmSeoHeatmapTableItem d-flex align-center gap1">
+                                          
+                                <div class="repWebInfoProgTrack SmSeoHeatmapTableTrack">
+                                    <div class="repWebInfoProgInner yt-bg-yellow" style="width: 20%;"></div>
+                                </div> <span class="color-grey SmSeoHeatmapTableText">0/5000 Chats</span>
+                                <p class="SmSeoHeatmapTablegreen yt-bg-yellow">200</p>
+                            </div>
+                        </td> 
+                        <td class="color-grey">27 days (25-5-2024)</td> 
+                        <td class="icons-left">
+                            <a href="#">
+                                <img src="./assets/img/eye-logo.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/edit-icon.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/Trash.svg" alt="">
+                            </a>
+                        </td>
+                       
+                      </tr> 
+                      <tr> 
+                        <td class="d-flex align-center gap2">
+                            <img src="./assets/img/Rocket_Icon.svg" alt="">
+                            <a href="#" class="color-grey">lxstore.com.co</a>
+                        </td>
+                        <td>
+                            <div class="repWebInfoProgItem  SmSeoHeatmapTableItem d-flex align-center gap1">
+                                          
+                                <div class="repWebInfoProgTrack SmSeoHeatmapTableTrack">
+                                    <div class="repWebInfoProgInner " style="width: 40%;"></div>
+                                </div> <span class="color-grey SmSeoHeatmapTableText">0/5000 Chats</span>
+                                <p class="SmSeoHeatmapTablegreen yt-bg-green">200</p>
+                            </div>
+                        </td>  
+                        <td class="color-grey">27 days (25-5-2024)</td> 
+                        
+                        <td class="icons-left">
+                            <a href="#">
+                                <img src="./assets/img/eye-logo.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/edit-icon.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/Trash.svg" alt="">
+                            </a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td class="d-flex align-center gap2">
+                            <img src="./assets/img/Rocket_Icon.svg" alt="">
+                            <a href="#" class="color-grey">lxstore.com.co</a>
+                        </td>
+                        <td>
+                            <div class="repWebInfoProgItem  SmSeoHeatmapTableItem d-flex align-center gap1">
+                                          
+                                <div class="repWebInfoProgTrack SmSeoHeatmapTableTrack">
+                                    <div class="repWebInfoProgInner yt-bg-yellow" style="width: 30%;"></div>
+                                </div> <span class="color-grey SmSeoHeatmapTableText">0/5000 Chats</span>
+                                <p class="SmSeoHeatmapTablegreen yt-bg-yellow">200</p>
+                            </div>
+                        </td> 
+                        <td class="color-grey">27 days (25-5-2024)</td> 
+                        <td class="icons-left">
+                            <a href="#">
+                                <img src="./assets/img/eye-logo.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/edit-icon.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/Trash.svg" alt="">
+                            </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="d-flex align-center gap2">
+                            <img src="./assets/img/Rocket_Icon.svg" alt="">
+                            <a href="#" class="color-grey">lxstore.com.co</a>
+                        </td>
+                        <td>
+                            <div class="repWebInfoProgItem  SmSeoHeatmapTableItem d-flex align-center gap1">
+                                          
+                                <div class="repWebInfoProgTrack SmSeoHeatmapTableTrack">
+                                    <div class="repWebInfoProgInner "></div>
+                                </div> <span class="color-grey SmSeoHeatmapTableText">0/5000 Chats</span>
+                                <p class="SmSeoHeatmapTablegreen yt-bg-green">200</p>
+                            </div>
+                            <td class="color-grey">27 days (25-5-2024)</td> 
+                            <td class="icons-left">
+                                <a href="#">
+                                    <img src="./assets/img/eye-logo.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="./assets/img/edit-icon.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="./assets/img/Trash.svg" alt="">
+                                </a>
+                            </td>
+                        </td> 
+                      </tr>
+                      <tr>
+                        <td class="d-flex align-center gap2">
+                            <img src="./assets/img/Rocket_Icon.svg" alt="">
+                            <a href="#" class="color-grey">lxstore.com.co</a>
+                        </td>
+                        <td>
+                            <div class="repWebInfoProgItem  SmSeoHeatmapTableItem d-flex align-center gap1">
+                                          
+                                <div class="repWebInfoProgTrack SmSeoHeatmapTableTrack">
+                                    <div class="repWebInfoProgInner "></div>
+                                </div> <span class="color-grey SmSeoHeatmapTableText">0/5000 Chats</span>
+                                <p class="SmSeoHeatmapTablegreen yt-bg-green">200</p>
+                            </div>
+                        </td> 
+                        <td class="color-grey">27 days (25-5-2024)</td> 
+                        <td class="icons-left">
+                            <a href="#">
+                                <img src="./assets/img/eye-logo.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/edit-icon.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/Trash.svg" alt="">
+                            </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="d-flex align-center gap2">
+                            <img src="./assets/img/Rocket_Icon.svg" alt="">
+                            <a href="#" class="color-grey">lxstore.com.co</a>
+                        </td>
+                        <td>
+                            <div class="repWebInfoProgItem  SmSeoHeatmapTableItem d-flex align-center gap1">
+                                          
+                                <div class="repWebInfoProgTrack SmSeoHeatmapTableTrack">
+                                    <div class="repWebInfoProgInner "></div>
+                                </div> <span class="color-grey SmSeoHeatmapTableText">0/5000 Chats</span>
+                                <p class="SmSeoHeatmapTablegreen yt-bg-green">200</p>
+                            </div>
+                        </td> 
+                        <td class="color-grey">27 days (25-5-2024)</td> 
+                        <td class="icons-left">
+                            <a href="#">
+                                <img src="./assets/img/eye-logo.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/edit-icon.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/Trash.svg" alt="">
+                            </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="d-flex align-center gap2">
+                            <img src="./assets/img/Rocket_Icon.svg" alt="">
+                            <a href="#" class="color-grey">lxstore.com.co</a>
+                        </td>
+                        <td>
+                            <div class="repWebInfoProgItem  SmSeoHeatmapTableItem d-flex align-center gap1">
+                                          
+                                <div class="repWebInfoProgTrack SmSeoHeatmapTableTrack">
+                                    <div class="repWebInfoProgInner "></div>
+                                </div> <span class="color-grey SmSeoHeatmapTableText">0/5000 Chats</span>
+                                <p class="SmSeoHeatmapTablegreen yt-bg-green">200</p>
+                            </div>
+                        </td> 
+    
+                        <td class="color-grey">27 days (25-5-2024)</td> 
+                        <td class="icons-left">
+                            <a href="#">
+                                <img src="./assets/img/eye-logo.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/edit-icon.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/Trash.svg" alt="">
+                            </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="d-flex align-center gap2">
+                            <img src="./assets/img/Rocket_Icon.svg" alt="">
+                            <a href="#" class="color-grey">lxstore.com.co</a>
+                        </td>
+                        <td>
+                            <div class="repWebInfoProgItem  SmSeoHeatmapTableItem d-flex align-center gap1">
+                                          
+                                <div class="repWebInfoProgTrack SmSeoHeatmapTableTrack">
+                                    <div class="repWebInfoProgInner "></div>
+                                </div> <span class="color-grey SmSeoHeatmapTableText">0/5000 Chats</span>
+                                <p class="SmSeoHeatmapTablegreen yt-bg-green">200</p>
+                            </div>
+                        </td> 
+                        <td class="color-grey">27 days (25-5-2024)</td> 
+                        <td class="icons-left">
+                            <a href="#">
+                                <img src="./assets/img/eye-logo.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/edit-icon.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/Trash.svg" alt="">
+                            </a>
+                        </td>
+                      </tr>
+                    </tbody> 
+                    <tfoot>
+                        <tr>
+                            <td class="color-grey">Showing <span>1-10 </span>of <span>100</span></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="TableFooterRight d-flex  align-center">
+                                <a class="Table-Arrow-left" href="#"> <img src="./assets/img/arrow-left-small-icon.svg" alt=""></a>
+                                 <li><a href="#">1</a></li>
+                                 <li><a href="#">2</a></li>
+                                 <li><a href="#">3</a></li>
+                                 <li><a href="#">4</a></li>
+                                 <li><a href="#">5</a></li>
+                               <a href="#"  class="Table-Arrow-left" >  <img src="./assets/img/arrow-right-small-icon.svg" alt=""></a>
+                                </div>
+                            </td>
+                        </tr>
+                       
+                    </tfoot>
+                  </table>
+            </div>
+              
+
+              </div>
+        </section>
+
+        <!--  -->
+
+        <!--  -->
+        <footer>
+            <ul>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">BLOG</a>
+                </li>
+                <li>
+                    <a href="#">API</a>
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+            </ul>
+
+            <div class="footerSocial">
+                <a href="#">
+                    <img src="assets/img/facebook-dark.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="assets/img/x-dark.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="assets/img/instagram-dark.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="assets/img/youtube-dark.svg" alt="">
+                </a>
+            </div>
+        </footer>
+    </main>
+
+
+
+
+
+    <script src="https://cdn.tiny.cloud/1/2ajq41h0kapxqv98zqthmv3awu50pgjm99n2qlmr323s53yg/tinymce/7/tinymce.min.js"
+        referrerpolicy="origin"></script>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
