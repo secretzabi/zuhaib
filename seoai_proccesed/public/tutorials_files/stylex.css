@@ -1,35 +1,36 @@
 @font-face{
     font-family: "Sharp Grotesk Book 20 Regular";
-    src: url("/assets/fonts/f4a88c23d1f27870fb1e458ace76a752.eot");
-    src: url("/assets/fonts/f4a88c23d1f27870fb1e458ace76a752.eot?#iefix")format("embedded-opentype"),
-        url("/assets/fonts/f4a88c23d1f27870fb1e458ace76a752.woff")format("woff"),
-        url("/assets/fonts/f4a88c23d1f27870fb1e458ace76a752.woff2")format("woff2"),
-        url("/assets/fonts/f4a88c23d1f27870fb1e458ace76a752.ttf")format("truetype"),
-        url("/assets/fonts/f4a88c23d1f27870fb1e458ace76a752.svg#Sharp Grotesk Book 20 Regular")format("svg");
+    src: url("../assets/fonts/f4a88c23d1f27870fb1e458ace76a752.eot");
+    src: url("../assets/fonts/f4a88c23d1f27870fb1e458ace76a752.eot");
+    src: url("../assets/fonts/f4a88c23d1f27870fb1e458ace76a752.eot?#iefix")format("embedded-opentype"),
+        url("../assets/fonts/f4a88c23d1f27870fb1e458ace76a752.woff")format("woff"),
+        url("../assets/fonts/f4a88c23d1f27870fb1e458ace76a752.woff2")format("woff2"),
+        url("../assets/fonts/f4a88c23d1f27870fb1e458ace76a752.ttf")format("truetype"),
+        url("../assets/fonts/f4a88c23d1f27870fb1e458ace76a752.svg#Sharp Grotesk Book 20 Regular")format("svg");
     font-weight:normal;
     font-style:normal;
     font-display:swap;
 }
 @font-face{
     font-family: "Sharp Grotesk Medium 20 Regular";
-    src: url("/assets/fonts/ff43ca80668e47a1b1208ba9aed65ad2.eot");
-    src: url("/assets/fonts/ff43ca80668e47a1b1208ba9aed65ad2.eot?#iefix")format("embedded-opentype"),
-        url("/assets/fonts/ff43ca80668e47a1b1208ba9aed65ad2.woff")format("woff"),
-        url("/assets/fonts/ff43ca80668e47a1b1208ba9aed65ad2.woff2")format("woff2"),
-        url("/assets/fonts/ff43ca80668e47a1b1208ba9aed65ad2.ttf")format("truetype"),
-        url("/assets/fonts/ff43ca80668e47a1b1208ba9aed65ad2.svg#Sharp Grotesk Medium 20 Regular")format("svg");
+    src: url("../assets/fonts/ff43ca80668e47a1b1208ba9aed65ad2.eot");
+    src: url("../assets/fonts/ff43ca80668e47a1b1208ba9aed65ad2.eot?#iefix")format("embedded-opentype"),
+        url("../assets/fonts/ff43ca80668e47a1b1208ba9aed65ad2.woff")format("woff"),
+        url("../assets/fonts/ff43ca80668e47a1b1208ba9aed65ad2.woff2")format("woff2"),
+        url("../assets/fonts/ff43ca80668e47a1b1208ba9aed65ad2.ttf")format("truetype"),
+        url("../assets/fonts/ff43ca80668e47a1b1208ba9aed65ad2.svg#Sharp Grotesk Medium 20 Regular")format("svg");
     font-weight:normal;
     font-style:normal;
     font-display:swap;
 }
 @font-face{
     font-family: "Sharp Grotesk SmBold 20 Regular";
-    src: url("/assets/fonts/629ed6829f706958b9bdf4f6300dfca0.eot");
-    src: url("/assets/fonts/629ed6829f706958b9bdf4f6300dfca0.eot?#iefix")format("embedded-opentype"),
-        url("/assets/fonts/629ed6829f706958b9bdf4f6300dfca0.woff")format("woff"),
-        url("/assets/fonts/629ed6829f706958b9bdf4f6300dfca0.woff2")format("woff2"),
-        url("/assets/fonts/629ed6829f706958b9bdf4f6300dfca0.ttf")format("truetype"),
-        url("/assets/fonts/629ed6829f706958b9bdf4f6300dfca0.svg#Sharp Grotesk SmBold 20 Regular")format("svg");
+    src: url("../assets/fonts/629ed6829f706958b9bdf4f6300dfca0.eot");
+    src: url("../assets/fonts/629ed6829f706958b9bdf4f6300dfca0.eot?#iefix")format("embedded-opentype"),
+        url("../assets/fonts/629ed6829f706958b9bdf4f6300dfca0.woff")format("woff"),
+        url("../assets/fonts/629ed6829f706958b9bdf4f6300dfca0.woff2")format("woff2"),
+        url("../assets/fonts/629ed6829f706958b9bdf4f6300dfca0.ttf")format("truetype"),
+        url("../assets/fonts/629ed6829f706958b9bdf4f6300dfca0.svg#Sharp Grotesk SmBold 20 Regular")format("svg");
     font-weight:normal;
     font-style:normal;
     font-display:swap;
