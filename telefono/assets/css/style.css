@@ -148,7 +148,8 @@ body{
     overflow: hidden;
     cursor: pointer;
     letter-spacing: 0.5px;
-    &:after {
+    transition: .3s;
+    /* &:after {
         background: #fff;
         content: "";
         height: 155px;
@@ -159,8 +160,8 @@ body{
         transform: rotate(35deg);
         transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
         width: 50px;
-        /* z-index: -10; */
-      }
+        /* z-index: -10; 
+      } */
 }
 .button-outline{
     border: 1px solid var(--theme-color);
@@ -172,10 +173,11 @@ body{
     }
 }
 .button:hover{
-      &:after {
+    opacity: .8;
+      /* &:after {
           left: 120%;
           transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
-        }
+        } */
     }
 .zip-code{
     position: relative;
@@ -199,10 +201,9 @@ body{
 .social-icons{
     a{
         &:hover{
+            transition: .3s;
             svg{
-                > path{
-                    fill: #fff;
-                }
+               opacity: .8;
             }
         }
     }
@@ -309,6 +310,9 @@ body{
             margin-inline: 14px;
         }
     }
+    .dropdown-menu li{
+        display: block;
+    }
 }
 
 .navbar .nav-links a {
@@ -322,6 +326,46 @@ body{
         text-decoration: underline;
         text-underline-offset: 8px;
     }
+}
+/* Dropdown Menu */
+li.dropdown{
+    position: relative;
+    li:after{
+        display: none !important;
+    }
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color:var(--primary-color);
+    color: #fff;
+    text-decoration: none !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 .contact {
@@ -351,17 +395,23 @@ body{
     width: 100%;
     max-width: 36%;
     padding: clamp(1.2rem, 5dvw, 2.5rem);
+    z-index: 1;
     .phone-wifi-icon{
         max-width: 120px;
     }
 }
 .main-banner{
     position: relative;
-    .character1{
+    margin-bottom: 10rem;
+    .duck{
         position: absolute;
         inset-inline: 0;
         margin-inline: auto;
         bottom: -80px;
+        text-align: center;
+        img{
+            margin-left: -100px;
+        }
     }
     .banner-bg{
         max-width: 1600px;
@@ -411,6 +461,14 @@ hr{
             margin-inline: auto;
             width: fit-content;
             letter-spacing: 0.5px;
+        }
+        img{
+            opacity: .9;
+            transition: .3s;
+            &:hover{
+                opacity: 1;
+                transform: translateY(-10px)
+            }
         }
         .title{
             min-height: 56px;
@@ -621,7 +679,11 @@ hr{
         padding: 24px;
         flex: 0 0 48%;
         border-radius: 24px;
-        > .d-flex{
+        transition: .3s;
+        &:hover{
+            transform: scale(1.05);
+        }
+        .d-flex{
             gap: 30px;
             >div{
                 display: flex;
@@ -746,6 +808,16 @@ footer{
         }    
     }
 }
+@media screen and (max-width:1200px) {
+    .main-banner {
+        & .duck {
+            img {
+                margin-left: -100px;
+                max-width: 260px;
+            }
+        }
+    }
+}
 @media screen and (max-width:1099px) {
     .navbar .nav-links a{
         font-size: 14px;
@@ -760,6 +832,7 @@ footer{
             }
         }
     }
+
 
 }
 @media screen and (max-width:991px) {
@@ -821,13 +894,16 @@ footer{
         display: none;
     }
     .banner-content{
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         gap: 20px;
         text-align: center;
         justify-content: center;
+        p {
+            margin-top: 1rem;
+        }
     }
     .package-offer{
-        max-width: 100%;
+        max-width: 46%;
     }
     .banner-content .fs-16.fw-500.text-white2{
         font-size: 12px;
@@ -835,19 +911,30 @@ footer{
     .main-banner {
         .banner-bg {
             height: 80dvh;
-        object-fit: cover;
+            object-fit: cover;
         }
     }
     .package-offer .fs-2{
-        margin-block: .8rem;
+        margin-block: 0rem;
     }
     .package-offer {
         border-radius: 70px 10px;
+        padding-block: 2rem;
     }
     footer{
         .container{
             >.d-flex{
                 flex-wrap: wrap;
+            }
+        }
+    }
+    .main-banner {
+        margin-bottom: 3rem;
+        & .duck {
+            display: none;
+            img {
+                margin-left: -100px;
+                max-width: 260px;
             }
         }
     }
@@ -871,8 +958,45 @@ footer{
     }
 }
 @media screen and (max-width:600px) {
+    body{
+        background-color: #efefef;
+    }
+    .friend-plan {
+        .d-flex{
+            gap: 10px;
+        }
+        .fs-4 {
+            margin-bottom: .6rem;
+        }
+        .button-outline{
+            margin-top: .8rem;
+        }
+    }    
+    .packages-list {
+        .package-item {
+            flex: 0 0 100%;
+            padding: 1.5rem;
+            > .d-flex{
+                margin-bottom: 1rem;
+                img{
+                    max-width: 128px;
+                }
+            }
+            .title{
+                min-height: inherit;
+            }
+        }
+    }
+    .banner-content{
+        flex-direction: column;
+        p{
+            margin-top: 0;
+        }
+    }
+    
     .package-offer{
         max-width: 340px;
+        border-radius: 40px;
     }
     .packages-list{
         .package-item{
@@ -901,12 +1025,19 @@ footer{
     }
     .advantages-list{
         grid-template-columns: 1fr;
+        margin-top: 2rem;
         & .bg-white{
             .d-flex{
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
+        }
+    }
+    .call-us-at{
+        margin-block: 24px;
+        img{
+            filter: drop-shadow(2px 4px 6px #999);
         }
     }
     .contact-section{
@@ -918,13 +1049,18 @@ footer{
         .container{
             >.d-flex{
                 flex-wrap: wrap;
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                /* flex-direction: column; */
+                gap: 1rem;
             }
         }
         .bottom-footer {
             .container{
                 >.d-flex{
                     gap: 20px;
+                    grid-template-columns: 1fr;
+                    place-items: center;
                 }
             }
             .middle-column{
