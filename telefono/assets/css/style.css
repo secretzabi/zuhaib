@@ -108,7 +108,7 @@ body{
     font-size: clamp(24px, 5dvw, 40px);
 }
 .fs-1{
-    font-size: clamp(50px, 5dvw, 100px);
+    font-size: clamp(44px, 5dvw, 100px);
 }
 .box-shadow{
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.16);
@@ -129,6 +129,11 @@ body{
             color: #457898;
         }
     }    
+}
+.mobile-banner-content{
+    img{
+        display: none;
+    }
 }
 .gap-x-6{
     column-gap: 6px;
@@ -162,6 +167,12 @@ body{
         width: 50px;
         /* z-index: -10; 
       } */
+      &.primary-theme, &.bg-white{
+        &:hover{
+            background-color: var(--theme-color);
+            color: #fff;
+        }
+      }
 }
 .button-outline{
     border: 1px solid var(--theme-color);
@@ -173,7 +184,7 @@ body{
     }
 }
 .button:hover{
-    opacity: .8;
+    /* opacity: .8; */
       /* &:after {
           left: 120%;
           transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -300,6 +311,9 @@ body{
     /* margin-left: 20px; */
     display: flex;
     align-items: center;
+    &:last-child{
+        display: none;
+    }
     &:not(:last-child){
         &::after{
             width: 1px;
@@ -382,13 +396,35 @@ li.dropdown{
     display: none;
     flex-direction: column;
     cursor: pointer;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    &.active{
+        background-color: #fff;
+        z-index: 1111;
+        margin-top: -110px;
+        .line:nth-child(1){
+            transform: rotate(45deg) translate(6px, 5px);
+        }
+        .line:nth-child(2){
+            opacity: 0;
+        }
+        .line:nth-child(3){
+            transform: rotate(-45deg) translate(5px, -4px);
+        }
+        .line{
+            background-color: #000;
+            width: 20px;
+        }
+    }
 }
 
 .hamburger .line {
-    width: 25px;
+    width: 22px;
     height: 2px;
-    background-color: var(--theme-color);
-    margin: 2px 0;
+    background-color: #fff;
 }
 .package-offer{
     border-radius: 140px 20px;
@@ -638,6 +674,10 @@ hr{
         display: inline-block;
         margin-top: 2rem;
         padding-inline: 32px;
+        &:hover{
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
     }
     .vector-bg{
         position: absolute;
@@ -731,6 +771,13 @@ hr{
 .call-us-at{
     gap:20px;
     margin-block: 40px;
+    align-items: center;
+}
+.contact-us-content{
+    img.img-fluid{
+        max-width: 360px;
+        width: 100%;
+    }
 }
 footer{
     background-color: var(--theme-color);
@@ -793,7 +840,9 @@ footer{
     100% { transform: translateY(-10px); }
 }
 
-
+.mobile-language-selector{
+    display: none;
+}
 /* Responsive Styles */
 
 
@@ -852,22 +901,26 @@ footer{
     
     .navbar .nav-links {
         position: fixed;
-        top: 120px;
+        top: 0px;
         right: 0;
-        background-color: var(--theme-color);
+        background-color: #fff;
         flex-direction: column;
         width: 100%;
+        padding-inline: 1.5rem;
         align-items: end;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
         opacity: 0;
         pointer-events: none;
         height: 100%;
-        max-width: 300px;
+        /* max-width: 300px; */
         z-index: 11;
+        padding-top: 3rem;
     }
     .navbar .nav-links a {
-        color: #fff;
+        /* color: #fff; */
+        flex-direction: row-reverse;
+        font-weight: 700;
     }
     .navbar .nav-links li {
         margin: 10px 0;
@@ -875,6 +928,12 @@ footer{
 
     .hamburger {
         display: flex;
+        background-color: var(--theme-color);
+        border-radius: 4px;
+        svg{
+            width: 36px;
+            height: 36px;
+        }
     }
 
     .navbar .nav-links.active {
@@ -958,6 +1017,69 @@ footer{
     }
 }
 @media screen and (max-width:600px) {
+    .contact-us-content {
+        img.img-fluid {
+            max-width: 200px;
+            width: 100%;
+        }
+    }
+    .mobile-banner-content{
+        display: flex;
+        text-align: start;
+        align-items: flex-end;
+        img{
+            display: block;
+            height:auto;
+            max-width: 40%;
+        }
+        > div{
+           flex: 0 0 60%;
+          max-width: 50%;
+            height: auto;
+        }
+    }
+    .zip-code {
+        input {
+            font-size: 11px;
+            padding: 6px 7px 6px 24px;
+        }
+        svg{
+            top: 5px;
+            left: 5px;
+        }
+    }
+    .mobile-language-selector{
+        display: flex;
+        gap: 10px;
+    }
+    .language-selector {
+        display: none;
+    }
+        .navbar .nav-links li{
+        a{
+            font-size: 18px;
+        }
+        &:last-child{
+            display: block;
+            .contact{
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                a{
+                    font-size: 24px;
+                    svg{
+                        display:none ;
+                    }
+                }
+            }
+        }
+    }
+    .logo{
+        img{
+            max-width: 120px;
+            height: auto;
+        }
+    }
     body{
         background-color: #efefef;
     }
@@ -970,6 +1092,7 @@ footer{
         }
         .button-outline{
             margin-top: .8rem;
+           
         }
     }    
     .packages-list {
@@ -980,6 +1103,8 @@ footer{
                 margin-bottom: 1rem;
                 img{
                     max-width: 128px;
+                    max-height: 157px;
+                    width: 100%;
                 }
             }
             .title{
@@ -990,13 +1115,14 @@ footer{
     .banner-content{
         flex-direction: column;
         p{
-            margin-top: 0;
+            margin-top: 44px;
         }
     }
     
     .package-offer{
-        max-width: 340px;
-        border-radius: 40px;
+        max-width: 310px;
+        border-radius: 30px;
+        padding-block: 1.5rem;
     }
     .packages-list{
         .package-item{
@@ -1007,9 +1133,15 @@ footer{
     }
     .header-strip{
         .right{
-            justify-content: space-between;
-            .private-area, >span{
+            /*justify-content: space-between;*/
+             >span{
                 display: none;
+            }
+            .private-area{
+                margin-left: auto;
+                span{
+                    display: none;
+                }
             }
         }
     }
@@ -1036,6 +1168,7 @@ footer{
     }
     .call-us-at{
         margin-block: 24px;
+        align-items: center;
         img{
             filter: drop-shadow(2px 4px 6px #999);
         }

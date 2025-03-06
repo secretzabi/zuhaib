@@ -81,9 +81,22 @@
                                 d="M5.9666 12.1335C3.94993 13.4835 3.94993 15.6835 5.9666 17.0252C8.25827 18.5585 12.0166 18.5585 14.3083 17.0252C16.3249 15.6752 16.3249 13.4752 14.3083 12.1335C12.0249 10.6085 8.2666 10.6085 5.9666 12.1335Z"
                                 stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        Private Area
+                        <span>
+                            Private Area
+                        </span>
                     </div>
                     <span>|</span>
+                    <div class="d-flex mobile-language-selector">
+                        <button class="language-button">
+                            <img src="https://flagcdn.com/us.svg" alt="English" class="flag-icon">
+                            <span>English</span>
+                        </button>
+                        /
+                        <button class="language-button">
+                            <img src="https://flagcdn.com/es.svg" alt="Spanish" class="flag-icon">
+                            <span>Español</span>
+                        </button>
+                    </div>
                     <div class="language-selector">
                         <button class="language-button">
                             <img src="https://flagcdn.com/us.svg" alt="English" class="flag-icon">
@@ -233,6 +246,21 @@
                             </svg>
                         </a>
                     </li>
+                    <li>
+                        <div class="contact">
+                            <a href="tel:900 53 37 81" class="phone primary-color fw-700 fs-20 text-decoration-none d-flex align-center" aria-label="Contact Phone">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M10.9604 1.0835C14.0446 1.426 16.4813 3.85933 16.8271 6.9435" stroke="#17577F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10.9604 4.03613C12.4363 4.3228 13.5896 5.47697 13.8771 6.9528" stroke="#17577F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.19277 9.39382C11.5169 12.7171 12.271 8.87243 14.3875 10.9875C16.428 13.0275 17.6017 13.4362 15.0155 16.0208C14.6917 16.281 12.6342 19.412 5.40356 12.1832C-1.828 4.9535 1.30114 2.89387 1.56146 2.57012C4.15297 -0.0216324 4.55552 1.15798 6.596 3.19794C8.71161 5.31391 4.86862 6.07051 8.19277 9.39382Z" stroke="#17577F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                900 53 37 81
+                            </a>
+                            <button class="call-button primary-theme button text-white fw-600" aria-label="Shall we call you?">
+                                <span> Shall we call you?</span>
+                            </button>
+                        </div>
+                    </li>
                 </ul>
             </nav>
             <div class="contact">
@@ -255,6 +283,13 @@
                 </button>
             </div>
             <div class="hamburger">
+<!--                <svg class="d-md-none button-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">-->
+<!--                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>-->
+<!--                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>-->
+<!--                    <g id="SVGRepo_iconCarrier">-->
+<!--                        <path d="M4 6H20M4 12H20M4 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>-->
+<!--                    </g>-->
+<!--                </svg>-->
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -265,10 +300,13 @@
     <main>
         <section class="main-banner">
             <div class="d-flex banner-content container align-center">
-                <div class="text-white">
-                    <h1 class="fs-2 fw-700 text-uppercase">Necestotas...</h1>
-                    <div class="fs-1 fw-700 text-uppercase">?Todo?</div>
-                    <p class="fs-4 fw-600">Pues te lo damos</p>
+                <div class="text-white d-flex mobile-banner-content">
+                    <div>
+                        <h1 class="fs-2 fw-700 text-uppercase">Necestotas...</h1>
+                        <div class="fs-1 fw-700 text-uppercase">?Todo?</div>
+                        <p class="fs-4 fw-600">...Pues te lo damos</p>
+                    </div>
+                    <img src="assets/img/character1.png" class="img-fluid" />
                 </div>
                 <div class="package-offer text-center primary-theme text-white">
                     <img src="assets/img/wifi+phone-icon.svg" alt="" loading="lazy" class="phone-wifi-icon" />
@@ -698,7 +736,7 @@
                 <div class="d-grid">
                     <div class="contact-us-content">
                         <a href="/index.html" aria-label="">
-                            <img src="assets/img/logo.svg" alt="Telefono ES" loading="lazy" class="img-fluid" width="360">
+                            <img src="assets/img/logo.svg" alt="Telefono ES" loading="lazy" class="img-fluid" width="">
                         </a>
                         <div class="fs-4 fw-700">Should We Call You?</div>
                         <p class="fs-16">Leave us your number and we will contact you.</p>
@@ -870,6 +908,7 @@
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
         hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
         });
 
