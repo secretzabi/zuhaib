@@ -582,9 +582,14 @@ hr{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
-    margin-bottom: 4rem;
     place-items: center;
     margin-top: 4rem;
+}
+.charactor-brand{
+    margin-bottom: 4rem;
+    > img{
+        max-width: 250px;
+    }
 }
 footer{
     background-color: var(--base-color);
@@ -764,6 +769,7 @@ footer{
 
 }
 @media screen and (max-width:991px) {
+
     .container{
         padding-inline: 1rem;
     }
@@ -892,7 +898,12 @@ footer{
     }
 }
 @media screen and (max-width:800px) {
-    .packages-list{
+    .charactor-brand{
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+        .packages-list{
         flex-wrap: wrap;
         justify-content: center;
         .package-item{
