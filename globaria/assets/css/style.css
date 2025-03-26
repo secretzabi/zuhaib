@@ -727,6 +727,48 @@ footer{
     font-size: 18px;
     color: #6B6B6B;
 }
+
+.fore-footer{
+    background-color: #FEF6F7;
+    padding-block: 4rem;
+    .container{
+        p{
+            margin-top: 2rem;
+        }
+        >.d-flex{
+            gap: 4rem;
+            >div{
+                flex: 1 1;
+                > .d-flex{
+                    gap: 2rem;
+
+                    > div{
+                        flex: 1 1;
+                        a{
+                            color: var(--base-color);
+                            text-decoration: none;
+                        }
+
+                        .tittle{
+                            position: relative;
+                            margin-bottom: 30px;
+                            &:after{
+                                width: 27px;
+                                height: 3px;
+                                background-color: var(--theme-color);
+                                content: '';
+                                position: absolute;
+                                bottom: -10px;
+                                left: 0;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
 /* Responsive Styles */
 
 
@@ -923,6 +965,24 @@ footer{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+    .fore-footer {
+        padding-block: 3rem;
+        & .container {
+            >.d-flex {
+                flex-direction: column;
+                gap: 2rem;
+                & > div {
+                    > .d-flex {
+                        /*flex-direction: column;*/
+                        gap: 1rem;
+                        .tittle, .fs-20 {
+                            font-size: 14px;
+                        }
+                     }
+                    }
+                }
+            }
+        }
 }
 @media screen and (max-width:600px) {
     .boxes{
