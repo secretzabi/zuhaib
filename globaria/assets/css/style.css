@@ -346,7 +346,7 @@ li.dropdown{
     &.active{
         background-color: #fff;
         z-index: 1111;
-        margin-top: -110px;
+        margin-top: -18px;
         .line:nth-child(1){
             transform: rotate(45deg) translate(6px, 5px);
         }
@@ -569,7 +569,22 @@ hr{
     }
     .why-choose-us-content{
         flex: 1 1;
+        p{
+            svg{
+                width: 20px;
+                height: 20px;
+                flex: 0 0 20px;
+            }
+        }
     }
+}
+.brands{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin-bottom: 4rem;
+    place-items: center;
+    margin-top: 4rem;
 }
 footer{
     background-color: var(--base-color);
@@ -649,7 +664,64 @@ footer{
     padding-bottom: 120px;
 }
 
+.accordion {
+    width: 100%;
+    max-width: 1280px;
+    margin: 50px auto;
+}
 
+.accordion-item {
+    /*border: 1px solid #ddd;*/
+    margin-bottom: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    /*box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.16);*/
+    border: 1px solid #D8D8D8;
+
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 20px 24px;
+    text-align: left;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    border-radius: 10px;
+    /*color: var(--theme-color);*/
+    align-items: center;
+
+}
+
+.accordion-header .icon {
+    transition: transform 0.3s ease;
+    height: 24px;
+    svg{
+        width: 16px;
+    }
+}
+
+.accordion-header.active .icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background-color: white;
+}
+
+.accordion-content p {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #6B6B6B;
+}
 /* Responsive Styles */
 
 
@@ -814,6 +886,10 @@ footer{
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
+    .brands{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 @media screen and (max-width:800px) {
     .packages-list{
@@ -832,8 +908,24 @@ footer{
             flex-direction: column;
         }
     }
+    .brands{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 @media screen and (max-width:600px) {
+    .boxes{
+        svg{
+            display: none;
+        }
+    }
+    .brands{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        img{
+            max-width: 130px;
+        }
+    }
     .banner-content {
         h1 {
             font-size: 48px;
