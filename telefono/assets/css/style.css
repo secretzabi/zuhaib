@@ -588,6 +588,7 @@ li.dropdown{
                 }
             }
         }
+
         .fs-3{
             margin-bottom: 1rem;
             line-height: 1.2;
@@ -1127,11 +1128,11 @@ i.wrap{
             margin: 0;
             padding: 0px;
             /*background-color: #f0f0f0;*/
-    border-radius: 0px;
-    transition: background-color 0.3s ease;
-    font-size: 22px;
-    font-weight: 600;
-}
+            border-radius: 0px;
+            transition: background-color 0.3s ease;
+            font-size: 22px;
+            font-weight: 600;
+        }
 
 .content-title:hover {
     /*background-color: #ddd;*/
@@ -1245,7 +1246,6 @@ i.wrap{
 }
 .how-it-works {
     margin-top: 5rem;
-
     .how-it-works-content {
         gap: 3rem;
         margin-top: 4rem;
@@ -1330,7 +1330,24 @@ i.wrap{
     margin-top: 5rem ;
 }
 
-
+.theme-box-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ECF1F4;
+        border-radius: 24px;
+        padding: 2rem 24px;
+        line-height: normal;
+        text-align: center;
+    }
+}
 
 footer{
     background-color: var(--theme-color);
@@ -1415,6 +1432,7 @@ footer{
             align-items: center;
             justify-content: center;
             line-height: 1.65;
+            margin-bottom: 3rem ;
             &:nth-child(2n){
                 flex-direction: row-reverse;
             }
@@ -2394,9 +2412,10 @@ a.pagination-btn.prev {
 }
 .install-container{
     align-items: initial;
+    justify-content: space-between;
     .contract-form{
         max-width: 50%;
-        flex: 0 0 50%;
+        flex: 1 1;
         .accordion{
             padding-top: 0;
             border: 0;
@@ -2527,6 +2546,29 @@ a.pagination-btn.prev {
         }    
     }
 }
+@media screen and (max-width:1300px) {
+    .install-container {
+        & .select-package-btns {
+            &:has(.quantity-container) {
+                column-gap: 2rem;
+            }
+        }
+    }
+
+}
+@media screen and (max-width:1300px) and (min-width:834px) {
+    .contract-form{
+        & .packages-list {
+            & .package-item {
+                > .d-flex {
+                    img{
+                        max-width: 80px !important;
+                    }
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width:1200px) {
     .main-banner {
         & .duck {
@@ -2536,6 +2578,7 @@ a.pagination-btn.prev {
             }
         }
     }
+
 }
 @media screen and (max-width:1099px) {
 
@@ -2948,8 +2991,14 @@ a.pagination-btn.prev {
             margin-bottom: 0;
         }
     }
+    .theme-box-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 @media screen and (max-width:600px) {
+    .theme-box-list{
+        grid-template-columns: 1fr;
+    }
     .faq-area {.bg-img{display: none}}
     .faq-topics {
         margin-block:3rem;
@@ -3097,11 +3146,15 @@ a.pagination-btn.prev {
                         }
                     }
                 }
-                &.rural-banner{
-                    .fs-3{
-                        line-height: 1.4;
-                        gap: .5rem;
-                    }
+            }
+            &.rural-banner{
+                .fs-3{
+                    line-height: 1.4;
+                    gap: .5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
                 }
             }
             &.plan-banner{
@@ -3159,6 +3212,15 @@ a.pagination-btn.prev {
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+                    margin-bottom: 0;
+                }
+            }
+            &.trade-banner{
+                .fs-3{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
                     margin-bottom: 0;
                 }
             }
@@ -3709,6 +3771,21 @@ a.pagination-btn.prev {
                 .column{
                     img{
                         max-width: 100px;
+                    }
+                }
+            }
+        }
+    }
+    .trades {
+        & .list-group.rural-list {
+            & .row {
+                & .column {
+                    img{
+                        max-width: 250px;
+                    }
+                    .fs-20{
+                        text-align: start;
+                        font-size: 16px;
                     }
                 }
             }
