@@ -206,11 +206,7 @@ body{
 .rounded-8{
     border-radius: 8px !important;
 }
-/*.mobile-banner-content{*/
-/*    img{*/
-/*        display: none;*/
-/*    }*/
-/*}*/
+
 .gap-x-6{
     column-gap: 6px !important;
 }
