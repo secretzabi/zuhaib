@@ -29,36 +29,26 @@
                 <nav class="navbar">
                     <ul class="nav-links">
                         <li class="dropdown">
-                            <a href="/" aria-label="Home">
+                            <a href="index.html" aria-label="Home">
                                 Home
                             </a>
                         </li>
                         <li class="dropdown">
-                            <a href="/" aria-label="About Us">
+                            <a href="#aboutUs" aria-label="About Us">
                                 About Us
                             </a>
                         </li>
                         <li class="dropdown">
-                            <a href="/" aria-label="Services">
+                            <a href="#services" aria-label="Services">
                                 Services
                             </a>
                         </li>
     
-                        <li>
-                            <a href="#" aria-label="Our Feature">
-                                Our Feature
+                       
     
-                            </a>
-                        </li>
-    
+                       
                         <li>
-                            <a href="#" aria-label="Resources">
-                                Resources
-    
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Contact Us">
+                            <a href="#contactForm" aria-label="Contact Us">
                                 Contact Us
                             
                             </a>
@@ -67,12 +57,12 @@
                     </ul>
                 </nav>
                 <div class="contact">
-                    <button class="call-button bg-white button theme-color fw-600 d-flex gap-x-6 align-center" aria-label="Register">
-                        <span> Register</span>
+                    <a href="https://palmy.io/" class="call-button bg-white button theme-color fw-600 d-flex gap-x-6 align-center text-decoration-none" aria-label="Login">
+                        <span> Login</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="#7478c5" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 16L16 12M16 12L12 8M16 12H8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </button>
+                    </a>
                 </div>
                 <div class="hamburger">
     <!--                <svg class="d-md-none button-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">-->
@@ -101,19 +91,14 @@
                                 fan engagement technology. Create unforgettable experiences, boost
                                 audience interaction, and drive loyalty like never before.
                             </p>
-                            <div class="d-flex gap-x-16">
-                                <button class="call-button bg-white button theme-color fw-600 d-flex gap-x-6 align-center" aria-label="Register">
-                                    <span> Register</span>
+                            <div class="d-flex gap-x-16 mt-24">
+                                <a href="https://palmy.io/auth/signup" class="call-button bg-white button theme-color fw-600 d-flex gap-x-6 align-center text-decoration-none" aria-label="Sign Up">
+                                    <span> Sign Up</span>
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="#7478c5" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 16L16 12M16 12L12 8M16 12H8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                </button>
-                                <button class="call-button  button button-outline text-white fw-600 d-flex gap-x-6 align-center" aria-label="Download App">
-                                    <span> Download App</span>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 16L16 12M16 12L12 8M16 12H8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
+                                </a>
+                               
                             </div>
  
                         </div>
@@ -136,7 +121,7 @@
     <!--  -->
     <main>
         
-        <section class="why-choose-us-section">
+        <section class="why-choose-us-section" id="aboutUs">
             <div class="container">
                 <div class="fs-4 fw-600  lh-1 mb-48 text-center base-color">
                     <span class="color2">
@@ -165,27 +150,13 @@
                             </svg>
                         </button>
                         
-                        <div class="stats-section">
-                            <div class="stat-item">
-                                <div class="stat-number suffix-k" data-target="1.5">0</div>
-                                <div class="stat-label">Our Happy Users</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number suffix-plus" data-target="4">0</div>
-                                <div class="stat-label">Years Experience</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number suffix-percent" data-target="98">0</div>
-                                <div class="stat-label">Satisfaction Rate</div>
-                            </div>
-                        </div>
                         
                     </div>
                 </div>
             </div>
         </section>
         <!--    -->
-        <section class="why-choose-us-section mb-48">
+        <section class="why-choose-us-section mb-48" id="services">
             <div class="container">
                 
                 <div class="d-flex align-center gap-x-24">
@@ -270,7 +241,8 @@
                         
                         <div class="mt-16">
                             <div class="fs-20 fw-400 mb-8 color3">
-                                Exclusive Content Access
+                                Space between Interviews
+                                and Content
                             </div>
                             <p class="">
                                 Offer behind-the-scenes
@@ -284,11 +256,11 @@
                         
                         <div class="mt-16">
                             <div class="fs-20 fw-400 mb-8 color3">
-                                Social Media Integration
+                                Change to Integration
                             </div>
                             <p class="">
                                 Seamlessly connect with fans
-                                across all major social
+                                and gameday
                                 platforms.
                             </p>
                         </div>
@@ -296,7 +268,7 @@
                 </div>
             </div>
         </section>
-        <section class="mb-96">
+        <section class="mb-96" id="">
             <div class="container contact-section">
                 <div class="d-flex  gap-x-32">
                     <div class="contact-content">
@@ -309,12 +281,12 @@
                         </p>
                         <hr>
                         <div class="mb-24">
-                            <a href="tel:+1234567890" class="text-decoration-none  d-flex gap-x-16 align-center">
+                            <a href="tel:+2067527883" class="text-decoration-none  d-flex gap-x-16 align-center">
                                 <img src="assets/img/icon5.png" alt="Phone Number" class="" />
                                 <div>
                                     <span>Phone Number</span>
                                     <p class="fs-18">
-                                        206-75207883
+                                        206-752-7883
                                     </p>
                                 </div>
                             </a>
@@ -433,66 +405,7 @@
         });
 
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const statNumbers = document.querySelectorAll('.stat-number');
-            let animationStarted = false;
-            
-            function animateValue(element, start, end, duration) {
-                let startTimestamp = null;
-                const step = (timestamp) => {
-                    if (!startTimestamp) startTimestamp = timestamp;
-                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                    const value = Math.floor(progress * (end - start) + start);
-                    
-                    // For decimal values
-                    if (end % 1 !== 0) {
-                        element.textContent = progress * (end - start) + start;
-                        // Format to 1 decimal place
-                        element.textContent = parseFloat(element.textContent).toFixed(1);
-                    } else {
-                        element.textContent = value;
-                    }
-                    
-                    if (progress < 1) {
-                        window.requestAnimationFrame(step);
-                    }
-                };
-                window.requestAnimationFrame(step);
-            }
-            
-            function startCountAnimation() {
-                if (animationStarted) return;
-                
-                statNumbers.forEach(element => {
-                    const target = parseFloat(element.getAttribute('data-target'));
-                    animateValue(element, 0, target, 2000);
-                });
-                
-                animationStarted = true;
-            }
-            
-            function isElementInViewport(el) {
-                const rect = el.getBoundingClientRect();
-                return (
-                        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-                        rect.bottom >= 0
-                );
-            }
-            
-            function checkIfInView() {
-                const statsSection = document.querySelector('.stats-section');
-                if (isElementInViewport(statsSection)) {
-                    startCountAnimation();
-                    window.removeEventListener('scroll', checkIfInView);
-                }
-            }
-            
-            window.addEventListener('scroll', checkIfInView);
-            // Check on load in case the section is already visible
-            checkIfInView();
-        });
-    </script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const videoContainer = document.querySelector('.video-container');
