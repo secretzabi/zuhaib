@@ -1,7 +1,7 @@
 :root {
     --theme-color:#2F87E9;
     --primary-color:#2F87E9;
-    --base-color:#111029;
+    --base-color:#171A1C;
     accent-color: #2F87E9;
 
 }
@@ -16,10 +16,10 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font:14px "Poppins", sans-serif;
+    font:14px "IBM Plex Sans", sans-serif;
     margin: 0;
     padding: 0;
-    color: #111029;
+    color: #171A1C;
     line-height: 1.55;
     background-image: url(../img/bg.svg);
     background-repeat: repeat-y;
@@ -326,10 +326,9 @@ body{
     overflow: hidden;
     cursor: pointer;
     transition: .3s;
-    font-size: 16px;
-    font-weight: 600;
+    font: 600 16px "IBM Plex Sans", sans-serif;
     &:hover{
-        background-color: #111029;
+        background-color: #171A1C;
     }
     &.sm{
         padding-block: 12px;
@@ -346,7 +345,7 @@ body{
 .gray-bordered{
     border-color: #6B6B6B !important;
     &:hover{
-        color: #111029 !important;
+        color: #171A1C !important;
     }
 }
 .button-outline{
@@ -434,7 +433,7 @@ header.inner-page{
 }
 
 .navbar .nav-links a {
-    color: #111029;
+    color: #171A1C;
     text-decoration: none;
     font-size: 14px;
     display: flex;
@@ -570,7 +569,7 @@ li.dropdown{
         line-height: 1.2;
     }
     > div.mobile-banner-content{
-        flex: 0 0 58%;
+        flex: 0 0 54%;
     }
 }
 
@@ -673,9 +672,9 @@ hr{
     .package-item{
         &:hover{
             background-color: #fff !important;
-            color: #111029;
+            color: #171A1C;
             .color2{
-                color: #111029;
+                color: #171A1C;
             }
         }
         .call-button{
@@ -691,7 +690,7 @@ hr{
             }
             &:hover{
                 .call-button{
-                    background-color:#111029;
+                    background-color:#171A1C;
                 }
                 box-shadow: 5px 10px 30px 0px rgba(0, 123, 255, 0.50);
             }
@@ -707,7 +706,7 @@ hr{
             &:hover{
                 box-shadow: 5px 10px 30px 0px rgba(255, 104, 0, 0.50);
                 .call-button{
-                    background-color:#111029;
+                    background-color:#171A1C;
                 }
             }
         }
@@ -1752,7 +1751,7 @@ progress[value].success{
     }
     .banner-content {
         h1 {
-            font-size: 56px;
+            font-size: 44px;
         }
         >.text-center{
          display: none;
