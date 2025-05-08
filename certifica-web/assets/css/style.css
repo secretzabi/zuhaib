@@ -422,7 +422,7 @@ header.inner-page{
 .navbar .nav-links {
     list-style: none;
     display: flex;
-    gap: 16px;
+    gap: 24px;
 }
 
 .navbar .nav-links li {
