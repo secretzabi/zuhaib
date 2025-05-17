@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ABOUT Us::News & Magazine</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header>
+	<!-- Top Bar with Site Title -->
+	<div class="header-top">
+		<div class="container">
+			<div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
+				<div class="col-auto d-none d-lg-block">
+					<div class="header-links">
+						<ul>
+							<li>
+								<i class="fa-regular fa-calendar-days"></i>
+								<a href="#">9 May, 2025</a>
+							</li>
+							<li>
+								<a href="https://policies.google.com/privacy?hl=en-US">Privacy Policy</a>
+							</li>
+							<li>
+								<a href="https://termly.io/resources/templates/terms-and-conditions-template/">Terms &amp; Conditions</a>
+							</li>
+							<li>
+								<a class="theme-toggler" href="#">
+<!--                <span class="dark">-->
+<!--                  <i class="fas fa-moon"></i>Dark Mode -->
+<!--                </span>-->
+									<span class="light">
+                    <i class="fa-regular fa-sun"></i>
+										Light Mode
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-auto">
+					<div class="header-links">
+						<ul>
+							<li class="d-none d-sm-inline-block">
+								<i class="far fa-user"></i>
+								<a href="" aria-label="Login / register" data-bs-toggle="modal" data-bs-target="#loginRegister">Login / register</a>
+							</li>
+							<li>
+								<div class="social-links">
+									<a href="https://www.facebook.com">
+										<i class="fab fa-facebook-f"></i>
+									</a>
+									<a href="https://www.twitter.com">
+										<i class="fab fa-twitter"></i>
+									</a>
+									<a href="https://www.linkedin.com">
+										<i class="fab fa-linkedin-in"></i>
+									</a>
+									<a href="https://www.instagram.com">
+										<i class="fab fa-instagram"></i>
+									</a>
+									<a href="https://www.youtube.com">
+										<i class="fab fa-youtube"></i>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-middle">
+		<div class="container">
+			<div class="row justify-content-center justify-content-lg-between align-items-center">
+				<div class="col-auto d-none d-lg-block">
+					<div class="col-auto">
+						<div class="header-logo">
+							<a class="logo" href="index.html">
+								<img class="img-fluid light-img" src="assets/img/logo.svg" alt="Tnews" width="150" height="30" loading="lazy">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8 text-end">
+					<div class="header-ads">
+						<a href="" aria-label="google ads">
+							<img class="light-img img-fluid" src="assets/img/ads_banner_1.jpg" alt="Tnews" width="700" height="60" loading="lazy"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Main Navigation -->
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<a class="logo d-block d-lg-none" href="">
+				<img class="img-fluid light-img" src="assets/img/logo-white.svg" alt="Tnews" width="150" height="30" loading="lazy">
+			</a>
+			
+			<!-- Drawer toggle button (visible on mobile) -->
+	<button class="drawer-toggle" type="button" id="mobileMenuToggle">
+				<i class="fas fa-bars"></i>
+		</button>
+			
+			<!-- Navigation menu -->
+			<div class="navbar-collapse" id="navbarContent">
+				<button class="close-btn" id="closeDrawer">
+					<i class="fas fa-times"></i>
+				</button>
+				
+				<ul class="navbar-nav mb-2 mb-lg-0 w-100">
+					<div class="menu-logo">
+						<img class="img-fluid light-img" src="assets/img/logo.svg" alt="Tnews" width="150" height="30" loading="lazy">
+					</div>
+					<li class="nav-item">
+						<a class="nav-link " href="#">HOME</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">ABOUT US</a>
+					</li>
+					
+					<!-- Dropdown menu -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button">
+							CATEGORY
+							<i class="fa-solid fa-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+							<li><a class="dropdown-item" href="#">Submenu 1</a></li>
+							<li><a class="dropdown-item" href="#">Submenu 2</a></li>
+							<li><a class="dropdown-item" href="#">Submenu 3</a></li>
+						</ul>
+					</li>
+					
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button">
+							PAGES
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+							<li><a class="dropdown-item" href="#">Page 1</a></li>
+							<li><a class="dropdown-item" href="#">Page 2</a></li>
+							<li><a class="dropdown-item" href="#">Page 3</a></li>
+							<li><a class="dropdown-item" href="#">Page 4</a></li>
+						</ul>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="#">BLOG</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">CONTACT</a>
+					</li>
+					<li class="nav-item d-none d-lg-block ms-auto">
+					</li>
+					<!-- Menu icon inside navigation (visible on desktop) -->
+					<li class="nav-item  ms-auto d-flex align-items-center d-none d-lg-flex">
+						<a href="" class="nav-link me-4 search-link" id="searchLink">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</a>
+						<a href="" class="nav-link me-4 drawer-trigger" data-drawer="cartDrawer">
+							<i class="fa-solid fa-cart-shopping"></i>
+						</a>
+						<a class="nav-link drawer-trigger news-drawer" href="#"   data-drawer="settingsDrawer">
+							<i class="fa-solid fa-bars"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- Search popup -->
+	<div class="search-popup" id="searchPopup">
+		<span class="search-close-btn" id="closeSearch"><i class="fas fa-times"></i></span>
+		<div class="search-input-container">
+			<input type="text" placeholder="What are you looking for?" id="searchInput">
+			<button class="search-btn"><i class="fas fa-search"></i></button>
+		</div>
+		
+		<!-- Search results container (initially empty) -->
+		<div class="search-results" id="searchResults">
+			<!-- Results will be populated here -->
+		</div>
+	</div>
+	<!-- Settings Drawer Template -->
+	<template id="settingsDrawerTemplate">
+		<div class="custom-drawer">
+			<button class="drawer-close-btn"><i class="fas fa-times"></i></button>
+			<h3>Settings</h3>
+			<ul class="list-group mt-3">
+				<li class="list-group-item">Account Settings</li>
+				<li class="list-group-item">Notification Preferences</li>
+				<li class="list-group-item">Privacy Controls</li>
+			</ul>
+		</div>
+	</template>
+	<!-- cartDrawer Template -->
+	<template id="cartDrawerTemplate">
+		<div class="custom-drawer">
+			<button class="drawer-close-btn"><i class="fas fa-times"></i></button>
+			<div class="fw-bold fs-22 title-border mb-4 title-color">
+				Shopping cart
+			</div>
+			<div class="">
+				<div class="d-flex gap-2 mb-3 fs-18">
+					<span class="fw-bold title-color">Subtotal</span>
+					<span>
+						$120.00
+					</span>
+				</div>
+				<div class="d-flex gap-3">
+					<a href="" class="custom-button" aria-label="View Cart">
+						View Cart
+					</a>
+					<a href="" class="custom-button" aria-label="View Cart">
+						Checkout
+					</a>
+				</div>
+			</div>
+		</div>
+	</template>
+	<!-- Backdrop for drawers -->
+	<div class="drawer-backdrop"></div>
+</header>
+<main>
+	<div class="breadcrumb-area">
+		<div class="container">
+			<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">About</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-12">
+				<div class="img-box1">
+					<div class="img1">
+						<img loading="lazy" width="358" height="468" src="assets/img/about_1_1.jpg" class="img-fluid" alt="About Photo"/>
+					</div>
+					<div class="img2">
+						<img loading="lazy" width="240" height="468" src="assets/img/about_1_2.jpg" class="img-fluid" alt="About Photo"/>
+					</div>
+					<button class="icon-btn popup-video"  data-bs-toggle="modal" data-bs-target="#videoModal">
+						<i class="fas fa-play"></i>
+					</button>
+			</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-12">
+				<div class="theme-color fw-600 text-uppercase my-3">
+					About Us
+				</div>
+				<div class="title-color fs-1 fw-bold mb-4 secondary-font">Over 25 years, we have been delivering real news</div>
+				<p class="lh-lg mb-4 fs-18">
+					Suggests that the entity or organization has a longstanding history of providing trustworthy and reliable news coverage. The phrase "Over 25 years" indicates a long-established 2presence in the industry, which can instill confidence in the audience.
+				</p>
+				<div class="checklist mt-n2 mb-5">
+					<ul style="list-style: none; padding-left: 0;" class="mb-0">
+						<li class="mb-2 title-color fs-18 fw-600"><i class="far fa-check-circle theme-color me-2"></i> User experience</li>
+						<li  class="mb-2 title-color fs-18 fw-600"><i class="far fa-check-circle theme-color me-2"></i> Strategy and Art Direction</li>
+						<li  class="mb-2 title-color fs-18 fw-600" ><i class="far fa-check-circle theme-color me-2"></i> Unique layouts Blocks</li>
+					</ul>
+				</div>
+				<a href="" class="custom-button">Learn More <i class="fa-solid fa-arrow-right ms-2"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="consulting-area">
+		<div class="container">
+			<div class="d-flex flex-wrap justify-content-between align-items-center">
+				<div>
+					<div class="theme-color fw-600 text-uppercase mb-3">
+						Get consulting
+					</div>
+					<div class="text-white fs-1 fw-bold">
+						Experience excellence our <br class="d-md-block d-none"> magazine's
+				</div>
+				</div>
+				<div>
+					<a href="/contact.html" class="custom-button">Contact us <i class="fa-solid fa-arrow-right ms-2"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="counter-area text-center">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-6">
+					<div class="counter-box">
+						<div class="counter-title">
+							25 <span>+</span>
+						</div>
+						<div class="counter-text">
+							Years Of Experience
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-6">
+					<div class="counter-box">
+						<div class="counter-title">
+							86 <span>+</span>
+						</div>
+						<div class="counter-text">
+							Get Winning Award
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-6">
+					<div class="counter-box">
+						<div class="counter-title">
+							149 <span>+</span>
+						</div>
+						<div class="counter-text">
+							Experience News Writer
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-6">
+					<div class="counter-box">
+						<div class="counter-title">
+							15 <span>+</span>
+						</div>
+						<div class="counter-text">
+							Language Translator
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="text-center mb-5">
+			<div class="theme-color fw-600 text-uppercase mb-3">
+				Company History
+			</div>
+			<div class="title-color fs-1 fw-bold mb-4 secondary-font">
+				Great Company History
+			</div>
+			
+		</div>
+		<div class="story-box-area background-image" style="background-image: url(https://themeholy.com/wordpress/tnews/wp-content/uploads/2023/08/story_bg_1.svg);">
+			<div class="story-box-wrap">
+				<div class="story-box">
+					<div class="box-img">
+						<img decoding="async" src="https://themeholy.com/wordpress/tnews/wp-content/uploads/2023/08/story_1.jpg" alt="story_1">
+					</div>
+					<div class="box-content">
+						<h3 class="box-title">We Start Company</h3>
+						<p class="box-text">Forward-thinking and venture born from a vision to Create positive</p>
+					</div>
+				</div>
+				<div class="story-year">1990</div>
+			</div>
+			<div class="story-box-wrap">
+				<div class="story-box">
+					<div class="box-img">
+						<img decoding="async" src="https://themeholy.com/wordpress/tnews/wp-content/uploads/2023/08/story_2.jpg" alt="story_2">
+					</div>
+					<div class="box-content">
+						<h3 class="box-title">Opening Office</h3>
+						<p class="box-text">Forward-thinking and venture born from a vision to Create positive</p>
+					</div>
+				</div>
+				<div class="story-year">1994</div>
+			</div>
+			<div class="story-box-wrap">
+				<div class="story-box">
+					<div class="box-img">
+						<img decoding="async" src="https://themeholy.com/wordpress/tnews/wp-content/uploads/2023/08/story_3.jpg" alt="story_3">
+					</div>
+					<div class="box-content">
+						<h3 class="box-title">Improve yourself</h3>
+						<p class="box-text">Forward-thinking and venture born from a vision to Create positive</p>
+					</div>
+				</div>
+				<div class="story-year">2000</div>
+			</div>
+			<div class="story-box-wrap">
+				<div class="story-box">
+					<div class="box-img">
+						<img decoding="async" src="https://themeholy.com/wordpress/tnews/wp-content/uploads/2023/08/story_4.jpg" alt="story_4">
+					</div>
+					<div class="box-content">
+						<h3 class="box-title">Winning Award</h3>
+						<p class="box-text">Forward-thinking and venture born from a vision to Create positive</p>
+					</div>
+				</div>
+				<div class="story-year">2010</div>
+			</div>
+			<div class="story-box-wrap">
+				<div class="story-year">End</div>
+			</div>
+		</div>
+	</div>
+	
+</main>
+
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 mb-4 mb-md-0">
+				<h5 class="footer-title">
+					<img class="img-fluid light-img" src="assets/img/logo-footer.svg" alt="Tnews" width="142" height="36" loading="lazy">
+				</h5>
+				<p>Magazines cover a wide subjects, including not limited to fashion, lifestyle, health, politics, business, Entertainment, sports, science,</p>
+				<div class="th-social style-black mt-4">
+					<a href="https://www.facebook.com">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+					<a href="https://www.twitter.com">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a href="https://www.linkedin.com">
+						<i class="fab fa-linkedin-in"></i>
+					</a>
+					<a href="https://www.instagram.com">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="https://www.youtube.com">
+						<i class="fab fa-youtube"></i>
+					</a>
+				</div>
+			</div>
+			
+			<div class="col-md-2 mb-4 mb-md-0">
+				<h5 class="footer-title">Categories</h5>
+				<ul class="category-list">
+					<li>
+						<a href="" class="text-decoration-none">Action</a>
+					</li>
+					<li><a href="" class="text-decoration-none">Adventure</a></li>
+					<li><a href="" class="text-decoration-none">Animals</a></li>
+					<li><a href="" class="text-decoration-none">Audio</a></li>
+					<li><a href="" class="text-decoration-none">Basketball</a></li>
+					<li><a href="" class="text-decoration-none">Bike Racing</a></li>
+				</ul>
+			</div>
+			
+			<div class="col-md-3 mb-4 mb-md-0">
+				<h5 class="footer-title">Recent Posts</h5>
+				<div class="mb-3">
+					<div class="d-flex gap-3 align-items-start">
+						<img src="assets/img/blog-single-31-80x80.jpg" width="80" height="80" class="img-fluid" alt="image description" loading="lazy">
+						<div>
+							<div class="fs-16 fw-bold ">
+								<a href="" class="">Travel Where memories are</a>
+							</div>
+							<div class="blog-meta">
+								<a href=""><i class="fa-regular fa-calendar-days"></i>12 Mar, 2023</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="d-flex gap-3 align-items-start">
+						<img src="assets/img/blog-single-31-80x80.jpg" width="80" height="80" class="img-fluid" alt="image description" loading="lazy">
+						<div>
+							<div class="fs-16 fw-bold ">
+								<a href="" class="">Travel Where memories are</a>
+							</div>
+							<div class="blog-meta">
+								<a href=""><i class="fa-regular fa-calendar-days"></i>12 Mar, 2023</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<h5 class="footer-title">Popular Tags</h5>
+				<div class="tags">
+					<span class="tag"><a href=""> Drama</a></span>
+					<span class="tag"><a href=""> Film</a></span>
+					<span class="tag"><a href="">Fashion</a></span>
+					<span class="tag"><a href="">Gadget</a></span>
+					<span class="tag"><a href="">Gadget Item</a></span>
+					<span class="tag"><a href="">Health</a></span>
+					<span class="tag"><a href="">Movie</a></span>
+					<span class="tag"><a href="">MS</a></span>
+					<span class="tag"><a href="">Sports</a></span>
+					<span class="tag"><a href="">Style</a></span>
+					<span class="tag"><a href="">Tech</a></span>
+					<span class="tag"><a href="">Tour</a></span>
+					<span class="tag"><a href="">Travel</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<div class="container">
+			<div class="d-flex flex-wrap justify-content-between align-items-center">
+				<div>Copyright © 2023 Thews. All Rights Reserved.</div>
+				<div class="footer-links">
+					<a href="#">Home</a>
+					<a href="#">About Us</a>
+					<a href="#">Team</a>
+					<a href="#">Contact Us</a>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+</footer>
+
+
+<!--login Modal -->
+<div class="modal fade " id="loginRegister" tabindex="-1" aria-labelledby="loginRegister" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="exampleModalLabel">Login/Register</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="login-container p-4">
+					<!-- Social Login Buttons -->
+					<div class="mb-4">
+						<a href="/auth/facebook" class="btn social-btn facebook-btn mb-3 d-block">
+							<i class="fab fa-facebook-f"></i>
+							Continue with Facebook
+						</a>
+						<a href="/auth/google" class="btn social-btn google-btn">
+							<i class="fab fa-google"></i>
+							Continue with Google
+						</a>
+					</div>
+					
+					<!-- Divider -->
+					<div class="divider">
+						<span class="divider-text">OR</span>
+					</div>
+					
+					<!-- Email Login Form -->
+					<form action="/login" method="POST">
+						<div class="mb-3">
+							<input type="email" class="form-control form-control-lg rounded-2" id="email" name="email" placeholder="Enter your email" required>
+						</div>
+						<div class="mb-3">
+							<input type="password" class="form-control form-control-lg rounded-2" id="password" name="password" placeholder="Enter your password" required>
+						</div>
+						<div class="d-grid mb-3">
+							<button type="submit" class="custom-button fs-18">Log In</button>
+						</div>
+						<div class="text-center">
+							<a href="#" class="text-decoration-underline">Forgot password?</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel1"></h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body p-0">
+				<div class="ratio ratio-16x9">
+					<iframe src="//www.youtube.com/embed/KpllAjxOIUU?enablejsapi=1&autoplay=1" type="text/html" id="staticPlayer"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Rest of the content would go here -->
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/drawer.js"></script>
+<script src="assets/js/script.js"></script>
+<script>
+
+</script>
+</body>
+</html>
