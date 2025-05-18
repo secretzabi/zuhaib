@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="50942ef6-b589-498f-9705-0180791c6d04" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/certified-network.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/certified-web-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depricatedpage2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/glossary-item.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/glossary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/improve-accessibility.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/improve-legal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/improve-security.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/improve-seo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/improve-usability.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pricing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seo-tools.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page2.html" beforeDir="false" afterPath="$PROJECT_DIR$/page2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page3.html" beforeDir="false" afterPath="$PROJECT_DIR$/page3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page4.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page5.html" beforeDir="false" afterPath="$PROJECT_DIR$/page5.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2vq777z7TKqgqTkVEJ6AKgiGMjE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.certified-network.html.executor": "Run",
+    "JavaScript Debug.certified-web-report.html.executor": "Run",
+    "JavaScript Debug.glossary-item.html.executor": "Run",
+    "JavaScript Debug.glossary.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.page2.html.executor": "Run",
+    "JavaScript Debug.page3.html.executor": "Run",
+    "JavaScript Debug.page5.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/zuhaib/other-projects/zuhaib/zuhaib/certifica-web/daios",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.page5.html">
+    <configuration name="certified-network.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/certifica-web/certified-network.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="certified-web-report.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/certifica-web/certified-web-report.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="glossary-item.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/certifica-web/glossary-item.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="glossary.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/certifica-web/glossary.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="page5.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/certifica-web/page5.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.page5.html" />
+        <item itemvalue="JavaScript Debug.glossary.html" />
+        <item itemvalue="JavaScript Debug.certified-network.html" />
+        <item itemvalue="JavaScript Debug.certified-web-report.html" />
+        <item itemvalue="JavaScript Debug.glossary-item.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-WS-243.24978.60" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="50942ef6-b589-498f-9705-0180791c6d04" name="Changes" comment="" />
+      <created>1744860579861</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744860579861</updated>
+      <workItem from="1744860580964" duration="5131000" />
+      <workItem from="1744881314588" duration="6000" />
+      <workItem from="1744946214881" duration="6879000" />
+      <workItem from="1745125541776" duration="10545000" />
+      <workItem from="1745222677286" duration="609000" />
+      <workItem from="1745292076231" duration="5772000" />
+      <workItem from="1745376343086" duration="9785000" />
+      <workItem from="1745428621033" duration="2008000" />
+      <workItem from="1746676575991" duration="4472000" />
+      <workItem from="1746702969784" duration="190000" />
+      <workItem from="1746768610859" duration="26000" />
+      <workItem from="1747493977268" duration="34919000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
