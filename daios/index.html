@@ -7,6 +7,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
 	<link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
@@ -314,7 +315,78 @@
 				</div>
 			</div>
 		</div>
+	</div>
+<!--Join Our Community-->
+	<div class="container mb-80 join-our-community-container">
 		
+		<div class="join-our-community">
+			<div>
+				<div class="join-our-community-item">
+					<img src="assets/img/Rectangle2.png" alt="MindScript Logo" class="">
+					<div class="join-our-community-content">
+					<h6 class="fs-20 mb-8">Collaborate</h6>
+					<div class="">
+						Build, refine, and evolved community tasks across industries.
+					</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="join-our-community-main-item">
+					<div class="fs-32 fw-400 theme-color mb-8">Join Our Community</div>
+					<div class="fs-18 secondary-color mb-16">
+						Shape the future of AI-powered<br> tasks alongside innovators<br> worldwide:
+					</div>
+					<div class="d-flex gap-x-16 mb-24 social-icons">
+						<a href="#" >
+							<i class="fa-brands fa-discord"></i>
+						</a>
+						<a href="#" >
+							<i class="fa-brands fa-telegram"></i>
+						</a>
+						<a href="#" >
+							<i class="fa-brands fa-x-twitter"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="join-our-community-item">
+					<img src="assets/img/Rectangle3.png" alt="MindScript Logo" class="">
+					<div class="join-our-community-content">
+						<h6 class="fs-20 mb-8">Learn</h6>
+						<div class="">
+							Access tutorials, best practices, and peer-drien insights.
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div>
+				<div class="join-our-community-item">
+					<img src="assets/img/Rectangle2.png" alt="MindScript Logo" class="">
+					<div class="join-our-community-content">
+						<h6 class="fs-20 mb-8 ">Shape</h6>
+						<div class=" ">
+							Rate tasks, give feedback, and guid our platform's roadmap.
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="join-our-community-item">
+					<img src="assets/img/Rectangle4.png" alt="MindScript Logo" class="">
+					<div class="join-our-community-content">
+						<h6 class="fs-20 mb-8">Collaborate</h6>
+						<div class="">
+							Build, refine, and evolved community tasks across industries.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
 	</div>
 <!--	-->
 	<div class="container mb-80">
@@ -348,12 +420,12 @@
 </main>
 <footer class="footer">
 	<div  class="container">
-		<div class="d-flex justify-between align-center mb-24">
+		<div class="d-flex justify-between align-center">
 			<div class="nav-brand">
 				<!-- Light theme logo (visible by default) -->
-				<img src="assets/img/logo-light.png" alt="daios" class="logo logo-light" loading="lazy" width="114" height="44">
+				<img  src="assets/img/logo-dark.png" alt="daios" class="logo logo-light" loading="lazy" width="114" height="44">
 				<!-- Dark theme logo (hidden by default) -->
-				<img src="assets/img/logo-dark.png" alt="daios" class="logo logo-dark" loading="lazy" width="114" height="44">
+				<img src="assets/img/logo-light.png"  alt="daios" class="logo logo-dark" loading="lazy" width="114" height="44">
 			</div>
 			<div class="copyright">
 				Copyright © 2025 Daios    |    All rights reserved.
@@ -371,6 +443,46 @@
         fade: true,
 		    arrows: false,
         cssEase: 'linear'
+    });
+    $('.join-our-community').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        centerMode: true,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+		                arrows: false,
+		                dots: true,
+		                centerMode: false,
+                    variableWidth: false
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
     });
 </script>
 <script>

@@ -7,6 +7,8 @@
     --secondary-color: rgba(0, 0, 0, 0.65);
     --teritary-color: rgba(0, 0, 0, 0.45);
     --pico-border-color: var( --border-color);
+    --bg-light:#F5F5F5;
+    --bg-white:#fff;
 }
 
 body{
@@ -32,6 +34,19 @@ body{
 }
 [data-theme="dark"]{
     --pico-background-color: rgb(31, 31, 31);
+    --border-color: #1F1F1F;
+    --bg-light:#141414;
+    --bg-white:#1f1f1f;
+    .icon-container-variant2{
+        background-color: #2A1215;
+    }
+    .slick-dots {
+        & li {
+            button{
+                background-color: #424242;
+            }
+        }
+    }
     input:is([type=submit],[type=button],[type=reset],[type=checkbox],[type=radio],[type=file]){
         --pico-form-element-focus-color:#A61D24
     }
@@ -72,6 +87,23 @@ body{
             &:last-child{
                 background-color: #24163A;
             }
+        }
+    }
+    footer{
+        background-color: #fff;
+        color:#2A1215;
+    }
+    /*.bg-light-gray{*/
+    /*    background-color: #141414;*/
+    /*}*/
+    .bg-white{
+        background-color: #1f1f1f;
+    }
+    .brands{
+        overflow: hidden;
+        img{
+            filter: drop-shadow(0px 1000px 0 gray);
+            transform: translateY(-1000px);
         }
     }
 }
@@ -134,6 +166,9 @@ header{
 .fs-20{
     font-size: 20px;
 }
+.fs-32{
+    font-size: 32px;
+}
 .text-center{
     text-align: center;
 }
@@ -160,6 +195,9 @@ button, input[type="submit"], .btn-primary{
 .theme-color{
     color: var(--theme-color);
 }
+.text-white{
+    color:var(--bg-white);
+}
 .secondary-color{
     color: var(--secondary-color);
 }
@@ -167,13 +205,13 @@ button, input[type="submit"], .btn-primary{
     color: var(--teritary-color);
 }
 .bg-light-gray{
-    background-color: #F5F5F5;
+    background-color: var(--bg-light);
 }
 .border-1{
     border: 1px solid var(--border-color);
 }
 .bg-white{
-    background-color: #fff;
+    background-color: var(--bg-white);
 }
 .fw-500{
     font-weight: 500;
@@ -315,8 +353,91 @@ button, input[type="submit"], .btn-primary{
 footer{
     background-color: #000;
     color:#fff;
+    margin-top: 60px;
+}
+.join-our-community{
+    .join-our-community-main-item{
+        margin-right: 1rem;
+    }
+    .join-our-community-item{
+        position: relative;
+        margin-right: 1rem;
+        .join-our-community-content{
+            padding: 20px 20px;
+            backdrop-filter: blur(6px);
+            background: rgba(255, 255, 255, 0.16);
+            /*color:var(--bg-white);*/
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #fff;
+            h6{
+                color: #fff;
+            }
+            div{
+                color: #fff;
+            }
+        }
+    }
+}
+.social-icons{
+    a{
+        border: 1px solid #FFCCC7;
+        width: 44px;
+        height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--theme-color);
+        text-decoration: none;
+        &:hover{
+            background-color: var(--theme-color);
+            color: var(--bg-white);
+        }
+    }
+}
+.slick-slider{
+    .slick-arrow{
+        border-radius: 50%;
+        border:1px solid var(--theme-color);
+        background-color: var(--bg-white);
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--theme-color);
+        text-decoration: none;
+        font-size: 0;
+        padding: 0;
+        z-index: 1;
+        /*&:hover{*/
+        /*    background-color: var(--theme-color);*/
+        /*}*/
+        &:before{
+            content: url("../img/arrow-right.svg");
+            width: 24px;
+            height: 24px;
+        }
+        &.slick-prev{
+            transform: rotate(180deg);
+        }
+    }
 }
 @media (max-width: 768px){
+    .join-our-community{
+        .slick-dots{
+            bottom: -50px;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 1/1.2;
+        }
+        br{
+            display: block;
+        }
+    }
     .mb-60{
         margin-bottom: 30px;
     }
