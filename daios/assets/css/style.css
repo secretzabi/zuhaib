@@ -9,13 +9,28 @@
     --pico-border-color: var( --border-color);
     --bg-light:#F5F5F5;
     --bg-white:#fff;
+    --pico-background-color: #fff;
+    --sidebar-width: 250px;
 }
 
 body{
     font-family: "Inter", sans-serif;
     font-size: 16px;
 }
-
+[type=checkbox], [type=radio], [type=range], progress{
+    accent-color: var(--theme-color);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+input:not([type=checkbox],[type=radio],[type=range],[type=file]), select, textarea{
+    padding: 8px 16px;
+    font-size: 14px;
+}
+input:not([type=checkbox],[type=radio],[type=range],[type=file]), select {
+    height: 40px;
+}
 .logo-dark {
     display: none;
 }
@@ -37,6 +52,19 @@ body{
     --border-color: #1F1F1F;
     --bg-light:#141414;
     --bg-white:#1f1f1f;
+    --theme-color: #A61D24;
+    --pico-form-element-background-color: --bg-light;
+    --pico-background-color:--theme-color;
+    [type=checkbox], [type=radio], [type=range], progress{
+        accent-color: var(--theme-color);
+    }
+    input[type=range],[type=file]), select, textarea{
+        background-color: var(--pico-background-color);
+    }
+    button, input[type="submit"], .btn-primary{
+        background-color: var(--theme-color);
+        border-color: var(--theme-color);
+    }
     img.theme-dark {
         display: inline-block;
     }
@@ -55,6 +83,7 @@ body{
     }
     .theme-switch{
         border-color: rgba(255, 255, 255, 0.12);
+        background-color: var(--border-color);
     }
     .exclusive-label{
         background-color: #2A1215;
@@ -65,9 +94,9 @@ body{
     .teritary-color{
         color: rgba(255, 255, 255, 0.45);
     }
-    input, select, textarea{
-        background-color: #fff;
-    }
+    /*input, select, textarea{*/
+    /*    background-color: #fff;*/
+    /*}*/
     .icon-container-variant1{
         background-color: #2A1215;
         svg{
@@ -163,6 +192,9 @@ header{
 .align-center{
     align-items: center;
 }
+.fs-12{
+    font-size: 12px;
+}
 .fs-16{
     font-size: 16px;
 }
@@ -187,6 +219,7 @@ button, input[type="submit"], .btn-primary{
     display: inline-block;
     padding: 8px 16px;
     text-decoration: none;
+    font-size: 16px;
 }
 .outline{
     border-color: var(--theme-color);
@@ -207,6 +240,9 @@ button, input[type="submit"], .btn-primary{
 }
 .text-white{
     color:var(--bg-white);
+}
+.text-decoration-underline{
+    text-decoration: underline;
 }
 .secondary-color{
     color: var(--secondary-color);
@@ -457,8 +493,9 @@ body{
 }
 .login-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 1fr;
     min-height: 100dvh;
+    font-size: 14px;
     .theme-switch{
         position: absolute;
         top: 16px;
@@ -479,23 +516,21 @@ body{
     }
 }
 
-.login-image img {
-    max-width: 100%;
-    height: auto;
-}
-
 .login-form {
-    padding: 2rem;
+    padding: 2rem 0rem 2rem 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 460px;
+    input:not([type=checkbox]){
+        margin-top: 8px;
+    }
 }
 
 .login-header {
-    text-align: center;
-    margin-bottom: 2rem;
+    h1{
+        color: var(--theme-color);
+    }
 }
 
 .login-options {
@@ -503,16 +538,72 @@ body{
     justify-content: space-between;
     margin-bottom: 1rem;
 }
+.side-menu-button{
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius);
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--theme-color);
+    text-decoration: none;
+    font-size: 14px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 12;
+        cursor: pointer;
+}
+.admin-container{
+    display: flex;
+    #page-sidebar {
+        position: fixed;
+        /*box-shadow: var(--pico-box-shadow);--pico-box-shadow*/
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        width: var(--sidebar-width);
+        background: var(--bg-light);
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+        padding: 1rem;
+        z-index: 1;
+    }
+    #admin-content {
+        transition: margin-left 0.3s ease; /* Add transition for smooth content movement */
+        margin-left: var(--sidebar-width);
+    }
+}
 
+.sidebar-closed {
+    .admin-container {
+        #page-sidebar {
+            transform: translateX(calc(-1 * var(--sidebar-width)));
+        }
 
+        #admin-content {
+            margin-left: 0;
+        }
+    }
 
+}
 @media (max-width: 768px){
     .login-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+    .login-form{
+        padding-inline: 2rem;
     }
 
     .login-image {
-        display: none;
+        height: 24dvh;
+        img{
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
     }
     .join-our-community{
         .slick-dots{

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login::Daios</title>
+	<title>Signup::Daios</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -33,34 +33,20 @@
 		
 		<!-- Right side with form -->
 		<div class="login-form">
-			<div class="login-header  mb-32">
-				<h1 class="fw-500 ">Log in</h1>
+			<div class="login-header mb-24">
+				<h1 class="fw-500 ">Sign up </h1>
+				<p class="mb-32">Daios is currently invite-only.</p>
+				<p class="mb-8">Join our waitlist to be among the first to experience it. Enjoy exclusive perks and stay updated on the latest feature releases!</p>
 			</div>
-			
-			<form>
-				<label for="email">
-					Email Address
-					<input type="email" id="email" name="email" placeholder="trans@domain.com" required>
-				</label>
-				
-				<label for="password">
-					Password
-					<input type="password" id="password" name="password" placeholder="Password" required>
-				</label>
-				
-				<div class="login-options">
-					<label>
-						<input type="checkbox" id="remember" name="remember">
-						Remember me
-					</label>
-					<a href="/forgot-password.html" aria-label="Forgot password" class="theme-color">Forgot Password</a>
-				</div>
-				
-				<button type="submit" class="btn-primary">Log in</button>
+			<form class="join-waitlist-form">
+				<fieldset role="group">
+					<input name="email" type="email" placeholder="Name@domain.com" autocomplete="email">
+					<input type="submit" class="fs-16" value="Join Waitlist">
+				</fieldset>
 			</form>
 			
 			<div>
-				<p>Do you have an account ? <a href="/signup.html" class="theme-color"> Sign up </a></p>
+				<p>Already have an account? <a href="/login.html" class="theme-color"> Log in </a></p>
 			</div>
 		</div>
 	</div>
