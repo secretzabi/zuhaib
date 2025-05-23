@@ -1,0 +1,584 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create Actions :: Daios</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!--Header-->
+<div class="admin-container">
+	<aside id="page-sidebar">
+		<div class="nav-brand">
+			<!-- Light theme logo (visible by default) -->
+			<img src="assets/img/logo-light.png" alt="daios" class="logo logo-light" loading="lazy" width="114" height="44">
+			<!-- Dark theme logo (hidden by default) -->
+			<img src="assets/img/logo-dark.png" alt="daios" class="logo logo-dark" loading="lazy" width="114" height="44">
+		</div>
+			<p>Users</p>
+		<nav>
+			<ul role="listbox">
+				<li>
+					<a href="/search" >
+							<i class="fa-solid fa-gauge icon" aria-hidden="true"></i>
+						Actions
+					</a>
+				</li>
+				<li>
+					<a href="/actions" class="active">
+							<i  class="fa-solid fa-plus" aria-hidden="true"></i> New action
+					</a>
+				</li>
+				<li>
+					<a href="/actions">
+						<i class="fa-solid fa-laptop-code"></i> API registration
+					</a>
+				</li>
+				<li>
+					<a href="/actions">
+						<i class="fa-solid fa-arrow-right-arrow-left icon"></i> Transactions
+					</a>
+				</li>
+				
+			</ul>
+		</nav>
+			<p>System</p>
+		<nav>
+			<ul role="listbox">
+				<li>
+					<a href="/settings">
+							<i class="fa-solid fa-gear icon" aria-hidden="true"></i> Settings
+					</a>
+				</li>
+				<li>
+					<a href="/user">
+							<i class="fa-solid fa-user icon" aria-hidden="true"></i> Profile
+					</a>
+				</li>
+				<li>
+					<a href="/logout">
+							<i class="fa-solid fa-power-off icon" aria-hidden="true"></i> Logout
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+	<div id="admin-content">
+		<header class="">
+				<nav>
+					<ul>
+						<li>
+							<a id="menuButton" class="side-menu-button" aria-label="Open side menu">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M6.80026 9.99984C6.80031 10.212 6.88462 10.4154 7.03466 10.5654L11.8347 15.3654C11.9855 15.5112 12.1876 15.5918 12.3974 15.59C12.6071 15.5882 12.8078 15.504 12.9561 15.3557C13.1044 15.2074 13.1886 15.0067 13.1904 14.797C13.1922 14.5872 13.1116 14.3851 12.9659 14.2342L8.73146 9.99984L12.9659 5.76544C13.1116 5.61456 13.1922 5.41247 13.1904 5.20272C13.1886 4.99296 13.1044 4.79231 12.9561 4.64398C12.8078 4.49566 12.6071 4.41152 12.3974 4.4097C12.1876 4.40788 11.9855 4.48851 11.8347 4.63424L7.03466 9.43424C6.88462 9.58423 6.80031 9.78768 6.80026 9.99984Z" fill="#F5222D"/>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<h1 class="title">
+								Create Actions
+							</h1>
+						</li>
+					</ul>
+					<ul>
+						
+						<li>
+							<details class="dropdown">
+								<summary role="button">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+										<g clip-path="url(#clip0_140_1936)">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M8.78907 0.0591971C6.95118 0.286267 5.18673 1.03431 3.71095 2.21209C3.28509 2.55197 2.55192 3.28513 2.21204 3.71099C1.00032 5.22931 0.245908 7.05088 0.0408691 8.95361C-0.0116699 9.44123 -0.0116699 10.5589 0.0408691 11.0465C0.245908 12.9492 1.00032 14.7708 2.21204 16.2891C2.55192 16.715 3.28509 17.4481 3.71095 17.788C5.22927 18.9997 7.05083 19.7542 8.95356 19.9592C9.44118 20.0117 10.5588 20.0117 11.0465 19.9592C12.9492 19.7542 14.7708 18.9997 16.2891 17.788C16.7149 17.4481 17.4481 16.715 17.788 16.2891C18.3906 15.5341 18.96 14.5625 19.2945 13.7189C19.6208 12.896 19.8872 11.8387 19.946 11.1341C19.9605 10.9602 19.9874 10.8087 20.0057 10.7973C20.0241 10.786 20.0391 10.4076 20.0391 9.95638C20.0391 9.50521 20.024 9.14541 20.0055 9.15681C19.9871 9.16818 19.9602 9.03627 19.9458 8.86365C19.8597 7.83127 19.4431 6.47201 18.8814 5.39068C18.4025 4.46885 17.8199 3.67584 17.072 2.92803C15.4427 1.29869 13.3316 0.287166 11.0465 0.0409159C10.5394 -0.0136935 9.29786 -0.00365442 8.78907 0.0591971ZM9.41407 1.21345C8.00294 1.30595 6.67571 1.72521 5.43556 2.47029C4.3047 3.14974 3.1497 4.30474 2.47024 5.4356C1.61267 6.86299 1.20435 8.33537 1.20435 10.0001C1.20435 12.3956 2.08388 14.5136 3.78517 16.2149C5.48646 17.9162 7.60446 18.7957 10 18.7957C12.3956 18.7957 14.5136 17.9162 16.2149 16.2149C17.9161 14.5136 18.7957 12.3956 18.7957 10.0001C18.7957 8.33537 18.3874 6.86299 17.5298 5.4356C16.8503 4.30474 15.6953 3.14974 14.5645 2.47029C12.9981 1.52924 11.2193 1.09513 9.41407 1.21345ZM11.6572 3.16072C11.6125 3.17994 11.5151 3.25447 11.4406 3.32638C11.0359 3.71689 4.53638 10.851 4.45985 10.9887C4.30282 11.2713 4.4106 11.6292 4.70036 11.7878C4.81118 11.8484 4.99388 11.8568 6.43556 11.8673C7.84325 11.8776 8.04688 11.8865 8.04688 11.9382C8.04688 11.9707 7.93138 12.9147 7.79024 14.0358C7.6272 15.3307 7.53896 16.1657 7.54837 16.3248C7.56216 16.5592 7.57282 16.5838 7.71306 16.705C7.97892 16.9348 8.28724 16.9288 8.54126 16.6888C8.91743 16.3334 15.4587 9.15803 15.5402 9.01138C15.6972 8.72885 15.5894 8.37088 15.2997 8.21236C15.1888 8.15174 15.0061 8.14334 13.5645 8.13283C12.1568 8.12256 11.9531 8.11357 11.9531 8.06189C11.9531 8.02939 12.0674 7.09099 12.207 5.97662C12.3467 4.86224 12.4609 3.86256 12.4609 3.75513C12.4609 3.49435 12.415 3.38791 12.2469 3.2597C12.0959 3.14451 11.8072 3.09607 11.6572 3.16072ZM8.69208 8.09564L6.35575 10.6446L7.66212 10.6641C8.83532 10.6817 8.97942 10.6908 9.07595 10.7541C9.22989 10.8551 9.33571 11.0494 9.3354 11.2305C9.33524 11.3165 9.24892 12.0723 9.14353 12.9102C9.03814 13.7481 8.95634 14.4381 8.96177 14.4435C8.96716 14.449 10.0229 13.3064 11.3079 11.9045L13.6443 9.35553L12.3379 9.33599C11.1647 9.31845 11.0206 9.30928 10.9241 9.24599C10.7701 9.14502 10.6643 8.95076 10.6646 8.76959C10.6648 8.68365 10.7511 7.92779 10.8565 7.0899C10.9619 6.25201 11.0437 5.56201 11.0383 5.55658C11.0329 5.55115 9.97708 6.69373 8.69208 8.09564ZM0.0166113 10.0001C0.0166113 10.462 0.0222363 10.651 0.0291504 10.42C0.0360645 10.189 0.0360645 9.81107 0.0291504 9.58014C0.0222363 9.3492 0.0166113 9.53814 0.0166113 10.0001Z" fill="#FFF1F0"/>
+										</g>
+										<defs>
+											<clipPath id="clip0_140_1936">
+												<rect width="20" height="20" fill="white"/>
+											</clipPath>
+										</defs>
+									</svg>
+									1203
+								</summary>
+								<ul dir="rtl">
+									<li><a href="#">Profile</a></li>
+									<li><a href="#">Settings</a></li>
+									<li><a href="#">Security</a></li>
+									<li><a href="#">Logout</a></li>
+								</ul>
+							</details>
+						</li>
+						<li>
+							<details class="dropdown">
+								<summary role="button">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+										<path d="M4 12C4 8.229 4 6.343 5.172 5.172C6.344 4.001 8.229 4 12 4C15.771 4 17.657 4 18.828 5.172C19.999 6.344 20 8.229 20 12C20 15.771 20 17.657 18.828 18.828C17.656 19.999 15.771 20 12 20C8.229 20 6.343 20 5.172 18.828C4.001 17.656 4 15.771 4 12Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M8 2V4M16 2V4M12 2V4M8 20V22M12 20V22M16 20V22M22 16H20M4 8H2M4 16H2M4 12H2M22 8H20M22 12H20M7.732 16.268C8.464 17 9.643 17 12 17C12.79 17 13.447 17 14 16.972L16.972 14C17 13.447 17 12.79 17 12C17 9.643 17 8.464 16.268 7.732C15.536 7 14.357 7 12 7C9.643 7 8.464 7 7.732 7.732C7 8.464 7 9.643 7 12C7 14.357 7 15.536 7.732 16.268Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									1
+								</summary>
+								<ul dir="rtl">
+									<li><a href="#">Profile</a></li>
+									<li><a href="#">Settings</a></li>
+									<li><a href="#">Security</a></li>
+									<li><a href="#">Logout</a></li>
+								</ul>
+							</details>
+						</li>
+						<li class="profile-section">
+							<div class="d-flex align-center">
+								<img src="assets/img/profile.png" alt="" />
+								<div>
+									<div> Peter Pan</div>
+									<div class="theme-color">Admin</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button class="theme-switch"  aria-label="Toggle theme">
+								<svg class="icon-light" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path d="M7.8928 1.69096C7.96555 1.50907 7.98328 1.30982 7.94378 1.11794C7.90428 0.926067 7.80929 0.75002 7.67061 0.611658C7.53193 0.473297 7.35566 0.378716 7.1637 0.339658C6.97173 0.3006 6.77252 0.318786 6.5908 0.391957C4.73884 1.1369 3.15212 2.4189 2.03475 4.07304C0.917383 5.72717 0.32047 7.67779 0.320801 9.67396C0.320801 15.197 4.7968 19.674 10.3208 19.674C14.5298 19.674 18.1298 17.073 19.6048 13.394C19.6777 13.2121 19.6956 13.0129 19.6562 12.821C19.6169 12.6291 19.522 12.453 19.3834 12.3145C19.2449 12.176 19.0687 12.0813 18.8767 12.0421C18.6848 12.0029 18.4856 12.0209 18.3038 12.094C17.0899 12.582 15.7749 12.7648 14.4739 12.6265C13.1729 12.4881 11.9257 12.0328 10.8416 11.3005C9.75749 10.5681 8.86953 9.58105 8.25553 8.42578C7.64153 7.2705 7.32023 5.98226 7.3198 4.67396C7.3198 3.62396 7.5258 2.60896 7.8928 1.69096Z" fill="#FF4D4F"/>
+								</svg>
+								<svg class="icon-dark " xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C10.2652 0 10.5196 0.105357 10.7071 0.292893C10.8946 0.48043 11 0.734784 11 1V2C11 2.26522 10.8946 2.51957 10.7071 2.70711C10.5196 2.89464 10.2652 3 10 3C9.73478 3 9.48043 2.89464 9.29289 2.70711C9.10536 2.51957 9 2.26522 9 2V1C9 0.734784 9.10536 0.48043 9.29289 0.292893C9.48043 0.105357 9.73478 0 10 0ZM2.793 2.793C2.98053 2.60553 3.23484 2.50021 3.5 2.50021C3.76516 2.50021 4.01947 2.60553 4.207 2.793L5.021 3.607C5.11651 3.69925 5.19269 3.80959 5.2451 3.9316C5.29751 4.0536 5.3251 4.18482 5.32625 4.3176C5.3274 4.45038 5.3021 4.58206 5.25182 4.70495C5.20154 4.82785 5.12729 4.9395 5.03339 5.03339C4.9395 5.12729 4.82785 5.20154 4.70495 5.25182C4.58206 5.3021 4.45038 5.3274 4.3176 5.32625C4.18482 5.3251 4.0536 5.29751 3.9316 5.2451C3.80959 5.19269 3.69925 5.11651 3.607 5.021L2.793 4.207C2.60553 4.01947 2.50021 3.76516 2.50021 3.5C2.50021 3.23484 2.60553 2.98053 2.793 2.793ZM17.207 2.793C17.3945 2.98053 17.4998 3.23484 17.4998 3.5C17.4998 3.76516 17.3945 4.01947 17.207 4.207L16.393 5.021C16.3008 5.11651 16.1904 5.19269 16.0684 5.2451C15.9464 5.29751 15.8152 5.3251 15.6824 5.32625C15.5496 5.3274 15.4179 5.3021 15.295 5.25182C15.1721 5.20154 15.0605 5.12729 14.9666 5.03339C14.8727 4.9395 14.7985 4.82785 14.7482 4.70495C14.6979 4.58206 14.6726 4.45038 14.6737 4.3176C14.6749 4.18482 14.7025 4.0536 14.7549 3.9316C14.8073 3.80959 14.8835 3.69925 14.979 3.607L15.793 2.793C15.9805 2.60553 16.2348 2.50021 16.5 2.50021C16.7652 2.50021 17.0195 2.60553 17.207 2.793ZM5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10ZM0 10C0 9.73478 0.105357 9.48043 0.292893 9.29289C0.48043 9.10536 0.734784 9 1 9H2C2.26522 9 2.51957 9.10536 2.70711 9.29289C2.89464 9.48043 3 9.73478 3 10C3 10.2652 2.89464 10.5196 2.70711 10.7071C2.51957 10.8946 2.26522 11 2 11H1C0.734784 11 0.48043 10.8946 0.292893 10.7071C0.105357 10.5196 0 10.2652 0 10ZM17 10C17 9.73478 17.1054 9.48043 17.2929 9.29289C17.4804 9.10536 17.7348 9 18 9H19C19.2652 9 19.5196 9.10536 19.7071 9.29289C19.8946 9.48043 20 9.73478 20 10C20 10.2652 19.8946 10.5196 19.7071 10.7071C19.5196 10.8946 19.2652 11 19 11H18C17.7348 11 17.4804 10.8946 17.2929 10.7071C17.1054 10.5196 17 10.2652 17 10ZM5.023 14.985C5.20994 15.1731 5.31454 15.4277 5.31379 15.6928C5.31304 15.958 5.207 16.212 5.019 16.399L4.205 17.209C4.11247 17.3042 4.00192 17.3801 3.87977 17.4321C3.75763 17.4841 3.62635 17.5113 3.49359 17.5121C3.36082 17.5128 3.22924 17.4872 3.10651 17.4365C2.98377 17.3859 2.87235 17.3113 2.77874 17.2172C2.68512 17.123 2.61119 17.0112 2.56126 16.8882C2.51133 16.7652 2.48639 16.6334 2.48791 16.5007C2.48942 16.3679 2.51735 16.2368 2.57008 16.115C2.6228 15.9931 2.69926 15.883 2.795 15.791L3.609 14.981C3.79706 14.7941 4.05166 14.6895 4.31683 14.6902C4.58199 14.691 4.836 14.797 5.023 14.985ZM14.977 14.985C15.164 14.797 15.418 14.691 15.6832 14.6902C15.9483 14.6895 16.2029 14.7941 16.391 14.981L17.205 15.791C17.3007 15.883 17.3772 15.9931 17.4299 16.115C17.4826 16.2368 17.5106 16.3679 17.5121 16.5007C17.5136 16.6334 17.4887 16.7652 17.4387 16.8882C17.3888 17.0112 17.3149 17.123 17.2213 17.2172C17.1276 17.3113 17.0162 17.3859 16.8935 17.4365C16.7708 17.4872 16.6392 17.5128 16.5064 17.5121C16.3737 17.5113 16.2424 17.4841 16.1202 17.4321C15.9981 17.3801 15.8875 17.3042 15.795 17.209L14.98 16.399C14.7921 16.2119 14.6863 15.9578 14.6857 15.6926C14.6852 15.4275 14.7899 15.1729 14.977 14.985ZM10 17C10.2652 17 10.5196 17.1054 10.7071 17.2929C10.8946 17.4804 11 17.7348 11 18V19C11 19.2652 10.8946 19.5196 10.7071 19.7071C10.5196 19.8946 10.2652 20 10 20C9.73478 20 9.48043 19.8946 9.29289 19.7071C9.10536 19.5196 9 19.2652 9 19V18C9 17.7348 9.10536 17.4804 9.29289 17.2929C9.48043 17.1054 9.73478 17 10 17Z" fill="#A61D24"/>
+								</svg>
+							</button>
+						</li>
+					</ul>
+				</nav>
+		</header>
+		<!---->
+		<div class="section-title fs-24 mb-16 d-flex align-center gap-x-8 fw-400 flex-wrap">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+				<path d="M4 12C4 8.229 4 6.343 5.172 5.172C6.344 4.001 8.229 4 12 4C15.771 4 17.657 4 18.828 5.172C19.999 6.344 20 8.229 20 12C20 15.771 20 17.657 18.828 18.828C17.656 19.999 15.771 20 12 20C8.229 20 6.343 20 5.172 18.828C4.001 17.656 4 15.771 4 12Z" stroke="#FF4D4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M7.732 16.268C8.464 17 9.643 17 12 17C12.79 17 13.447 17 14 16.972L16.972 14C17 13.447 17 12.79 17 12C17 9.643 17 8.464 16.268 7.732C15.536 7 14.357 7 12 7C9.643 7 8.464 7 7.732 7.732C7 8.464 7 9.643 7 12C7 14.357 7 15.536 7.732 16.268ZM8 2V4V2ZM16 2V4V2ZM12 2V4V2ZM8 20V22V20ZM12 20V22V20ZM16 20V22V20ZM22 16H20H22ZM4 8H2H4ZM4 16H2H4ZM4 12H2H4ZM22 8H20H22ZM22 12H20H22Z" fill="#FF4D4F"/>
+				<path d="M8 2V4M16 2V4M12 2V4M8 20V22M12 20V22M16 20V22M22 16H20M4 8H2M4 16H2M4 12H2M22 8H20M22 12H20M7.732 16.268C8.464 17 9.643 17 12 17C12.79 17 13.447 17 14 16.972L16.972 14C17 13.447 17 12.79 17 12C17 9.643 17 8.464 16.268 7.732C15.536 7 14.357 7 12 7C9.643 7 8.464 7 7.732 7.732C7 8.464 7 9.643 7 12C7 14.357 7 15.536 7.732 16.268Z" stroke="#FF4D4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+			My Actions
+			
+			<div class="ms-auto d-flex flex-wrap gap-x-16">
+				<button type="submit" class="btn-primary d-flex align-center gap-x-8 mb-0 w-auto"  data-target="create-modal" onclick="toggleModal(event)">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M6 12H18M12 6V18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					New Action
+				</button>
+				<button type="submit" class="btn-primary d-flex align-center gap-x-8 mb-0 w-auto" data-target="delete-modal" onclick="toggleModal(event)">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+						<path d="M1 4H17M13 4L12.73 3.188C12.467 2.401 12.336 2.008 12.093 1.717C11.878 1.46012 11.6019 1.26137 11.29 1.139C10.938 1 10.524 1 9.694 1H8.306C7.477 1 7.062 1 6.71 1.139C6.39815 1.26137 6.12203 1.46012 5.907 1.717C5.664 2.007 5.533 2.401 5.271 3.188L5 4M15 4V14.2C15 15.88 15 16.72 14.673 17.362C14.3854 17.9265 13.9265 18.3854 13.362 18.673C12.72 19 11.88 19 10.2 19H7.8C6.12 19 5.28 19 4.638 18.673C4.07354 18.3854 3.61462 17.9265 3.327 17.362C3 16.72 3 15.88 3 14.2V4M11 8V15M7 8V15" stroke="#FFF1F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					Delete all
+				</button>
+			</div>
+		</div>
+		<dialog id="create-modal" class="modal-sm">
+			<article>
+				<a href="#close" aria-label="Close" class="close" data-target="create-modal" onclick="toggleModal(event)">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M4 4L20 20M20 4L4 20" stroke="#FF4D4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+				<h3>Delele All Action</h3>
+				<form>
+					<div class="mb-8 fs-14">
+						Path name — The new action will be at "@Peter/[Path]"
+					</div>
+					<input type="text" id="name" name="name" placeholder="My-new-actions" required="">
+					<div class="mb-8 fs-14">
+						Description
+					</div>
+					<textarea id="message" name="message" rows="5" placeholder="Describe what your actions does." required=""></textarea>
+					<button type="submit" class="btn-primary">Submit</button>
+				</form>
+			</article>
+		</dialog>
+		<dialog id="delete-modal" class="modal-sm">
+			<article>
+				<a href="#close" aria-label="Close" class="close" data-target="delete-modal" onclick="toggleModal(event)">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M4 4L20 20M20 4L4 20" stroke="#FF4D4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+				<h3>Delele All Action</h3>
+				<form>
+					<div class="mb-8 text-center">
+						Are you sure you want to delete<br>
+						all existing actions?
+					</div>
+					<button type="submit" class="btn-primary">Yes</button>
+				</form>
+			</article>
+		</dialog>
+		<div class="custom-table mb-24">
+			<div class="responsive-table-container">
+				<table>
+					<thead class="teritary-color">
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Type</th>
+						<th>Price</th>
+						<th>
+							Active
+						</th>
+						<th>
+							Action
+						</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-label="Name"><span class="theme-color">@daios/std/action-lookup</span></td>
+							<td data-label="Description" >I'm Peter</td>
+							<td data-label="Type">script</td>
+							<td data-label="Price">
+								<div class="d-flex gap-x-8">
+									<input type="text" class="form-control-inline mb-0" placeholder="6883">
+									<button class="btn-link-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+											<path d="M12.9167 4.58393L15.2733 6.94227M10.8333 17.5006H17.5M2.5 17.5006L2.53917 17.2239C2.67917 16.2448 2.74917 15.7548 2.90833 15.2981C3.05 14.8923 3.2425 14.5064 3.48333 14.1498C3.7525 13.7481 4.1025 13.3981 4.8025 12.6989L14.5083 2.99227C14.8227 2.68867 15.2437 2.52068 15.6807 2.52448C16.1177 2.52827 16.5357 2.70356 16.8447 3.01257C17.1537 3.32158 17.329 3.7396 17.3328 4.1766C17.3366 4.61359 17.1686 5.0346 16.865 5.34893L6.98083 15.2339C6.34667 15.8681 6.02917 16.1856 5.6675 16.4381C5.34667 16.6623 5.00083 16.8481 4.63667 16.9914C4.22667 17.1523 3.78667 17.2414 2.90667 17.4189L2.5 17.5006Z" stroke="#FF4D4F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+								
+								</div>
+							</td>
+							<td data-label="Active">
+								<label class="mb-0">
+									<input name="opt-in" type="checkbox" role="switch" checked />
+								</label>
+							</td>
+							<td  data-label="Action">
+								<button class="btn-link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+										<path d="M1 4H17M13 4L12.73 3.188C12.467 2.401 12.336 2.008 12.093 1.717C11.878 1.46012 11.6019 1.26137 11.29 1.139C10.938 1 10.524 1 9.694 1H8.306C7.477 1 7.062 1 6.71 1.139C6.39815 1.26137 6.12203 1.46012 5.907 1.717C5.664 2.007 5.533 2.401 5.271 3.188L5 4M15 4V14.2C15 15.88 15 16.72 14.673 17.362C14.3854 17.9265 13.9265 18.3854 13.362 18.673C12.72 19 11.88 19 10.2 19H7.8C6.12 19 5.28 19 4.638 18.673C4.07354 18.3854 3.61462 17.9265 3.327 17.362C3 16.72 3 15.88 3 14.2V4M11 8V15M7 8V15" stroke="#F5222D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td data-label="Name"><span class="theme-color">@daios/std/action-lookup</span></td>
+							<td data-label="Description" >I'm Peter</td>
+							<td data-label="Type">script</td>
+							<td data-label="Price">
+								<div class="d-flex gap-x-8">
+									<input type="text" class="form-control-inline mb-0" placeholder="6883">
+									<button class="btn-link-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+											<path d="M12.9167 4.58393L15.2733 6.94227M10.8333 17.5006H17.5M2.5 17.5006L2.53917 17.2239C2.67917 16.2448 2.74917 15.7548 2.90833 15.2981C3.05 14.8923 3.2425 14.5064 3.48333 14.1498C3.7525 13.7481 4.1025 13.3981 4.8025 12.6989L14.5083 2.99227C14.8227 2.68867 15.2437 2.52068 15.6807 2.52448C16.1177 2.52827 16.5357 2.70356 16.8447 3.01257C17.1537 3.32158 17.329 3.7396 17.3328 4.1766C17.3366 4.61359 17.1686 5.0346 16.865 5.34893L6.98083 15.2339C6.34667 15.8681 6.02917 16.1856 5.6675 16.4381C5.34667 16.6623 5.00083 16.8481 4.63667 16.9914C4.22667 17.1523 3.78667 17.2414 2.90667 17.4189L2.5 17.5006Z" stroke="#FF4D4F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+								
+								</div>
+							</td>
+							<td data-label="Active">
+								<label class="mb-0">
+									<input name="opt-in" type="checkbox" role="switch" checked />
+								</label>
+							</td>
+							<td  data-label="Action">
+								<button class="btn-link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+										<path d="M1 4H17M13 4L12.73 3.188C12.467 2.401 12.336 2.008 12.093 1.717C11.878 1.46012 11.6019 1.26137 11.29 1.139C10.938 1 10.524 1 9.694 1H8.306C7.477 1 7.062 1 6.71 1.139C6.39815 1.26137 6.12203 1.46012 5.907 1.717C5.664 2.007 5.533 2.401 5.271 3.188L5 4M15 4V14.2C15 15.88 15 16.72 14.673 17.362C14.3854 17.9265 13.9265 18.3854 13.362 18.673C12.72 19 11.88 19 10.2 19H7.8C6.12 19 5.28 19 4.638 18.673C4.07354 18.3854 3.61462 17.9265 3.327 17.362C3 16.72 3 15.88 3 14.2V4M11 8V15M7 8V15" stroke="#F5222D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td data-label="Name"><span class="theme-color">@daios/std/action-lookup</span></td>
+							<td data-label="Description" >I'm Peter</td>
+							<td data-label="Type">script</td>
+							<td data-label="Price">
+								<div class="d-flex gap-x-8">
+									<input type="text" class="form-control-inline mb-0" placeholder="6883">
+									<button class="btn-link-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+											<path d="M12.9167 4.58393L15.2733 6.94227M10.8333 17.5006H17.5M2.5 17.5006L2.53917 17.2239C2.67917 16.2448 2.74917 15.7548 2.90833 15.2981C3.05 14.8923 3.2425 14.5064 3.48333 14.1498C3.7525 13.7481 4.1025 13.3981 4.8025 12.6989L14.5083 2.99227C14.8227 2.68867 15.2437 2.52068 15.6807 2.52448C16.1177 2.52827 16.5357 2.70356 16.8447 3.01257C17.1537 3.32158 17.329 3.7396 17.3328 4.1766C17.3366 4.61359 17.1686 5.0346 16.865 5.34893L6.98083 15.2339C6.34667 15.8681 6.02917 16.1856 5.6675 16.4381C5.34667 16.6623 5.00083 16.8481 4.63667 16.9914C4.22667 17.1523 3.78667 17.2414 2.90667 17.4189L2.5 17.5006Z" stroke="#FF4D4F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+								
+								</div>
+							</td>
+							<td data-label="Active">
+								<label class="mb-0">
+									<input name="opt-in" type="checkbox" role="switch" checked />
+								</label>
+							</td>
+							<td  data-label="Action">
+								<button class="btn-link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+										<path d="M1 4H17M13 4L12.73 3.188C12.467 2.401 12.336 2.008 12.093 1.717C11.878 1.46012 11.6019 1.26137 11.29 1.139C10.938 1 10.524 1 9.694 1H8.306C7.477 1 7.062 1 6.71 1.139C6.39815 1.26137 6.12203 1.46012 5.907 1.717C5.664 2.007 5.533 2.401 5.271 3.188L5 4M15 4V14.2C15 15.88 15 16.72 14.673 17.362C14.3854 17.9265 13.9265 18.3854 13.362 18.673C12.72 19 11.88 19 10.2 19H7.8C6.12 19 5.28 19 4.638 18.673C4.07354 18.3854 3.61462 17.9265 3.327 17.362C3 16.72 3 15.88 3 14.2V4M11 8V15M7 8V15" stroke="#F5222D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td data-label="Name"><span class="theme-color">@daios/std/action-lookup</span></td>
+							<td data-label="Description" >I'm Peter</td>
+							<td data-label="Type">script</td>
+							<td data-label="Price">
+								<div class="d-flex gap-x-8">
+									<input type="text" class="form-control-inline mb-0" placeholder="6883">
+									<button class="btn-link-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+											<path d="M12.9167 4.58393L15.2733 6.94227M10.8333 17.5006H17.5M2.5 17.5006L2.53917 17.2239C2.67917 16.2448 2.74917 15.7548 2.90833 15.2981C3.05 14.8923 3.2425 14.5064 3.48333 14.1498C3.7525 13.7481 4.1025 13.3981 4.8025 12.6989L14.5083 2.99227C14.8227 2.68867 15.2437 2.52068 15.6807 2.52448C16.1177 2.52827 16.5357 2.70356 16.8447 3.01257C17.1537 3.32158 17.329 3.7396 17.3328 4.1766C17.3366 4.61359 17.1686 5.0346 16.865 5.34893L6.98083 15.2339C6.34667 15.8681 6.02917 16.1856 5.6675 16.4381C5.34667 16.6623 5.00083 16.8481 4.63667 16.9914C4.22667 17.1523 3.78667 17.2414 2.90667 17.4189L2.5 17.5006Z" stroke="#FF4D4F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+								
+								</div>
+							</td>
+							<td data-label="Active">
+								<label class="mb-0">
+									<input name="opt-in" type="checkbox" role="switch" checked />
+								</label>
+							</td>
+							<td  data-label="Action">
+								<button class="btn-link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+										<path d="M1 4H17M13 4L12.73 3.188C12.467 2.401 12.336 2.008 12.093 1.717C11.878 1.46012 11.6019 1.26137 11.29 1.139C10.938 1 10.524 1 9.694 1H8.306C7.477 1 7.062 1 6.71 1.139C6.39815 1.26137 6.12203 1.46012 5.907 1.717C5.664 2.007 5.533 2.401 5.271 3.188L5 4M15 4V14.2C15 15.88 15 16.72 14.673 17.362C14.3854 17.9265 13.9265 18.3854 13.362 18.673C12.72 19 11.88 19 10.2 19H7.8C6.12 19 5.28 19 4.638 18.673C4.07354 18.3854 3.61462 17.9265 3.327 17.362C3 16.72 3 15.88 3 14.2V4M11 8V15M7 8V15" stroke="#F5222D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td data-label="Name"><span class="theme-color">@daios/std/action-lookup</span></td>
+							<td data-label="Description" >I'm Peter</td>
+							<td data-label="Type">script</td>
+							<td data-label="Price">
+								<div class="d-flex gap-x-8">
+									<input type="text" class="form-control-inline mb-0" placeholder="6883">
+									<button class="btn-link-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+											<path d="M12.9167 4.58393L15.2733 6.94227M10.8333 17.5006H17.5M2.5 17.5006L2.53917 17.2239C2.67917 16.2448 2.74917 15.7548 2.90833 15.2981C3.05 14.8923 3.2425 14.5064 3.48333 14.1498C3.7525 13.7481 4.1025 13.3981 4.8025 12.6989L14.5083 2.99227C14.8227 2.68867 15.2437 2.52068 15.6807 2.52448C16.1177 2.52827 16.5357 2.70356 16.8447 3.01257C17.1537 3.32158 17.329 3.7396 17.3328 4.1766C17.3366 4.61359 17.1686 5.0346 16.865 5.34893L6.98083 15.2339C6.34667 15.8681 6.02917 16.1856 5.6675 16.4381C5.34667 16.6623 5.00083 16.8481 4.63667 16.9914C4.22667 17.1523 3.78667 17.2414 2.90667 17.4189L2.5 17.5006Z" stroke="#FF4D4F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+								
+								</div>
+							</td>
+							<td data-label="Active">
+								<label class="mb-0">
+									<input name="opt-in" type="checkbox" role="switch" checked />
+								</label>
+							</td>
+							<td  data-label="Action">
+								<button class="btn-link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+										<path d="M1 4H17M13 4L12.73 3.188C12.467 2.401 12.336 2.008 12.093 1.717C11.878 1.46012 11.6019 1.26137 11.29 1.139C10.938 1 10.524 1 9.694 1H8.306C7.477 1 7.062 1 6.71 1.139C6.39815 1.26137 6.12203 1.46012 5.907 1.717C5.664 2.007 5.533 2.401 5.271 3.188L5 4M15 4V14.2C15 15.88 15 16.72 14.673 17.362C14.3854 17.9265 13.9265 18.3854 13.362 18.673C12.72 19 11.88 19 10.2 19H7.8C6.12 19 5.28 19 4.638 18.673C4.07354 18.3854 3.61462 17.9265 3.327 17.362C3 16.72 3 15.88 3 14.2V4M11 8V15M7 8V15" stroke="#F5222D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td data-label="Name"><span class="theme-color">@daios/std/action-lookup</span></td>
+							<td data-label="Description" >I'm Peter</td>
+							<td data-label="Type">script</td>
+							<td data-label="Price">
+								<div class="d-flex gap-x-8">
+									<input type="text" class="form-control-inline mb-0" placeholder="6883">
+									<button class="btn-link-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+											<path d="M12.9167 4.58393L15.2733 6.94227M10.8333 17.5006H17.5M2.5 17.5006L2.53917 17.2239C2.67917 16.2448 2.74917 15.7548 2.90833 15.2981C3.05 14.8923 3.2425 14.5064 3.48333 14.1498C3.7525 13.7481 4.1025 13.3981 4.8025 12.6989L14.5083 2.99227C14.8227 2.68867 15.2437 2.52068 15.6807 2.52448C16.1177 2.52827 16.5357 2.70356 16.8447 3.01257C17.1537 3.32158 17.329 3.7396 17.3328 4.1766C17.3366 4.61359 17.1686 5.0346 16.865 5.34893L6.98083 15.2339C6.34667 15.8681 6.02917 16.1856 5.6675 16.4381C5.34667 16.6623 5.00083 16.8481 4.63667 16.9914C4.22667 17.1523 3.78667 17.2414 2.90667 17.4189L2.5 17.5006Z" stroke="#FF4D4F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+								
+								</div>
+							</td>
+							<td data-label="Active">
+								<label class="mb-0">
+									<input name="opt-in" type="checkbox" role="switch" checked />
+								</label>
+							</td>
+							<td  data-label="Action">
+								<button class="btn-link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+										<path d="M1 4H17M13 4L12.73 3.188C12.467 2.401 12.336 2.008 12.093 1.717C11.878 1.46012 11.6019 1.26137 11.29 1.139C10.938 1 10.524 1 9.694 1H8.306C7.477 1 7.062 1 6.71 1.139C6.39815 1.26137 6.12203 1.46012 5.907 1.717C5.664 2.007 5.533 2.401 5.271 3.188L5 4M15 4V14.2C15 15.88 15 16.72 14.673 17.362C14.3854 17.9265 13.9265 18.3854 13.362 18.673C12.72 19 11.88 19 10.2 19H7.8C6.12 19 5.28 19 4.638 18.673C4.07354 18.3854 3.61462 17.9265 3.327 17.362C3 16.72 3 15.88 3 14.2V4M11 8V15M7 8V15" stroke="#F5222D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td data-label="Name"><span class="theme-color">@daios/std/action-lookup</span></td>
+							<td data-label="Description" >I'm Peter</td>
+							<td data-label="Type">script</td>
+							<td data-label="Price">
+								<div class="d-flex gap-x-8">
+									<input type="text" class="form-control-inline mb-0" placeholder="6883">
+									<button class="btn-link-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+											<path d="M12.9167 4.58393L15.2733 6.94227M10.8333 17.5006H17.5M2.5 17.5006L2.53917 17.2239C2.67917 16.2448 2.74917 15.7548 2.90833 15.2981C3.05 14.8923 3.2425 14.5064 3.48333 14.1498C3.7525 13.7481 4.1025 13.3981 4.8025 12.6989L14.5083 2.99227C14.8227 2.68867 15.2437 2.52068 15.6807 2.52448C16.1177 2.52827 16.5357 2.70356 16.8447 3.01257C17.1537 3.32158 17.329 3.7396 17.3328 4.1766C17.3366 4.61359 17.1686 5.0346 16.865 5.34893L6.98083 15.2339C6.34667 15.8681 6.02917 16.1856 5.6675 16.4381C5.34667 16.6623 5.00083 16.8481 4.63667 16.9914C4.22667 17.1523 3.78667 17.2414 2.90667 17.4189L2.5 17.5006Z" stroke="#FF4D4F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+								
+								</div>
+							</td>
+							<td data-label="Active">
+								<label class="mb-0">
+									<input name="opt-in" type="checkbox" role="switch" checked />
+								</label>
+							</td>
+							<td  data-label="Action">
+								<button class="btn-link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+										<path d="M1 4H17M13 4L12.73 3.188C12.467 2.401 12.336 2.008 12.093 1.717C11.878 1.46012 11.6019 1.26137 11.29 1.139C10.938 1 10.524 1 9.694 1H8.306C7.477 1 7.062 1 6.71 1.139C6.39815 1.26137 6.12203 1.46012 5.907 1.717C5.664 2.007 5.533 2.401 5.271 3.188L5 4M15 4V14.2C15 15.88 15 16.72 14.673 17.362C14.3854 17.9265 13.9265 18.3854 13.362 18.673C12.72 19 11.88 19 10.2 19H7.8C6.12 19 5.28 19 4.638 18.673C4.07354 18.3854 3.61462 17.9265 3.327 17.362C3 16.72 3 15.88 3 14.2V4M11 8V15M7 8V15" stroke="#F5222D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td data-label="Name"><span class="theme-color">@daios/std/action-lookup</span></td>
+							<td data-label="Description" >I'm Peter</td>
+							<td data-label="Type">script</td>
+							<td data-label="Price">
+								<div class="d-flex gap-x-8">
+									<input type="text" class="form-control-inline mb-0" placeholder="6883">
+									<button class="btn-link-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+											<path d="M12.9167 4.58393L15.2733 6.94227M10.8333 17.5006H17.5M2.5 17.5006L2.53917 17.2239C2.67917 16.2448 2.74917 15.7548 2.90833 15.2981C3.05 14.8923 3.2425 14.5064 3.48333 14.1498C3.7525 13.7481 4.1025 13.3981 4.8025 12.6989L14.5083 2.99227C14.8227 2.68867 15.2437 2.52068 15.6807 2.52448C16.1177 2.52827 16.5357 2.70356 16.8447 3.01257C17.1537 3.32158 17.329 3.7396 17.3328 4.1766C17.3366 4.61359 17.1686 5.0346 16.865 5.34893L6.98083 15.2339C6.34667 15.8681 6.02917 16.1856 5.6675 16.4381C5.34667 16.6623 5.00083 16.8481 4.63667 16.9914C4.22667 17.1523 3.78667 17.2414 2.90667 17.4189L2.5 17.5006Z" stroke="#FF4D4F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+								
+								</div>
+							</td>
+							<td data-label="Active">
+								<label class="mb-0">
+									<input name="opt-in" type="checkbox" role="switch" checked />
+								</label>
+							</td>
+							<td  data-label="Action">
+								<button class="btn-link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+										<path d="M1 4H17M13 4L12.73 3.188C12.467 2.401 12.336 2.008 12.093 1.717C11.878 1.46012 11.6019 1.26137 11.29 1.139C10.938 1 10.524 1 9.694 1H8.306C7.477 1 7.062 1 6.71 1.139C6.39815 1.26137 6.12203 1.46012 5.907 1.717C5.664 2.007 5.533 2.401 5.271 3.188L5 4M15 4V14.2C15 15.88 15 16.72 14.673 17.362C14.3854 17.9265 13.9265 18.3854 13.362 18.673C12.72 19 11.88 19 10.2 19H7.8C6.12 19 5.28 19 4.638 18.673C4.07354 18.3854 3.61462 17.9265 3.327 17.362C3 16.72 3 15.88 3 14.2V4M11 8V15M7 8V15" stroke="#F5222D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td data-label="Name"><span class="theme-color">@daios/std/action-lookup</span></td>
+							<td data-label="Description" >I'm Peter</td>
+							<td data-label="Type">script</td>
+							<td data-label="Price">
+								<div class="d-flex gap-x-8">
+									<input type="text" class="form-control-inline mb-0" placeholder="6883">
+									<button class="btn-link-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+											<path d="M12.9167 4.58393L15.2733 6.94227M10.8333 17.5006H17.5M2.5 17.5006L2.53917 17.2239C2.67917 16.2448 2.74917 15.7548 2.90833 15.2981C3.05 14.8923 3.2425 14.5064 3.48333 14.1498C3.7525 13.7481 4.1025 13.3981 4.8025 12.6989L14.5083 2.99227C14.8227 2.68867 15.2437 2.52068 15.6807 2.52448C16.1177 2.52827 16.5357 2.70356 16.8447 3.01257C17.1537 3.32158 17.329 3.7396 17.3328 4.1766C17.3366 4.61359 17.1686 5.0346 16.865 5.34893L6.98083 15.2339C6.34667 15.8681 6.02917 16.1856 5.6675 16.4381C5.34667 16.6623 5.00083 16.8481 4.63667 16.9914C4.22667 17.1523 3.78667 17.2414 2.90667 17.4189L2.5 17.5006Z" stroke="#FF4D4F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+								
+								</div>
+							</td>
+							<td data-label="Active">
+								<label class="mb-0">
+									<input name="opt-in" type="checkbox" role="switch" checked />
+								</label>
+							</td>
+							<td  data-label="Action">
+								<button class="btn-link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+										<path d="M1 4H17M13 4L12.73 3.188C12.467 2.401 12.336 2.008 12.093 1.717C11.878 1.46012 11.6019 1.26137 11.29 1.139C10.938 1 10.524 1 9.694 1H8.306C7.477 1 7.062 1 6.71 1.139C6.39815 1.26137 6.12203 1.46012 5.907 1.717C5.664 2.007 5.533 2.401 5.271 3.188L5 4M15 4V14.2C15 15.88 15 16.72 14.673 17.362C14.3854 17.9265 13.9265 18.3854 13.362 18.673C12.72 19 11.88 19 10.2 19H7.8C6.12 19 5.28 19 4.638 18.673C4.07354 18.3854 3.61462 17.9265 3.327 17.362C3 16.72 3 15.88 3 14.2V4M11 8V15M7 8V15" stroke="#F5222D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td data-label="Name"><span class="theme-color">@daios/std/action-lookup</span></td>
+							<td data-label="Description" >I'm Peter</td>
+							<td data-label="Type">script</td>
+							<td data-label="Price">
+								<div class="d-flex gap-x-8">
+									<input type="text" class="form-control-inline mb-0" placeholder="6883">
+									<button class="btn-link-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+											<path d="M12.9167 4.58393L15.2733 6.94227M10.8333 17.5006H17.5M2.5 17.5006L2.53917 17.2239C2.67917 16.2448 2.74917 15.7548 2.90833 15.2981C3.05 14.8923 3.2425 14.5064 3.48333 14.1498C3.7525 13.7481 4.1025 13.3981 4.8025 12.6989L14.5083 2.99227C14.8227 2.68867 15.2437 2.52068 15.6807 2.52448C16.1177 2.52827 16.5357 2.70356 16.8447 3.01257C17.1537 3.32158 17.329 3.7396 17.3328 4.1766C17.3366 4.61359 17.1686 5.0346 16.865 5.34893L6.98083 15.2339C6.34667 15.8681 6.02917 16.1856 5.6675 16.4381C5.34667 16.6623 5.00083 16.8481 4.63667 16.9914C4.22667 17.1523 3.78667 17.2414 2.90667 17.4189L2.5 17.5006Z" stroke="#FF4D4F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+								
+								</div>
+							</td>
+							<td data-label="Active">
+								<label class="mb-0">
+									<input name="opt-in" type="checkbox" role="switch" checked />
+								</label>
+							</td>
+							<td  data-label="Action">
+								<button class="btn-link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+										<path d="M1 4H17M13 4L12.73 3.188C12.467 2.401 12.336 2.008 12.093 1.717C11.878 1.46012 11.6019 1.26137 11.29 1.139C10.938 1 10.524 1 9.694 1H8.306C7.477 1 7.062 1 6.71 1.139C6.39815 1.26137 6.12203 1.46012 5.907 1.717C5.664 2.007 5.533 2.401 5.271 3.188L5 4M15 4V14.2C15 15.88 15 16.72 14.673 17.362C14.3854 17.9265 13.9265 18.3854 13.362 18.673C12.72 19 11.88 19 10.2 19H7.8C6.12 19 5.28 19 4.638 18.673C4.07354 18.3854 3.61462 17.9265 3.327 17.362C3 16.72 3 15.88 3 14.2V4M11 8V15M7 8V15" stroke="#F5222D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td data-label="Name"><span class="theme-color">@daios/std/action-lookup</span></td>
+							<td data-label="Description" >I'm Peter</td>
+							<td data-label="Type">script</td>
+							<td data-label="Price">
+								<div class="d-flex gap-x-8">
+									<input type="text" class="form-control-inline mb-0" placeholder="6883">
+									<button class="btn-link-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+											<path d="M12.9167 4.58393L15.2733 6.94227M10.8333 17.5006H17.5M2.5 17.5006L2.53917 17.2239C2.67917 16.2448 2.74917 15.7548 2.90833 15.2981C3.05 14.8923 3.2425 14.5064 3.48333 14.1498C3.7525 13.7481 4.1025 13.3981 4.8025 12.6989L14.5083 2.99227C14.8227 2.68867 15.2437 2.52068 15.6807 2.52448C16.1177 2.52827 16.5357 2.70356 16.8447 3.01257C17.1537 3.32158 17.329 3.7396 17.3328 4.1766C17.3366 4.61359 17.1686 5.0346 16.865 5.34893L6.98083 15.2339C6.34667 15.8681 6.02917 16.1856 5.6675 16.4381C5.34667 16.6623 5.00083 16.8481 4.63667 16.9914C4.22667 17.1523 3.78667 17.2414 2.90667 17.4189L2.5 17.5006Z" stroke="#FF4D4F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+								
+								</div>
+							</td>
+							<td data-label="Active">
+								<label class="mb-0">
+									<input name="opt-in" type="checkbox" role="switch" checked />
+								</label>
+							</td>
+							<td  data-label="Action">
+								<button class="btn-link-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+										<path d="M1 4H17M13 4L12.73 3.188C12.467 2.401 12.336 2.008 12.093 1.717C11.878 1.46012 11.6019 1.26137 11.29 1.139C10.938 1 10.524 1 9.694 1H8.306C7.477 1 7.062 1 6.71 1.139C6.39815 1.26137 6.12203 1.46012 5.907 1.717C5.664 2.007 5.533 2.401 5.271 3.188L5 4M15 4V14.2C15 15.88 15 16.72 14.673 17.362C14.3854 17.9265 13.9265 18.3854 13.362 18.673C12.72 19 11.88 19 10.2 19H7.8C6.12 19 5.28 19 4.638 18.673C4.07354 18.3854 3.61462 17.9265 3.327 17.362C3 16.72 3 15.88 3 14.2V4M11 8V15M7 8V15" stroke="#F5222D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script>
+    const menuButton = document.getElementById('menuButton');
+    menuButton.addEventListener('click', () => {
+        // Toggle a class on the body to indicate sidebar state.
+        document.body.classList.toggle('sidebar-closed');
+    });
+</script>
+
+<script>
+    const themeSwitch = document.querySelector('.theme-switch');
+    const html = document.documentElement;
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    html.dataset.theme = savedTheme;
+
+    // Theme switching function
+    themeSwitch.addEventListener('click', () => {
+        const newTheme = html.dataset.theme === 'dark' ? 'light' : 'dark';
+        html.dataset.theme = newTheme;
+        localStorage.setItem('theme', newTheme);
+    });
+
+    // Minimal modal toggle function
+    function toggleModal(event) {
+        event.preventDefault();
+        const modalId = event.currentTarget.getAttribute('data-target');
+        const modal = document.getElementById(modalId);
+        modal.open ? modal.close() : modal.showModal();
+    }
+</script>
+</body>
+</html>

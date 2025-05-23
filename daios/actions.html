@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<div class="sidebar-overlay"></div>
 <!--Header-->
 <div class="admin-container">
 	
@@ -21,6 +22,11 @@
 			<img src="assets/img/logo-light.png" alt="daios" class="logo logo-light" loading="lazy" width="114" height="44">
 			<!-- Dark theme logo (hidden by default) -->
 			<img src="assets/img/logo-dark.png" alt="daios" class="logo logo-dark" loading="lazy" width="114" height="44">
+		</div>
+		<div class="sidebar-header">
+			<button id="closeSidebar" class="close-btn">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
 		</div>
 			<p>Users</p>
 		<nav>
@@ -49,7 +55,7 @@
 				
 			</ul>
 		</nav>
-			<p>System</p>
+		<p>System</p>
 		<nav>
 			<ul role="listbox">
 				<li>
@@ -65,6 +71,46 @@
 				<li>
 					<a href="/logout">
 							<i class="fa-solid fa-power-off icon" aria-hidden="true"></i> Logout
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<p>System</p>
+		<nav>
+			<ul role="listbox">
+				<li>
+					<a href="/settings">
+						<i class="fa-solid fa-gear icon" aria-hidden="true"></i> Settings
+					</a>
+				</li>
+				<li>
+					<a href="/user">
+						<i class="fa-solid fa-user icon" aria-hidden="true"></i> Profile
+					</a>
+				</li>
+				<li>
+					<a href="/logout">
+						<i class="fa-solid fa-power-off icon" aria-hidden="true"></i> Logout
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<p>System</p>
+		<nav>
+			<ul role="listbox">
+				<li>
+					<a href="/settings">
+						<i class="fa-solid fa-gear icon" aria-hidden="true"></i> Settings
+					</a>
+				</li>
+				<li>
+					<a href="/user">
+						<i class="fa-solid fa-user icon" aria-hidden="true"></i> Profile
+					</a>
+				</li>
+				<li>
+					<a href="/logout">
+						<i class="fa-solid fa-power-off icon" aria-hidden="true"></i> Logout
 					</a>
 				</li>
 			</ul>
@@ -597,10 +643,56 @@
 
 
 <script>
+
     const menuButton = document.getElementById('menuButton');
+    const closeButton = document.getElementById('closeSidebar');
+    const sidebar = document.getElementById('page-sidebar');
+
+    // Detect if mobile
+    function isMobile() {
+        return window.matchMedia("(max-width: 768px)").matches;
+    }
+
+    // Toggle sidebar
     menuButton.addEventListener('click', () => {
-        // Toggle a class on the body to indicate sidebar state.
-        document.body.classList.toggle('sidebar-closed');
+        if (isMobile()) {
+            document.body.classList.add('sidebar-closed', 'mobile');
+        } else {
+            document.body.classList.toggle('sidebar-closed');
+            document.body.classList.toggle('desktop');
+        }
+    });
+
+    // Close sidebar with X button (mobile only)
+    closeButton.addEventListener('click', () => {
+        if (isMobile()) {
+            document.body.classList.remove('sidebar-closed', 'mobile');
+        }
+    });
+
+    // Close sidebar when clicking outside (mobile only)
+    document.addEventListener('click', (e) => {
+        if (!isMobile()) return;
+
+        const isSidebar = sidebar.contains(e.target);
+        const isMenuButton = e.target === menuButton || menuButton.contains(e.target);
+
+        if (document.body.classList.contains('mobile') &&
+            !isSidebar &&
+            !isMenuButton) {
+            document.body.classList.remove('sidebar-closed', 'mobile');
+        }
+    });
+
+    // Close sidebar on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (isMobile() && document.body.classList.contains('mobile')) {
+                document.body.classList.remove('sidebar-closed', 'mobile');
+            } else if (!isMobile()) {
+                document.body.classList.remove('sidebar-closed', 'desktop');
+            }
+        }
     });
 </script>
 
