@@ -1216,6 +1216,9 @@ dialog{
     }
 }
 @media (max-width: 768px) {
+    .setting-content{
+        flex-direction: column;
+    }
     .admin-container {
         #page-sidebar {
             top: 0px;
@@ -1270,11 +1273,11 @@ dialog{
     }
 }
 @media (max-width: 580px){
-    .setting-content{
-        .border-card{
-            padding: 0px;
-        }
-    }
+    /*.setting-content{*/
+    /*    .border-card{*/
+    /*        padding: 0px;*/
+    /*    }*/
+    /*}*/
     .section-title{
         &.fs-24{
             font-size: 18px;
@@ -1282,6 +1285,9 @@ dialog{
         .ms-auto{
             margin-left: initial;
         }
+    }
+    .border-card{
+        padding: 12px;
     }
 }
 
@@ -1312,6 +1318,9 @@ dialog{
         border-color: var(--theme-color);
         color: #fff;
 
+    }
+    .sidebar-overlay{
+        background-color: rgb(205 205 205 / 50%);
     }
     img.theme-dark {
         display: inline-block;

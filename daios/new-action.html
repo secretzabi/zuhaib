@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<div class="sidebar-overlay"></div>
+
 <!--Header-->
 <div class="admin-container">
 	
@@ -21,6 +23,11 @@
 			<img src="assets/img/logo-light.png" alt="daios" class="logo logo-light" loading="lazy" width="114" height="44">
 			<!-- Dark theme logo (hidden by default) -->
 			<img src="assets/img/logo-dark.png" alt="daios" class="logo logo-dark" loading="lazy" width="114" height="44">
+		</div>
+		<div class="sidebar-header">
+			<button id="closeSidebar" class="close-btn">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
 		</div>
 			<p>Users</p>
 		<nav>
@@ -540,30 +547,7 @@
 </div>
 
 
+<script src="assets/js/script.js"></script>
 
-<script>
-    const menuButton = document.getElementById('menuButton');
-    menuButton.addEventListener('click', () => {
-        // Toggle a class on the body to indicate sidebar state.
-        document.body.classList.toggle('sidebar-closed');
-    });
-</script>
-
-<script>
-    const themeSwitch = document.querySelector('.theme-switch');
-    const html = document.documentElement;
-
-    // Initialize theme
-    const savedTheme = localStorage.getItem('theme') ||
-        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    html.dataset.theme = savedTheme;
-
-    // Theme switching function
-    themeSwitch.addEventListener('click', () => {
-        const newTheme = html.dataset.theme === 'dark' ? 'light' : 'dark';
-        html.dataset.theme = newTheme;
-        localStorage.setItem('theme', newTheme);
-    });
-</script>
 </body>
 </html>
