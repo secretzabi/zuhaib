@@ -99,137 +99,201 @@
 			</div>
 		</div>
 	</div>
+</header>
 <!-- Main Navigation -->
+<div class="main-nav-container">
 	<nav class="navbar navbar-expand-lg">
-		<div class="container">
-			<a class="logo d-block d-lg-none" href="">
-				<img class="img-fluid light-img" src="assets/img/logo-white.svg" alt="Tnews" width="150" height="30" loading="lazy">
-			</a>
-			
-			<!-- Drawer toggle button (visible on mobile) -->
-	<button class="drawer-toggle" type="button" id="mobileMenuToggle">
-				<i class="fas fa-bars"></i>
-		</button>
-			
-			<!-- Navigation menu -->
-			<div class="navbar-collapse" id="navbarContent">
-				<button class="close-btn" id="closeDrawer">
-					<i class="fas fa-times"></i>
-				</button>
-				
-				<ul class="navbar-nav mb-2 mb-lg-0 w-100">
-					<div class="menu-logo">
-						<img class="img-fluid light-img" src="assets/img/logo.svg" alt="Tnews" width="150" height="30" loading="lazy">
-					</div>
-					<li class="nav-item">
-						<a class="nav-link " href="#">HOME</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">ABOUT US</a>
-					</li>
-					
-					<!-- Dropdown menu -->
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button">
-							CATEGORY
-							<i class="fa-solid fa-angle-down"></i>
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="categoryDropdown">
-							<li><a class="dropdown-item" href="#">Submenu 1</a></li>
-							<li><a class="dropdown-item" href="#">Submenu 2</a></li>
-							<li><a class="dropdown-item" href="#">Submenu 3</a></li>
-						</ul>
-					</li>
-					
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button">
-							PAGES
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="pagesDropdown">
-							<li><a class="dropdown-item" href="#">Page 1</a></li>
-							<li><a class="dropdown-item" href="#">Page 2</a></li>
-							<li><a class="dropdown-item" href="#">Page 3</a></li>
-							<li><a class="dropdown-item" href="#">Page 4</a></li>
-						</ul>
-					</li>
-					
-					<li class="nav-item">
-						<a class="nav-link" href="#">BLOG</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">CONTACT</a>
-					</li>
-					<li class="nav-item d-none d-lg-block ms-auto">
-					</li>
-					<!-- Menu icon inside navigation (visible on desktop) -->
-					<li class="nav-item  ms-auto d-flex align-items-center d-none d-lg-flex">
-						<a href="" class="nav-link me-4 search-link" id="searchLink">
-							<i class="fa-solid fa-magnifying-glass"></i>
-						</a>
-						<a href="" class="nav-link me-4 drawer-trigger" data-drawer="cartDrawer">
-							<i class="fa-solid fa-cart-shopping"></i>
-						</a>
-						<a class="nav-link drawer-trigger news-drawer" href="#"   data-drawer="settingsDrawer">
-							<i class="fa-solid fa-bars"></i>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- Search popup -->
-	<div class="search-popup" id="searchPopup">
-		<span class="search-close-btn" id="closeSearch"><i class="fas fa-times"></i></span>
-		<div class="search-input-container">
-			<input type="text" placeholder="What are you looking for?" id="searchInput">
-			<button class="search-btn"><i class="fas fa-search"></i></button>
-		</div>
+	<div class="container">
+		<a class="logo d-block d-lg-none" href="">
+			<img class="img-fluid light-img" src="assets/img/logo-white.svg" alt="Tnews" width="150" height="30" loading="lazy">
+		</a>
 		
-		<!-- Search results container (initially empty) -->
-		<div class="search-results" id="searchResults">
-			<!-- Results will be populated here -->
-		</div>
-	</div>
-	<!-- Settings Drawer Template -->
-	<template id="settingsDrawerTemplate">
-		<div class="custom-drawer">
-			<button class="drawer-close-btn"><i class="fas fa-times"></i></button>
-			<h3>Settings</h3>
-			<ul class="list-group mt-3">
-				<li class="list-group-item">Account Settings</li>
-				<li class="list-group-item">Notification Preferences</li>
-				<li class="list-group-item">Privacy Controls</li>
+		<!-- Drawer toggle button (visible on mobile) -->
+		<button class="drawer-toggle" type="button" id="mobileMenuToggle">
+			<i class="fas fa-bars"></i>
+		</button>
+		
+		<!-- Navigation menu -->
+		<div class="navbar-collapse" id="navbarContent">
+			<button class="close-btn" id="closeDrawer">
+				<i class="fas fa-times"></i>
+			</button>
+			
+			<ul class="navbar-nav mb-2 mb-lg-0 w-100">
+				<div class="menu-logo">
+					<img class="img-fluid light-img" src="assets/img/logo.svg" alt="Tnews" width="150" height="30" loading="lazy">
+				</div>
+				<li class="nav-item">
+					<a class="nav-link " href="#">HOME</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">ABOUT US</a>
+				</li>
+				
+				<!-- Dropdown menu -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button">
+						CATEGORY
+						<i class="fa-solid fa-angle-down"></i>
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+						<li><a class="dropdown-item" href="#">Submenu 1</a></li>
+						<li><a class="dropdown-item" href="#">Submenu 2</a></li>
+						<li><a class="dropdown-item" href="#">Submenu 3</a></li>
+					</ul>
+				</li>
+				
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button">
+						PAGES
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+						<li><a class="dropdown-item" href="#">Page 1</a></li>
+						<li><a class="dropdown-item" href="#">Page 2</a></li>
+						<li><a class="dropdown-item" href="#">Page 3</a></li>
+						<li><a class="dropdown-item" href="#">Page 4</a></li>
+					</ul>
+				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link" href="#">BLOG</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">CONTACT</a>
+				</li>
+				<li class="nav-item d-none d-lg-block ms-auto">
+				</li>
+				<!-- Menu icon inside navigation (visible on desktop) -->
+				<li class="nav-item  ms-auto d-flex align-items-center d-none d-lg-flex">
+					<a href="" class="nav-link me-4 search-link" id="searchLink">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</a>
+					<a href="" class="nav-link me-4 drawer-trigger" data-drawer="cartDrawer">
+						<i class="fa-solid fa-cart-shopping"></i>
+					</a>
+					<a class="nav-link drawer-trigger news-drawer" href="#"   data-drawer="settingsDrawer">
+						<i class="fa-solid fa-bars"></i>
+					</a>
+				</li>
 			</ul>
 		</div>
-	</template>
-	<!-- cartDrawer Template -->
-	<template id="cartDrawerTemplate">
-		<div class="custom-drawer">
-			<button class="drawer-close-btn"><i class="fas fa-times"></i></button>
-			<div class="fw-bold fs-22 title-border mb-4 title-color">
-				Shopping cart
-			</div>
-			<div class="">
-				<div class="d-flex gap-2 mb-3 fs-18">
-					<span class="fw-bold title-color">Subtotal</span>
-					<span>
-						$120.00
-					</span>
+	</div>
+</nav>
+</div>
+<!-- Search popup -->
+<div class="search-popup" id="searchPopup">
+	<span class="search-close-btn" id="closeSearch"><i class="fas fa-times"></i></span>
+	<div class="search-input-container">
+		<input type="text" placeholder="What are you looking for?" id="searchInput">
+		<button class="search-btn"><i class="fas fa-search"></i></button>
+	</div>
+	
+	<!-- Search results container (initially empty) -->
+	<div class="search-results" id="searchResults">
+		<!-- Results will be populated here -->
+	</div>
+</div>
+<!-- Settings Drawer Template -->
+<template id="settingsDrawerTemplate">
+	<div class="custom-drawer">
+		<button class="drawer-close-btn"><i class="fas fa-times"></i></button>
+		<h5 class="footer-title mb-16">
+			<img class="img-fluid light-img" src="assets/img/logo.svg" alt="Tnews" width="142" height="36" loading="lazy">
+		</h5>
+		<p>Magazines cover a wide subjects, including not limited to fashion, lifestyle, health, politics, business, Entertainment, sports, science,</p>
+		<div class="th-social style-black mt-4">
+			<a href="https://www.facebook.com">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+			<a href="https://www.twitter.com">
+				<i class="fab fa-twitter"></i>
+			</a>
+			<a href="https://www.linkedin.com">
+				<i class="fab fa-linkedin-in"></i>
+			</a>
+			<a href="https://www.instagram.com">
+				<i class="fab fa-instagram"></i>
+			</a>
+			<a href="https://www.youtube.com">
+				<i class="fab fa-youtube"></i>
+			</a>
+		</div>
+		<div class="fw-bold fs-18 title-border mb-4 title-color mt-4">
+			Recent Posts
+		</div>
+		<div class="d-flex gap-3 align-items-start mb-3">
+			<img src="assets/img/blog-single-31-80x80.jpg" width="80" height="80" class="img-fluid" alt="image description" loading="lazy">
+			<div>
+				<a href="" class="category-label" style="--theme-color: #4E4BD0;">Entertainment</a>
+				<div class="fs-18 fw-600 secondary-font title-color mt-2">
+					<a href="" class="title-color">Travel Where memories are</a>
 				</div>
-				<div class="d-flex gap-3">
-					<a href="" class="custom-button" aria-label="View Cart">
-						View Cart
-					</a>
-					<a href="" class="custom-button" aria-label="View Cart">
-						Checkout
-					</a>
+				<div class="blog-meta">
+					<a href=""><i class="fa-regular fa-calendar-days"></i>12 Mar, 2023</a>
 				</div>
 			</div>
 		</div>
-	</template>
-	<!-- Backdrop for drawers -->
-	<div class="drawer-backdrop"></div>
-</header>
+		<div class="d-flex gap-3 align-items-start mb-3">
+			<img src="assets/img/blog-single-31-80x80.jpg" width="80" height="80" class="img-fluid" alt="image description" loading="lazy">
+			<div>
+				<a href="" class="category-label" style="--theme-color: #4E4BD0;">Entertainment</a>
+				<div class="fs-18 fw-600 secondary-font title-color mt-2">
+					<a href="" class="title-color">Travel Where memories are</a>
+				</div>
+				<div class="blog-meta">
+					<a href=""><i class="fa-regular fa-calendar-days"></i>12 Mar, 2023</a>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex gap-3 align-items-start">
+			<img src="assets/img/blog-single-31-80x80.jpg" width="80" height="80" class="img-fluid" alt="image description" loading="lazy">
+			<div>
+				<a href="" class="category-label" style="--theme-color: #4E4BD0;">Entertainment</a>
+				<div class="fs-18 fw-600 secondary-font title-color mt-2">
+					<a href="" class="title-color">Travel Where memories are</a>
+				</div>
+				<div class="blog-meta">
+					<a href=""><i class="fa-regular fa-calendar-days"></i>12 Mar, 2023</a>
+				</div>
+			</div>
+		</div>
+		<div class="fw-bold fs-18 title-border mb-4 title-color mt-4">
+			Subscribe
+		</div>
+		<p>Sign up to get update news about us. Don't be hasitate your email is safe.</p>
+		<form class="form-inline d-flex">
+			<input type="text" class="form-control" placeholder="Enter email " style="border-radius: 10px 0 0 10px;">
+			<button type="submit" class="custom-button" style="min-width: initial; border-radius: 0px 10px 10px 0px;"><i class="fa-solid fa-paper-plane"></i></button>
+		</form>
+	</div>
+</template>
+<!-- cartDrawer Template -->
+<template id="cartDrawerTemplate">
+	<div class="custom-drawer">
+		<button class="drawer-close-btn"><i class="fas fa-times"></i></button>
+		<div class="fw-bold fs-22 title-border mb-4 title-color">
+			Shopping cart
+		</div>
+		<div class="">
+			<div class="d-flex gap-2 mb-3 fs-18">
+				<span class="fw-bold title-color">Subtotal</span>
+				<span>
+						$120.00
+					</span>
+			</div>
+			<div class="d-flex gap-3">
+				<a href="" class="custom-button" aria-label="View Cart">
+					View Cart
+				</a>
+				<a href="" class="custom-button" aria-label="View Cart">
+					Checkout
+				</a>
+			</div>
+		</div>
+	</div>
+</template>
+<!-- Backdrop for drawers -->
+<div class="drawer-backdrop"></div>
 <!-- Text Scroller -->
 <div class="container px-0 px-md-3">
 		<div class="marquee">
