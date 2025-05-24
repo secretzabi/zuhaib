@@ -27,7 +27,17 @@ body {
     font-family: "Poppins", sans-serif;
     line-height: 1.45;
 }
-
+.fa, .fas, .far, .fal, .fab {
+    font-family: "Font Awesome 6 Free" !important;
+}
+/* Fix for iOS rendering issues */
+@supports (-webkit-touch-callout: none) {
+    .fa, .fas, .far, .fal, .fab {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+}
 a {
     text-decoration: none;
     color: inherit;
