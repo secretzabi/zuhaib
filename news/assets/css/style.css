@@ -601,93 +601,76 @@ main{
     margin-right: 6px
 }
 
+
 .custom-card{
     position: relative;
-   h3 a{
-        &:hover{
-            color: var(--theme-color) !important;
-        }
-    }
-    &:hover{
-        .blog-img{
-            img{
-                transform: scale(1.1);
-            }
-        }
-    }
-    .blog-img{
-        overflow: hidden;
-        img{
-            transition: 0.4s ease-in-out;
-
-        }
-        &:after{
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(19.27%, rgba(0, 0, 0, 0)), to(#000000));
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 19.27%, #000000 100%);
-            content: "";
-            position: absolute;
-            inset: 0;
-
-        }
-    }
-    .blog-content {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding: var(--space);
-        z-index: 3;
+}
+.custom-card h3 a:hover {
+    color: var(--theme-color) !important;
+}
+.custom-card:hover .blog-img{
+    img{
+        transform: scale(1.1);
     }
 }
-.img-frame{
-    .blog-img{
-        overflow: hidden;
-        img{
-            transition: 0.4s ease-in-out;
-
-        }
-    }
-    &:hover{
-        .blog-img{
-            img{
-                transform: scale(1.1);
-            }
-        }
-    }
+.custom-card  .blog-img{
+    overflow: hidden;
 }
-.tabs{
-    .nav-pills{
-        margin-bottom: 30px;
-        .nav-item{
-            flex: 1 1;
-            &:first-child{
-                button{
-                    border-bottom-left-radius: 4px;
-                    border-top-left-radius: 4px;
-                }
-            }
-            &:last-child{
-                button{
-                    border-bottom-right-radius: 4px;
-                    border-top-right-radius: 4px;
-                }
-            }
-            button{
-                width: 100%;
-                border-radius: 0;
-                background-color: var(--border-color);
-                color: var(--title-color);
-                font-size: 15px;
-                padding-inline: .4rem;
-                &.active{
-                    background-color: var(--theme-color);
-                    color: #FFF;
-                }
-            }
-        }
-
-    }
+.custom-card  .blog-img img{
+        transition: 0.4s ease-in-out;
 }
+.custom-card  .blog-img:after{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(19.27%, rgba(0, 0, 0, 0)), to(#000000));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 19.27%, #000000 100%);
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+.custom-card  .blog-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: var(--space);
+    z-index: 3;
+}
+.img-frame .blog-img{
+    overflow: hidden;
+}
+.img-frame .blog-img img{
+    transition: 0.4s ease-in-out;
+}
+.img-frame .blog-img img:hover{
+    transform: scale(1.1);
+}
+
+.tabs .nav-pills{
+    margin-bottom: 30px;
+}
+.tabs .nav-pills .nav-item{
+    flex: 1 1;
+}
+.tabs .nav-pills .nav-item:first-child button{
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.tabs .nav-pills .nav-item:last-child button{
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.tabs .nav-pills .nav-item button{
+    width: 100%;
+    border-radius: 0;
+    background-color: var(--border-color);
+    color: var(--title-color);
+    font-size: 15px;
+    padding-inline: .4rem;
+}
+.tabs .nav-pills .nav-item button.active{
+    background-color: var(--theme-color);
+    color: #FFF;
+}
+
 .sec-title {
     /*margin-bottom: calc(var(--section-title-space) - 7px);*/
     /*margin-top: -0.2em;*/
@@ -702,7 +685,8 @@ main{
     align-items: center;
     width: 100%;
     --bs-gutter-x: 24px;
-    &:after{
+}
+.sec-title:after{
         content: "";
         height: 6px;
         width: 100%;
@@ -712,8 +696,8 @@ main{
         border-top: 1px dashed var(--gray-color);
         border-bottom: 1px dashed var(--gray-color);
         margin-left: var(--bs-gutter-x);
-    }
 }
+
 a.hover-line{
     color: inherit;
     background-image: -webkit-gradient(linear, right top, left top, from(var(--theme-color)), to(var(--theme-color)));
@@ -723,10 +707,10 @@ a.hover-line{
     background-size: 0 2px;
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
-    &:hover{
-        background-size: 100% 2px;
-        color: var(--theme-color);
-    }
+}
+a.hover-line:hover{
+    background-size: 100% 2px;
+    color: var(--theme-color);
 }
 .trending-news, .carousel-container{
     .category-item{
