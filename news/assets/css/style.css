@@ -608,10 +608,8 @@ main{
 .custom-card h3 a:hover {
     color: var(--theme-color) !important;
 }
-.custom-card:hover .blog-img{
-    img{
+.custom-card:hover .blog-img img{
         transform: scale(1.1);
-    }
 }
 .custom-card  .blog-img{
     overflow: hidden;
@@ -687,15 +685,15 @@ main{
     --bs-gutter-x: 24px;
 }
 .sec-title:after{
-        content: "";
-        height: 6px;
-        width: 100%;
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        border-top: 1px dashed var(--gray-color);
-        border-bottom: 1px dashed var(--gray-color);
-        margin-left: var(--bs-gutter-x);
+    content: "";
+    height: 6px;
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border-top: 1px dashed var(--gray-color);
+    border-bottom: 1px dashed var(--gray-color);
+    margin-left: var(--bs-gutter-x);
 }
 
 a.hover-line{
@@ -714,57 +712,93 @@ a.hover-line:hover{
 }
 .trending-news, .carousel-container{
     .category-item{
-        padding-right: 1rem;
+
     }
     .slick-next, .slick-prev{
-        top: -60px;
-        transform: translateY(0%);
-        z-index: 2;
-        border: 1px solid var(--border-color);
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background-color: #fff;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
         &:before{
-            font-size: 20px;
-            color: var(--body-color);
-            content: "";
-            background-image: url(../img/arrow-left-solid.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 16px;
-            width: 16px;
-            height: 16px;
-            display: block;
         }
         &:hover{
-            background-color: var(--theme-color);
             &:before{
-                filter: brightness(0) invert(1);
+
             }
         }
         &.slick-disabled{
-            cursor: default;
             &:hover{
-                background-color: #eeeeee2e;
                 &:before{
-                    filter:none;
                 }
             }
         }
     }
     .slick-prev{
-        right: 42px;
-        left: auto;
+
     }
     .slick-next{
-        transform: rotate(180deg);
-        right: 4px
+
     }
 }
+.trending-news .category-item, .carousel-container  .category-item{
+    padding-right: 1rem;
+}
+.trending-news .slick-next, .trending-news .slick-prev,
+.carousel-container .slick-next, .carousel-container .slick-prev{
+    top: -60px;
+    transform: translateY(0%);
+    z-index: 2;
+    border: 1px solid var(--border-color);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.trending-news .slick-next:before, .trending-news .slick-prev:before,
+.carousel-container .slick-next:before, .carousel-container .slick-prev:before{
+    font-size: 20px;
+    color: var(--body-color);
+    content: "";
+    background-image: url(../img/arrow-left-solid.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+.trending-news .slick-next:hover, .trending-news .slick-prev:hover,
+.carousel-container .slick-next:hover, .carousel-container .slick-prev:hover{
+    background-color: var(--theme-color);
+}
+.trending-news .slick-next:hover:before, .trending-news .slick-prev:hover:before,
+.carousel-container .slick-next:hover:before, .carousel-container .slick-prev:hover:before{
+    filter: brightness(0) invert(1);
+}
+
+.trending-news .slick-next.slick-disabled, .trending-news .slick-prev.slick-disabled,
+.carousel-container .slick-next.slick-disabled, .carousel-container .slick-prev.slick-disabled{
+    cursor: default;
+}
+.trending-news .slick-next.slick-disabled:hover, .trending-news .slick-prev.slick-disabled:hover,
+.carousel-container .slick-next.slick-disabled:hover, .carousel-container .slick-prev.slick-disabled:hover{
+    background-color: #eeeeee2e;
+}
+.trending-news .slick-next.slick-disabled:hover:before, .trending-news .slick-prev.slick-disabled:hover:before,
+.carousel-container .slick-next.slick-disabled:hover:before, .carousel-container .slick-prev.slick-disabled:hover:before{
+    filter:none;
+
+}
+.trending-news .slick-prev, .carousel-container .slick-prev{
+    right: 42px;
+    left: auto;
+}
+.trending-news .slick-next,
+.carousel-container .slick-next{
+    transform: rotate(180deg);
+    right: 4px
+}
+
+
 
 .tech-news-section, .popular-new-section{
     .navbar{
