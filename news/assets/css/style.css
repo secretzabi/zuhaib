@@ -49,42 +49,40 @@ a {
 .header-top {
     padding: 7px 0;
     background-color: #282828;
-    .header-links{
-        ul{
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-            li{
-                display: inline-block;
-                position: relative;
-                font-size: 13px;
-                line-height: 18px;
-                font-weight: 500;
-                text-transform: uppercase;
-                > i{
-                    color: var(--theme-color);
-                    font-size: 14px;
-                    margin-right: 8px;
-                }
-            }
-            li:not(:last-child){
-                margin:0 35px 0 0;
-                &:after{
-                    content: "";
-                    height: 10px;
-                    width: 1px;
-                    background-color: rgb(181, 181, 181);
-                    position: absolute;
-                    top: 3px;
-                    right: -20px;
-                    opacity: 0.6;
-                }
-            }
-            li, a,p, span{
-                color: rgb(181, 181, 181);
-            }
-        }
-    }
+}
+.header-top .header-links ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.header-top .header-links ul li{
+    display: inline-block;
+    position: relative;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.header-top .header-links ul li > i{
+    color: var(--theme-color);
+    font-size: 14px;
+    margin-right: 8px;
+}
+.header-top .header-links ul li:not(:last-child){
+    margin:0 35px 0 0;
+}
+.header-top .header-links ul li:not(:last-child):after{
+    content: "";
+    height: 10px;
+    width: 1px;
+    background-color: rgb(181, 181, 181);
+    position: absolute;
+    top: 3px;
+    right: -20px;
+    opacity: 0.6;
+}
+.header-top .header-links ul li, .header-top .header-links ul a,.header-top .header-links ul p, .header-top .header-links ul span{
+    color: rgb(181, 181, 181);
 }
 .theme-toggler i {
     margin-right: 6px;
