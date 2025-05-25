@@ -275,6 +275,9 @@ a {
     color: var(--body-color);
     transition: all 0.3s ease;
 }
+.drawer-close-btn svg path, .search-close-btn svg path{
+    fill: var(--theme-color);
+}
 .drawer-close-btn, .search-close-btn:hover{
     border-color: var(--theme-color);
     color: var(--theme-color);
@@ -1110,7 +1113,7 @@ footer .footer-links {
     gap: 10px;
 }
 
-.blog-details .multi-social a i{
+.blog-details .multi-social a{
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -1133,7 +1136,7 @@ footer .footer-links {
 .blog-details .multi-social a i.fa-linkedin-in{
     color: #0077B5;
 }
-.blog-details .multi-social a &:hover i{
+.blog-details .multi-social a:hover{
     background-color: var(--theme-color);
     color: #fff;
 }
