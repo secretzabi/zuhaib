@@ -113,6 +113,7 @@
 	</div>
 </header>
 <!-- Main Navigation -->
+<!-- Main Navigation -->
 <div class="main-nav-container">
 	<nav class="navbar navbar-expand-lg">
 		<div class="container">
@@ -120,6 +121,9 @@
 				<img class="img-fluid light-img" src="assets/img/logo-white.svg" alt="Tnews" width="150" height="30" loading="lazy">
 			</a>
 			
+			<a href="" class="nav-link me-4 search-link text-white d-block d-lg-none"  data-search-trigger >
+				<i class="fa-solid fa-magnifying-glass "></i>
+			</a>
 			<!-- Drawer toggle button (visible on mobile) -->
 			<button class="drawer-toggle" type="button" id="mobileMenuToggle">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24">
@@ -134,7 +138,6 @@
 						<path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
 					</svg>
 				</button>
-				
 				<ul class="navbar-nav mb-2 mb-lg-0 w-100">
 					<div class="menu-logo">
 						<img class="img-fluid light-img" src="assets/img/logo.svg" alt="Tnews" width="150" height="30" loading="lazy">
@@ -181,7 +184,7 @@
 					</li>
 					<!-- Menu icon inside navigation (visible on desktop) -->
 					<li class="nav-item  ms-auto d-flex align-items-center d-none d-lg-flex">
-						<a href="" class="nav-link me-4 search-link" id="searchLink">
+						<a href="" class="nav-link me-4 search-link" data-search-trigger>
 							<i class="fa-solid fa-magnifying-glass"></i>
 						</a>
 						<a href="" class="nav-link me-4 drawer-trigger" data-drawer="cartDrawer">
@@ -196,6 +199,7 @@
 		</div>
 	</nav>
 </div>
+
 <!-- Search popup -->
 <div class="search-popup" id="searchPopup">
 	<span class="search-close-btn" id="closeSearch">

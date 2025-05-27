@@ -1,76 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const searchLink = document.getElementById('searchLink');
+    const searchTriggers = document.querySelectorAll('[data-search-trigger]');
     const searchPopup = document.getElementById('searchPopup');
     const closeSearch = document.getElementById('closeSearch');
     const searchInput = document.getElementById('searchInput');
     const searchResults = document.getElementById('searchResults');
+    const body = document.body;
 
-    // Open search popup
-    searchLink.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default anchor behavior
-        searchPopup.classList.add('active');
-        searchInput.focus();
+    // Add click event to all search triggers
+    searchTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            body.classList.add('blur');
+            searchPopup.classList.add('active');
+            setTimeout(() => {
+                searchInput.focus();
+            }, 400);
+        });
     });
 
-    // Close search popup
-    closeSearch.addEventListener('click', function() {
+    // Close function
+    function closePopup() {
+        body.classList.remove('blur');
         searchPopup.classList.remove('active');
-    });
+        searchInput.value = '';
+        searchResults.innerHTML = '';
+    }
 
-    // Close when clicking outside the search box (optional)
+    closeSearch.addEventListener('click', closePopup);
+
+    // Close when clicking outside
     searchPopup.addEventListener('click', function(e) {
         if (e.target === searchPopup) {
-            searchPopup.classList.remove('active');
+            closePopup();
         }
     });
 
-    // Search functionality (example)
+    // Search functionality
     searchInput.addEventListener('input', function() {
         const query = this.value.toLowerCase();
-
-        // Clear previous results
         searchResults.innerHTML = '';
 
         if (query.length > 2) {
-            // Simulate search results (replace with your actual search logic)
-            const mockResults = [
-                {
-                    title: "From the Ground Up: A People-Centered Approach",
-                    description: "Exploring how to build systems with people at the core."
-                },
-                {
-                    title: "Justice for All: Exploring the Role of Public Support",
-                    description: "How public opinion influences justice systems."
-                }
-            ];
-
-            // Filter results based on query
-            const filteredResults = mockResults.filter(item =>
-                item.title.toLowerCase().includes(query) ||
-                item.description.toLowerCase().includes(query)
-            );
-
-            // Display results
-            if (filteredResults.length > 0) {
-                filteredResults.forEach(result => {
-                    const resultItem = document.createElement('div');
-                    resultItem.className = 'search-result-item';
-                    resultItem.innerHTML = `
-                                <h3>${result.title}</h3>
-                                <p>${result.description}</p>
-                            `;
-                    searchResults.appendChild(resultItem);
-                });
-            } else {
-                searchResults.innerHTML = '<p>No results found.</p>';
-            }
+            // Your search logic here...
         }
     });
 
-    // Close with ESC key
+    // ESC key close
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
-            searchPopup.classList.remove('active');
+            closePopup();
         }
     });
 });
