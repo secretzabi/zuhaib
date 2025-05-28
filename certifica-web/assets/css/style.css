@@ -1841,7 +1841,111 @@ progress[value].success{
         }
     }
 }
+.rating-container {
+    display: flex;
+    align-items: center;
+}
 
+.stars {
+    display: flex;
+}
+
+.star {
+    width: 24px;
+    height: 24px;
+    background: url('../img/Star.svg') no-repeat center/contain;
+    margin-right: 2px;
+}
+
+.half-star {
+    background: url('../img/halfStar.svg') no-repeat center/contain;
+}
+
+.rating-percent {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+.certificate-container{
+    gap: 32px;
+    .bar-container{
+        flex: 0  0 100px;
+    }
+    .certificate-content{
+        flex: 1 1;
+    }
+}
+.vertical-text {
+    writing-mode: vertical-rl; /* Vertical, right-to-left */
+    transform: rotate(180deg); /* Optional: to match image orientation */
+    font-size: 12px;
+    line-height: 1.5;
+    height: 100%;
+}
+.certificate-info, .certificate-details{
+    flex: 1 1;
+}
+.certificate-info{
+    padding-bottom: 2rem;
+    hr{
+        margin-block: 2rem;
+    }
+}
+.certificate-details-content{
+    gap: 64px;
+}
+.certificate-logo{
+    .star{
+        width: 44px;
+        height: 44px;
+    }
+    .rating-percent{
+        font-size: 44px;
+    }
+}
+.report-list{
+    border-radius: 12px;
+    padding:8px 16px;
+    gap: 16px;
+    progress[value]{
+        --background: #fff;
+        height: 16px;
+        padding: 3px;
+        background-color: #fff;
+        border-radius: 12px;
+        &::-webkit-progress-bar{
+            background: #fff;
+        }
+        &::-webkit-progress-value{
+            border-radius: 12px;
+        }
+    }
+    &.green{
+        background-color:rgba(110, 198, 54, 0.12);
+        progress[value]::-webkit-progress-value{
+            background-color: #6EC636;
+        }
+    }
+    &.yellow{
+        background-color:rgba(255, 204, 0, 0.12);
+        progress[value]::-webkit-progress-value{
+            background-color: #FFCC00;
+        }
+    }
+    &.red{
+        background-color:rgba(255, 45, 89, 0.12);
+        progress[value]::-webkit-progress-value{
+            background-color: #FF2D59;
+        }
+    }
+}
+.quality-seal{
+    border-radius: 12px;
+    background: #FFF;
+    padding: 20px;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.15);
+    width: fit-content;
+}
 @media screen and (max-width:1099px) {
     .navbar .nav-links a{
         font-size: 14px;
@@ -2144,6 +2248,52 @@ progress[value].success{
     }
 }
 @media screen and (max-width:600px) {
+    .certificate-container{
+        flex-direction: column-reverse;
+        .certificate-details-content{
+         flex-direction: column;
+            gap: 2rem;
+        }
+        .rating-container{
+
+        }
+        .certificate-logo {
+            .star {
+                width: 24px;
+                height: 24px;
+            }
+            .rating-percent {
+                font-size: 24px;
+            }
+        }
+        .fs-32{
+            font-size: 20px;
+        }
+        .certificate-info {
+            hr {
+                margin-block: 1rem;
+            }
+        }
+        .vertical-text{
+            writing-mode: initial;
+            transform: initial;
+            margin-top: 0;
+        }
+        .bar-container{
+            flex: 0 0 100%;
+            display: flex;
+            align-items: self-start;
+            gap: 16px;
+        }
+        .quality-seal{
+            > .d-flex{
+                flex-wrap: wrap;
+                > div:not(.d-flex){
+                    margin-inline: auto;
+                }
+            }
+        }
+    }
     .tools-container {
         .tools-list {
             flex-direction: column;
