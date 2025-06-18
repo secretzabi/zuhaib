@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard-style.css">
+    <title>12-Dashboard</title>
+</head>
+
+<body>
+<div class="sidebar-overlay"></div>
+<div class="admin-container">
+    <aside id="page-sidebar">
+        <button id="closeSidebar" class="close-btn">
+            <img src="assets/img/dashboard/close.svg" alt="close side bar" loading="lazy" width="24" class="img-fluid">
+        </button>
+        <div class="sidebar-header">
+            <div class="logo">
+                <a href="index.html" aria-label="">
+                    <img src="assets/img/logo.png" alt="Certifica Web" loading="lazy" width="" class="img-fluid">
+                </a>
+            </div>
+            <div class="text-center mb-24 mt-16">
+                <svg width="155" height="2" viewBox="0 0 155 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0.5" y1="0.720001" x2="154.5" y2="0.720001" stroke="#E6E8EC"/>
+                </svg>
+            </div>
+            <!---->
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="dashboard.html" aria-label="Dashboard" class=" fw-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 6.72C3 4.09479 3.02811 3.22 6.5 3.22C9.97189 3.22 10 4.09479 10 6.72C10 9.34521 10.0111 10.22 6.5 10.22C2.98893 10.22 3 9.34521 3 6.72Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 6.72C14 4.09479 14.0281 3.22 17.5 3.22C20.9719 3.22 21 4.09479 21 6.72C21 9.34521 21.0111 10.22 17.5 10.22C13.9889 10.22 14 9.34521 14 6.72Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 17.72C3 15.0948 3.02811 14.22 6.5 14.22C9.97189 14.22 10 15.0948 10 17.72C10 20.3452 10.0111 21.22 6.5 21.22C2.98893 21.22 3 20.3452 3 17.72Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 17.72C14 15.0948 14.0281 14.22 17.5 14.22C20.9719 14.22 21 15.0948 21 17.72C21 20.3452 21.0111 21.22 17.5 21.22C13.9889 21.22 14 20.3452 14 17.72Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard.html" aria-label="Informes" class=" fw-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M8 2.22V5.22" stroke="#848382" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 2.22V5.22" stroke="#848382" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 8.72V13.85C20.11 13.14 18.98 12.72 17.75 12.72C16.52 12.72 15.37 13.15 14.47 13.88C13.26 14.83 12.5 16.32 12.5 17.97C12.5 18.95 12.78 19.89 13.26 20.67C13.63 21.28 14.11 21.81 14.68 22.22H8C4.5 22.22 3 20.22 3 17.22V8.72C3 5.72 4.5 3.72 8 3.72H16C19.5 3.72 21 5.72 21 8.72Z" stroke="#848382" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 11.22H13" stroke="#848382" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 16.22H9.62" stroke="#848382" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M23 17.97C23 18.95 22.72 19.89 22.24 20.67C21.96 21.15 21.61 21.57 21.2 21.91C20.28 22.73 19.08 23.22 17.75 23.22C16.6 23.22 15.54 22.85 14.68 22.22C14.11 21.81 13.63 21.28 13.26 20.67C12.78 19.89 12.5 18.95 12.5 17.97C12.5 16.32 13.26 14.83 14.47 13.88C15.37 13.15 16.52 12.72 17.75 12.72C18.98 12.72 20.11 13.14 21 13.85C22.22 14.81 23 16.3 23 17.97Z" stroke="#848382" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.75 20.47C17.75 19.09 18.87 17.97 20.25 17.97C18.87 17.97 17.75 16.85 17.75 15.47C17.75 16.85 16.63 17.97 15.25 17.97C16.63 17.97 17.75 19.09 17.75 20.47Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Informes
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard.html" aria-label="Certificados" class="fw-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M19 9.22C19 10.67 18.57 12 17.83 13.11C16.75 14.71 15.04 15.84 13.05 16.13C12.71 16.19 12.36 16.22 12 16.22C11.64 16.22 11.29 16.19 10.95 16.13C8.96 15.84 7.25 14.71 6.17 13.11C5.43 12 5 10.67 5 9.22C5 5.35 8.13 2.22 12 2.22C15.87 2.22 19 5.35 19 9.22Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21.2501 18.69L19.6001 19.08C19.2301 19.17 18.9401 19.45 18.8601 19.82L18.5101 21.29C18.3201 22.09 17.3001 22.33 16.7701 21.7L12.0001 16.22L7.23008 21.71C6.70008 22.34 5.68008 22.1 5.49008 21.3L5.14008 19.83C5.05008 19.46 4.76008 19.17 4.40008 19.09L2.75008 18.7C1.99008 18.52 1.72008 17.57 2.27008 17.02L6.17008 13.12C7.25008 14.72 8.96008 15.85 10.9501 16.14C11.2901 16.2 11.6401 16.23 12.0001 16.23C12.3601 16.23 12.7101 16.2 13.0501 16.14C15.0401 15.85 16.7501 14.72 17.8301 13.12L21.7301 17.02C22.2801 17.56 22.0101 18.51 21.2501 18.69Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.58 6.2L13.17 7.37999C13.25 7.53999 13.46 7.7 13.65 7.73L14.72 7.90999C15.4 8.01999 15.56 8.52 15.07 9.01L14.24 9.83999C14.1 9.97999 14.02 10.25 14.07 10.45L14.31 11.48C14.5 12.29 14.07 12.61 13.35 12.18L12.35 11.59C12.17 11.48 11.87 11.48 11.69 11.59L10.69 12.18C9.96997 12.6 9.53997 12.29 9.72997 11.48L9.96997 10.45C10.01 10.26 9.93997 9.97999 9.79997 9.83999L8.96997 9.01C8.47997 8.52 8.63997 8.02999 9.31997 7.90999L10.39 7.73C10.57 7.7 10.78 7.53999 10.86 7.37999L11.45 6.2C11.74 5.56 12.26 5.56 12.58 6.2Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Certificados
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard.html" aria-label="Widgets" class="fw-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M22 8.49V4.45C22 2.86 21.36 2.22 19.77 2.22H15.73C14.14 2.22 13.5 2.86 13.5 4.45V8.49C13.5 10.08 14.14 10.72 15.73 10.72H19.77C21.36 10.72 22 10.08 22 8.49Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 8.74V4.2C10.5 2.79 9.86 2.22 8.27 2.22H4.23C2.64 2.22 2 2.79 2 4.2V8.73C2 10.15 2.64 10.71 4.23 10.71H8.27C9.86 10.72 10.5 10.15 10.5 8.74Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 19.99V15.95C10.5 14.36 9.86 13.72 8.27 13.72H4.23C2.64 13.72 2 14.36 2 15.95V19.99C2 21.58 2.64 22.22 4.23 22.22H8.27C9.86 22.22 10.5 21.58 10.5 19.99Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 15.72H21" stroke="#848382" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M15 19.72H21" stroke="#848382" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        Widgets
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard.html" aria-label="Alerts" class="fw-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M12.0001 8.11L10.9301 9.97C10.6901 10.38 10.8901 10.72 11.3601 10.72H12.6301C13.1101 10.72 13.3001 11.06 13.0601 11.47L12.0001 13.33" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.30035 18.26V17.1C6.00035 15.71 4.11035 13 4.11035 10.12C4.11035 5.17 8.66035 1.29 13.8004 2.41C16.0604 2.91 18.0404 4.41 19.0704 6.48C21.1604 10.68 18.9604 15.14 15.7304 17.09V18.25C15.7304 18.54 15.8404 19.21 14.7704 19.21H9.26035C8.16035 19.22 8.30035 18.79 8.30035 18.26Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.5 22.22C10.79 21.57 13.21 21.57 15.5 22.22" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Alerts
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard.html" aria-label="Perfile" class="fw-600 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M12 12.22C14.7614 12.22 17 9.98143 17 7.22C17 4.45858 14.7614 2.22 12 2.22C9.23858 2.22 7 4.45858 7 7.22C7 9.98143 9.23858 12.22 12 12.22Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.5901 22.22C20.5901 18.35 16.7402 15.22 12.0002 15.22C7.26015 15.22 3.41016 18.35 3.41016 22.22" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Perfile
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard.html" aria-label="Suscripcion" class="fw-600 active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M9 22.22H15C20 22.22 22 20.22 22 15.22V9.22C22 4.22 20 2.22 15 2.22H9C4 2.22 2 4.22 2 9.22V15.22C2 20.22 4 22.22 9 22.22Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.3511 11.1301C14.2511 11.8401 13.8311 12.4401 13.2511 12.8001V14.7801C13.2511 15.4701 12.6911 16.0301 12.0011 16.0301C11.3111 16.0301 10.7511 15.4701 10.7511 14.7801V12.8001C10.1711 12.4401 9.75109 11.8401 9.65109 11.1301C9.63109 11.0201 9.62109 10.9001 9.62109 10.7801C9.62109 9.26012 11.0611 8.08012 12.6411 8.50012C13.4411 8.71012 14.0911 9.36012 14.3011 10.1601C14.3911 10.4901 14.4011 10.8201 14.3511 11.1301Z" stroke="#848382" stroke-width="1.5" stroke-miterlimit="10"/>
+                            <path d="M22.0016 11.1302H14.3516" stroke="#848382" stroke-width="1.5" stroke-miterlimit="10"/>
+                            <path d="M9.64999 11.13H2" stroke="#848382" stroke-width="1.5" stroke-miterlimit="10"/>
+                        </svg>
+                        Suscripcion
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard.html" aria-label="Factures" class="fw-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M22 6.22V8.64C22 10.22 21 11.22 19.42 11.22H16V4.23C16 3.12 16.91 2.22 18.02 2.22C19.11 2.23 20.11 2.67 20.83 3.39C21.55 4.12 22 5.12 22 6.22Z" stroke="#848382" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 7.22V21.22C2 22.05 2.93998 22.52 3.59998 22.02L5.31 20.74C5.71 20.44 6.27 20.48 6.63 20.84L8.28998 22.51C8.67998 22.9 9.32002 22.9 9.71002 22.51L11.39 20.83C11.74 20.48 12.3 20.44 12.69 20.74L14.4 22.02C15.06 22.51 16 22.04 16 21.22V4.22C16 3.12 16.9 2.22 18 2.22H7H6C3 2.22 2 4.01 2 6.22V7.22Z" stroke="#848382" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 9.22H12" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.75 13.22H11.25" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Factures
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard.html" aria-label="Ayuda" class="fw-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M14.2617 15.6585H9.26172" stroke="#848382" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.7617 13.218V18.218" stroke="#848382" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.66 2.73814L12.63 2.80814L9.72996 9.53814H6.87996C6.19996 9.53814 5.54996 9.67814 4.95996 9.92814L6.70996 5.74814L6.74996 5.64814L6.81996 5.48814C6.83996 5.42814 6.85996 5.36814 6.88996 5.31814C8.19996 2.28814 9.67996 1.59814 12.66 2.73814Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18.0505 9.73814C17.6005 9.59814 17.1205 9.53814 16.6405 9.53814H9.73047L12.6305 2.80814L12.6605 2.73814C12.8105 2.78814 12.9505 2.85814 13.1005 2.91814L15.3105 3.84814C16.5405 4.35814 17.4005 4.88814 17.9205 5.52814C18.0205 5.64814 18.1005 5.75814 18.1705 5.88814C18.2605 6.02814 18.3305 6.16814 18.3705 6.31814C18.4105 6.40814 18.4405 6.49814 18.4605 6.57814C18.7305 7.41814 18.5705 8.44814 18.0505 9.73814Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21.5217 14.4184V16.3684C21.5217 16.5684 21.5117 16.7684 21.5017 16.9684C21.3117 20.4584 19.3617 22.2184 15.6617 22.2184H7.86172C7.62172 22.2184 7.38172 22.1984 7.15172 22.1684C3.97172 21.9584 2.27172 20.2584 2.06172 17.0784C2.03172 16.8484 2.01172 16.6084 2.01172 16.3684V14.4184C2.01172 12.4084 3.23172 10.6784 4.97172 9.92836C5.57172 9.67836 6.21172 9.53836 6.89172 9.53836H16.6517C17.1417 9.53836 17.6217 9.60836 18.0617 9.73836C20.0517 10.3484 21.5217 12.2084 21.5217 14.4184Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.71 5.74814L4.96 9.92814C3.22 10.6781 2 12.4081 2 14.4181V11.4881C2 8.64814 4.02 6.27814 6.71 5.74814Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21.5186 11.4877V14.4177C21.5186 12.2177 20.0586 10.3477 18.0586 9.74766C18.5786 8.44766 18.7286 7.42766 18.4786 6.57766C18.4586 6.48766 18.4286 6.39766 18.3886 6.31766C20.2486 7.27766 21.5186 9.24766 21.5186 11.4877Z" stroke="#848382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Ayuda
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <div id="admin-content">
+        <header>
+            <div class="d-flex justify-content-between align-center">
+                <h1 class="fs-32 fw-600 d-flex align-center gap-x-10">
+                    <a id="menuButton" class="side-menu-button" aria-label="Open side menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.80026 9.99984C6.80031 10.212 6.88462 10.4154 7.03466 10.5654L11.8347 15.3654C11.9855 15.5112 12.1876 15.5918 12.3974 15.59C12.6071 15.5882 12.8078 15.504 12.9561 15.3557C13.1044 15.2074 13.1886 15.0067 13.1904 14.797C13.1922 14.5872 13.1116 14.3851 12.9659 14.2342L8.73146 9.99984L12.9659 5.76544C13.1116 5.61456 13.1922 5.41247 13.1904 5.20272C13.1886 4.99296 13.1044 4.79231 12.9561 4.64398C12.8078 4.49566 12.6071 4.41152 12.3974 4.4097C12.1876 4.40788 11.9855 4.48851 11.8347 4.63424L7.03466 9.43424C6.88462 9.58423 6.80031 9.78768 6.80026 9.99984Z" fill="#2F87E9"/>
+                        </svg>
+                    </a>
+                    Suscripcion
+                </h1>
+                <div class="d-flex align-center gap-x-10 action">
+                    <img src="assets/img/profile/1.png" alt="" width="60" height="60">
+                    <div class="profile" onclick="menuToggle();">
+                        <div> Cadfka</div>
+                        <div class="color2 fs-12">User</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" class="icon" viewBox="0 0 15 16" fill="none">
+                            <path d="M4.39746 6L7.93171 10L11.466 6" stroke="#151516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="#">My profile</a>
+                            </li>
+                            <li>
+                                <a href="#">Edit profile</a>
+                            </li>
+                            <li>
+                                <a href="#">Inbox</a>
+                            </li>
+                            <li>
+                                <a href="#">Setting</a>
+                            </li>
+                            <li><a href="#">Help</a></li>
+                            <li>
+                                <a href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+        <a href="#" class="d-flex gap-x-10 align-center fs-24 fw-600 text-decoration-none base-color mb-24">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M8 16H25.3333M8 16L13.3333 10.6667M8 16L13.3333 21.3333" stroke="#848382" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Payment
+        </a>
+        <!---->
+       <div class="d-flex gap-x-32 gap-y-24 flex-wrap profile-content">
+           <div class="flex-1 bg-light p-20 rounded-8">
+               <div class="payment-options">
+                   <div class="d-flex gap-x-10 mb-16 p-15 align-center rounded-8 select-payment-option">
+                       <input type="radio" name="payment-option" id="payment-option-1" checked>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="8" viewBox="0 0 25 8" fill="none">
+                           <path d="M4.14712 0.840057C3.84004 0.6138 3.43932 0.500397 2.94496 0.500397H1.03108C0.879529 0.500397 0.795802 0.581628 0.779897 0.743935L0.00244042 5.97442C-0.00563981 6.0258 0.00635253 6.07278 0.0383078 6.11549C0.0700803 6.15828 0.110043 6.17956 0.157903 6.17956H1.06698C1.22643 6.17956 1.31407 6.09852 1.33016 5.93602L1.54544 4.52589C1.5533 4.45755 1.58134 4.40199 1.6292 4.3592C1.67702 4.31648 1.73684 4.28854 1.80861 4.27577C1.88038 4.26307 1.94806 4.25665 2.01197 4.25665C2.0757 4.25665 2.15142 4.261 2.23927 4.2695C2.32691 4.278 2.38278 4.28219 2.40673 4.28219C3.09249 4.28219 3.63076 4.0751 4.02157 3.66044C4.4122 3.24601 4.60773 2.67132 4.60773 1.93612C4.60773 1.43188 4.45406 1.06655 4.14712 0.839939V0.840057ZM3.16035 2.41061C3.12035 2.7098 3.0168 2.90627 2.84935 3.00032C2.68186 3.09448 2.44263 3.14135 2.13167 3.14135L1.73691 3.15412L1.94031 1.78235C1.95617 1.68842 2.00798 1.6414 2.09577 1.6414H2.32311C2.64193 1.6414 2.87333 1.69066 3.01688 1.78878C3.16035 1.88713 3.20821 2.09447 3.16035 2.41061Z" fill="#003087"/>
+                           <path d="M24.3438 0.500572H23.4587C23.3708 0.500572 23.319 0.547595 23.3032 0.64168L22.5257 5.97484L22.5137 6.00046C22.5137 6.04341 22.5296 6.08381 22.5616 6.12229C22.5933 6.16069 22.6334 6.17993 22.6812 6.17993H23.4708C23.622 6.17993 23.7058 6.0989 23.722 5.93639L24.4994 0.692973V0.680238C24.4994 0.560526 24.4474 0.500729 24.3438 0.500729V0.500572Z" fill="white"/>
+                           <path d="M13.6538 2.56505C13.6538 2.52242 13.6378 2.48174 13.6061 2.44338C13.5741 2.40494 13.5382 2.38558 13.4984 2.38558H12.5774C12.4895 2.38558 12.4177 2.42853 12.362 2.51376L11.0941 4.51375L10.5678 2.59076C10.5277 2.45412 10.4401 2.38558 10.3046 2.38558H9.40734C9.36738 2.38558 9.33151 2.40486 9.29981 2.44338C9.26782 2.48174 9.25195 2.5225 9.25195 2.56505C9.25195 2.58225 9.32972 2.8343 9.48518 3.32145C9.64064 3.80876 9.8081 4.3344 9.98755 4.89851C10.167 5.46251 10.2606 5.76181 10.2686 5.79571C9.61469 6.75309 9.28786 7.26587 9.28786 7.33413C9.28786 7.44534 9.33959 7.50083 9.44336 7.50083H10.3644C10.4521 7.50083 10.5238 7.45819 10.5797 7.37269L13.63 2.65475C13.6458 2.63782 13.6538 2.60804 13.6538 2.56501V2.56505Z" fill="#003087"/>
+                           <path d="M22.2283 2.38474H21.3192C21.2074 2.38474 21.1399 2.52581 21.116 2.80791C20.9084 2.46613 20.5298 2.29501 19.9795 2.29501C19.4053 2.29501 18.9168 2.52581 18.5142 2.98734C18.1114 3.44886 17.9102 3.99174 17.9102 4.61557C17.9102 5.11993 18.0477 5.52158 18.3228 5.82061C18.5979 6.11995 18.9667 6.26932 19.4293 6.26932C19.6606 6.26932 19.8958 6.21795 20.135 6.11548C20.3743 6.01293 20.5615 5.87625 20.6973 5.70525C20.6973 5.71383 20.6892 5.75215 20.6734 5.82049C20.6573 5.88899 20.6494 5.94044 20.6494 5.97433C20.6494 6.11125 20.7011 6.17943 20.805 6.17943H21.6304C21.7817 6.17943 21.8695 6.0984 21.8934 5.93589L22.3839 2.58984C22.3918 2.5385 22.3798 2.4916 22.348 2.44881C22.3159 2.40617 22.2762 2.38474 22.2283 2.38474ZM20.6673 4.91041C20.464 5.12409 20.2187 5.23087 19.9317 5.23087C19.7003 5.23087 19.5131 5.16261 19.3695 5.02577C19.2258 4.88933 19.1541 4.70127 19.1541 4.46169C19.1541 4.1457 19.2538 3.87838 19.4532 3.66047C19.6523 3.44252 19.8998 3.33358 20.1948 3.33358C20.4179 3.33358 20.6034 3.40407 20.751 3.54502C20.8984 3.68609 20.9724 3.88053 20.9724 4.12846C20.9723 4.43611 20.8707 4.69685 20.6673 4.91041Z" fill="white"/>
+                           <path d="M8.63859 2.38474H7.72947C7.61767 2.38474 7.55003 2.52581 7.52608 2.80791C7.31077 2.46613 6.93194 2.29501 6.38969 2.29501C5.81552 2.29501 5.32701 2.52581 4.92436 2.98734C4.52159 3.44886 4.32031 3.99174 4.32031 4.61557C4.32031 5.11993 4.4579 5.52158 4.73303 5.82061C5.00816 6.11995 5.37688 6.26932 5.83947 6.26932C6.06264 6.26932 6.29405 6.21795 6.53324 6.11548C6.77246 6.01293 6.96386 5.87625 7.10741 5.70525C7.07541 5.80772 7.05955 5.89749 7.05955 5.97433C7.05955 6.11125 7.11136 6.17943 7.21505 6.17943H8.0404C8.1918 6.17943 8.27962 6.0984 8.30357 5.93589L8.79398 2.58984C8.80184 2.5385 8.78992 2.4916 8.75811 2.44881C8.72619 2.40617 8.68638 2.38474 8.63859 2.38474ZM7.07757 4.91675C6.87418 5.1264 6.62486 5.23087 6.32999 5.23087C6.09858 5.23087 5.91318 5.16261 5.77373 5.02577C5.6341 4.88933 5.56438 4.70127 5.56438 4.46169C5.56438 4.1457 5.66401 3.87838 5.86345 3.66047C6.06268 3.44252 6.30991 3.33354 6.60508 3.33354C6.82825 3.33354 7.01366 3.40407 7.16134 3.54502C7.30875 3.68609 7.38261 3.88053 7.38261 4.12846C7.38257 4.44469 7.28093 4.70758 7.07757 4.91675Z" fill="#003087"/>
+                           <path d="M17.737 0.840233C17.43 0.613975 17.0294 0.500572 16.5349 0.500572H14.633C14.4734 0.500572 14.3856 0.581804 14.3698 0.74411L13.5923 5.9746C13.5842 6.02597 13.5962 6.07295 13.6282 6.11567C13.6598 6.15846 13.6999 6.17974 13.7477 6.17974H14.7286C14.8242 6.17974 14.888 6.12425 14.92 6.01312L15.1353 4.52607C15.1432 4.45773 15.1711 4.40216 15.2191 4.35937C15.2669 4.31666 15.3267 4.28872 15.3985 4.27594C15.4702 4.26325 15.5379 4.25682 15.6018 4.25682C15.6656 4.25682 15.7413 4.26117 15.8291 4.26968C15.9168 4.27818 15.9728 4.28237 15.9965 4.28237C16.6824 4.28237 17.2206 4.07527 17.6114 3.66061C18.0022 3.24619 18.1975 2.67149 18.1975 1.93629C18.1976 1.43205 18.044 1.06669 17.737 0.840115V0.840233ZM16.511 2.94916C16.3355 3.07734 16.0723 3.1414 15.7216 3.1414L15.3387 3.15426L15.5421 1.78245C15.5579 1.68856 15.6097 1.64146 15.6975 1.64146H15.9128C16.0882 1.64146 16.2278 1.65004 16.3316 1.66709C16.4351 1.68425 16.5349 1.73758 16.6306 1.82728C16.7264 1.91705 16.7741 2.04746 16.7741 2.21831C16.7741 2.57741 16.6863 2.82087 16.511 2.94916Z" fill="white"/>
+                       </svg>
+                       <span class="fs-18 fw-500">Paypal</span>
+                       <div class="ms-auto fs-18 text-base">Paypal Account</div>
+                   </div>
+                   <div class="d-flex gap-x-10 mb-16  p-15 align-center rounded-8 select-payment-option">
+                       <input type="radio" name="payment-option" id="payment-option-2" />
+                       <svg xmlns="http://www.w3.org/2000/svg" width="21" height="8" viewBox="0 0 21 8" fill="none">
+                           <g clip-path="url(#clip0_143_4742)">
+                               <path d="M20.9835 4.11653C20.9835 2.75545 20.275 1.68147 18.9207 1.68147C17.5607 1.68147 16.7378 2.75545 16.7378 4.10589C16.7378 5.70622 17.7093 6.51437 19.1035 6.51437C19.7835 6.51437 20.2978 6.37081 20.6864 6.16878V5.10544C20.2978 5.2862 19.8521 5.39786 19.2864 5.39786C18.7321 5.39786 18.2407 5.21709 18.1778 4.58971H20.9721C20.9721 4.5206 20.9835 4.24413 20.9835 4.11653ZM18.1607 3.61144C18.1607 3.01065 18.555 2.76076 18.915 2.76076C19.2635 2.76076 19.635 3.01065 19.635 3.61144H18.1607ZM14.5321 1.68147C13.9721 1.68147 13.6121 1.92604 13.4121 2.09617L13.3378 1.76654H12.0807V7.96583L13.5093 7.68404L13.515 6.17941C13.7207 6.31765 14.0235 6.51437 14.5264 6.51437C15.5493 6.51437 16.4807 5.74876 16.4807 4.06336C16.475 2.52151 15.5321 1.68147 14.5321 1.68147ZM14.1893 5.34469C13.8521 5.34469 13.6521 5.23304 13.515 5.0948L13.5093 3.1223C13.6578 2.96811 13.8635 2.86178 14.1893 2.86178C14.7093 2.86178 15.0693 3.40409 15.0693 4.10058C15.0693 4.81302 14.715 5.34469 14.1893 5.34469ZM10.115 1.36778L11.5493 1.08068V0.00138474L10.115 0.283171V1.36778ZM10.115 1.77185H11.5493V6.42398H10.115V1.77185ZM8.57782 2.16529L8.48639 1.77185H7.25211V6.42398H8.68068V3.27117C9.01782 2.86178 9.58925 2.93621 9.76639 2.9947V1.77185C9.58354 1.70805 8.91497 1.59108 8.57782 2.16529ZM5.72068 0.618124L4.3264 0.894594L4.32068 5.15329C4.32068 5.94016 4.95497 6.51968 5.80068 6.51968C6.26925 6.51968 6.61211 6.43993 6.80068 6.34423V5.26494C6.61782 5.33405 5.71497 5.57862 5.71497 4.79175V2.90431H6.80068V1.77185H5.71497L5.72068 0.618124ZM1.85782 3.1223C1.85782 2.91495 2.04068 2.8352 2.34354 2.8352C2.77782 2.8352 3.3264 2.95748 3.76068 3.17547V1.92604C3.2864 1.75059 2.81782 1.68147 2.34354 1.68147C1.18354 1.68147 0.412109 2.24504 0.412109 3.1861C0.412109 4.65351 2.58354 4.41958 2.58354 5.05227C2.58354 5.29684 2.35497 5.37659 2.03497 5.37659C1.56068 5.37659 0.954966 5.19582 0.474967 4.95125V6.21663C1.0064 6.4293 1.54354 6.51968 2.03497 6.51968C3.22354 6.51968 4.04068 5.97206 4.04068 5.02037C4.03497 3.43599 1.85782 3.71777 1.85782 3.1223Z" fill="#635BFF"/>
+                           </g>
+                           <defs>
+                               <clipPath id="clip0_143_4742">
+                                   <rect width="20.5714" height="8" fill="white" transform="translate(0.40625)"/>
+                               </clipPath>
+                           </defs>
+                       </svg>
+                       <span class="fs-18 fw-500"> Stripe</span>
+                       <div class="ms-auto fs-18 text-base">Credit Card</div>
+                   </div>
+               </div>
+               <div class="fs-20 mb-16 fw-500">Billing Information</div>
+                <div class="d-flex mb-8 gap-y-16 gap-x-16 flex-wrap">
+                    <div class="flex-1">
+                        <label class="fw-500 fs-14 mb-8 d-block">Name</label>
+                        <div class=" position-relative mb-16">
+                            <input type="text" class="rounded-8 border-content bg-white p-20" placeholder="Enter your name" style="max-width: 100%; width: 100%; height: 50px">
+                        </div>
+                    </div>
+                </div>
+               <div class="d-flex mb-8 gap-y-16 gap-x-16 flex-wrap">
+                   <div class="flex-1">
+                       <label class="fw-500 fs-14 mb-8 d-block">Company Name (or your name if it is not a company)</label>
+                       <div class=" position-relative mb-16">
+                           <input type="text" class="rounded-8 border-content bg-white p-20" placeholder="Los tres patitos SL" style="max-width: 100%; width: 100%; height: 50px">
+                       </div>
+                   </div>
+               </div>
+               <div class="d-flex mb-8 gap-y-16 gap-x-16 flex-wrap">
+                   <div class="flex-1">
+                       <label class="fw-500 fs-14 mb-8 d-block">Address</label>
+                       <div class=" position-relative mb-16">
+                           <input type="text" class="rounded-8 border-content bg-white p-20" placeholder="C/del Higo 23 2A" style="max-width: 100%; width: 100%; height: 50px">
+                       </div>
+                   </div>
+               </div>
+               <div class="d-flex mb-8 gap-y-16 gap-x-16 flex-wrap">
+                   <div class="flex-1">
+                       <label class="fw-500 fs-14 mb-8 d-block">City</label>
+                       <div class=" position-relative mb-16">
+                           <input type="text" class="rounded-8 border-content bg-white p-20" placeholder="Barbastro" style="max-width: 100%; width: 100%; height: 50px">
+                       </div>
+                   </div>
+                   <div class="flex-1">
+                       <label class="fw-500 fs-14 mb-8 d-block">State</label>
+                       <div class=" position-relative mb-16">
+                           <input type="text" class="rounded-8 border-content bg-white p-20" placeholder="Huesca" style="max-width: 100%; width: 100%; height: 50px">
+                       </div>
+                   </div>
+                   <div class="flex-1">
+                       <label class="fw-500 fs-14 mb-8 d-block">Postal Code</label>
+                       <div class=" position-relative mb-16">
+                           <input type="text" class="rounded-8 border-content bg-white p-20" placeholder="22300" style="max-width: 100%; width: 100%; height: 50px">
+                       </div>
+                   </div>
+               </div>
+               <div class="d-flex mb-8 gap-y-16 gap-x-16 flex-wrap">
+                   <div class="flex-1">
+                       <label class="fw-500 fs-14 mb-8 d-block">Country</label>
+                       <div class=" position-relative mb-16">
+                           <input type="text" class="rounded-8 border-content bg-white p-20" placeholder="Country" style="max-width: 100%; width: 100%; height: 50px">
+                       </div>
+                   </div>
+                  
+               </div>
+               <div class="d-flex mb-8 gap-y-16 gap-x-16 flex-wrap">
+                   <div class="flex-1">
+                       <label class="fw-500 fs-14 mb-8 d-block">NIF / CIF</label>
+                       <div class=" position-relative mb-16">
+                           <input type="text" class="rounded-8 border-content bg-white p-20" placeholder="73196413V" style="max-width: 100%; width: 100%; height: 50px">
+                       </div>
+                   </div>
+                 
+               </div>
+               <div class="d-flex mb-8 gap-y-16 gap-x-16 flex-wrap">
+                   <div class="flex-1">
+                       <label class="fw-500 fs-14 mb-8 d-block">Phone</label>
+                       <div class=" position-relative mb-16">
+                           <input type="text" class="rounded-8 border-content bg-white p-20" placeholder="+34665898587" style="max-width: 100%; width: 100%; height: 50px">
+                       </div>
+                   </div>
+                 
+               </div>
+              
+           </div>
+           <div class="rounded order-summary-content  flex-1" style="max-width: 370px">
+               <div class="order-summary">
+                    <div class="fs-20 fw-500 mb-16">
+                        Order Summary
+                    </div>
+                   <div class="tabs">
+                       
+                       <input type="radio" id="tab1" name="tab-group" >
+                       <label for="tab1">Monthly</label>
+                       <input type="radio" id="tab2" name="tab-group" checked>
+                       <label for="tab2">Yearly</label>
+                       
+                       <div class="content">
+                           <div class="tab-content" id="content1">
+                               <p>This is Monthly content.</p>
+                           </div>
+                           <div class="tab-content" id="content2">
+                               <div class="d-flex justify-content-between mb-16 fs-18">
+                                   <div>
+                                       <p>Premium Plan</p>
+                                       <span class="text-base fs-16">Billed Monthly</span>
+                                   </div>
+                                   <span>1.00 EUR</span>
+                               </div>
+                               <hr>
+                               <div class="d-flex justify-content-between mb-16 fs-18">
+                                   <span>Total</span>
+                                   <span class="fw-600">1.00 EUR</span>
+                               </div>
+                               <div class="text-base">
+                                   By continuing, you agree with the terms of service and authorize
+                                   <span class="base-color fw-600">CertificaWeb</span> to charge your payment method on a recurring basis.
+                                   You can cancel your subscription at any time.
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <button class="button bg-theme text-white w-100  fs-16  rounded-8" style="" aria-label="Change profile">
+                     <span>
+                        Pay 89$
+                    </span>
+                   </button>
+               </div>
+               <div class="need-help bg-light rounded-8">
+                   <div class="d-flex align-center gap-x-10">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                           <path d="M3 5.5H21V17.5C21 18.6046 20.1046 19.5 19 19.5H5C3.89543 19.5 3 18.6046 3 17.5V5.5Z" stroke="#2F87E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                           <path d="M3 5.5L12 14.5L21 5.5" stroke="#2F87E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                       </svg>
+                       <div class="text-base">
+                           <p class="fs-18 fw-500">Need Help?</p>
+                           <p>Get in touch with us.</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+        
+    </div>
+</div>
+
+<script>
+    function menuToggle() {
+        const toggleMenu = document.querySelector(".menu");
+        toggleMenu.classList.toggle("active");
+    }
+    
+    ///////////Sidebar
+    const menuButton = document.getElementById('menuButton');
+    const closeButton = document.getElementById('closeSidebar');
+    const sidebar = document.getElementById('page-sidebar');
+    
+    // Detect if mobile
+    function isMobile() {
+        return window.matchMedia("(max-width: 768px)").matches;
+    }
+    
+    // Toggle sidebar
+    menuButton.addEventListener('click', () => {
+        if (isMobile()) {
+            document.body.classList.add('sidebar-closed', 'mobile');
+        } else {
+            document.body.classList.toggle('sidebar-closed');
+            document.body.classList.toggle('desktop');
+        }
+    });
+    
+    // Close sidebar with X button (mobile only)
+    closeButton.addEventListener('click', () => {
+        if (isMobile()) {
+            document.body.classList.remove('sidebar-closed', 'mobile');
+        }
+    });
+    
+    // Close sidebar when clicking outside (mobile only)
+    document.addEventListener('click', (e) => {
+        if (!isMobile()) return;
+        
+        const isSidebar = sidebar.contains(e.target);
+        const isMenuButton = e.target === menuButton || menuButton.contains(e.target);
+        
+        if (document.body.classList.contains('mobile') &&
+                !isSidebar &&
+                !isMenuButton) {
+            document.body.classList.remove('sidebar-closed', 'mobile');
+        }
+    });
+    
+    // Close sidebar on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (isMobile() && document.body.classList.contains('mobile')) {
+                document.body.classList.remove('sidebar-closed', 'mobile');
+            } else if (!isMobile()) {
+                document.body.classList.remove('sidebar-closed', 'desktop');
+            }
+        }
+    });
+
+
+
+
+</script>
+</body>
+
+</html>
