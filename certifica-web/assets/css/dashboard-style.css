@@ -55,6 +55,14 @@ body{
 .bg-light-blue{
     background-color:rgba(47, 135, 233, 0.04);
 }
+button.border-light{
+    background-color: transparent;
+    cursor: pointer;
+    &:hover, &.active{
+        background-color: #171A1C;
+        color: #fff;
+    }
+}
 .admin-container {
     display: flex;
     #page-sidebar {
@@ -401,7 +409,10 @@ tr{
         padding: 12px;
     }
 }
-
+.active-tab{
+    border: 1px solid #848382;
+    background: #F8F8F8;
+}
 @media screen and (max-width: 768px) {
     .side-menu-button{
         display: flex;
