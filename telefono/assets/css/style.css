@@ -89,6 +89,9 @@ button{
 .d-flex{
     display: flex;
 }
+.justify-content-between{
+    justify-content: space-between;
+}
 .d-block{
     display: block;
 }
@@ -3254,6 +3257,47 @@ a.pagination-btn.prev {
         background-color: #000;
     }
 }
+.register-content{
+    margin-block: 4rem;
+    .bg-white{
+        padding: 2rem;
+    }
+    input{
+        border-radius: 12px;
+        border: 1px solid #DBEAF3;
+        background: #FFF;
+        box-shadow: 0px 1px 2px 0px rgba(23, 87, 127, 0.05);
+        color: #17577F;
+        &::placeholder{
+            color: #17577F;
+        }
+    }
+}
+.flex-1{
+    flex: 1 1;
+}
+.rounded-24{
+    border-radius: 24px;
+}
+.or-text {
+    position: relative;
+    span {
+        position: relative;
+        z-index: 1;
+        background-color: #fff;
+        padding: 0 12px;
+    }
+    &:after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #D8D8D8;
+        position: absolute;
+        inset: 0;
+        margin-block: auto;
+    }
+}
 @media (max-width: 768px) {
     .feature-column {
         width: 100%;
@@ -3906,6 +3950,19 @@ a.pagination-btn.prev {
 
 }
 @media screen and (max-width:600px) {
+    .register-content{
+        flex-direction: column;
+        gap: 1rem;
+        margin-block: 2rem;
+        .bg-white{
+            max-width: 100%;
+            width: 100%;
+            padding: 2rem 1.5rem;
+        }
+        img{
+            height: auto;
+        }
+    }
     .prize-wheel-container{
         canvas{
             max-width: 300px !important;
