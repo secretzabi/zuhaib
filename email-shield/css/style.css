@@ -1,0 +1,93 @@
+html {
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'Geon';
+    src: url('../fonts/FONTSPRINGDEMO-GeonCondensedMediumRegular.woff2') format('woff2'),
+    url('../fonts/FONTSPRINGDEMO-GeonCondensedMediumRegular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geon';
+    src: url('../fonts/FONTSPRINGDEMO-GeonMediumRegular.woff2') format('woff2'),
+    url('../fonts/FONTSPRINGDEMO-GeonMediumRegular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geon';
+    src: url('../fonts/FONTSPRINGDEMO-GeonCondensedLightRegular.woff2') format('woff2'),
+    url('../fonts/FONTSPRINGDEMO-GeonCondensedLightRegular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geon';
+    src: url('../fonts/FONTSPRINGDEMO-GeonBoldRegular.woff2') format('woff2'),
+    url('../fonts/FONTSPRINGDEMO-GeonBoldRegular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geon';
+    src: url('../fonts/FONTSPRINGDEMO-GeonRegular.woff2') format('woff2'),
+    url('../fonts/FONTSPRINGDEMO-GeonRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Geon', sans-serif;
+    font-weight: normal;
+    background-color: #0a0e1a; /* A dark navy blue background */
+}
+.hero-glow {
+    /*box-shadow: 0 0 80px 20px rgba(59, 130, 246, 0.2); !* A subtle blue glow *!*/
+}
+.feature-card {
+    background: rgba(17, 24, 39, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(55, 65, 81, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(59, 130, 246, 0.1);
+}
+.hero-main{
+    &:before{
+        background-color: #000000b3;
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+.cta-section {
+    background: linear-gradient(45deg, rgba(30, 41, 59, 0.4), rgba(59, 130, 246, 0.2));
+}
+pre{
+    white-space: break-spaces;
+    /*box-shadow: 0 0 30px 5px rgba(59, 130, 246, 0.2);*/
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(30 41 59 / 0.2);
+}
+.bg-custom-blue {
+    background-color: #1889d5;
+}
+.bg-custom-blue-dark:hover {
+    background-color: #000; /* Slightly darker for hover state */
+}
