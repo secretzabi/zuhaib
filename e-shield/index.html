@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,15 +38,7 @@
 			<h1 class="text-2xl font-bold text-white">TempCatcher</h1>
 		</a>
 		
-		<!-- Mobile Menu Button -->
-		<button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
-			<svg id="menu-icon" class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-			</svg>
-			<svg id="close-icon" class="w-6 h-6 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-			</svg>
-		</button>
+		
 		
 		<!-- Desktop Navigation -->
 		<nav class="hidden md:flex items-center space-x-8">
@@ -57,7 +49,7 @@
 			<a href="#use-cases" class="hover:text-purple-400 transition-colors duration-300">Use Cases</a>
 			<a href="#cta" class="hover:text-purple-400 transition-colors duration-300">Contact</a>
 		</nav>
-		<button id="theme-toggle" class="ml-8 p-2 rounded-full text-slate-500 dark:text-gray-400 hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900 focus:ring-blue-500">
+		<button id="theme-toggle" class="ml-2 p-2 rounded-full text-slate-500 dark:text-gray-400 hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900 focus:ring-blue-500">
 			<svg id="theme-icon-light" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
 			
 			<svg  id="theme-icon-dark" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,8 +77,17 @@
 			</svg>
 <!--			<svg id="theme-icon-dark" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.121-3.536a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4.05 16.95l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 01-1.414 1.414zM10 18a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zM2.707 4.707a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707z" clip-rule="evenodd"></path></svg>-->
 		</button>
-		<button class="md:hidden ml-4 p-2 rounded-md text-slate-500 dark:text-gray-400 hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none">
-			<svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+<!--		<button class="md:hidden ml-4 p-2 rounded-md text-slate-500 dark:text-gray-400 hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none">-->
+<!--			<svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>-->
+<!--		</button>-->
+		<!-- Mobile Menu Button -->
+		<button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+			<svg id="menu-icon" class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+			</svg>
+			<svg id="close-icon" class="w-6 h-6 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+			</svg>
 		</button>
 	</div>
 	
@@ -414,22 +415,24 @@
 	</div>
 </footer>
 <script>
-    // Theme initialization and toggle functionality
     document.addEventListener('DOMContentLoaded', function() {
         const themeToggle = document.getElementById('theme-toggle');
         const themeIconLight = document.getElementById('theme-icon-light');
         const themeIconDark = document.getElementById('theme-icon-dark');
 
-        // Initialize theme
+        // Initialize theme - Dark by default
         function initTheme() {
-            if (localStorage.theme === 'light' || (!('theme' in localStorage) && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            // Check for saved theme preference, default to dark if none exists
+            if (localStorage.theme === 'light') {
                 document.documentElement.classList.remove('dark');
                 document.documentElement.classList.add('light');
                 themeIconLight.classList.add('hidden');
                 themeIconDark.classList.remove('hidden');
             } else {
+                // Default case (dark theme)
                 document.documentElement.classList.add('dark');
                 document.documentElement.classList.remove('light');
+                localStorage.theme = 'dark'; // Set dark theme in localStorage
                 themeIconDark.classList.add('hidden');
                 themeIconLight.classList.remove('hidden');
             }
@@ -438,12 +441,14 @@
         // Toggle theme
         function toggleTheme() {
             if (document.documentElement.classList.contains('dark')) {
+                // Switch to light
                 document.documentElement.classList.remove('dark');
                 document.documentElement.classList.add('light');
                 localStorage.theme = 'light';
                 themeIconDark.classList.add('hidden');
                 themeIconLight.classList.remove('hidden');
             } else {
+                // Switch to dark
                 document.documentElement.classList.add('dark');
                 document.documentElement.classList.remove('light');
                 localStorage.theme = 'dark';

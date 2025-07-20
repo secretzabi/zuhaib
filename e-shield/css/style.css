@@ -91,7 +91,14 @@ pre{
 .bg-custom-blue-dark:hover {
     background-color: #000; /* Slightly darker for hover state */
 }
-
+/* Default dark theme styles (already in your CSS) */
+.dark {
+    --color-bg-primary: #0f172a;
+    --color-bg-secondary: #1e293b;
+    --color-text-primary: #f1f5f9;
+    --color-text-secondary: #94a3b8;
+    --color-border-primary: #334155;
+}
 /* Light theme specific styles */
 /* Light theme styles */
 .light {
@@ -122,6 +129,9 @@ html.light {
         .text-purple-400{
             color: rgb(146 77 255);
         }
+    }
+    .bg-slate-900\/95 {
+        background-color: #924dff26;
     }
 }
 
