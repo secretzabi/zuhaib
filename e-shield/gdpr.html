@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TempCatcher - Defend Your Network with Precision Email Intelligence</title>
+	
+	<!-- Tailwind CSS -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  colors: {
+                      'custom-blue': '#924dff', // Your custom color
+                  }
+              }
+          }
+      }
+	</script>
+	<!-- Google Fonts: Inter -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	
+</head>
+<body class="text-gray-300">
+
+<!-- Header Navigation -->
+<header class="bg-slate-900/50 backdrop-blur-sm sticky top-0 z-50">
+	<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+		<a href="/" class="flex items-center space-x-3">
+			<!-- Logo/Icon Placeholder -->
+			<img src="img/logo.png" width="60" height="100" alt="TempCatcher logo" />
+			<h1 class="text-2xl font-bold text-white">TempCatcher</h1>
+		</a>
+		
+		
+		
+		<!-- Desktop Navigation -->
+		<nav class="hidden md:flex items-center space-x-8">
+			<a href="#how-it-works" class="hover:text-purple-400 transition-colors duration-300">How it works</a>
+			<a href="#why-us" class="hover:text-purple-400 transition-colors duration-300">Why us</a>
+			<a href="#enterprise" class="hover:text-purple-400 transition-colors duration-300">Enterprise Solutions</a>
+<!--			<a href="#api-demo" class="hover:text-purple-400 transition-colors duration-300">API Docs</a>-->
+			<a href="#use-cases" class="hover:text-purple-400 transition-colors duration-300">Use Cases</a>
+			<a href="#cta" class="hover:text-purple-400 transition-colors duration-300">Contact</a>
+		</nav>
+		<button id="theme-toggle" class="ml-2 p-2 rounded-full text-slate-500 dark:text-gray-400 hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900 focus:ring-blue-500">
+			<svg id="theme-icon-light" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+			
+			<svg  id="theme-icon-dark" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+				
+				<g clip-path="url(#a)" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10">
+					
+					<path d="M5 12H1M23 12h-4M7.05 7.05 4.222 4.222M19.778 19.778 16.95 16.95M7.05 16.95l-2.828 2.828M19.778 4.222 16.95 7.05" stroke-linecap="round"/>
+					
+					<path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" fill="#fff" fill-opacity=".16"/>
+					
+					<path d="M12 19v4M12 1v4" stroke-linecap="round"/>
+				
+				</g>
+				
+				<defs>
+					
+					<clipPath id="a">
+						
+						<path fill="#ffffff" d="M0 0h24v24H0z"/>
+					
+					</clipPath>
+				
+				</defs>
+			
+			</svg>
+<!--			<svg id="theme-icon-dark" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.121-3.536a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4.05 16.95l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 01-1.414 1.414zM10 18a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zM2.707 4.707a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707z" clip-rule="evenodd"></path></svg>-->
+		</button>
+<!--		<button class="md:hidden ml-4 p-2 rounded-md text-slate-500 dark:text-gray-400 hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none">-->
+<!--			<svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>-->
+<!--		</button>-->
+		<!-- Mobile Menu Button -->
+		<button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+			<svg id="menu-icon" class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+			</svg>
+			<svg id="close-icon" class="w-6 h-6 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+			</svg>
+		</button>
+	</div>
+	
+	<!-- Mobile Navigation (hidden by default) -->
+	<div id="mobile-menu" class="md:hidden hidden bg-slate-900/95 backdrop-blur-sm">
+		<div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+			<a href="#how-it-works" class="text-white hover:text-purple-400 transition-colors duration-300 py-2">How it works</a>
+			<a href="#why-us" class="text-white hover:text-purple-400 transition-colors duration-300 py-2">Why us</a>
+			<a href="#enterprise" class="text-white hover:text-purple-400 transition-colors duration-300 py-2">Enterprise Solutions</a>
+<!--			<a href="#api-demo" class="text-white hover:text-purple-400 transition-colors duration-300 py-2">API Docs</a>-->
+			<a href="#use-cases" class="text-white hover:text-purple-400 transition-colors duration-300 py-2">Use Cases</a>
+			<a href="#cta" class="text-white hover:text-purple-400 transition-colors duration-300 py-2">Contact</a>
+		</div>
+	</div>
+</header>
+
+
+
+<!-- Main Content -->
+<main>
+	<section class="py-20 sm:py-24">
+		<div class="container mx-auto px-6">
+			<div class="max-w-4xl mx-auto">
+				<div class="text-center">
+					<h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
+						GDPR Privacy Notice
+					</h1>
+					<p class="mt-4 text-lg text-slate-600 dark:text-gray-400">
+						Effective Date: July 21, 2025
+					</p>
+				</div>
+				
+				<div class="mt-12 privacy-content text-slate-700 dark:text-gray-300 border-t border-slate-200 dark:border-slate-700 pt-8">
+					<p><strong>Company:</strong> TempCatcher Ltd.</p>
+					<p><strong>Registered in:</strong> [Insert Country], Company No. [Insert Company Number]</p>
+					<p><strong>Email:</strong> <a href="mailto:privacy@tempcatcher.com" class="text-blue-600 dark:text-blue-400">privacy@tempcatcher.com</a></p>
+					
+					<h2 class="text-slate-900 dark:text-white border-slate-200 dark:border-slate-700">1. Introduction</h2>
+					<p>TempCatcher Ltd. (“TempCatcher”, “we”, “our”, or “us”) is committed to protecting the privacy and data rights of individuals under the General Data Protection Regulation (GDPR).</p>
+					<p>This notice explains how we collect, use, share, and protect personal data when you interact with our website, services, and API platform.</p>
+					
+					<h2 class="text-slate-900 dark:text-white border-slate-200 dark:border-slate-700">2. Who This Applies To</h2>
+					<p>This privacy notice applies to:</p>
+					<ul>
+						<li>Website visitors</li>
+						<li>Customers using our API services</li>
+						<li>Individuals whose data may be processed through our platform (e.g., email addresses submitted for validation)</li>
+					</ul>
+					
+					<h2 class="text-slate-900 dark:text-white border-slate-200 dark:border-slate-700">3. What Data We Process</h2>
+					<p>We may process the following types of data:</p>
+					<h3>A. Website Visitors:</h3>
+					<ul>
+						<li>IP address</li>
+						<li>Browser type, device info, and access times (via cookies or analytics)</li>
+						<li>Contact information (if submitted via forms)</li>
+					</ul>
+					<h3>B. API Customers:</h3>
+					<ul>
+						<li>Account registration data (name, email, company name, billing info)</li>
+						<li>API usage logs (IP, timestamp, API calls)</li>
+					</ul>
+					<h3>C. API Input Data (Emails for Analysis):</h3>
+					<ul>
+						<li>Email addresses submitted for validation</li>
+						<li>We treat email addresses as pseudonymized data.</li>
+						<li>We do not store full email addresses unless required for logging or abuse detection, and even then, data is anonymized or hashed when possible.</li>
+					</ul>
+					
+					<h2 class="text-slate-900 dark:text-white border-slate-200 dark:border-slate-700">4. Lawful Basis for Processing</h2>
+					<p>Under GDPR, we process data on the following legal bases:</p>
+					<ul>
+						<li><strong>Contractual necessity:</strong> For providing services to our customers</li>
+						<li><strong>Legitimate interests:</strong> For improving platform security, performance, and anti-abuse measures</li>
+						<li><strong>Consent:</strong> For marketing communications and website cookies</li>
+						<li><strong>Legal obligation:</strong> To comply with applicable laws or law enforcement</li>
+					</ul>
+					
+					<h2 class="text-slate-900 dark:text-white border-slate-200 dark:border-slate-700">5. Data Retention</h2>
+					<ul>
+						<li><strong>Customer account data:</strong> Retained as long as the account is active or as required by law</li>
+						<li><strong>API email inputs:</strong> Retained temporarily (if at all) for processing and abuse prevention, then purged</li>
+						<li><strong>Website analytics data:</strong> Retained according to the provider's default (e.g., Google Analytics)</li>
+					</ul>
+					
+					<h2 class="text-slate-900 dark:text-white border-slate-200 dark:border-slate-700">6. Data Sharing & Sub-Processors</h2>
+					<p>We do not sell or trade your data.</p>
+					<p>We may share data with trusted sub-processors, strictly for service delivery. These may include:</p>
+					<ul>
+						<li>Cloud infrastructure providers (e.g., AWS, GCP)</li>
+						<li>Payment processors (e.g., Stripe)</li>
+						<li>Email delivery services (e.g., Postmark or SendGrid)</li>
+						<li>Analytics and monitoring tools (e.g., Plausible, Sentry)</li>
+					</ul>
+					<p>All third parties are bound by GDPR-compliant data processing agreements.</p>
+					
+					<h2 class="text-slate-900 dark:text-white border-slate-200 dark:border-slate-700">7. International Data Transfers</h2>
+					<p>If data is transferred outside the EEA, it is done under appropriate safeguards such as:</p>
+					<ul>
+						<li>Standard Contractual Clauses (SCCs)</li>
+						<li>Adequacy decisions from the European Commission</li>
+						<li>Binding corporate rules or equivalent protections</li>
+					</ul>
+					
+					<h2 class="text-slate-900 dark:text-white border-slate-200 dark:border-slate-700">8. Your Rights (Under GDPR)</h2>
+					<p>You have the right to:</p>
+					<ul>
+						<li>Access your personal data</li>
+						<li>Correct or update your data</li>
+						<li>Request deletion (“right to be forgotten”)</li>
+						<li>Restrict or object to processing</li>
+						<li>Data portability</li>
+						<li>Lodge a complaint with a data protection authority (e.g., the ICO in the UK)</li>
+					</ul>
+					<p>To exercise any of these rights, please email: <a href="mailto:privacy@tempcatcher.com" class="text-blue-600 dark:text-blue-400">privacy@tempcatcher.com</a></p>
+					
+					<h2 class="text-slate-900 dark:text-white border-slate-200 dark:border-slate-700">9. Security</h2>
+					<p>We implement technical and organizational measures to safeguard your data, including:</p>
+					<ul>
+						<li>HTTPS encryption</li>
+						<li>Role-based access controls</li>
+						<li>API rate limiting and abuse detection</li>
+						<li>Periodic vulnerability scans and audits</li>
+					</ul>
+					
+					<h2 class="text-slate-900 dark:text-white border-slate-200 dark:border-slate-700">10. Contact Us</h2>
+					<p>For privacy concerns, data access requests, or GDPR compliance questions:</p>
+					<ul>
+						<li>📧 <a href="mailto:privacy@tempcatcher.com" class="text-blue-600 dark:text-blue-400">privacy@tempcatcher.com</a></li>
+						<li>🏢 TempCatcher Ltd., [Insert Business Address]</li>
+						<li>📞 [Insert Optional Contact Phone]</li>
+					</ul>
+					
+					<h2 class="text-slate-900 dark:text-white border-slate-200 dark:border-slate-700">11. Updates to This Policy</h2>
+					<p>We may update this policy from time to time. Significant changes will be communicated via email or notices on our website.</p>
+					<p class="mt-8"><em>Last Updated: July 21, 2025</em></p>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900/50 border-t border-slate-800">
+	<div class="container mx-auto px-6 py-12">
+		<div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+			<!-- Logo & Company Name -->
+			<div class="col-span-2 md:col-span-2">
+				<div class="flex items-center space-x-3">
+					<img src="img/logo.png" width="30" height="100" alt="TempCatcher logo">
+					<h1 class="text-xl font-bold text-white">TempCatcher</h1>
+				</div>
+				<p class="mt-4 text-gray-400 max-w-xs">Defend Your Network with Precision Email Intelligence.</p>
+			</div>
+			
+			<!-- Product Links -->
+			<div>
+				<h3 class="font-semibold text-white tracking-wider uppercase">Product</h3>
+				<ul class="mt-4 space-y-3">
+					<li><a href="#" class="text-gray-400 hover:text-white transition">System Status</a></li>
+				</ul>
+			</div>
+			
+			<!-- Company Links -->
+			<div>
+				<h3 class="font-semibold text-white tracking-wider uppercase">Company</h3>
+				<ul class="mt-4 space-y-3">
+					<li><a href="/gdpr.html" class="text-gray-400 hover:text-white transition">GDPR Statement</a></li>
+					<li><a href="/slavery.html" class="text-gray-400 hover:text-white transition">Modern Day Slavery Statement</a></li>
+				</ul>
+			</div>
+			
+			<!-- Connect Links -->
+			<div>
+				<h3 class="font-semibold text-white tracking-wider uppercase">Connect</h3>
+				<ul class="mt-4 space-y-3">
+					<li><a href="#" class="text-gray-400 hover:text-white transition">LinkedIn</a></li>
+					<li><a href="#" class="text-gray-400 hover:text-white transition">Twitter</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="mt-12 pt-8 border-t border-slate-800 text-center text-gray-500">
+			<p>&copy; 2025 TempCatcher. All rights reserved.</p>
+		</div>
+	</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIconLight = document.getElementById('theme-icon-light');
+        const themeIconDark = document.getElementById('theme-icon-dark');
+
+        // Initialize theme - Dark by default
+        function initTheme() {
+            // Check for saved theme preference, default to dark if none exists
+            if (localStorage.theme === 'light') {
+                document.documentElement.classList.remove('dark');
+                document.documentElement.classList.add('light');
+                themeIconLight.classList.add('hidden');
+                themeIconDark.classList.remove('hidden');
+            } else {
+                // Default case (dark theme)
+                document.documentElement.classList.add('dark');
+                document.documentElement.classList.remove('light');
+                localStorage.theme = 'dark'; // Set dark theme in localStorage
+                themeIconDark.classList.add('hidden');
+                themeIconLight.classList.remove('hidden');
+            }
+        }
+
+        // Toggle theme
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                // Switch to light
+                document.documentElement.classList.remove('dark');
+                document.documentElement.classList.add('light');
+                localStorage.theme = 'light';
+                themeIconDark.classList.add('hidden');
+                themeIconLight.classList.remove('hidden');
+            } else {
+                // Switch to dark
+                document.documentElement.classList.add('dark');
+                document.documentElement.classList.remove('light');
+                localStorage.theme = 'dark';
+                themeIconLight.classList.add('hidden');
+                themeIconDark.classList.remove('hidden');
+            }
+        }
+
+        // Initialize on load
+        initTheme();
+
+        // Add event listener to theme toggle button
+        themeToggle.addEventListener('click', toggleTheme);
+
+        // Mobile menu toggle (existing code)
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    });
+</script>
+</body>
+</html>

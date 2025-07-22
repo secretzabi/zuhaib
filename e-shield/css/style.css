@@ -108,7 +108,31 @@ pre{
     --color-text-secondary: #28313e;
     --color-border-primary: #e2e8f0;
 }
-
+.privacy-content h2 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 700;
+    margin-top: 2rem; /* 32px */
+    margin-bottom: 1rem; /* 16px */
+    border-bottom-width: 1px;
+    padding-bottom: 0.5rem; /* 8px */
+}
+.privacy-content h3 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600;
+    margin-top: 1.5rem; /* 24px */
+    margin-bottom: 0.5rem; /* 8px */
+}
+.privacy-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem; /* 24px */
+    margin-bottom: 1rem; /* 16px */
+}
+.privacy-content li {
+    margin-bottom: 0.5rem; /* 8px */
+}
+.privacy-content a {
+    text-decoration: underline;
+}
 /* Apply light theme classes */
 html.light {
     background-color: var(--color-bg-primary);
