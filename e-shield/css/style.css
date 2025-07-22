@@ -133,6 +133,27 @@ pre{
 .privacy-content a {
     text-decoration: underline;
 }
+.statement-content h2 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 700;
+    margin-top: 2rem; /* 32px */
+    margin-bottom: 1rem; /* 16px */
+    border-bottom-width: 1px;
+    padding-bottom: 0.5rem; /* 8px */
+}
+.statement-content p, .statement-content ul {
+    margin-bottom: 1rem; /* 16px */
+}
+.statement-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem; /* 24px */
+}
+.statement-content li {
+    margin-bottom: 0.5rem; /* 8px */
+}
+.statement-content a {
+    text-decoration: underline;
+}
 /* Apply light theme classes */
 html.light {
     background-color: var(--color-bg-primary);
