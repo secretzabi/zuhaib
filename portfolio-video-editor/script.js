@@ -24,7 +24,7 @@ const services = [
 
   const renderCard = (service) => `
     <article class="flex flex-col bg-neutral-100 shadow-sm border border-gray-200 rounded-md overflow-hidden">
-      <div class="relative lg:h-56 md:h-40 overflow-hidden">
+      <div class="relative h-40 lg:h-56 md:h-40 overflow-hidden">
         <img src="${service.image}" alt="${service.title}" class="absolute inset-0 w-full h-full object-cover" />
       </div>
       <div class="p-8 md:p-4 lg:p-8 flex-1 bg-gray-100">
