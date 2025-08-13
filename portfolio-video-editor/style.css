@@ -357,9 +357,6 @@ h6 {
     min-height: 100% !important;
   }
 
-  .about-us img {
-    display: none !important;
-  }
 
   .about-us {
     display: flex !important;
@@ -903,9 +900,9 @@ footer p {
     min-height: 100% !important;
   }
 
-  .about-us img {
-    display: none !important;
-  }
+  /*.about-us img {*/
+  /*  display: none !important;*/
+  /*}*/
 
   .about-us {
     display: flex !important;
@@ -1120,6 +1117,8 @@ body {
   #contact {
     display: none !important;
   }
+
+
 }
 
 /* Mobile-Ansicht (bis 767px) */
@@ -1242,6 +1241,9 @@ body {
 @media (max-width: 768px) {
   .container:has(.portfolio-item){
     padding-inline: 1.5rem;
+  }
+  .about-us img {
+    display: none !important;
   }
 }
 @media (max-width: 767px) {
