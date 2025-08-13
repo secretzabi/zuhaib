@@ -1434,3 +1434,8 @@ iframe:not(.desktop-iframe):not(.mobile-iframe) {
     display: block !important;
   }
 }
+@media (max-width: 400px) {
+  #services .text-base{
+    min-height: 240px !important;
+  }
+}
