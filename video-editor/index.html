@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Stefan Aberer - Video Editor</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="dns-prefetch" href="https://player.vimeo.com">
+    <link rel="dns-prefetch" href="https://i.vimeocdn.com">
+    <link rel="preconnect" href="https://player.vimeo.com">
+    <link rel="preconnect" href="https://i.vimeocdn.com">
+    <link rel="preload"
+        href="https://player.vimeo.com/video/1095933665?background=1&autoplay=1&muted=1&playsinline=1&autopause=0"
+        as="document" crossorigin>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="48x48" href="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/iconsite_00000.png">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/iconsite_00000.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://player.vimeo.com/api/player.js" defer importance="high"></script>
+</head>
+
+<body>
+
+    <!-- Intro Overlay -->
+    <div class="intro-overlay">
+        <div class="name-wrapper text-xl md:text-2xl font-bold text-white leading-tight">
+            <span class="name-part first">stefan</span>
+            <span class="name-part second">aberer</span>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-black site-nav">
+        <div class="mx-auto max-w-7xl px-6 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo links (bold, 2xl) -->
+                <a href="#" id="homeLink" class="text-white font-bold text-xl ">stefan aberer</a>
+                <!-- Desktop-Links (base size, medium) -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-white text-xs font-base page-link font-mono-custom"
+                        data-page="main">ABOUT</a>
+                    <a href="#portfolio" class="nav-link text-white text-xs font-base page-link font-mono-custom"
+                        data-page="main">WORK</a>
+                    <a href="#services" class="nav-link text-white text-xs font-base page-link font-mono-custom"
+                        data-page="main">SERVICES</a>
+                    <a href="#videoEditing" class="nav-link text-white text-xs font-base page-link font-mono-custom"
+                        data-page="videoEditing">TECH</a>
+                    <a href="#ai" class="nav-link text-white text-xs font-base page-link font-mono-custom"
+                        data-page="ai">AI</a>
+                    <a href="#misc" class="nav-link text-white text-xs font-base page-link font-mono-custom"
+                        data-page="miscellaneous">MISC</a>
+                </div>
+                <!-- Mobile-Button -->
+                <div class="md:hidden">
+                    <button id="mobileMenuButton" class="text-white text-2xl focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile-Links (base size, bold) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-black px-6 pb-4">
+            <a href="#ai" class="block text-white nav-link text-sm font-medium page-link py-2" data-page="ai">AI</a>
+            <a href="#images" class="block text-white nav-link text-sm font-medium page-link py-2"
+                data-page="images">Images</a>
+            <a href="#videoEditing" class="block text-white nav-link text-sm font-medium page-link py-2"
+                data-page="videoEditing">Tech</a>
+            <a href="#miscellaneous" class="block text-white nav-link text-sm font-medium page-link py-2"
+                data-page="miscellaneous"> Misc</a>
+        </div>
+    </nav>
+
+    <!-- MAIN-PAGE -->
+    <div id="main-page" data-page="main">
+
+        <!-- Hero -->
+        <section id="home" class="video-container">
+            <!-- Hinzugefügt: loading="lazy" für iframes, um das Laden zu verzögern -->
+            <iframe id="landingIframe" loading="eager" class="video-background fade-in desktop-iframe"
+                src="https://player.vimeo.com/video/1095933665?h=6266b2155c&background=1&autoplay=1&muted=1&playsinline=1&autopause=0&loop=1"
+                frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <iframe loading="eager" class="video-background fade-in mobile-iframe"
+                src="https://player.vimeo.com/video/873205791?background=1&autoplay=1&muted=1&playsinline=1&autopause=0&loop=1"
+                frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+            <!-- Mobile-Fallback-Bild (nur Smartphones sichtbar) -->
+            <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/audifinalreel_00037.webp" alt="Video-Fallback" class="mobile-fallback" loading="eager" />
+
+            <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Comp%201_00000.png" alt="Video-Fallback Desktop" class="desktop-fallback" loading="lazy" />
+
+            <div class="content-overlay">
+                <!-- Desktop-Variante -->
+                <div class="hidden md:flex flex-col items-center justify-center
+              text-center gap-2 mt-12 w-full h-full">
+
+                    <h1 class="hero-title text-8xl md:text-8xl font-bold leading-none">
+                        Make&nbsp;it&nbsp;Count.
+                    </h1>
+
+                    <p class="text-lg md:text-xl max-w-xl mb-4 mx-auto text-gray-100">
+                        Creating Visuals by combinding traditional editing processes with cutting-edge AI technology.
+                    </p>
+
+                    <a href="mailto:stefan.aberer@hotmail.com" class="btn-glass">
+                        Contact
+                    </a>
+                </div>
+
+
+
+                <!--  Mobile-Variante -->
+                <div class="mobile-hero md:hidden absolute bottom-6 left-4 text-left">
+                    <h1 class="mobile-hero__title leading-none">
+                        <span class="block">Let’s</span>
+                        <span class="block">Make&nbsp;it</span>
+                        <span class="block">Count.</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Hero Section -->
+        <section id="about" class="py-8 md:py-24 bg-blacksolid text-white" data-page="about">
+            <div class="container mt-6 mb-6 mx-auto max-w-7xl px-6 ">
+                <div class="grid md:grid-cols-2 gap-0 items-center about-us">
+
+                    <!-- Text-Column -->
+                    <div>
+                        <!-- kleine Monospace-Überschrift -->
+                        <p class="font-mono uppercase text-xs tracking-widest mb-4">
+                            ABOUT ME
+                        </p>
+
+                        <!-- große Headlines -->
+                        <h1 class="text-4xl md:text-4xl leading-tight font-light mb-2">
+                            Sharp Cuts
+                        </h1>
+                        <h1 class="text-4xl md:text-4xl leading-tight font-light mb-2">
+                            Smooth Flow
+                        </h1>
+                        <h1 class="text-4xl md:text-4xl leading-tight font-bold mb-6">
+                            AI Enhanced
+                        </h1>
+
+                        <!-- Fließtext -->
+                        <p class="text-base md:text-md max-w-2xl font-light mb-4">
+                            I’m a 28-year-old Video Editor based near Bregenz (Austria) with over 5 years of industry
+                            experience. I specialize in short-form content such as ads, trailers, music videos, image
+                            films, and social media visuals. My foundation lies in traditional editing, refined through
+                            years of experimenting and working with AI.
+                        </p>
+
+                        <!-- Weißer Mono-Button mit Pfeil und echtem Link -->
+                        <a href="#ai" data-page="ai"
+                            class="page-link mt-2 inline-block bg-white text-black tracking-widest font-mono uppercase text-xs px-4 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                            MORE ABOUT AI
+                            <span class="ml-2">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Dein Bild -->
+                    <div class="flex justify-center about-us pl-18">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/stayconnectedlel_00000.png"
+                            alt="Mein Profilbild" class="max-w-sm w-full h-auto rounded-lg" loading="lazy">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio" class="py-8 md:py-20  bg-white">
+            <!-- Titel -->
+            <div class="container mx-auto max-w-7xl px-6 text-center mb-4 md:mb-12 lg:mb-12 ">
+                <h2 class="super-title text-black">Selected Work</h2>
+            </div>
+
+            <!-- Erstes Video -->
+            <div class=" mx-auto max-w-7xl mb-4 md:mb-12 lg:mb-12 video-hover">
+                <div class="erstes-video">
+                    <iframe loading="lazy"
+                        src="https://player.vimeo.com/video/1104258791?muted=1&background=1&autopause=0&loop=1&autoplay=0&muted=1"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                        data-vimeo-id="1104258791"
+                        style="position:absolute;top:0;left:0;width:100%;height:225%;transform:translateY(-27.778%);border:0;"></iframe>
+                    <div class="erstes-video-s"></div>
+                    <!-- Overlay Texte -->
+                    <div class="absolute bottom-2 md:bottom-6 left-6 text-white z-[1] ">
+                        <p class="font-mono text-sm uppercase mb-1">motion study</p>
+                        <h3 class="text-xl :text-3xl lg:text-2xl font-bold">stefan-aberer.at</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zweites Video (ohne Autoplay) -->
+            <div class=" mx-auto max-w-7xl mb-4 md:mb-12 lg:mb-12 video-hover ">
+                <div class="erstes-video">
+                    <iframe loading="lazy"
+                        src="https://player.vimeo.com/video/1043117915?muted=1&background=1&autopause=0&loop=1&autoplay=0&muted=1"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                        data-vimeo-id="1043117915"
+                        style="position:absolute;top:0;left:0;width:100%;height:225%;transform:translateY(-27.778%);border:0;"></iframe>
+                     <div class="erstes-video-s"></div>
+                    <!-- Overlay Texte -->
+                    <div class="absolute  bottom-2 md:bottom-6 left-6 text-white z-[1]">
+                        <p class="font-mono text-sm uppercase mb-1">Proof of Concept (AI)</p>
+                        <h3 class="text-xl :text-3xl lg:text-2xl font-bold">The Ultimate Drive</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Dritt­es Video (ohne Autoplay) -->
+            <div class=" mx-auto max-w-7xl mb-4 md:mb-12 lg:mb-12 video-hover ">
+               <div class="erstes-video">
+                    <iframe loading="lazy"
+                        src="https://player.vimeo.com/video/1098650054?muted=1&background=1&autopause=0&loop=1&autoplay=0&muted=1"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                        data-vimeo-id="1098650054"
+                        style="position:absolute;top:0;left:0;width:100%;height:225%;transform:translateY(-27.778%);border:0;"></iframe>
+                     <div class="erstes-video-s"></div>
+                    <!-- Overlay Texte -->
+                    <div class="absolute  bottom-2 md:bottom-6  left-6 text-white z-[1]">
+                        <p class="font-mono text-sm uppercase mb-1">Shortfilm Trailer</p>
+                        <h3 class="text-xl :text-3xl lg:text-2xl font-bold">One Last Time</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Viertes Video (ohne Autoplay) -->
+            <div class=" mx-auto max-w-7xl mb-4 md:mb-12 lg:mb-4 video-hover ">
+                 <div class="erstes-video">
+
+                    <iframe loading="lazy"
+                        src="https://player.vimeo.com/video/1065077098?muted=1&background=1&autopause=0&loop=1&autoplay=0&muted=1"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                        data-vimeo-id="1065077098"
+                        style="position:absolute;top:0;left:0;width:100%;height:225%;transform:translateY(-27.778%);border:0;"></iframe>
+                    <div class="erstes-video-s"></div>
+                    <!-- Overlay Texte -->
+                    <div class="absolute  bottom-2 md:bottom-6  left-6 text-white z-[1]">
+                        <p class="font-mono text-sm uppercase mb-1">Porsche</p>
+                        <h3 class="text-xl :text-3xl lg:text-2xl font-bold">Skyfall</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Trennlinie nach dem letzten Video -->
+            <div class="container mx-auto max-w-8xl px-6">
+                </div>
+                <!-- z. B. 90 % Breite -->
+                <!-- <hr class="border-t border-black w-11/12 mx-auto mt-4 md:mt-12" />-->
+        </section>
+
+        <section id="services" class="pt-0 md:pt-0 pb-8 md:pb-28 bg-white">
+            <div class="container mx-auto max-w-7xl px-6 text-center mb-12">
+                <p class="font-mono text-xs tracking-widest uppercase text-gray-500 mb-2">more about me</p>
+                <h2 class="super-title text-3xl font-bold text-black mb-8 md:mb-12">Services</h2>
+
+                <!-- Mobile: Swiper -->
+                <div class="block md:hidden relative text-left">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper" id="swiper-wrapper"></div>
+                    </div>
+                    <div class="swiper-pagination mt-6"></div>
+                </div>
+
+                <!-- Desktop: Grid -->
+                <div class="hidden md:grid md:grid-cols-3 gap-4 md:gap-4 xl:gap-12 text-left" id="grid-wrapper"></div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+<!--        <section id="contact" class="py-8 md:py-32 bg-blacksolid" data-page="contact">-->
+<!--            <div class="container mx-auto px-6">-->
+<!--                <div class="grid md:grid-cols-2 gap-12 items-center">-->
+<!--                    &lt;!&ndash; Bild links &ndash;&gt;-->
+<!--                    <div class="flex justify-center">-->
+<!--                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/conncedted_00000_00000.png"-->
+<!--                            alt="Contact" class="max-w-xs h-auto rounded-lg desktop-icon -mt-8" loading="lazy" />-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; Text rechts &ndash;&gt;-->
+<!--                    <div class="footer-main">-->
+<!--                        <p class="font-mono-custom uppercase text-xs tracking-widest mb-4">-->
+<!--                            Reach out anytime-->
+<!--                        </p>-->
+<!--                        <h2 class="text-3xl md:text-5xl font-bold mb-6">-->
+<!--                            Let’s Stay Connected-->
+<!--                        </h2>-->
+<!--                        <p class="text-base md:text-lg font-light mb-8 max-w-lg">-->
+<!--                            Got questions or want to collaborate? Feel free to reach out.<br class="break-sm">I’m open-->
+<!--                            to new projects or just a casual chat!-->
+<!--                        </p>-->
+<!--                        <a href="mailto:stefan.aberer@hotmail.com"-->
+<!--                            class="inline-block px-6 py-3 border-2 border-white bg-black text-white rounded-md font-mono-custom uppercase text-sm mb-8 transition-colors hover:bg-white hover:text-black hover:border-black">-->
+<!--                            Contact Me-->
+<!--                        </a>-->
+<!--                        <div class="flex space-x-6 mb-4 text-white text-2xl">-->
+<!--                            <a href="https://vimeo.com/user77038892" target="_blank" rel="noopener noreferrer"-->
+<!--                                class="hover:text-gray-400 transition">-->
+<!--                                <i class="fab fa-vimeo"></i>-->
+<!--                            </a>-->
+<!--                            <a href="https://www.instagram.com/i12b0kay" target="_blank" rel="noopener noreferrer"-->
+<!--                                class="hover:text-gray-400 transition">-->
+<!--                                <i class="fab fa-instagram"></i>-->
+<!--                            </a>-->
+<!--                            <a href="https://wa.me/4369911110970" target="_blank" rel="noopener noreferrer"-->
+<!--                                class="hover:text-gray-400 transition">-->
+<!--                                <i class="fab fa-whatsapp"></i>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        <p class="text-sm font-light">-->
+<!--                            stefan.aberer@hotmail.com-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+
+        <!-- ===== Footer mit Magnet-Lines & neuem Spalten-Setup ===== -->
+        <footer class="bg-darker footer-magnet">
+            <div class="mx-auto max-w-7xl px-6">
+
+                <!-- oberer Abstand -->
+                <div class="h-16"></div>
+
+                <!-- Magnet-Raster -->
+                <div class="magnet-wrapper" class="mb-12">
+                    <canvas class="magnet-grid"></canvas>
+                </div>
+
+                <!-- Inhalt -->
+                <div class="pb-12">
+                    <!-- Logo / Name (kein Hover, nicht klickbar) -->
+                    <span class="block text-white font-bold text-xl md:mt-12 mt-8 md:mb-10 mb-8 select-none">
+                        stefan aberer
+                    </span>
+
+                    <!-- 3 Spalten -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+
+                        <!-- LEGAL -------------------------------------------------->
+                        <div>
+                            <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                Legal
+                            </h4>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a href="#impressum"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                        data-page="impressum">Impressum</a>
+                                </li>
+                                <li>
+                                    <a href="#agb"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                        data-page="agb">AGB</a>
+                                </li>
+                                <li>
+                                    <a href="#datenschutz"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                        data-page="datenschutz">Datenschutz</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SOCIALS ------------------------------------------------>
+                        <div>
+                            <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                Socials
+                            </h4>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a href="https://vimeo.com/user77038892" target="_blank" rel="noopener noreferrer"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        Vimeo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/i12b0kay" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        Instagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CONTACT ----------------------------------------------->
+                        <div>
+                            <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                Contact
+                            </h4>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a href="mailto:stefan.aberer@hotmail.com"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        E-Mail
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://wa.me/4369911110970" target="_blank" rel="noopener noreferrer"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        WhatsApp
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+        </footer>
+    </div>
+
+    <!-- /MAIN-PAGE -->
+
+    <!-- IMAGES-PAGE -->
+    <div id="images-page">
+        <div id="images-background" class="transition-filter duration-500">
+            <section class="py-20 md:py-32 bg-black">
+                <div class="container max-w-7xl mx-auto px-6">
+                    <h2 class="super-title mb-8 md:mb-16 lg:mb-16 text-center">Images</h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 lg:gap-8">
+                        <!-- Lazy Loading für alle Bilder hinzugefügt und Image-Dimensionen angegeben -->
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/jobsterleans_young_black_man_leaning_casually_against_an_urba_e1e79051-4667-44ec-abe6-b4a1a8dfcde5_0.png"
+                                alt="Image 3" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/Cute%203D%20robot%20character%20with%20a%20melting%2C%20glitchy%20face%2C%20standing%20in%20the%20center%20of%20a%20chaotic%2C%20digital-i_.png"
+                                alt="Image 4" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/Hyperrealistic%20fashion%20concept_%20a%20model%20floating%20in%20deep%20space%2C%20wearing%20a%20garment%20made%20of%20glowing%20ga_.png"
+                                alt="Image 5" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/Stylized%203D%20poster%20of%20a%20character%20on%20a%20hoverboard%20with%20a%20jetpack%20and%20heart-shaped%20sunglasses%2C%20racing_.png"
+                                alt="Image 7" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrfs1skvebzvr25cbra89q6s_img_1.webp"
+                                alt="Image 8" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrk684yne8ms937bkcmeh1cn_img_0.webp"
+                                alt="Image 9" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrk6zeg3fpn9sge1ea2pqm7r_img_0.webp"
+                                alt="Image 10" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrk780mheshty3kjw2tbjeqv_img_0.webp"
+                                alt="Image 11" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrk7ydj9e1yvx461jgk6yy5q_img_0.webp"
+                                alt="Image 12" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrk8rhh0e3y958t6j3hq4a3q_img_0.webp"
+                                alt="Image 13" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrk910dje2et7tcnmd6hh6tt_img_0.webp"
+                                alt="Image 14" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrk9vpfqfara8xtprjsqd461_img_0.webp"
+                                alt="Image 15" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrkac6v7ej2bj7cx2yywk12y_img_0.webp"
+                                alt="Image 16" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrkb10v0f6err278dxsm2aa8_img_0.webp"
+                                alt="Image 17" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrn7aaxaetrt9j8yandxn0h2_img_0.webp"
+                                alt="Image 18" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrn7frsmf4pbz9dcg8gq423x_img_0.webp"
+                                alt="Image 19" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrra52tzfa7ar6a8grpv88tn_img_0.png"
+                                alt="Image 20" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrre32mdfsktdpvt6b1vcf5w_img_0.webp"
+                                alt="Image 21" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrrb1g1rft29y76p2j3shfr5_img_0.webp"
+                                alt="Image 22" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrrabrtmfyj90revknrex3br_img_0.webp"
+                                alt="Image 23" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/lfdy1.png"
+                                alt="Image 24" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ChatGPT%20Image%2028.%20Apr.%202025%2C%2013_55_45.png"
+                                alt="Image 25" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ChatGPT%20Image%2028.%20Apr.%202025%2C%2014_13_38.png"
+                                alt="Image 26" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ChatGPT%20Image%2028.%20Apr.%202025%2C%2014_24_02.png"
+                                alt="Image 27" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/assets_task_01jsy77eeaeq4r9fhcbx4bv3fg_1745844757_img_0.webp"
+                                alt="Image 29" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Comp%201/Comp%201_00000.png"
+                                alt="Image 31" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/assets_task_01jsy7fh89eqzr1rvqvq78dzwz_1745845019_img_0.webp"
+                                alt="Image 32" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Comp%201/2_00000.png"
+                                alt="Image 33" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Comp%201/3_00000.png"
+                                alt="Image 34" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Comp%201/4_00000.png"
+                                alt="Image 35" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Editd/earth.png"
+                                alt="Image 36" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Editd/fragments.png"
+                                alt="Image 37" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Editd/jimeng-2025-05-05-160-Create%20a%20colorful%20poster%20for%20a%20children%E2%80%99s%20arts%20festival%20titled%20_KUNSTFUNKEL_.U_.png"
+                                alt="Image 38" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Editd/jimeng-2025-05-05-161-Design%20a%20dark%20poster%20with%20deep%20purple%20and%20black%20gradient%20for%20a%20club%20night%20titl_.png"
+                                alt="Image 39" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Editd/jimeng-2025-05-05-162-Create%20a%20poster%20with%20a%20black%20background%20and%20a%20central%20image%20of%20a%20glowing%20plane_.png"
+                                alt="Image 40" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Editd/jimeng-2025-05-05-163-Design%20a%20gritty%20urban%20poster%20with%20a%20concrete%20wall%20texture%20as%20background.%20Event_.png"
+                                alt="Image 41" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Editd/meisterkonzerte1.png"
+                                alt="Image 43" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/generation-52194d85-7223-4302-92b8-33cb8b882707.png"
+                                alt="Image 44" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Editd/premiere2.png"
+                                alt="Image 45" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Editd/rawcut.png"
+                                alt="Image 46" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Editd/jimeng-2025-05-05-172-Create%20a%20black%20poster%20with%20white%20chalkboard%20texture%20and%20scattered%20handwritten_.png"
+                                alt="Image 47" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/porsche%20poster/jobsterleans_A_high_resolution_photography_award_winning_phot_e876f282-2b1a-46cc-bb51-d9418bbe87db_2.png"
+                                alt="Image 48" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/porsche%20poster/jobsterleans_Ultra-professional_studio_photo_of_a_baby_blue_Por_e15cecf9-6abb-4c2d-8192-8fcebf9ad33b_00000.png"
+                                alt="Image 51" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/porsche%20poster/jobsterleans_Ultra-professional_studio_photo_of_a_baby_blue_mod_76c82e1a-a3d9-40ef-a04a-d81c0a4273b0.png"
+                                alt="Image 52" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/jobsterleans_httpss.mj.runU35g9-9KARM_A_1960s-style_family_ad_c67913ca-f93e-45a5-8501-3b8be3c7e1c1_2.png"
+                                alt="Image 55" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/midjourneynew0806/jobsterleans_httpss.mj.runNDgIxMAr9ok_An_elderly_bearded_man__36ccb12f-5084-4edd-8bb7-c33fee169d61_1.png"
+                                alt="Image 53" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/midjourneynew0806/jobsterleans_httpss.mj.runXWW2rhOyfOM_A_stylish_anime-inspire_5e9f28ed-a850-4638-b3d1-80c185880366_0.png"
+                                alt="Image 54" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                        <div class="portfolio-item"><img
+                                src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/jobsterleans_two_young_black_men_standing_on_an_empty_urban_str_8684a07a-3a3a-433c-94bc-c18e8583c62b.png"
+                                alt="Image 55" class="w-full h-auto" loading="lazy" width="400" height="300"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Footer mit Magnet-Lines & neuem Spalten-Setup ===== -->
+            <footer class="bg-darker footer-magnet">
+                <div class="mx-auto max-w-7xl px-6">
+
+                    <!-- oberer Abstand -->
+                    <div class="h-16"></div>
+
+                    <!-- Magnet-Raster -->
+                    <div class="magnet-wrapper" class="mb-12">
+                        <canvas class="magnet-grid"></canvas>
+                    </div>
+
+                    <!-- Inhalt -->
+                    <div class="pb-12">
+                        <!-- Logo / Name (kein Hover, nicht klickbar) -->
+                        <span class="block text-white font-bold text-xl mt-12 mb-10 select-none">
+                            stefan aberer
+                        </span>
+
+                        <!-- 3 Spalten -->
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+
+                            <!-- LEGAL -------------------------------------------------->
+                            <div>
+                                <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                    Legal
+                                </h4>
+                                <ul class="space-y-1">
+                                    <li>
+                                        <a href="#impressum"
+                                            class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                            data-page="impressum">Impressum</a>
+                                    </li>
+                                    <li>
+                                        <a href="#agb"
+                                            class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                            data-page="agb">AGB</a>
+                                    </li>
+                                    <li>
+                                        <a href="#datenschutz"
+                                            class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                            data-page="datenschutz">Datenschutz</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- SOCIALS ------------------------------------------------>
+                            <div>
+                                <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                    Socials
+                                </h4>
+                                <ul class="space-y-1">
+                                    <li>
+                                        <a href="https://vimeo.com/user77038892" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="text-sm text-gray-300 hover:text-white transition-colors">
+                                            Vimeo
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/i12b0kay" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="text-sm text-gray-300 hover:text-white transition-colors">
+                                            Instagram
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- CONTACT ----------------------------------------------->
+                            <div>
+                                <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                    Contact
+                                </h4>
+                                <ul class="space-y-1">
+                                    <li>
+                                        <a href="mailto:stefan.aberer@hotmail.com"
+                                            class="text-sm text-gray-300 hover:text-white transition-colors">
+                                            E-Mail
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/4369911110970" target="_blank" rel="noopener noreferrer"
+                                            class="text-sm text-gray-300 hover:text-white transition-colors">
+                                            WhatsApp
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+            </footer>
+        </div>
+
+
+
+        <!-- Blur & Popup -->
+        <div id="blur-overlay"></div>
+        <div id="popup-overlay">
+            <div id="popup-box" style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                <div class="popup-content">
+                    <h3 class="text-3xl font-bold mb-4">Note</h3>
+                    <p>Creating high-quality videos – whether traditional or AI-generated – still requires a lot of
+                        technical skill, experience, time, and creative direction.</p>
+                    <p>However, AI images are now easier to produce than ever, depending on complexity. These examples,
+                        created without manual retouching, highlight raw AI potential. They can be further refined using
+                        simple traditional steps.</p>
+                    <p>I created these images for demonstration purposes, showing how an AI-assisted workflow can be a
+                        strong alternative for advertising, social media, and branding.</p>
+                </div>
+                <button id="continue-btn">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI‑PAGE (neu) -->
+    <section id="ai-page" class="placeholder-page">
+        <!-- Intro-Block wie bei About & Video Editing -->
+        <section id="ai-intro" class="py-8 pb-0 md:pb-24 md:py-24 bg-blacksolid text-white">
+            <div class=" mx-auto max-w-7xl px-6 container">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="pt-8 md:pt-0 ">
+                        <p class="font-mono uppercase text-xs tracking-widest mb-4">
+                            AI INSIGHTS
+                        </p>
+                        <h1 class="text-4xl md:text-4xl leading-tight font-light mb-2">
+                            Cutting-Edge
+                        </h1>
+                        <h1 class="text-4xl md:text-4xl leading-tight font-bold mb-6">
+                            Solutions
+                        </h1>
+                        <p class="text-base md:text-md max-w-2xl font-light mb-4">
+                            Whether it's images, videos or text – if it can be done with AI, I can make it happen. For
+                            me, AI isn’t just about chasings trends, but more about staying current in a fast moving
+                            field.
+                        </p>
+                    </div>
+                    <div class="flex justify-center relative">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Finalwebpimages/dotsfinalai_00000.webp"
+                            alt="AI Visualisierung" class="max-w-sm w-full h-auto rounded-lg visualisierung-img "
+                            loading="eager">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-8 md:py-32 bg-white">
+            <div class=" max-w-7xl mx-auto ">
+                <p class="font-mono text-xs text-center tracking-widest uppercase text-gray-500 mb-2">
+                    AI WORKFLOW
+                </p>
+                <h2 class="super-title mb-4 md:mb-8 lg:mb-8  text-black text-center">Generative AI</h2>
+                <p class="container text-sm mx-auto font-light text-black  max-w-2xl mb-4 md:mb-12 ai-text">
+                    When working with AI in video production, generative AI is by far the most transformative
+                    innovation, fundamentally changing the way we create content. I prefer an image-to-video approach
+                    because it currently offers the most amount of creative control. The process still follows
+                    traditional methods: each shot is planned in terms of lighting, camera, lense, setting, and action.
+                    I begin with a base image, either photographed or AI-generated, and develop the composition using
+                    sketches, 3D models, or reference images. With tailored prompts and style guides, I generate a
+                    high-quality image, which I then refine through editing and color grading. This image then becomes
+                    the base for the AI video model, after all that I then finalize the best Ai-output one last time
+                    with finishing touches like adding back the logos, text or just an overall cleanup.
+                </p>
+
+                <!-- ############################################################# -->
+                <!-- =============   AI-WORKFLOW IMAGE BLOCK   ==================== -->
+                <!-- ############################################################# -->
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 mb-0">
+
+                    <!-- Bild 1 -->
+                    <div class="relative w-full ai-img overflow-hidden">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/1finall/2.2_00000.png"
+                            alt="Initital Still – Adding 3D Mesh / Drawing"
+                            class="w-full h-full object-cover object-center" />
+                        <div style="position: absolute; inset: 0px; cursor: pointer;"></div>
+                        <div class="absolute bottom-2 left-4 text-white pointer-events-none">
+                            <p class="font-mono uppercase text-sm md:text-xs mb-1 md:mb-0">01 Initial Image</p>
+                            <h4 class="font-bold text-xl md:text-lg">Adding Content</h4>
+                        </div>
+                    </div>
+
+                    <!-- Bild 2 -->
+                    <div class="relative w-full ai-img overflow-hidden">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/sgfsg_00000.png"
+                            alt="Reference Image (Google) – Including Prompt for the Image"
+                            class="w-full h-full object-cover object-center" />
+                        <div style="position: absolute; inset: 0px; cursor: pointer;"></div>
+                        <div class="absolute bottom-2 left-4 text-white pointer-events-none">
+                            <p class="font-mono uppercase text-sm md:text-xs mb-1 md:mb-0">02 Reference</p>
+                            <h4 class="font-bold text-xl md:text-lg">Google Image</h4>
+                        </div>
+                    </div>
+
+                    <!-- Bild 3 -->
+                    <div class="relative w-full ai-img overflow-hidden">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/1finall/3_00125.png"
+                            alt="Final Still – First Color Grading" class="w-full h-full object-cover object-center" />
+                        <div style="position: absolute; inset: 0px; cursor: pointer; ;"></div>
+                        <div class="absolute bottom-2 left-4 text-white pointer-events-none">
+                            <p class="font-mono uppercase text-sm md:text-xs mb-1 md:mb-0">03 Final Still</p>
+                            <h4 class="font-bold text-xl md:text-lg">Fully Edited</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Erstes Video – jetzt im gleichen Container wie die Bilder -->
+
+                <div class=" mx-auto max-w-7xl -mt-2 mb-4 md:mb-4 lg:mb-4 video-hover ">>
+                    <div style="position:relative;width:100%;padding-top:30%;overflow:hidden;pointer-events:none;">
+                        <iframe loading="lazy"
+                            src="https://player.vimeo.com/video/1082247370?h=98745941f3&muted=1&background=1&autopause=0&loop=1&autoplay=1&muted=1"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                            data-vimeo-id="1082247370?h=98745941f3&"
+                            style="position:absolute;top:0;left:0;width:100%;height:225%;transform:translateY(-27.778%);border:0;pointer-events:none;"></iframe>
+                        <div style="position:absolute;inset:0;pointer-events:none;"></div>
+                        <!-- Overlay Texte -->
+                        <div class="absolute bottom-2 md:bottom-6 left-6 text-white z-[1]">
+                            <p class="font-mono uppercase text-sm md:text-xs mb-1 md:mb-0">04 Final Result</p>
+                            <h3 class="font-bold text-xl md:text-lg">Jet Scene</h3>
+                        </div>
+                    </div>
+                </div>
+
+ <div class=" mx-auto max-w-7xl mb-4 md:mb-12 lg:mb-12 video-hover ">
+                    <div style="position:relative;width:100%;padding-top:30%;overflow:hidden;">
+                        <iframe loading="lazy"
+                              src="https://player.vimeo.com/video/1108201283?h=39501b5291&background=1&loop=1&autoplay=1"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                            data-vimeo-id="1108201283?h=39501b5291&"
+                            style="position:absolute;top:0;left:0;width:100%;height:225%;transform:translateY(-27.778%);border:0;pointer-events:none;"></iframe>
+                        <div style="position:absolute;inset:0;pointer-events:none;"></div>
+                        <!-- Overlay Texte -->
+                        <div class="absolute bottom-2 md:bottom-6 left-6 text-white z-[1]">
+                            <p class="font-mono uppercase text-sm md:text-xs mb-1 md:mb-0">05 Final Result</p>
+                            <h3 class="font-bold text-xl md:text-lg">Music Video Visualizer</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vimeo Player SDK -->
+
+                <p
+                    class="mt-6 mb-0 sm:mt-0 sm:mb-2 font-mono text-xs text-center tracking-widest uppercase text-gray-500">
+                    Mai 2025
+                </p>
+                <h3 class="text-2xl md:text-4xl text-black mx-auto text-center font-bold mb-4">
+                    Veo3 Showcase
+                </h3>
+
+                <p class="container text-sm mx-auto text-black font-light max-w-2xl mb-4 md:mb-12 ai-text">
+                    Google’s latest generative AI sets new standards in AI-powered video creation especially in the
+                    field of facial look, movements and talking with built-in native audio generation. Below are two
+                    examples. First, I created a general showcase, including a short, trashy, sitcom-style show, to test
+                    Veo3's capabilities in conveying emotion and human interaction when it was first released. Second is
+                    a short, high-dopamine ad directed by PJaccetturo. This clip marks a major milestone in advertising:
+                    the first fully Veo3 AI-generated commercial that was launched for a company. Fast, absurd, engaging
+                    and efficient without loosing brand identity.
+                </p>
+
+                <!-- neuesvideo  -->
+                <div class=" mx-auto max-w-7xl mb-4 md:mb-12 lg:mb-4 video-hover ">
+                    <div class="erstes-video">
+                        <iframe loading="lazy"
+                            src="https://player.vimeo.com/video/1093141149?h=1392a96123&muted=1&autopause=0&background=1&loop=1&autoplay=1&muted=1"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                            data-vimeo-id="1093141149?h=1392a96123&"
+                            style="position:absolute;top:0;left:0;width:100%;height:225%;transform:translateY(-27.778%);border:0;"></iframe>
+                           <div class="erstes-video-s"></div>
+                        <!-- Overlay Texte -->
+                        <div class="absolute bottom-2 md:bottom-6 left-6 text-white z-[1]">
+                            <p class="font-mono uppercase text-sm md:text-xs mb-1 md:mb-0">01 General</p>
+                            <h3 class="font-bold text-xl md:text-lg">Veo3 Showcase</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Drittes Video -->
+                <div class=" mx-auto max-w-7xl  mb-4 md:mb-12 lg:mb-12 video-hover ">
+                    <div class="erstes-video">
+                        <iframe loading="lazy"
+                            src="https://player.vimeo.com/video/1088245147?h=9553efd5a6&muted=1&autopause=0&background=1&loop=1&autoplay=1&muted=1"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                            data-vimeo-id="1088245147?h=9553efd5a6&"
+                            style="position:absolute;top:0;left:0;width:100%;height:225%;transform:translateY(-27.778%);border:0;"></iframe>
+                          <div class="erstes-video-s"></div>
+                        <!-- Overlay Texte -->
+                        <div class="absolute bottom-2 md:bottom-6 left-6 text-white z-[1]">
+                            <p class="font-mono uppercase text-sm md:text-xs mb-1 md:mb-0">02 directed by PJaccetturo
+                            </p>
+                            <h3 class="font-bold text-xl md:text-lg">Veo3 High Dopamine Ad</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <p
+                    class="mt-6 mb-0 sm:mt-0 sm:mb-2 font-mono text-xs text-center tracking-widest uppercase text-gray-500">
+                    December 2024
+                </p>
+                <h3 class="text-2xl md:text-4xl text-black mx-auto text-center font-bold mb-4">
+                    Ultimate Drive
+                </h3>
+
+                <p class="container text-sm mx-auto text-black font-light max-w-2xl mb-4 md:mb-12 ai-text">
+                    This is an early proof of concept based on AI-generated footage using an image-to-video workflow,
+                    similar to today’s best practices showen above. This clip focuses more on the results of traditional
+                    editing craftsmanship than on raw AI output alone. This is the result of over 80 hours of hands-on
+                    work: editing, sound design, VFX, color grading, and prompt engineering. Images were created with
+                    MidJourney 6.1, refined in Photoshop and Magnific AI, animated with Kling 1.6 AI and Veo2, and
+                    finalized in After Effects with flares, flames, lighting effects, camera shake, and a 3D Porsche
+                    logo. Final polish and upscaling were done with Topaz AI. Below is a before-and-after comparison
+                    aswell as the final clip.
+                </p>
+
+                <!-- Zweites Video – jetzt im gleichen Container wie die Bilder -->
+                <div class=" mx-auto max-w-7xl mb-4 md:mb-12 lg:mb-4 video-hover ">
+                    <div class="erstes-video">
+                        <iframe loading="lazy"
+                            src="https://player.vimeo.com/video/1067746530?h=fe2796adb1&muted=1&background=1&autopause=0&loop=1&autoplay=1&muted=1"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                            data-vimeo-id="1067746530?h=fe2796adb1&"
+                            style="position:absolute;top:0;left:0;width:100%;height:225%;transform:translateY(-27.778%);border:0;"></iframe>
+                         <div class="erstes-video-s"></div>
+                        <!-- Overlay Texte -->
+                        <div class="absolute bottom-2 md:bottom-6 left-6 text-white z-[1]">
+                            <p class="font-mono uppercase text-sm md:text-xs mb-1 md:mb-0">01 RAW AI OUTPUT</p>
+                            <h3 class="font-bold text-xl md:text-lg">Editing Breakdown</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Drittes Video -->
+                <div class=" mx-auto max-w-7xl  mb-4 md:mb-12 lg:mb-12 video-hover ">
+                    <div class="erstes-video">
+                        <iframe loading="lazy"
+                            src="https://player.vimeo.com/video/1043117915?muted=1&background=1&loop=1&autopause=0&autoplay=1&muted=1"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                            data-vimeo-id="1043117915"
+                            style="position:absolute;top:0;left:0;width:100%;height:225%;transform:translateY(-27.778%);border:0;"></iframe>
+                        <div class="erstes-video-s"></div>
+                        <!-- Overlay Texte -->
+                        <div class="absolute bottom-2 md:bottom-6 left-6 text-white z-[1]">
+                            <p class="font-mono uppercase text-sm md:text-xs mb-1 md:mb-0">02 Final Result</p>
+                            <h3 class="font-bold text-xl md:text-lg">The Ultimate Drive</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- ===================================================== -->
+                <!--  02 · AI Image Production – neuer Unterabschnitt      -->
+                <!-- ===================================================== -->
+                <p
+                    class="mt-6 mb-0 sm:mt-0 sm:mb-2 font-mono text-xs text-center tracking-widest uppercase text-gray-500">
+                    2024 & 2025
+                </p>
+                <h3 class="text-2xl md:text-4xl text-black mx-auto text-center font-bold mb-4">
+                    Image Production
+                </h3>
+
+                <p class=" container text-sm text-black mx-auto font-light max-w-2xl mb-4 md:mb-12 ai-text">
+                    While creating high-quality and especially coherent videos, whether traditionally or with AI, still
+                    requires technical expertise, experience, time, and a clear creative vision, image generation on the
+                    other hand is now more accessible than ever. These images were created to showcase AI’s
+                    transformative potential to replace real life photoshootings. The following images were solely
+                    generated from prompts.
+                    <!-- Mini-Gallery für AI-Image-Production ----------------------------->
+
+                <div class="container grid grid-cols-2 md:grid-cols-4 gap-4 m-auto md:gap-8 mb-8 md:mb-24 lg:mb-24">
+                    <div class="portfolio-item">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrk780mheshty3kjw2tbjeqv_img_0.webp"
+                            alt="Abstract 3-D swirl" class="w-full h-auto parallax" data-speed="0.1">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Comp%201/2_00000.png"
+                            alt="Stylized humanoid character" class="w-full h-auto parallax" data-speed="0.1">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/ALL%20IMAGES%20WEBSITE/assets_task_01jrrb1g1rft29y76p2j3shfr5_img_0.webp"
+                            alt="Colorful abstract poster" class="w-full h-auto parallax" data-speed="0.1">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Editd/rawcut.png"
+                            alt="Surreal asteroid field" class="w-full h-auto">
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#images" data-page="images"
+                        class="page-link inline-block px-3 py-1 text-sm font-medium bg-black text-white rounded-md border border-transparent transition-colors duration-200 hover:bg-white hover:text-black hover:border-black">
+                        View More
+                    </a>
+                </div>
+
+            </div> <!-- ← Ende .container -->
+        </section> <!-- ← Ende AI-Workflow -->
+
+        <!-- ===== Footer mit Magnet-Lines & neuem Spalten-Setup ===== -->
+        <footer class="bg-darker footer-magnet">
+            <div class="mx-auto max-w-7xl px-6">
+
+                <!-- oberer Abstand -->
+                <div class="h-16"></div>
+
+                <!-- Magnet-Raster -->
+                <div class="magnet-wrapper" class="mb-12">
+                    <canvas class="magnet-grid"></canvas>
+                </div>
+
+                <!-- Inhalt -->
+                <div class="pb-12">
+                    <!-- Logo / Name (kein Hover, nicht klickbar) -->
+                    <span class="block text-white font-bold text-xl mt-12 mb-10 select-none">
+                        stefan aberer
+                    </span>
+
+                    <!-- 3 Spalten -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+
+                        <!-- LEGAL -------------------------------------------------->
+                        <div>
+                            <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                Legal
+                            </h4>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a href="#impressum"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                        data-page="impressum">Impressum</a>
+                                </li>
+                                <li>
+                                    <a href="#agb"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                        data-page="agb">AGB</a>
+                                </li>
+                                <li>
+                                    <a href="#datenschutz"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                        data-page="datenschutz">Datenschutz</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SOCIALS ------------------------------------------------>
+                        <div>
+                            <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                Socials
+                            </h4>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a href="https://vimeo.com/user77038892" target="_blank" rel="noopener noreferrer"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        Vimeo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/i12b0kay" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        Instagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CONTACT ----------------------------------------------->
+                        <div>
+                            <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                Contact
+                            </h4>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a href="mailto:stefan.aberer@hotmail.com"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        E-Mail
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://wa.me/4369911110970" target="_blank" rel="noopener noreferrer"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        WhatsApp
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+        </footer>
+        </div>
+    </section>
+
+    <!-- IMPRESSUM-PAGE -->
+    <div id="impressum-page" class="placeholder-page">
+        <section class="py-32 bg-black">
+            <div class="container max-w-7xl mx-auto px-6">
+                <h2 class="super-title mb-16 text-center">IMPRESSUM</h2>
+                <div class="placeholder-content">
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">ANGABEN GEMÄSS §
+                        5 ECG & § 24 MEDIENG</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Stefan Aberer<br>
+                            Kuhn 102 123<br>
+                            6934 Sulzberg<br>
+                            Österreich
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">
+                        UNTERNEHMENSDETAILS</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Unternehmensform: Einzelunternehmen (freies Gewerbe)<br>
+                            Gewerbe: Multimediadienstleistungen / Filmproduktion<br>
+                            Mitglied bei: Wirtschaftskammer Österreich (WKO)<br>
+                            Zuständige Behörde: Bezirkshauptmannschaft Bregenz
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">STEUERN & RECHT
+                    </h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Kleinunternehmer gemäß § 6 Abs. 1 Z 27 UStG<br>
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">MEDIENINHABER &
+                        BLATTLINIE</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Medieninhaber: Stefan Aberer<br>
+                            Diese Website informiert über die beruflichen Tätigkeiten, Projekte und Angebote von Stefan
+                            Aberer im Bereich Filmproduktion, Postproduktion und Mediengestaltung. Unter Umständen
+                            werden auf dieser Website auch Inhalte von externen Medieninhabern zu Demonstrationszwecken
+                            gezeigt. Diese sind stets ausdrücklich gekennzeichnet.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">
+                        HAFTUNGSAUSSCHLUSS & URHEBERRECHT</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Trotz sorgfältiger Kontrolle übernehme ich keine Haftung für Inhalte externer Links. Für den
+                            Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Die auf
+                            dieser Website veröffentlichten Inhalte sind urheberrechtlich geschützt. Jegliche Verwendung
+                            bedarf der schriftlichen Zustimmung.
+                        </span><br>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer für AGB-Page -->
+            <footer class="py-8 bg-darker fixed bottom-0 w-full">
+                <div class="container max-w-7xl max-w-7xl mx-auto px-6">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <!-- Urheberrecht -->
+                        <p class="text-sm text-gray-300 font-light">&copy; 2025 Stefan Aberer. All Rights Reserved.</p>
+                        <!-- Rechtliche Links -->
+                        <nav class="flex space-x-6 mt-4 md:mt-0">
+                            <a href="#impressum"
+                                class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                data-page="impressum">Impressum</a>
+                            <a href="#agb" class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                data-page="agb">AGB</a>
+                            <a href="#datenschutz"
+                                class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                data-page="datenschutz">Datenschutz</a>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+
+
+    <!-- AGB-PAGE -->
+    <div id="agb-page" class="placeholder-page">
+        <section class="py-32 bg-black">
+            <div class="container max-w-7xl mx-auto px-6">
+                <h2 class="super-title mb-16 text-center">AGB</h2>
+                <div class="placeholder-content">
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">GELTUNGSBEREICH
+                    </h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen Stefan Aberer
+                            (nachfolgend „Dienstleister“) und seinen Kunden (nachfolgend „Kunde“) über Dienstleistungen
+                            im Bereich Video-Produktion, Video-Editing sowie Mediengestaltung und verwandte Leistungen,
+                            soweit nicht ausdrücklich etwas anderes vereinbart wurde.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">VERTRAGSABSCHLUSS
+                    </h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Ein Vertrag kommt zustande, wenn der Kunde ein Angebot des Dienstleisters schriftlich oder
+                            mündlich annimmt oder wenn der Dienstleister eine schriftliche Auftragsbestätigung
+                            versendet.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">LEISTUNGEN &
+                        MITWIRKUNGSPFLICHTEN</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            (1) Der genaue Umfang der zu erbringenden Leistungen ergibt sich aus dem jeweiligen Angebot
+                            oder der Auftragsbestätigung.<br>
+                            (2) Der Kunde verpflichtet sich, alle zur Durchführung des Auftrags erforderlichen Inhalte,
+                            Daten und Materialien rechtzeitig zur Verfügung zu stellen. Verzögerungen aufgrund
+                            verspäteter Lieferung solcher Materialien verlängern die Lieferfrist entsprechend.<br>
+                            (3) Änderungswünsche nach Auftragsbestätigung bedürfen einer gesonderten Vereinbarung und
+                            können zu Mehrkosten führen.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">VERGÜTUNG &
+                        ZAHLUNGSBEDINGUNGEN</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            (1) Die Vergütung richtet sich nach dem im Angebot vereinbarten Preis. Alle Preise verstehen
+                            sich als Nettopreise gemäß § 6 Abs 1 Z 27 UStG (Kleinunternehmerregelung – keine
+                            Umsatzsteuer).<br>
+                            (2) Rechnungen sind, soweit nicht anders vereinbart, binnen 14 Tagen ab Rechnungsdatum ohne
+                            Abzug fällig.<br>
+                            (3) Bei Projekten mit einem Auftragswert von mehr als 1.000 Euro behält sich der
+                            Dienstleister vor, eine Anzahlung in Höhe von 30 % des Gesamtbetrags vor Beginn der Arbeiten
+                            zu verlangen.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">ABNAHME</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            (1) Nach Fertigstellung wird das Arbeitsergebnis zur Abnahme vorgelegt.<br>
+                            (2) Der Kunde ist verpflichtet, das Werk innerhalb von 10 Werktagen zu prüfen und etwaige
+                            Mängel schriftlich mitzuteilen. Erfolgt innerhalb dieser Frist keine Rückmeldung, gilt das
+                            Werk als abgenommen.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">VERGÜTUNG &
+                        ZAHLUNGSBEDINGUNGEN</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            (1) Mit vollständiger Zahlung erhält der Kunde die einfachen Nutzungsrechte am gelieferten
+                            Werk für den vereinbarten Zweck.<br>
+                            (2) Eine Weitergabe an Dritte oder die Bearbeitung durch Dritte bedarf der vorherigen
+                            schriftlichen Zustimmung des Dienstleisters.<br>
+                            (3) Der Dienstleister ist berechtigt, die erbrachten Leistungen zu Referenzzwecken (z.B. auf
+                            der eigenen Website oder in Social Media) zu verwenden, sofern der Kunde dem nicht
+                            ausdrücklich widerspricht.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">HAFTUNG</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            (1) Der Dienstleister haftet nur für Schäden, die auf vorsätzlicher oder grob fahrlässiger
+                            Pflichtverletzung beruhen.<br>
+                            (2) Keine Haftung wird übernommen für Inhalte, die vom Kunden bereitgestellt werden (z.B.
+                            Texte, Bilder, Musik). Der Kunde stellt sicher, dass sämtliche gelieferten Materialien frei
+                            von Rechten Dritter sind.<br>
+                            (3) Für technische Probleme (z.B. Ausfälle von Servern oder Hosting-Diensten), die außerhalb
+                            des Einflussbereichs des Dienstleisters liegen, wird keine Haftung übernommen.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">LIEFERUNG</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Lieferfristen gelten nur als verbindlich, wenn sie ausdrücklich schriftlich zugesagt wurden.
+                            Bei unvorhergesehenen Ereignissen (z.B. Krankheit, höhere Gewalt) kann sich die Frist
+                            angemessen verlängern.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">DATENSCHUTZ</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Personenbezogene Daten werden ausschließlich zur Abwicklung des jeweiligen Auftrags
+                            verarbeitet und nicht an Dritte weitergegeben, sofern dies nicht zur Vertragserfüllung
+                            erforderlich ist.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">
+                        SCHLUSSBESTIMMUNGEN</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            (1) Es gilt österreichisches Recht unter Ausschluss des UN-Kaufrechts.<br>
+                            (2) Gerichtsstand für alle Streitigkeiten ist Dornbirn.<br>
+                            (3) Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die
+                            Wirksamkeit der übrigen Bestimmungen unberührt.
+                        </span><br>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer für AGB-Page -->
+            <footer class="py-8 bg-darker fixed bottom-0 w-full">
+                <div class="container max-w-7xl max-w-7xl mx-auto px-6">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <!-- Urheberrecht -->
+                        <p class="text-sm text-gray-300 font-light">&copy; 2025 Stefan Aberer. All Rights Reserved.</p>
+                        <!-- Rechtliche Links -->
+                        <nav class="flex space-x-6 mt-4 md:mt-0">
+                            <a href="#impressum"
+                                class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                data-page="impressum">Impressum</a>
+                            <a href="#agb" class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                data-page="agb">AGB</a>
+                            <a href="#datenschutz"
+                                class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                data-page="datenschutz">Datenschutz</a>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+
+    <!-- DATENSCHUTZ-PAGE -->
+    <div id="datenschutz-page" class="placeholder-page">
+        <section class="py-32 bg-black">
+            <div class="container max-w-7xl mx-auto px-6">
+                <h2 class="super-title mb-16 text-center">DATENSCHUTZ</h2>
+                <div class="placeholder-content">
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">VERANTWORTLICHER
+                    </h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Stefan Aberer<br>
+                            Kuhn 102<br>
+                            6934 Sulzberg, Österreich
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">ERHEBUNG &
+                        SPEICHERUNG VON DATEN</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            (1) IP-Adresse<br>
+                            (2) Datum und Uhrzeit des Zugriffs<br>
+                            (3) aufgerufene Seite (URL)<br>
+                            (4) Browsertyp und Betriebssystem<br>
+                            (5) Referrer-URL (die zuvor besuchte Seite)<br><br>
+                            Diese Daten dienen ausschließlich zur technischen Überwachung und Sicherstellung der
+                            Funktion der Website. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO
+                            (berechtigtes Interesse). Die Daten werden nach spätestens 14 Tagen gelöscht.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">COOKIES</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Diese Website verwendet nur technisch notwendige Cookies, um grundlegende Funktionen wie die
+                            Seitendarstellung zu ermöglichen.
+                            Es werden keine Cookies zu Analyse- oder Marketingzwecken gesetzt.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">EINGEBETTETE
+                        VIMEO-VIDEOS</h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Auf manchen Seiten sind Videos des Anbieters Vimeo (Vimeo LLC, 555 West 18th Street, New
+                            York, NY 10011, USA) eingebettet.
+                            Die Videos werden im sogenannten „Do Not Track“-Modus geladen (?dnt=1), wodurch keine
+                            Tracking-Cookies gesetzt werden. Erst beim aktiven Anklicken eines Videos wird eine
+                            Verbindung zu Vimeo hergestellt und es können Daten wie Ihre IP-Adresse übertragen werden.
+                            Die Rechtsgrundlage für diese Datenübertragung ist Ihre Einwilligung gemäß Art. 6 Abs. 1
+                            lit. a DSGVO. Vimeo verarbeitet Daten unter anderem auch in den USA. Der Schutz Ihrer Daten
+                            wird durch sogenannte Standardvertragsklauseln der EU sichergestellt.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">KONTAKTAUFNAHME
+                    </h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Wenn Sie per E-Mail Kontakt mit mir aufnehmen, werden Ihre angegebenen Daten (z. B. Name,
+                            E-Mail-Adresse, Inhalt der Nachricht) zur Bearbeitung Ihrer Anfrage verwendet.
+                            Rechtsgrundlage dafür ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen).
+                            Die Daten werden gelöscht, sobald Ihre Anfrage vollständig bearbeitet ist – spätestens
+                            jedoch nach sechs Monaten.
+                        </span><br>
+                    </p>
+
+                    <h3 style="font-size: 2rem; line-height: 1.2;" class="text-xl font-bold mt-8 mb-4">DATENSICHERHEIT
+                    </h3>
+                    <p> <span style="font-family: 'Circular STD Light', sans-serif; font-weight: 300;">
+                            Diese Website nutzt SSL-Verschlüsselung (https), um Ihre Daten sicher zu übertragen. Es
+                            werden darüber hinaus alle zumutbaren technischen und organisatorischen Maßnahmen getroffen,
+                            um Ihre Daten zu schützen.
+                        </span><br>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer für Datenschutz-Page -->
+            <footer class="py-8 bg-darker fixed bottom-0 w-full">
+                <div class="container max-w-7xl max-w-7xl mx-auto px-6">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <!-- Urheberrecht -->
+                        <p class="text-sm text-gray-300 font-light">&copy; 2025 Stefan Aberer. All Rights Reserved.</p>
+                        <!-- Rechtliche Links -->
+                        <nav class="flex space-x-6 mt-4 md:mt-0">
+                            <a href="#impressum"
+                                class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                data-page="impressum">Impressum</a>
+                            <a href="#agb" class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                data-page="agb">AGB</a>
+                            <a href="#datenschutz"
+                                class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                data-page="datenschutz">Datenschutz</a>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+
+    <!-- NEUE PAGE: Video Editing -->
+    <div id="video-editing-page" class="placeholder-page ">
+        <!-- Section 1: Technical specs -->
+        <section id="Workflow & Tools" class="py-24 pb-0 md:py-24 bg-blacksolid text-white">
+            <div class="container mx-auto max-w-7xl px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="pt-8 md:pt-0">
+                        <p class="font-mono uppercase text-xs tracking-widest mb-4">
+                            TEch insights
+                        </p>
+                        <h1 class="text-4xl md:text-4xl leading-tight font-bold mb-6">
+                            Video Editing
+                        </h1>
+                        <p class="text-base md:text-md max-w-2xl font-light mb-4" style="max-width: 37rem;">
+                            My workflow is built around mainly industry-standard Adobe Programs. <br class="break-sm">
+                            For AI-assisted tasks, I use a wide spread collection of tools for image & video generation
+                            as well as editing. My main OS is Windows, but I’m also comfortable on macOS.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/update1/videoediting2_00000.webp"
+                            alt="Video Editing Vorschaubild" class="max-w-sm w-full h-auto rounded-lg video-editing-img"
+                            loading="eager">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-8 md:py-32 bg-white tech-specs">
+            <div class="container text-black max-w-7xl mx-auto px-6">
+
+                <!-- Erste Reihe: Text links, Bild rechts -->
+                <div class="grid md:grid-cols-2 gap-4 md:gap-12 items-center mb-4 md:mb-16 lg:mb-16">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 md:mb-4">Color Management</h3>
+                        <p class="text-base md:text-sm font-light tech-text">
+                            I can work with all major camera systems: ARRI Alexa (Log C), RED Komodo & DSMC2 (REDCODE
+                            RAW / Log3G10), Blackmagic RAW & Sony S-Log. My pipeline is designed around Rec. 709 (Log to
+                            Rec 709 conversion).
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Finalwebpimages/colormangementpngfinal_00000.webp"
+                            alt="Color Management Vorschaubild" class="max-w-sm w-full h-auto rounded-lg tech-desk"
+                            loading="lazy">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/Finalwebpimages/colormangementpngfinal_00000.webp"
+                            alt="Color Management Vorschaubild" class="max-w-md w-full h-auto rounded-lg tech-mob"
+                            loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Zweite Reihe: Bild links, Text rechts -->
+                <div class="grid md:grid-cols-2 gap-4 md:gap-12 items-center mb-4 md:mb-16 lg:mb-16">
+                    <div class="flex justify-center switch-posi">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/technicalspecs/AE_00000.png"
+                            alt="Programs & Tools Vorschaubild" class="max-w-sm w-full h-auto rounded-lg tech-desk"
+                            loading="lazy">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/technicalspecs/AE_00000.png"
+                            alt="Programs & Tools Vorschaubild" class="max-w-md w-full h-auto rounded-lg tech-mob"
+                            loading="lazy">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 md:mb-4">Programs & Tools</h3>
+                        <p class="text-base md:text-sm font-light tech-text">My main program is Adobe After Effects but
+                            I also work with Premiere, Photoshop, and Davinci. In addition, I use a wide range of AI
+                            tools, including Midjourney, Runway, Topaz, Kling, ChatGPT, Gemini, Veo and others.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dritte Reihe: Text links, Bild rechts (wie Erste Reihe) -->
+                <div class="grid md:grid-cols-2 gap-4 md:gap-12 items-center mb-4 md:mb-16 lg:mb-16">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 md:mb-4">Delivery Formats</h3>
+                        <p class="text-base md:text-sm font-light tech-text">
+                            I deliver in all common industry formats, including ProRes 422 HQ, ProRes 4444, and
+                            H.264/HEVC (up to 4K resolution). Depending on the project's needs, I also provide custom
+                            outputs for social media platforms and web use.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/technicalspecs/422_00000_00000.png"
+                            alt="Platzhalter Bild für drittes Feature"
+                            class="max-w-sm w-full h-auto rounded-lg tech-mob" loading="lazy">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/technicalspecs/422_00000_00000.png"
+                            alt="Platzhalter Bild für drittes Feature"
+                            class="max-w-sm w-full h-auto rounded-lg tech-desk" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Footer mit Magnet-Lines & neuem Spalten-Setup ===== -->
+        <footer class="bg-darker footer-magnet">
+            <div class="mx-auto max-w-7xl px-6">
+
+                <!-- oberer Abstand -->
+                <div class="h-16"></div>
+
+                <!-- Magnet-Raster -->
+                <div class="magnet-wrapper" class="mb-12">
+                    <canvas class="magnet-grid"></canvas>
+                </div>
+
+                <!-- Inhalt -->
+                <div class="pb-12">
+                    <!-- Logo / Name (kein Hover, nicht klickbar) -->
+                    <span class="block text-white font-bold text-xl mt-12 mb-10 select-none">
+                        stefan aberer
+                    </span>
+
+                    <!-- 3 Spalten -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+
+                        <!-- LEGAL -------------------------------------------------->
+                        <div>
+                            <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                Legal
+                            </h4>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a href="#impressum"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                        data-page="impressum">Impressum</a>
+                                </li>
+                                <li>
+                                    <a href="#agb"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                        data-page="agb">AGB</a>
+                                </li>
+                                <li>
+                                    <a href="#datenschutz"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                        data-page="datenschutz">Datenschutz</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SOCIALS ------------------------------------------------>
+                        <div>
+                            <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                Socials
+                            </h4>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a href="https://vimeo.com/user77038892" target="_blank" rel="noopener noreferrer"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        Vimeo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/i12b0kay" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        Instagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CONTACT ----------------------------------------------->
+                        <div>
+                            <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                Contact
+                            </h4>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a href="mailto:stefan.aberer@hotmail.com"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        E-Mail
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://wa.me/4369911110970" target="_blank" rel="noopener noreferrer"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        WhatsApp
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+        </footer>
+    </div>
+
+    <!-- NEUE PAGE: Misc -->
+    <div id="miscellaneous-page" class="placeholder-page ">
+        <!-- Section 1: Technical specs -->
+        <section id="Videos, Images & Web" class="py-24 pb-0 md:py-24 bg-blacksolid text-white">
+            <div class="container mx-auto max-w-7xl px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="pt-8 md:pt-0">
+                        <p class="font-mono uppercase text-xs tracking-widest mb-4">
+                            Videos, Images & Web
+                        </p>
+                        <h1 class="text-4xl md:text-4xl leading-tight font-bold mb-6">
+                            Miscellaneous
+                        </h1>
+                        <p class="text-base md:text-md max-w-2xl font-light mb-4" style="max-width: 37rem;">
+                            While my core focus is video editing, I offer a complete visual service, from video and
+                            image production to web-based solutions, always rooted within a modern digital-first
+                            approach.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/miscfinal_00000.webp"
+                            alt="misc Vorschaubild" class="max-w-sm w-full h-auto rounded-lg misc-hero-img"
+                            loading="eager">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-8 md:py-32 bg-white tech-specs">
+            <div class="container text-black max-w-7xl mx-auto px-6">
+
+                <!-- Erste Reihe: Text links, Bild rechts -->
+                <div class="grid md:grid-cols-2 gap-4 md:gap-12 items-center mb-4 md:mb-16 lg:mb-16">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 md:mb-4">From Idea to Video</h3>
+                        <p class="text-base md:text-sm font-light tech-text">
+                            In addition to editing existing footage, I can create complete videos without any pre-shot
+                            material using Motion Graphics, Typography, high-quality stock footage and or fully
+                            customized AI-generated visuals, always enhanced with traditional editing and sound design.
+                            I also create and implement 3D visuals, objects, and renderings directly within After
+                            Effects. For more advanced 3D requirements such as complex visualizations or high-end
+                            animations, I collaborate with experienced industry professionals to seamlessly integrate 3D
+                            elements into any project.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/idea2finalfinal_00000.webp"
+                            alt="Color Management Vorschaubild" class="max-w-sm w-full h-auto rounded-lg tech-desk"
+                            loading="lazy">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/idea2finalfinal_00000.webp"
+                            alt="Color Management Vorschaubild" class="md:max-w-lg w-full h-auto rounded-lg tech-mob"
+                            loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Zweite Reihe: Bild links, Text rechts -->
+                <div class="grid md:grid-cols-2 gap-4 md:gap-12 items-center mb-4 md:mb-16 lg:mb-16">
+                    <div class="flex justify-center switch-posi">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/miscfox/aboutblank_00000.webp"
+                            alt="Programs & Tools Vorschaubild" class="md:max-w-sm w-full h-auto rounded-lg tech-desk"
+                            loading="lazy">
+                        <img src="https://raw.githubusercontent.com/xStivix/website/refs/heads/main/miscfox/aboutblank_00000.webp"
+                            alt="Programs & Tools Vorschaubild" class="md:max-w-md w-full h-auto rounded-lg tech-mob"
+                            loading="lazy">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 md:mb-4">Digital First</h3>
+                        <p class="text-base md:text-sm font-light tech-text">
+                            Whether working with typography, existing frames or real life assets, I combine traditional
+                            editing processes with an AI-assisted, digital-first workflow to create professional,
+                            lifelike, and fully individualized content for any purpose. This method eliminates the need
+                            for traditional production while upholding a high visual standard.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Footer mit Magnet-Lines & neuem Spalten-Setup ===== -->
+        <footer class="bg-darker footer-magnet">
+            <div class="mx-auto max-w-7xl px-6">
+
+                <!-- oberer Abstand -->
+                <div class="h-16"></div>
+
+                <!-- Magnet-Raster -->
+                <div class="magnet-wrapper" class="mb-12">
+                    <canvas class="magnet-grid"></canvas>
+                </div>
+
+                <!-- Inhalt -->
+                <div class="pb-12">
+                    <!-- Logo / Name (kein Hover, nicht klickbar) -->
+                    <span class="block text-white font-bold text-xl mt-12 mb-10 select-none">
+                        stefan aberer
+                    </span>
+
+                    <!-- 3 Spalten -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+
+                        <!-- LEGAL -------------------------------------------------->
+                        <div>
+                            <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                Legal
+                            </h4>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a href="#impressum"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                        data-page="impressum">Impressum</a>
+                                </li>
+                                <li>
+                                    <a href="#agb"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                        data-page="agb">AGB</a>
+                                </li>
+                                <li>
+                                    <a href="#datenschutz"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors page-link"
+                                        data-page="datenschutz">Datenschutz</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SOCIALS ------------------------------------------------>
+                        <div>
+                            <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                Socials
+                            </h4>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a href="https://vimeo.com/user77038892" target="_blank" rel="noopener noreferrer"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        Vimeo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/i12b0kay" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        Instagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CONTACT ----------------------------------------------->
+                        <div>
+                            <h4 class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-3">
+                                Contact
+                            </h4>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a href="mailto:stefan.aberer@hotmail.com"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        E-Mail
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://wa.me/4369911110970" target="_blank" rel="noopener noreferrer"
+                                        class="text-sm text-gray-300 hover:text-white transition-colors">
+                                        WhatsApp
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+        </footer>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="image-modal">
+        <div class="modal-overlay"></div>
+        <img src="" class="modal-image" alt="Vergrößertes Bild">
+    </div>
+
+    <!-- Video Lightbox -->
+    <div id="video-lightbox">
+        <span class="close-btn">&times;</span>
+        <iframe id="lightbox-player" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+
+    <!-- Language Switcher -->
+    <div id="lang-switcher">
+        <div class="relative flex w-16 h-8 rounded-md overflow-hidden" style="background-color: #2d2d2d;">
+            <!-- Weißer Slider -->
+            <div class="indicator absolute top-0 left-0 w-1/2 h-full bg-white rounded-md"></div>
+            <!-- EN -->
+            <button data-lang="en"
+                class="relative w-1/2 h-full flex items-center justify-center text-xs font-medium text-black pointer-events-none">
+                EN
+            </button>
+            <!-- DE -->
+            <button data-lang="de"
+                class="relative w-1/2 h-full flex items-center justify-center text-xs font-medium text-white pointer-events-none">
+                DE
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
