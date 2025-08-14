@@ -353,9 +353,9 @@ h6 {
     height: 12rem !important;
   }
 
-  #services .text-base {
-    min-height: 100% !important;
-  }
+  /*#services .text-base {*/
+  /*  min-height: 100% !important;*/
+  /*}*/
 
 
   .about-us {
@@ -366,9 +366,9 @@ h6 {
     display: none !Important;
   }
 
-  #services .text-base {
-    min-height: 100% !important;
-  }
+  /*#services .text-base {*/
+  /*  min-height: 100% !important;*/
+  /*}*/
 }
 
 @media (max-width:767px) {
@@ -534,7 +534,7 @@ h6 {
   }
 
   #services .text-base {
-    min-height: 100% !important;
+    min-height: initial !important;
   }
 
   .nav-link.active::after {
@@ -897,7 +897,7 @@ footer p {
   }
 
   #services .text-base {
-    min-height: 100% !important;
+    min-height: initial !important;
   }
 
   /*.about-us img {*/
@@ -912,9 +912,6 @@ footer p {
     display: none !Important;
   }
 
-  #services .text-base {
-    min-height: 100% !important;
-  }
 }
 
 /* iframe klick-durchlässig machen  */
@@ -1242,15 +1239,15 @@ body {
   .container:has(.portfolio-item){
     padding-inline: 1.5rem;
   }
-  .about-us img {
-    display: none !important;
-  }
 }
 @media (max-width: 767px) {
   .mobile-hero__title {
     font-size: 5rem !important;
     /* oder 6rem, je nach Geschmack */
     line-height: 1;
+  }
+  .about-us img {
+    display: none !important;
   }
 }
 
@@ -1433,6 +1430,11 @@ iframe:not(.desktop-iframe):not(.mobile-iframe) {
   #contact {
     display: block !important;
   }
+
+  #services .text-base {
+    min-height: initial !important;
+  }
+
 }
 @media (max-width: 400px) {
   #services .text-base{
