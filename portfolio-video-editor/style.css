@@ -1336,13 +1336,13 @@ iframe:not(.desktop-iframe):not(.mobile-iframe) {
 }
 
 /* ab 1024 px Breite (lg‑Breakpoint) noch größer */
-@media (min-width: 1024px) {
-  /*.hero-title {*/
-  /*  font-size: 11.5rem;*/
-  /*  !* z.B. ≈192 px – passe nach Geschmack an *!*/
-  /*  line-height: 1;*/
-  /*  !* bleibt knackig eng *!*/
-  /*}*/
+@media (min-width: 1270px) {
+  .hero-title {
+    font-size: 11.5rem;
+    /* z.B. ≈192 px – passe nach Geschmack an */
+    line-height: 1;
+    /* bleibt knackig eng */
+  }
 }
 
 
