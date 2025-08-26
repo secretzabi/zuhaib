@@ -363,6 +363,10 @@ footer{
     }
 }
 .home-page{
+    .carousel-caption{
+        left: 0;
+        right: 0;
+    }
     .top-strip{
         background: rgba(28, 20, 16, 0.18);
         a{
