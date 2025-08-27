@@ -481,46 +481,25 @@
 						<input type="text" class="form-control border-0 bg-light rounded-0 px-4" placeholder="Какой вопрос вас интересует? Если вам необходимо сделать расчет кухни— напишите название модели, размеры и как с вами связаться." id="44" />
 						<label for="44" class="px-4">Какой вопрос вас интересует? </label>
 					</div>
+					<div class="form-floating mb-4">
+						<input type="file" class="form-control border-0 bg-light rounded-0 px-4" id="inputGroupFile">
+					
+					</div>
 					<button aria-label="ОТПРАВИТЬ СООБЩЕНИЕ " class="button bg-theme px-4 w-100" data-bs-toggle="modal" data-bs-target="#sendMessage">
 						ОТПРАВИТЬ СООБЩЕНИЕ
 					</button>
+				
 				</form>
+				<p class="mt-5 text-center mb-0">
+					Отправляя сообщение, Вы соглашаетесь c
+					<a class="link primary-light-color" href="http://twenty-studio.ru/pk" target="_blank">политикой конфиденциальности</a>
+				</p>
 			</div>
 		</div>
 	</div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-
-<script>
-    document.querySelectorAll(".btn-favorite").forEach(btn => {
-        btn.addEventListener("click", function () {
-            this.classList.toggle("active");
-        });
-    });
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const toggleButtons = document.querySelectorAll(".toggle-btn");
-
-        toggleButtons.forEach((btn) => {
-            btn.addEventListener("click", function (e) {
-                e.preventDefault();
-                e.stopPropagation(); // 🔴 prevent Bootstrap from closing dropdown
-
-                const megaMenu = this.closest(".megamenu-section").querySelector(".mega-menu");
-                const isOpen = this.getAttribute("aria-expanded") === "true";
-
-                if (isOpen) {
-                    megaMenu.style.display = "none";
-                    this.setAttribute("aria-expanded", "false");
-                } else {
-                    megaMenu.style.display = "block";
-                    this.setAttribute("aria-expanded", "true");
-                }
-            });
-        });
-    });
-</script>
+<script src="assets/js/scripts.js"></script>
 
 </body>
 </html>

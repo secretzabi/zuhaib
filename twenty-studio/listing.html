@@ -328,266 +328,482 @@
 	
 	<div class="row catalog-listing gy-4">
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-			<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
-			<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
-				<div>
-					<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
-					<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
-					<div class="d-flex light-color gap-3 align-items-center">
+			<div class="item-list">
+				<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
+				<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
+					<div>
+						<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
+						<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
+						<div class="d-flex light-color gap-3 align-items-center">
 											<span class="square-icon">
 											</span>
-						На заказ
+							На заказ
+						</div>
+					</div>
+					<div>
+						<button aria-label="Favorites" class="d-flex bg-transparent justify-content-center border-0 flex-column fs-7 btn-favorite light-color">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
+								<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
+						</button>
 					</div>
 				</div>
-				<div>
-					<button aria-label="Favorites" class="d-flex justify-content-center bg-white border-0 flex-column fs-7 btn-favorite light-color">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
-							<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-						<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
-					</button>
+				<div class="visible-content mt-3">
+					<div class="fs-6 fw-600 primary">
+						Фабрика <a href="" class="primary-light-color link"> Mossman</a>, Россия-Италия
+					</div>
+					<div class="d-flex gap-4 button-set mt-3  flex-wrap">
+						<button class="button bg-theme px-3 text-uppercase" aria-label="Рассчитать заказ">
+							Рассчитать заказ
+						</button>
+						<button class="button outline-button px-3 text-uppercase d-flex gap-2 align-items-center justify-content-center" aria-label="Рассчитать заказ">
+							В избранное
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+								<path d="M8.33 12.7112L8.25 12.7929L8.162 12.7112C4.362 9.18801 1.85 6.85831 1.85 4.49591C1.85 2.86104 3.05 1.63488 4.65 1.63488C5.882 1.63488 7.082 2.45232 7.506 3.56403H8.994C9.418 2.45232 10.618 1.63488 11.85 1.63488C13.45 1.63488 14.65 2.86104 14.65 4.49591C14.65 6.85831 12.138 9.18801 8.33 12.7112ZM11.85 0C10.458 0 9.122 0.662125 8.25 1.70027C7.378 0.662125 6.042 0 4.65 0C2.186 0 0.25 1.97003 0.25 4.49591C0.25 7.57766 2.97 10.1035 7.09 13.921L8.25 15L9.41 13.921C13.53 10.1035 16.25 7.57766 16.25 4.49591C16.25 1.97003 14.314 0 11.85 0Z" fill="#008EB5"></path>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-			<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
-			<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
-				<div>
-					<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
-					<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
-					<div class="d-flex light-color gap-3 align-items-center">
+			<div class="item-list">
+				<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
+				<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
+					<div>
+						<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
+						<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
+						<div class="d-flex light-color gap-3 align-items-center">
 											<span class="square-icon">
 											</span>
-						На заказ
+							На заказ
+						</div>
+					</div>
+					<div>
+						<button aria-label="Favorites" class="d-flex justify-content-center bg-transparent border-0 flex-column fs-7 btn-favorite light-color">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
+								<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
+						</button>
 					</div>
 				</div>
-				<div>
-					<button aria-label="Favorites" class="d-flex justify-content-center bg-white border-0 flex-column fs-7 btn-favorite light-color">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
-							<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-						<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
-					</button>
+				<div class="visible-content mt-3">
+					<div class="fs-6 fw-600 primary">
+						Фабрика <a href="" class="primary-light-color link"> Mossman</a>, Россия-Италия
+					</div>
+					<div class="d-flex gap-4 button-set mt-3  flex-wrap">
+						<button class="button bg-theme px-3 text-uppercase" aria-label="Рассчитать заказ">
+							Рассчитать заказ
+						</button>
+						<button class="button outline-button px-3 text-uppercase d-flex gap-2 align-items-center justify-content-center" aria-label="Рассчитать заказ">
+							В избранное
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+								<path d="M8.33 12.7112L8.25 12.7929L8.162 12.7112C4.362 9.18801 1.85 6.85831 1.85 4.49591C1.85 2.86104 3.05 1.63488 4.65 1.63488C5.882 1.63488 7.082 2.45232 7.506 3.56403H8.994C9.418 2.45232 10.618 1.63488 11.85 1.63488C13.45 1.63488 14.65 2.86104 14.65 4.49591C14.65 6.85831 12.138 9.18801 8.33 12.7112ZM11.85 0C10.458 0 9.122 0.662125 8.25 1.70027C7.378 0.662125 6.042 0 4.65 0C2.186 0 0.25 1.97003 0.25 4.49591C0.25 7.57766 2.97 10.1035 7.09 13.921L8.25 15L9.41 13.921C13.53 10.1035 16.25 7.57766 16.25 4.49591C16.25 1.97003 14.314 0 11.85 0Z" fill="#008EB5"></path>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-			<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
-			<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
-				<div>
-					<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
-					<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
-					<div class="d-flex light-color gap-3 align-items-center">
+			<div class="item-list">
+				<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
+				<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
+					<div>
+						<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
+						<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
+						<div class="d-flex light-color gap-3 align-items-center">
 											<span class="square-icon">
 											</span>
-						На заказ
+							На заказ
+						</div>
+					</div>
+					<div>
+						<button aria-label="Favorites" class="d-flex justify-content-center bg-transparent border-0 flex-column fs-7 btn-favorite light-color">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
+								<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
+						</button>
 					</div>
 				</div>
-				<div>
-					<button aria-label="Favorites" class="d-flex justify-content-center bg-white border-0 flex-column fs-7 btn-favorite light-color">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
-							<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-						<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
-					</button>
+				<div class="visible-content mt-3">
+					<div class="fs-6 fw-600 primary">
+						Фабрика <a href="" class="primary-light-color link"> Mossman</a>, Россия-Италия
+					</div>
+					<div class="d-flex gap-4 button-set mt-3  flex-wrap">
+						<button class="button bg-theme px-3 text-uppercase" aria-label="Рассчитать заказ">
+							Рассчитать заказ
+						</button>
+						<button class="button outline-button px-3 text-uppercase d-flex gap-2 align-items-center justify-content-center" aria-label="Рассчитать заказ">
+							В избранное
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+								<path d="M8.33 12.7112L8.25 12.7929L8.162 12.7112C4.362 9.18801 1.85 6.85831 1.85 4.49591C1.85 2.86104 3.05 1.63488 4.65 1.63488C5.882 1.63488 7.082 2.45232 7.506 3.56403H8.994C9.418 2.45232 10.618 1.63488 11.85 1.63488C13.45 1.63488 14.65 2.86104 14.65 4.49591C14.65 6.85831 12.138 9.18801 8.33 12.7112ZM11.85 0C10.458 0 9.122 0.662125 8.25 1.70027C7.378 0.662125 6.042 0 4.65 0C2.186 0 0.25 1.97003 0.25 4.49591C0.25 7.57766 2.97 10.1035 7.09 13.921L8.25 15L9.41 13.921C13.53 10.1035 16.25 7.57766 16.25 4.49591C16.25 1.97003 14.314 0 11.85 0Z" fill="#008EB5"></path>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-			<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
-			<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
-				<div>
-					<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
-					<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
-					<div class="d-flex light-color gap-3 align-items-center">
+			<div class="item-list">
+				<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
+				<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
+					<div>
+						<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
+						<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
+						<div class="d-flex light-color gap-3 align-items-center">
 											<span class="square-icon">
 											</span>
-						На заказ
+							На заказ
+						</div>
+					</div>
+					<div>
+						<button aria-label="Favorites" class="d-flex justify-content-center bg-transparent border-0 flex-column fs-7 btn-favorite light-color">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
+								<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
+						</button>
 					</div>
 				</div>
-				<div>
-					<button aria-label="Favorites" class="d-flex justify-content-center bg-white border-0 flex-column fs-7 btn-favorite light-color">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
-							<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-						<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
-					</button>
+				<div class="visible-content mt-3">
+					<div class="fs-6 fw-600 primary">
+						Фабрика <a href="" class="primary-light-color link"> Mossman</a>, Россия-Италия
+					</div>
+					<div class="d-flex gap-4 button-set mt-3  flex-wrap">
+						<button class="button bg-theme px-3 text-uppercase" aria-label="Рассчитать заказ">
+							Рассчитать заказ
+						</button>
+						<button class="button outline-button px-3 text-uppercase d-flex gap-2 align-items-center justify-content-center" aria-label="Рассчитать заказ">
+							В избранное
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+								<path d="M8.33 12.7112L8.25 12.7929L8.162 12.7112C4.362 9.18801 1.85 6.85831 1.85 4.49591C1.85 2.86104 3.05 1.63488 4.65 1.63488C5.882 1.63488 7.082 2.45232 7.506 3.56403H8.994C9.418 2.45232 10.618 1.63488 11.85 1.63488C13.45 1.63488 14.65 2.86104 14.65 4.49591C14.65 6.85831 12.138 9.18801 8.33 12.7112ZM11.85 0C10.458 0 9.122 0.662125 8.25 1.70027C7.378 0.662125 6.042 0 4.65 0C2.186 0 0.25 1.97003 0.25 4.49591C0.25 7.57766 2.97 10.1035 7.09 13.921L8.25 15L9.41 13.921C13.53 10.1035 16.25 7.57766 16.25 4.49591C16.25 1.97003 14.314 0 11.85 0Z" fill="#008EB5"></path>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-			<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
-			<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
-				<div>
-					<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
-					<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
-					<div class="d-flex light-color gap-3 align-items-center">
+			<div class="item-list">
+				<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
+				<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
+					<div>
+						<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
+						<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
+						<div class="d-flex light-color gap-3 align-items-center">
 											<span class="square-icon">
 											</span>
-						На заказ
+							На заказ
+						</div>
+					</div>
+					<div>
+						<button aria-label="Favorites" class="d-flex justify-content-center bg-transparent border-0 flex-column fs-7 btn-favorite light-color">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
+								<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
+						</button>
 					</div>
 				</div>
-				<div>
-					<button aria-label="Favorites" class="d-flex justify-content-center bg-white border-0 flex-column fs-7 btn-favorite light-color">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
-							<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-						<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
-					</button>
+				<div class="visible-content mt-3">
+					<div class="fs-6 fw-600 primary">
+						Фабрика <a href="" class="primary-light-color link"> Mossman</a>, Россия-Италия
+					</div>
+					<div class="d-flex gap-4 button-set mt-3  flex-wrap">
+						<button class="button bg-theme px-3 text-uppercase" aria-label="Рассчитать заказ">
+							Рассчитать заказ
+						</button>
+						<button class="button outline-button px-3 text-uppercase d-flex gap-2 align-items-center justify-content-center" aria-label="Рассчитать заказ">
+							В избранное
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+								<path d="M8.33 12.7112L8.25 12.7929L8.162 12.7112C4.362 9.18801 1.85 6.85831 1.85 4.49591C1.85 2.86104 3.05 1.63488 4.65 1.63488C5.882 1.63488 7.082 2.45232 7.506 3.56403H8.994C9.418 2.45232 10.618 1.63488 11.85 1.63488C13.45 1.63488 14.65 2.86104 14.65 4.49591C14.65 6.85831 12.138 9.18801 8.33 12.7112ZM11.85 0C10.458 0 9.122 0.662125 8.25 1.70027C7.378 0.662125 6.042 0 4.65 0C2.186 0 0.25 1.97003 0.25 4.49591C0.25 7.57766 2.97 10.1035 7.09 13.921L8.25 15L9.41 13.921C13.53 10.1035 16.25 7.57766 16.25 4.49591C16.25 1.97003 14.314 0 11.85 0Z" fill="#008EB5"></path>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-			<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
-			<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
-				<div>
-					<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
-					<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
-					<div class="d-flex light-color gap-3 align-items-center">
+			<div class="item-list">
+				<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
+				<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
+					<div>
+						<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
+						<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
+						<div class="d-flex light-color gap-3 align-items-center">
 											<span class="square-icon">
 											</span>
-						На заказ
+							На заказ
+						</div>
+					</div>
+					<div>
+						<button aria-label="Favorites" class="d-flex justify-content-center bg-transparent border-0 flex-column fs-7 btn-favorite light-color">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
+								<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
+						</button>
 					</div>
 				</div>
-				<div>
-					<button aria-label="Favorites" class="d-flex justify-content-center bg-white border-0 flex-column fs-7 btn-favorite light-color">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
-							<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-						<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
-					</button>
+				<div class="visible-content mt-3">
+					<div class="fs-6 fw-600 primary">
+						Фабрика <a href="" class="primary-light-color link"> Mossman</a>, Россия-Италия
+					</div>
+					<div class="d-flex gap-4 button-set mt-3  flex-wrap">
+						<button class="button bg-theme px-3 text-uppercase" aria-label="Рассчитать заказ">
+							Рассчитать заказ
+						</button>
+						<button class="button outline-button px-3 text-uppercase d-flex gap-2 align-items-center justify-content-center" aria-label="Рассчитать заказ">
+							В избранное
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+								<path d="M8.33 12.7112L8.25 12.7929L8.162 12.7112C4.362 9.18801 1.85 6.85831 1.85 4.49591C1.85 2.86104 3.05 1.63488 4.65 1.63488C5.882 1.63488 7.082 2.45232 7.506 3.56403H8.994C9.418 2.45232 10.618 1.63488 11.85 1.63488C13.45 1.63488 14.65 2.86104 14.65 4.49591C14.65 6.85831 12.138 9.18801 8.33 12.7112ZM11.85 0C10.458 0 9.122 0.662125 8.25 1.70027C7.378 0.662125 6.042 0 4.65 0C2.186 0 0.25 1.97003 0.25 4.49591C0.25 7.57766 2.97 10.1035 7.09 13.921L8.25 15L9.41 13.921C13.53 10.1035 16.25 7.57766 16.25 4.49591C16.25 1.97003 14.314 0 11.85 0Z" fill="#008EB5"></path>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-			<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
-			<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
-				<div>
-					<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
-					<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
-					<div class="d-flex light-color gap-3 align-items-center">
+			<div class="item-list">
+				<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
+				<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
+					<div>
+						<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
+						<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
+						<div class="d-flex light-color gap-3 align-items-center">
 											<span class="square-icon">
 											</span>
-						На заказ
+							На заказ
+						</div>
+					</div>
+					<div>
+						<button aria-label="Favorites" class="d-flex justify-content-center bg-transparent border-0 flex-column fs-7 btn-favorite light-color">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
+								<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
+						</button>
 					</div>
 				</div>
-				<div>
-					<button aria-label="Favorites" class="d-flex justify-content-center bg-white border-0 flex-column fs-7 btn-favorite light-color">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
-							<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-						<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
-					</button>
+				<div class="visible-content mt-3">
+					<div class="fs-6 fw-600 primary">
+						Фабрика <a href="" class="primary-light-color link"> Mossman</a>, Россия-Италия
+					</div>
+					<div class="d-flex gap-4 button-set mt-3  flex-wrap">
+						<button class="button bg-theme px-3 text-uppercase" aria-label="Рассчитать заказ">
+							Рассчитать заказ
+						</button>
+						<button class="button outline-button px-3 text-uppercase d-flex gap-2 align-items-center justify-content-center" aria-label="Рассчитать заказ">
+							В избранное
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+								<path d="M8.33 12.7112L8.25 12.7929L8.162 12.7112C4.362 9.18801 1.85 6.85831 1.85 4.49591C1.85 2.86104 3.05 1.63488 4.65 1.63488C5.882 1.63488 7.082 2.45232 7.506 3.56403H8.994C9.418 2.45232 10.618 1.63488 11.85 1.63488C13.45 1.63488 14.65 2.86104 14.65 4.49591C14.65 6.85831 12.138 9.18801 8.33 12.7112ZM11.85 0C10.458 0 9.122 0.662125 8.25 1.70027C7.378 0.662125 6.042 0 4.65 0C2.186 0 0.25 1.97003 0.25 4.49591C0.25 7.57766 2.97 10.1035 7.09 13.921L8.25 15L9.41 13.921C13.53 10.1035 16.25 7.57766 16.25 4.49591C16.25 1.97003 14.314 0 11.85 0Z" fill="#008EB5"></path>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-			<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
-			<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
-				<div>
-					<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
-					<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
-					<div class="d-flex light-color gap-3 align-items-center">
+			<div class="item-list">
+				<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
+				<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
+					<div>
+						<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
+						<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
+						<div class="d-flex light-color gap-3 align-items-center">
 											<span class="square-icon">
 											</span>
-						На заказ
+							На заказ
+						</div>
+					</div>
+					<div>
+						<button aria-label="Favorites" class="d-flex justify-content-center bg-transparent border-0 flex-column fs-7 btn-favorite light-color">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
+								<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
+						</button>
 					</div>
 				</div>
-				<div>
-					<button aria-label="Favorites" class="d-flex justify-content-center bg-white border-0 flex-column fs-7 btn-favorite light-color">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
-							<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-						<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
-					</button>
+				<div class="visible-content mt-3">
+					<div class="fs-6 fw-600 primary">
+						Фабрика <a href="" class="primary-light-color link"> Mossman</a>, Россия-Италия
+					</div>
+					<div class="d-flex gap-4 button-set mt-3  flex-wrap">
+						<button class="button bg-theme px-3 text-uppercase" aria-label="Рассчитать заказ">
+							Рассчитать заказ
+						</button>
+						<button class="button outline-button px-3 text-uppercase d-flex gap-2 align-items-center justify-content-center" aria-label="Рассчитать заказ">
+							В избранное
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+								<path d="M8.33 12.7112L8.25 12.7929L8.162 12.7112C4.362 9.18801 1.85 6.85831 1.85 4.49591C1.85 2.86104 3.05 1.63488 4.65 1.63488C5.882 1.63488 7.082 2.45232 7.506 3.56403H8.994C9.418 2.45232 10.618 1.63488 11.85 1.63488C13.45 1.63488 14.65 2.86104 14.65 4.49591C14.65 6.85831 12.138 9.18801 8.33 12.7112ZM11.85 0C10.458 0 9.122 0.662125 8.25 1.70027C7.378 0.662125 6.042 0 4.65 0C2.186 0 0.25 1.97003 0.25 4.49591C0.25 7.57766 2.97 10.1035 7.09 13.921L8.25 15L9.41 13.921C13.53 10.1035 16.25 7.57766 16.25 4.49591C16.25 1.97003 14.314 0 11.85 0Z" fill="#008EB5"></path>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-			<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
-			<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
-				<div>
-					<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
-					<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
-					<div class="d-flex light-color gap-3 align-items-center">
+			<div class="item-list">
+				<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
+				<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
+					<div>
+						<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
+						<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
+						<div class="d-flex light-color gap-3 align-items-center">
 											<span class="square-icon">
 											</span>
-						На заказ
+							На заказ
+						</div>
+					</div>
+					<div>
+						<button aria-label="Favorites" class="d-flex justify-content-center bg-transparent border-0 flex-column fs-7 btn-favorite light-color">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
+								<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
+						</button>
 					</div>
 				</div>
-				<div>
-					<button aria-label="Favorites" class="d-flex justify-content-center bg-white border-0 flex-column fs-7 btn-favorite light-color">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
-							<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-						<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
-					</button>
+				<div class="visible-content mt-3">
+					<div class="fs-6 fw-600 primary">
+						Фабрика <a href="" class="primary-light-color link"> Mossman</a>, Россия-Италия
+					</div>
+					<div class="d-flex gap-4 button-set mt-3  flex-wrap">
+						<button class="button bg-theme px-3 text-uppercase" aria-label="Рассчитать заказ">
+							Рассчитать заказ
+						</button>
+						<button class="button outline-button px-3 text-uppercase d-flex gap-2 align-items-center justify-content-center" aria-label="Рассчитать заказ">
+							В избранное
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+								<path d="M8.33 12.7112L8.25 12.7929L8.162 12.7112C4.362 9.18801 1.85 6.85831 1.85 4.49591C1.85 2.86104 3.05 1.63488 4.65 1.63488C5.882 1.63488 7.082 2.45232 7.506 3.56403H8.994C9.418 2.45232 10.618 1.63488 11.85 1.63488C13.45 1.63488 14.65 2.86104 14.65 4.49591C14.65 6.85831 12.138 9.18801 8.33 12.7112ZM11.85 0C10.458 0 9.122 0.662125 8.25 1.70027C7.378 0.662125 6.042 0 4.65 0C2.186 0 0.25 1.97003 0.25 4.49591C0.25 7.57766 2.97 10.1035 7.09 13.921L8.25 15L9.41 13.921C13.53 10.1035 16.25 7.57766 16.25 4.49591C16.25 1.97003 14.314 0 11.85 0Z" fill="#008EB5"></path>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-			<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
-			<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
-				<div>
-					<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
-					<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
-					<div class="d-flex light-color gap-3 align-items-center">
+			<div class="item-list">
+				<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
+				<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
+					<div>
+						<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
+						<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
+						<div class="d-flex light-color gap-3 align-items-center">
 											<span class="square-icon">
 											</span>
-						На заказ
+							На заказ
+						</div>
+					</div>
+					<div>
+						<button aria-label="Favorites" class="d-flex justify-content-center bg-transparent border-0 flex-column fs-7 btn-favorite light-color">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
+								<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
+						</button>
 					</div>
 				</div>
-				<div>
-					<button aria-label="Favorites" class="d-flex justify-content-center bg-white border-0 flex-column fs-7 btn-favorite light-color">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
-							<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-						<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
-					</button>
+				<div class="visible-content mt-3">
+					<div class="fs-6 fw-600 primary">
+						Фабрика <a href="" class="primary-light-color link"> Mossman</a>, Россия-Италия
+					</div>
+					<div class="d-flex gap-4 button-set mt-3  flex-wrap">
+						<button class="button bg-theme px-3 text-uppercase" aria-label="Рассчитать заказ">
+							Рассчитать заказ
+						</button>
+						<button class="button outline-button px-3 text-uppercase d-flex gap-2 align-items-center justify-content-center" aria-label="Рассчитать заказ">
+							В избранное
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+								<path d="M8.33 12.7112L8.25 12.7929L8.162 12.7112C4.362 9.18801 1.85 6.85831 1.85 4.49591C1.85 2.86104 3.05 1.63488 4.65 1.63488C5.882 1.63488 7.082 2.45232 7.506 3.56403H8.994C9.418 2.45232 10.618 1.63488 11.85 1.63488C13.45 1.63488 14.65 2.86104 14.65 4.49591C14.65 6.85831 12.138 9.18801 8.33 12.7112ZM11.85 0C10.458 0 9.122 0.662125 8.25 1.70027C7.378 0.662125 6.042 0 4.65 0C2.186 0 0.25 1.97003 0.25 4.49591C0.25 7.57766 2.97 10.1035 7.09 13.921L8.25 15L9.41 13.921C13.53 10.1035 16.25 7.57766 16.25 4.49591C16.25 1.97003 14.314 0 11.85 0Z" fill="#008EB5"></path>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-			<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
-			<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
-				<div>
-					<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
-					<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
-					<div class="d-flex light-color gap-3 align-items-center">
+			<div class="item-list">
+				<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
+				<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
+					<div>
+						<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
+						<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
+						<div class="d-flex light-color gap-3 align-items-center">
 											<span class="square-icon">
 											</span>
-						На заказ
+							На заказ
+						</div>
+					</div>
+					<div>
+						<button aria-label="Favorites" class="d-flex justify-content-center bg-transparent border-0 flex-column fs-7 btn-favorite light-color">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
+								<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
+						</button>
 					</div>
 				</div>
-				<div>
-					<button aria-label="Favorites" class="d-flex justify-content-center bg-white border-0 flex-column fs-7 btn-favorite light-color">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
-							<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-						<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
-					</button>
+				<div class="visible-content mt-3">
+					<div class="fs-6 fw-600 primary">
+						Фабрика <a href="" class="primary-light-color link"> Mossman</a>, Россия-Италия
+					</div>
+					<div class="d-flex gap-4 button-set mt-3  flex-wrap">
+						<button class="button bg-theme px-3 text-uppercase" aria-label="Рассчитать заказ">
+							Рассчитать заказ
+						</button>
+						<button class="button outline-button px-3 text-uppercase d-flex gap-2 align-items-center justify-content-center" aria-label="Рассчитать заказ">
+							В избранное
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+								<path d="M8.33 12.7112L8.25 12.7929L8.162 12.7112C4.362 9.18801 1.85 6.85831 1.85 4.49591C1.85 2.86104 3.05 1.63488 4.65 1.63488C5.882 1.63488 7.082 2.45232 7.506 3.56403H8.994C9.418 2.45232 10.618 1.63488 11.85 1.63488C13.45 1.63488 14.65 2.86104 14.65 4.49591C14.65 6.85831 12.138 9.18801 8.33 12.7112ZM11.85 0C10.458 0 9.122 0.662125 8.25 1.70027C7.378 0.662125 6.042 0 4.65 0C2.186 0 0.25 1.97003 0.25 4.49591C0.25 7.57766 2.97 10.1035 7.09 13.921L8.25 15L9.41 13.921C13.53 10.1035 16.25 7.57766 16.25 4.49591C16.25 1.97003 14.314 0 11.85 0Z" fill="#008EB5"></path>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-			<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
-			<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
-				<div>
-					<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
-					<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
-					<div class="d-flex light-color gap-3 align-items-center">
+			<div class="item-list">
+				<img src="assets/images/image1.jpg" alt="Slide 1" width="336" height="200" loading="lazy" class="img-fluid w-100">
+				<div class="d-flex gap-3 justify-content-between align-items-center mt-3">
+					<div>
+						<h4 class="fs-6 fw-500 primary">Кухня Mossman Edel</h4>
+						<p class="fs-5 fw-600 primary mb-0">от 476 100 ₽</p>
+						<div class="d-flex light-color gap-3 align-items-center">
 											<span class="square-icon">
 											</span>
-						На заказ
+							На заказ
+						</div>
+					</div>
+					<div>
+						<button aria-label="Favorites" class="d-flex justify-content-center bg-transparent border-0 flex-column fs-7 btn-favorite light-color">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
+								<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
+						</button>
 					</div>
 				</div>
-				<div>
-					<button aria-label="Favorites" class="d-flex justify-content-center bg-white border-0 flex-column fs-7 btn-favorite light-color">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 17" fill="none">
-							<path d="M9.82049 15.6508L16.4155 8.97957C18.036 7.34038 18.2751 4.64365 16.7416 2.92098C16.3574 2.48823 15.8902 2.13919 15.3683 1.89515C14.8464 1.65111 14.2809 1.51718 13.7061 1.50155C13.1314 1.48591 12.5595 1.5889 12.0254 1.80421C11.4913 2.01953 11.0062 2.34267 10.5997 2.75391L9.36009 4.0078L8.28985 2.92519C6.66939 1.28599 4.00348 1.04415 2.30049 2.59539C1.87269 2.98395 1.52764 3.4566 1.28638 3.98452C1.04513 4.51243 0.912737 5.08453 0.897282 5.66591C0.881826 6.24729 0.983633 6.82576 1.19649 7.36603C1.40935 7.9063 1.72879 8.39703 2.13533 8.80828L8.8997 15.6508C9.0218 15.7744 9.18741 15.8438 9.36009 15.8438C9.53278 15.8438 9.69839 15.7744 9.82049 15.6508V15.6508Z" stroke="#90A1B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-						<p class="mb-0 mt-1">ИЗБРАННОЕ</p>
-					</button>
+				<div class="visible-content mt-3">
+					<div class="fs-6 fw-600 primary">
+						Фабрика <a href="" class="primary-light-color link"> Mossman</a>, Россия-Италия
+					</div>
+					<div class="d-flex gap-4 button-set mt-3  flex-wrap">
+						<button class="button bg-theme px-3 text-uppercase" aria-label="Рассчитать заказ">
+							Рассчитать заказ
+						</button>
+						<button class="button outline-button px-3 text-uppercase d-flex gap-2 align-items-center justify-content-center" aria-label="Рассчитать заказ">
+							В избранное
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+								<path d="M8.33 12.7112L8.25 12.7929L8.162 12.7112C4.362 9.18801 1.85 6.85831 1.85 4.49591C1.85 2.86104 3.05 1.63488 4.65 1.63488C5.882 1.63488 7.082 2.45232 7.506 3.56403H8.994C9.418 2.45232 10.618 1.63488 11.85 1.63488C13.45 1.63488 14.65 2.86104 14.65 4.49591C14.65 6.85831 12.138 9.18801 8.33 12.7112ZM11.85 0C10.458 0 9.122 0.662125 8.25 1.70027C7.378 0.662125 6.042 0 4.65 0C2.186 0 0.25 1.97003 0.25 4.49591C0.25 7.57766 2.97 10.1035 7.09 13.921L8.25 15L9.41 13.921C13.53 10.1035 16.25 7.57766 16.25 4.49591C16.25 1.97003 14.314 0 11.85 0Z" fill="#008EB5"></path>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -753,67 +969,26 @@
 						<input type="text" class="form-control border-0 bg-light rounded-0 px-4" placeholder="Какой вопрос вас интересует? Если вам необходимо сделать расчет кухни— напишите название модели, размеры и как с вами связаться." id="44" />
 						<label for="44" class="px-4">Какой вопрос вас интересует? </label>
 					</div>
+					<div class="form-floating mb-4">
+						<input type="file" class="form-control border-0 bg-light rounded-0 px-4" id="inputGroupFile">
+					
+					</div>
 					<button aria-label="ОТПРАВИТЬ СООБЩЕНИЕ " class="button bg-theme px-4 w-100" data-bs-toggle="modal" data-bs-target="#sendMessage">
 						ОТПРАВИТЬ СООБЩЕНИЕ
 					</button>
+				
 				</form>
+				<p class="mt-5 text-center mb-0">
+					Отправляя сообщение, Вы соглашаетесь c
+					<a class="link primary-light-color" href="http://twenty-studio.ru/pk" target="_blank">политикой конфиденциальности</a>
+				</p>
 			</div>
 		</div>
 	</div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
-<script>
-    var slider = new KeenSlider("#my-keen-slider", {
-        mode: "free-snap",
-        slides: {
-            // origin: "start",
-            perView: 1,
-            spacing: 16,
-        },
-        breakpoints: {
-            "(min-width: 640px)": {
-                slides: { perView: 2, spacing: 15 },
-            },
-            "(min-width: 1024px)": {
-                slides: { perView: 3, spacing: 20 },
-            },
-            "(min-width: 1440px)": {
-                slides: { perView: 4, spacing: 32 },
-            },
-        }
-    })
-</script>
-<script>
-    document.querySelectorAll(".btn-favorite").forEach(btn => {
-        btn.addEventListener("click", function () {
-            this.classList.toggle("active");
-        });
-    });
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const toggleButtons = document.querySelectorAll(".toggle-btn");
+<script src="assets/js/scripts.js"></script>
 
-        toggleButtons.forEach((btn) => {
-            btn.addEventListener("click", function (e) {
-                e.preventDefault();
-                e.stopPropagation(); // 🔴 prevent Bootstrap from closing dropdown
-
-                const megaMenu = this.closest(".megamenu-section").querySelector(".mega-menu");
-                const isOpen = this.getAttribute("aria-expanded") === "true";
-
-                if (isOpen) {
-                    megaMenu.style.display = "none";
-                    this.setAttribute("aria-expanded", "false");
-                } else {
-                    megaMenu.style.display = "block";
-                    this.setAttribute("aria-expanded", "true");
-                }
-            });
-        });
-    });
-</script>
 
 </body>
 </html>
