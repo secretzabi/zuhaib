@@ -1,33 +1,81 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Free DMV Practice Tests – All States</title>
-  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
-  <meta name="description" content="Select your state to take free online DMV practice tests for cars and more. Updated for 2025.">
-  <link rel="stylesheet" href="assets/css/style.css">
-<script>
-function startPracticing(){ window.location.href='state-california.html'; }
-</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Free DMV Practice Tests – All States (2025)</title>
+	
+	<meta name="description" content="Select your state to take free DMV practice tests for cars, motorcycles, and boating. 100% free, updated for 2025.">
+	<meta name="keywords" content="DMV practice test, driving test, permit test, drivers license practice, motorcycle test, boating test, free DMV test">
+	<meta name="robots" content="index, follow">
+	<link rel="canonical" href="https://drivingpracticetests.com/">
+	<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+	
+	<!-- Open Graph / Social -->
+	<meta property="og:title" content="Free DMV Practice Tests – All States (2025)">
+	<meta property="og:description" content="Free DMV practice tests for cars, motorcycles, and boating. Select your state and start practicing today.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://drivingpracticetests.com/">
+	<meta property="og:image" content="assets/img/og-image.webp">
+	<meta property="og:image:alt" content="DMV Practice Tests - Free online driving tests for all states">
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Free DMV Practice Tests – All States (2025)">
+	<meta name="twitter:description" content="Practice DMV tests online. Free, updated, and state-specific.">
+	<meta name="twitter:image" content="assets/img/og-image.webp">
+	<meta name="twitter:image:alt" content="DMV Practice Tests - Free online driving tests for all states">
+	
+	<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+	<link rel="stylesheet" href="assets/css/accessibility.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "DrivingPracticeTests.com",
+			"url": "https://drivingpracticetests.com",
+			"description": "Free DMV practice tests for cars, motorcycles, and boating. Select your state and start practicing today.",
+			"publisher": {
+				"@type": "Organization",
+				"name": "DrivingPracticeTests.com",
+				"url": "https://drivingpracticetests.com"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://drivingpracticetests.com/search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			}
+		}
+	</script>
+	
+	<script>
+      function startPracticing(){ window.location.href='state-california.html'; }
+	</script>
 </head>
 <body>
 
-<div class="topbar" role="banner">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="topbar" role="banner">
 <!--  <div class="nav">-->
 <!--    <div class="brand"><span class="logo" aria-hidden="true">DP</span> <span aria-label="Driving Practice Tests">DrivingPracticeTests.com</span></div>-->
 <!--    <nav class="links" aria-label="Primary">-->
-<!--      <a href="state-california.html">Choose State</a>-->
+<!--      <a href="state-state-california.html">Choose State</a>-->
 <!--      <a href="#">Categories</a>-->
 <!--      <a href="#">Resources</a>-->
 <!--    </nav>-->
 <!--    <button class="cta" onclick="startPracticing()" aria-label="Start practicing now">Start Practicing</button>-->
 <!--  </div>-->
 	<div class="nav" id="navbar">
-		<div class="brand">
+		<a href="index.html" aria-label="home link" class="brand" title="Home page">
 			<span class="logo" aria-hidden="true">DP</span>
 			<span aria-label="Driving Practice Tests">DrivingPracticeTests.com</span>
-		</div>
+		</a>
 			<nav class="links" aria-label="Primary">
 				<a href="state-california.html" aria-label="Choose State">Choose State</a>
 				<a href="#" aria-label="Categories">Categories</a>
@@ -37,114 +85,113 @@ function startPracticing(){ window.location.href='state-california.html'; }
 				Start Practicing
 			</button>
 			
-			<div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
+			<button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</button>
 	</div>
-</div>
-
-<section class="hero">
-  <h1>Free DMV Practice Tests – All States</h1>
-  <p>Select your state to take free online DMV practice tests for cars (motorcycle and boating coming soon). Updated for 2025.</p>
-</section>
-
-<div class="wrap">
-	<div>
-		<div class="card">
-			<h2>Choose Your State</h2>
-			<div class="state-grid">
-				<a class="state inactive" aria-disabled="true" href="#">Alabama<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Alaska<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Arizona<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Arkansas<small>Coming&nbsp;Soon</small></a>
-				<a class="state" href="state-california.html">California</a>
-				<a class="state inactive" aria-disabled="true" href="#">Colorado<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Connecticut<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Delaware<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Florida<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Georgia<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Hawaii<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Idaho<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Illinois<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Indiana<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Iowa<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Kansas<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Kentucky<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Louisiana<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Maine<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Maryland<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Massachusetts<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Michigan<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Minnesota<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Mississippi<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Missouri<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Montana<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Nebraska<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Nevada<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">New Hampshire<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">New Jersey<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">New Mexico<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">New York<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">North Carolina<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">North Dakota<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Ohio<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Oklahoma<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Oregon<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Pennsylvania<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Rhode Island<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">South Carolina<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">South Dakota<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Tennessee<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Texas<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Utah<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Vermont<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Virginia<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Washington<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">West Virginia<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Wisconsin<small>Coming&nbsp;Soon</small></a>
-				<a class="state inactive" aria-disabled="true" href="#">Wyoming<small>Coming&nbsp;Soon</small></a>
+</header>
+<!--End Header-->
+<main id="main-content">
+	<section class="hero">
+	  <h1>Free DMV Practice Tests – All States</h1>
+	  <p>Select your state to take free online DMV practice tests for cars (motorcycle and boating coming soon). Updated for 2025.</p>
+	</section>
+	<div class="wrap">
+		<div>
+			<div class="card">
+				<h2>Choose Your State</h2>
+				<div class="state-grid">
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Alabama">Alabama<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Alaska">Alaska<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Arizona">Arizona<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Arkansas">Arkansas<small>Coming&nbsp;Soon</small></a>
+					<a class="state" href="state-california.html" aria-label="California DMV practice test">California</a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Colorado">Colorado<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Connecticut">Connecticut<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Delaware">Delaware<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Florida">Florida<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Georgia">Georgia<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Hawaii">Hawaii<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Idaho">Idaho<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Illinois">Illinois<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Indiana">Indiana<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Iowa">Iowa<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Kansas">Kansas<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Kentucky">Kentucky<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Louisiana">Louisiana<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Maine">Maine<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Maryland">Maryland<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Massachusetts">Massachusetts<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Michigan">Michigan<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Minnesota">Minnesota<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Mississippi">Mississippi<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Missouri">Missouri<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Montana">Montana<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Nebraska">Nebraska<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Nevada">Nevada<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="New Hampshire">New Hampshire<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="New Jersey">New Jersey<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="New Mexico">New Mexico<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="New York">New York<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="North Carolina">North Carolina<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="North Dakota">North Dakota<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Ohio">Ohio<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Oklahoma">Oklahoma<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Oregon">Oregon<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Pennsylvania">Pennsylvania<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Rhode Island">Rhode Island<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="South Carolina">South Carolina<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="South Dakota">South Dakota<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Tennessee">Tennessee<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Texas">Texas<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Utah">Utah<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Vermont">Vermont<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Virginia">Virginia<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Washington">Washington<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="West Virginia">West Virginia<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Wisconsin">Wisconsin<small>Coming&nbsp;Soon</small></a>
+					<a class="state inactive" aria-disabled="true" tabindex="-1" rel="nofollow" href="#" aria-label="Wyoming">Wyoming<small>Coming&nbsp;Soon</small></a>
+				</div>
+			</div>
+			<div class="card blurb">
+				<div class="">
+					Practice for your DMV test the
+					smart way. Our free DMV practice tests are designed to match the style, format, and difficulty
+					of the real exam in your state. Every question is based on your official driver s handbook, so
+					you can study with confidence and know exactly what to expect on test day. Whether you re
+					preparing for your first permit or renewing your license, DrivingPracticeTests.com gives you
+					the most accurate, up-to-date practice available all completely free.
+				</div>
 			</div>
 		</div>
-		<div class="card blurb">
-			<div class="">
-				Practice for your DMV test the
-				smart way. Our free DMV practice tests are designed to match the style, format, and difficulty
-				of the real exam in your state. Every question is based on your official driver s handbook, so
-				you can study with confidence and know exactly what to expect on test day. Whether you re
-				preparing for your first permit or renewing your license, DrivingPracticeTests.com gives you
-				the most accurate, up-to-date practice available all completely free.
-			</div>
-		</div>
+	
+	  <div class="card" aria-labelledby="browsecat">
+	    <h2 id="browsecat">Or Browse by Category</h2>
+	    <div class="category-list">
+	      <a class="category" href="state-california.html" aria-label="Car link"><span>Car</span><span class="pill">Main</span></a>
+	      <a class="category" href="state-california.html" aria-label="Motorcycle link"><span>Motorcycle</span><span class="pill">Soon</span></a>
+	      <a class="category" href="state-california.html" aria-label="Boating"><span>Boating</span><span class="pill">Later</span></a>
+	    </div>
+	    <div class="ad">Ad Slot (300×250 / 300×600)</div>
+	  </div>
 	</div>
-
-  <div class="card" aria-labelledby="browsecat">
-    <h2 id="browsecat">Or Browse by Category</h2>
-    <div class="category-list">
-      <a class="category" href="state-california.html"><span>Car</span><span class="pill">Main</span></a>
-      <a class="category" href="state-california.html"><span>Motorcycle</span><span class="pill">Soon</span></a>
-      <a class="category" href="state-california.html"><span>Boating</span><span class="pill">Later</span></a>
-    </div>
-    <div class="ad">Ad Slot (300×250 / 300×600)</div>
-  </div>
-</div>
-
-<div class="mobile-cta">
-  <button class="cta" onclick="startPracticing()">Start Practicing</button>
-</div>
-
-
+	<div class="mobile-cta">
+	  <button class="cta" onclick="startPracticing()">Start Practicing</button>
+	</div>
+</main>
+<!--End Main-->
 <footer class="footer">
-<div style="margin-bottom: 10px">Fast, simple, and free</div>
+	<div style="margin-bottom: 10px">Fast, simple, and free</div>
 	<div class="footer-menu">
-		<a href="index.html">Home</a> |
-		<a href="index.html#states">Select State</a> |
-		<a href="resources.html">Resources</a> |
-		<a href="editorial-policy.html">Editorial Policy</a> |
-		<a href="#">Terms</a> |
-		<a href="#">Privacy</a> |
-		<a href="contact.html">Contact</a>
+		<a href="index.html" aria-label="Home link">Home</a> |
+		<a href="index.html#states" aria-label="Select State link">Select State</a> |
+		<a href="resources.html" aria-label="Resources link">Resources</a> |
+		<a href="editorial-policy.html" aria-label="Editorial Policy link">Editorial Policy</a> |
+		<a href="#" aria-label="Terms link">Terms</a> |
+		<a href="#" aria-label="Privacy link">Privacy</a> |
+		<a href="contact.html" aria-label="Contact link">Contact</a>
 	</div>
 	<div style="font-size: 13px; margin-top: 10px">© 2025 DrivingPracticeTests.com</div>
 </footer>
