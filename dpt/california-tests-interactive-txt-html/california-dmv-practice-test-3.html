@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>California DMV Practice Test 3</title>
+<meta name="description" content="California DMV Practice Test 3 – One question at a time with instant explanations.">
+<style>
+  :root {
+    --primary: #1976D2;
+    --accent: #FF7A00;
+    --bg: #F6F8FB;
+    --text: #111827;
+    --muted: #6B7280;
+    --ok: #16A34A;
+    --bad: #EF4444;
+    --border: #E5E7EB;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); }
+  .wrap { max-width: 760px; margin: 24px auto; padding: 16px; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 22px; box-shadow: 0 8px 30px rgba(0,0,0,.05); }
+  h1 { margin: 0 0 8px; font-size: clamp(22px, 3.2vw, 28px); }
+  .sub { color: var(--muted); margin: 0 0 14px; font-size: 14px; }
+  .progress { font-weight: 700; color:#0f172a; margin: 8px 0 10px; }
+  .bar { width: 100%; height: 8px; background:#f3f4f6; border-radius: 999px; overflow: hidden; }
+  .bar > div { height: 100%; background: var(--primary); width: 0%; transition: width .25s ease; }
+  .q { font-size: 18px; font-weight: 700; margin: 14px 0 10px; }
+  .choice { display:block; width:100%; text-align:left; padding:12px 14px; margin:8px 0; border:1px solid var(--border); border-radius:12px; background:#fff; cursor:pointer; line-height:1.4; }
+  .choice:hover { background:#F9FAFB; }
+  .choice.correct { border-color: var(--ok); background:#ECFDF5; }
+  .choice.incorrect { border-color: var(--bad); background:#FEF2F2; }
+  .ex { display:none; margin-top: 12px; padding:12px; background:#F0F9FF; border-left:4px solid var(--primary); border-radius:8px; }
+  .controls { display:flex; gap:10px; margin-top:16px; }
+  .btn { padding:11px 16px; border:0; border-radius:12px; font-weight:800; cursor:pointer; }
+  .btn-next { background: var(--accent); color:#fff; box-shadow: 0 10px 28px rgba(255,122,0,.25); }
+  .btn-reset { background:#EEF2FF; color:#3730A3; }
+  @media (max-width: 640px) {
+    .btn { width: 100%; }
+    .controls { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>California DMV Practice Test 3</h1>
+      <p class="sub">One question at a time · Instant explanations · Updated for 2025</p>
+      <div class="progress" id="progress">Question 1</div>
+      <div class="bar"><div id="bar"></div></div>
+      <div class="q" id="qtext"></div>
+      <div id="choices"></div>
+      <div class="ex" id="ex"></div>
+      <div class="controls">
+        <button class="btn btn-next" onclick="next()">Next Question</button>
+        <button class="btn btn-reset" onclick="reset()">Restart Test</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const DATA = [{"q": "1. When you see a solid yellow line on your side of the center line, it means:", "options": ["You may pass if traffic is clear", "Passing is not allowed", "You may pass only at night"], "correct": 1, "expl": "A solid yellow line on your side means you cannot legally pass because of limited visibility or unsafe conditions."}, {"q": "2. At an intersection with no stop or yield signs, you must:", "options": ["Yield to the vehicle on your left", "Yield to the vehicle on your right", "Continue first if you are going straight"], "correct": 1, "expl": "In California, at an uncontrolled intersection, you must yield to vehicles approaching from your right."}, {"q": "3. If you are involved in a minor collision with no injuries, you should:", "options": ["Leave the scene to avoid blocking traffic", "Stop, exchange information, and move the vehicles out of traffic", "Call the police only if damage is over $5,000"], "correct": 1, "expl": "The law requires you to stop, exchange information, and move vehicles if it is safe to do so."}, {"q": "4. When parking uphill with a curb, you should turn your front wheels:", "options": ["Toward the curb", "Away from the curb", "Straight ahead"], "correct": 1, "expl": "Turning the wheels away from the curb allows the vehicle to roll back gently into the curb if the brakes fail."}, {"q": "5. You must turn on your headlights:", "options": ["When you cannot see clearly 1,000 feet ahead", "When driving under 35 mph", "Only at night"], "correct": 0, "expl": "California law requires headlights when visibility is poor, such as when you cannot see 1,000 feet ahead."}, {"q": "6. What is the safest hand position on the steering wheel for most driving situations?", "options": ["9 and 3 o’clock", "10 and 2 o’clock", "12 and 6 o’clock"], "correct": 0, "expl": "9 and 3 o’clock allows better control and reduces injury risk from airbag deployment."}, {"q": "7. A flashing red traffic light means:", "options": ["Stop, then proceed when safe", "Slow down and proceed with caution", "Stop only if other vehicles are present"], "correct": 0, "expl": "A flashing red light is treated the same as a stop sign — stop completely, then go when it’s safe."}, {"q": "8. Before changing lanes, you should:", "options": ["Check mirrors and blind spots", "Honk to warn other drivers", "Increase speed quickly"], "correct": 0, "expl": "Always check mirrors and over your shoulder to ensure the lane is clear before moving over."}, {"q": "9. In California, you must wear a seat belt:", "options": ["Only if the vehicle is moving", "At all times while in the vehicle", "Only if driving on the freeway"], "correct": 1, "expl": "The law requires all occupants to wear seat belts whenever the vehicle is in operation."}, {"q": "10. A solid white line between lanes means:", "options": ["Lane changes are discouraged", "Lane changes are never allowed", "You must change lanes immediately"], "correct": 0, "expl": "A solid white line discourages lane changes, but they are not strictly prohibited unless otherwise posted."}, {"q": "11. What does a yellow diamond-shaped sign with a black cross mean?", "options": ["Four-way stop ahead", "Crossroad ahead", "Hospital ahead"], "correct": 1, "expl": "This sign warns that another road crosses the one you are on — slow down and be prepared to yield."}, {"q": "12. You are approaching a school bus stopped with flashing red lights. You must:", "options": ["Stop and remain stopped until the lights stop flashing", "Pass slowly if no children are visible", "Stop only if traveling in the same direction"], "correct": 0, "expl": "In California, you must stop in both directions when a school bus has flashing red lights, unless on a divided highway."}, {"q": "13. When driving in rain on a highway, you should:", "options": ["Drive at the posted speed limit", "Slow down and increase following distance", "Turn on high-beam headlights"], "correct": 1, "expl": "Wet roads reduce traction, so slowing down and leaving more space helps prevent skidding."}, {"q": "14. When two vehicles meet on a steep road where neither can pass, the vehicle facing downhill:", "options": ["Has the right-of-way", "Must yield and back up", "Should honk until the other backs up"], "correct": 1, "expl": "The downhill vehicle must yield because it is harder for an uphill vehicle to restart."}, {"q": "15. If your accelerator sticks, you should:", "options": ["Shift to neutral and apply brakes", "Turn the ignition off immediately", "Pump the gas pedal repeatedly"], "correct": 0, "expl": "Shifting to neutral disconnects the engine power, allowing you to slow down and stop safely."}, {"q": "16. When driving at night, you should dim your high-beam headlights when you are within:", "options": ["300 feet of another vehicle", "500 feet of an oncoming vehicle", "200 feet of another vehicle"], "correct": 1, "expl": "High beams must be dimmed when you are within 500 feet of an approaching vehicle to avoid blinding the driver."}, {"q": "17. What is the speed limit in a residential area unless otherwise posted?", "options": ["25 mph", "30 mph", "35 mph"], "correct": 0, "expl": "In most California residential areas, the speed limit is 25 mph unless posted otherwise."}, {"q": "18. You are required to report a traffic collision to the DMV within 10 days if there is:", "options": ["Any injury or property damage over $1,000", "Any visible damage to a vehicle", "Any disagreement between drivers"], "correct": 0, "expl": "California law requires a DMV report when injuries occur or property damage exceeds $1,000."}, {"q": "19. What does a white painted curb mean?", "options": ["Passenger loading only", "No stopping at any time", "Loading zone for freight"], "correct": 0, "expl": "A white curb allows stopping briefly for passengers to get in or out."}, {"q": "20. If you miss your exit on the freeway, you should:", "options": ["Back up carefully to the exit", "Continue to the next exit", "Stop and wait for a gap to turn around"], "correct": 1, "expl": "Never back up on a freeway — proceed to the next exit and re-enter safely."}, {"q": "21. Before entering an intersection from a complete stop, you should:", "options": ["Look left, right, then left again", "Look straight ahead only", "Honk before entering"], "correct": 0, "expl": "Looking left, right, then left again helps ensure the path is clear of traffic or pedestrians."}, {"q": "22. When driving in fog, you should use:", "options": ["Low-beam headlights", "High-beam headlights", "Parking lights only"], "correct": 0, "expl": "Low beams reduce glare and improve visibility in foggy conditions."}, {"q": "23. A yellow, five-sided sign indicates:", "options": ["Pedestrian crossing", "School zone or school crossing", "Playground area"], "correct": 1, "expl": "A pentagon-shaped sign warns of a school zone or school crossing ahead."}, {"q": "24. What is the minimum following distance you should keep under normal conditions?", "options": ["3 seconds", "1 second", "5 seconds"], "correct": 0, "expl": "The three-second rule helps maintain a safe distance for reaction time in most driving situations."}, {"q": "25. When a traffic signal turns green, you should:", "options": ["Move immediately without checking", "Look left and right before proceeding", "Accelerate quickly to clear the intersection"], "correct": 1, "expl": "Even with a green light, you must yield to vehicles or pedestrians still in the intersection."}, {"q": "26. When are road surfaces most slippery?", "options": ["During heavy rain", "Just after it starts raining", "After several hours of rain"], "correct": 1, "expl": "Oil and dirt mix with the first rain, creating slippery conditions at the start of rainfall."}, {"q": "27. If you are being tailgated, you should:", "options": ["Slow down gradually to encourage the driver to pass", "Brake suddenly to warn them", "Speed up to create distance"], "correct": 0, "expl": "Gradually slowing can make it easier for the tailgater to pass without causing sudden hazards."}, {"q": "28. When turning left from a two-way street onto a one-way street, you should start your turn from:", "options": ["The right lane", "The lane closest to the center line", "Any lane available"], "correct": 1, "expl": "Always turn from the lane closest to the center line when making a left turn onto a one-way street."}, {"q": "29. If you see orange construction signs and cones on a freeway, you should:", "options": ["Maintain your current speed", "Be prepared for workers and slow down", "Drive in the left lane only"], "correct": 1, "expl": "Orange signs indicate construction zones, and drivers must reduce speed for worker safety."}, {"q": "30. Which of the following is true about safety belts?", "options": ["They increase your chance of survival in most collisions", "They can trap you in a crash", "They are only needed on freeways"], "correct": 0, "expl": "Safety belts are proven to reduce injury and save lives in most collisions."}, {"q": "31. You must use your turn signal at least how many feet before turning?", "options": ["100 feet", "50 feet", "150 feet"], "correct": 0, "expl": "California law requires signaling at least 100 feet before making a turn to alert other drivers."}, {"q": "32. When approaching a stop sign, you must stop:", "options": ["Only if other vehicles are approaching", "Before the crosswalk or limit line", "After entering the intersection"], "correct": 1, "expl": "Always stop before the crosswalk or limit line to ensure pedestrian safety and compliance with the law."}, {"q": "33. Which of the following increases your chances of having an accident?", "options": ["Adjusting your speed for conditions", "Driving faster than surrounding traffic", "Checking mirrors frequently"], "correct": 1, "expl": "Driving faster than surrounding vehicles can lead to collisions and reduces reaction time."}, {"q": "34. What does a red painted curb mean?", "options": ["No stopping, standing, or parking", "Passenger loading only", "Freight loading zone"], "correct": 0, "expl": "Red curbs indicate no stopping or parking at any time, except for buses where posted."}, {"q": "35. What should you do if your vehicle starts to skid?", "options": ["Steer in the direction you want the front wheels to go", "Steer in the opposite direction", "Slam on the brakes"], "correct": 0, "expl": "Steering toward your intended path helps regain control during a skid."}, {"q": "36. When is it legal to turn right on a red light in California?", "options": ["After making a full stop and ensuring it’s safe", "Anytime without stopping", "Only during daylight hours"], "correct": 0, "expl": "You may turn right on red after stopping and yielding to all traffic and pedestrians."}, {"q": "37. When entering a freeway from an on-ramp, you should:", "options": ["Stop at the end of the ramp before merging", "Adjust your speed to match freeway traffic", "Enter at any speed you choose"], "correct": 1, "expl": "Matching the flow of traffic allows for a smooth and safe merge."}, {"q": "38. A yellow curb means:", "options": ["Passenger loading zone", "Loading zone for freight or passengers", "No stopping at any time"], "correct": 1, "expl": "Yellow curbs are typically for loading or unloading passengers or freight, with time limits posted."}, {"q": "39. When passing a bicyclist, you must leave at least:", "options": ["1 foot of space", "3 feet of space", "2 feet of space"], "correct": 1, "expl": "California law requires a minimum of three feet when passing a bicyclist."}, {"q": "40. What should you do if you see a “Road Closed” sign?", "options": ["Proceed slowly with caution", "Follow the posted detour", "Continue if no workers are visible"], "correct": 1, "expl": "A “Road Closed” sign means you must take the detour or another route."}, {"q": "41. When driving near road construction, you should:", "options": ["Be prepared for sudden stops", "Speed up to get through quickly", "Ignore posted speed limits"], "correct": 0, "expl": "Construction zones often have changing conditions, so be alert and ready to stop."}, {"q": "42. If you are in an intersection and the light turns yellow, you should:", "options": ["Stop immediately", "Continue through if you cannot stop safely", "Back up to avoid entering"], "correct": 1, "expl": "If you are too close to stop safely, continue through the intersection cautiously."}, {"q": "43. When driving in windy conditions, especially with a high-profile vehicle, you should:", "options": ["Keep a firm grip on the steering wheel", "Drive faster to reduce exposure to wind", "Use cruise control"], "correct": 0, "expl": "A firm grip helps maintain control when gusts push against your vehicle."}, {"q": "44. If you are under 21, you can be charged with DUI if your BAC is:", "options": ["0.05% or higher", "0.01% or higher", "0.08% or higher"], "correct": 1, "expl": "California’s zero-tolerance law for drivers under 21 sets the limit at 0.01% BAC."}, {"q": "45. When two vehicles arrive at a four-way stop at the same time, the right-of-way goes to:", "options": ["The driver on the right", "The driver on the left", "The faster vehicle"], "correct": 0, "expl": "At a four-way stop, the driver to the right has the right-of-way when vehicles arrive at the same time."}, {"q": "46. What should you do if your brakes fail while driving?", "options": ["Shift to a lower gear and use the parking brake", "Turn off the engine immediately", "Pump the brakes once and continue"], "correct": 0, "expl": "Downshifting and carefully applying the parking brake help slow the vehicle safely."}, {"q": "47. You must yield to pedestrians:", "options": ["Only in marked crosswalks", "In both marked and unmarked crosswalks", "Only when traffic signals indicate"], "correct": 1, "expl": "Pedestrians have the right-of-way in all crosswalks, marked or unmarked, at intersections."}, {"q": "48. What is the penalty for failing to stop for a school bus with flashing red lights?", "options": ["A warning ticket only", "A fine and possible license suspension", "No penalty if no children are present"], "correct": 1, "expl": "California law imposes fines and possible suspension for not stopping for a school bus with flashing red lights."}, {"q": "49. When driving on a wet road, you should:", "options": ["Drive at the posted speed limit", "Reduce your speed", "Drive faster to avoid hydroplaning"], "correct": 1, "expl": "Wet roads reduce traction, and slowing down helps prevent loss of control."}, {"q": "50. When merging onto a freeway, you should be driving:", "options": ["At or near the same speed as traffic on the freeway", "Much slower than traffic on the freeway", "At the speed limit regardless of conditions"], "correct": 0, "expl": "Matching the speed of traffic allows for a smoother and safer merge onto the freeway."}];
+  const KEY = 'dpt_' + (document.title || 'test') + '_idx';
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent) || window.matchMedia('(max-width: 768px)').matches;
+
+  function getIndex() {
+    const v = parseInt(localStorage.getItem(KEY) || '0', 10);
+    return isNaN(v) ? 0 : Math.max(0, Math.min(v, DATA.length - 1));
+  }
+  function setIndex(i) { localStorage.setItem(KEY, String(i)); }
+
+  function setBar(i) {
+    const pct = ((i+1) / DATA.length) * 100;
+    document.getElementById('bar').style.width = pct + '%';
+  }
+
+  function render() {
+    const i = getIndex();
+    const q = DATA[i];
+    document.getElementById('progress').textContent = `Question ${i+1} of ${DATA.length}`;
+    setBar(i);
+    document.getElementById('qtext').textContent = q.q;
+    const list = document.getElementById('choices');
+    list.innerHTML = '';
+    q.options.forEach((t, idx) => {
+      const btn = document.createElement('button');
+      btn.className = 'choice';
+      btn.innerHTML = `<strong>${String.fromCharCode(65+idx)}.</strong> ${t}`;
+      btn.addEventListener('click', () => select(idx, q.correct, q.expl));
+      list.appendChild(btn);
+    });
+    const ex = document.getElementById('ex');
+    ex.style.display = 'none';
+    ex.textContent = '';
+  }
+
+  function select(idx, correct, expl) {
+    document.querySelectorAll('.choice').forEach(el => el.onclick = null);
+    const nodes = document.querySelectorAll('.choice');
+    nodes.forEach((n, i) => {
+      if (i === correct) n.classList.add('correct');
+      if (i === idx && idx !== correct) n.classList.add('incorrect');
+    });
+    const ex = document.getElementById('ex');
+    ex.textContent = 'Explanation: ' + (expl || 'See handbook guidance for details.');
+    ex.style.display = 'block';
+  }
+
+  function next() {
+    let i = getIndex();
+    if (i < DATA.length - 1) {
+      i += 1;
+      setIndex(i);
+      if (isMobile) { location.reload(); } else { render(); }
+    } else {
+      alert('You finished this practice test!');
+      setIndex(0);
+      if (isMobile) location.reload(); else render();
+    }
+  }
+  function reset() { setIndex(0); if (isMobile) location.reload(); else render(); }
+
+  window.addEventListener('DOMContentLoaded', () => { render(); });
+</script>
+</body>
+</html>

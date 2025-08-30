@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>California DMV Practice Test 4</title>
+<meta name="description" content="California DMV Practice Test 4 – One question at a time with instant explanations.">
+<style>
+  :root {
+    --primary: #1976D2;
+    --accent: #FF7A00;
+    --bg: #F6F8FB;
+    --text: #111827;
+    --muted: #6B7280;
+    --ok: #16A34A;
+    --bad: #EF4444;
+    --border: #E5E7EB;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); }
+  .wrap { max-width: 760px; margin: 24px auto; padding: 16px; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 22px; box-shadow: 0 8px 30px rgba(0,0,0,.05); }
+  h1 { margin: 0 0 8px; font-size: clamp(22px, 3.2vw, 28px); }
+  .sub { color: var(--muted); margin: 0 0 14px; font-size: 14px; }
+  .progress { font-weight: 700; color:#0f172a; margin: 8px 0 10px; }
+  .bar { width: 100%; height: 8px; background:#f3f4f6; border-radius: 999px; overflow: hidden; }
+  .bar > div { height: 100%; background: var(--primary); width: 0%; transition: width .25s ease; }
+  .q { font-size: 18px; font-weight: 700; margin: 14px 0 10px; }
+  .choice { display:block; width:100%; text-align:left; padding:12px 14px; margin:8px 0; border:1px solid var(--border); border-radius:12px; background:#fff; cursor:pointer; line-height:1.4; }
+  .choice:hover { background:#F9FAFB; }
+  .choice.correct { border-color: var(--ok); background:#ECFDF5; }
+  .choice.incorrect { border-color: var(--bad); background:#FEF2F2; }
+  .ex { display:none; margin-top: 12px; padding:12px; background:#F0F9FF; border-left:4px solid var(--primary); border-radius:8px; }
+  .controls { display:flex; gap:10px; margin-top:16px; }
+  .btn { padding:11px 16px; border:0; border-radius:12px; font-weight:800; cursor:pointer; }
+  .btn-next { background: var(--accent); color:#fff; box-shadow: 0 10px 28px rgba(255,122,0,.25); }
+  .btn-reset { background:#EEF2FF; color:#3730A3; }
+  @media (max-width: 640px) {
+    .btn { width: 100%; }
+    .controls { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>California DMV Practice Test 4</h1>
+      <p class="sub">One question at a time · Instant explanations · Updated for 2025</p>
+      <div class="progress" id="progress">Question 1</div>
+      <div class="bar"><div id="bar"></div></div>
+      <div class="q" id="qtext"></div>
+      <div id="choices"></div>
+      <div class="ex" id="ex"></div>
+      <div class="controls">
+        <button class="btn btn-next" onclick="next()">Next Question</button>
+        <button class="btn btn-reset" onclick="reset()">Restart Test</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const DATA = [{"q": "Use the right lane on multi-lane freeways for:", "options": ["Emergency vehicles only", "Passing only", "Slower traffic or exiting"], "correct": 2, "expl": "Right lane is for slower traffic and exiting; pass on the left where legal."}, {"q": "A child under 8 years old must be secured:", "options": ["In a car seat or booster in the back seat", "With a lap belt in front", "Standing behind the seats"], "correct": 0, "expl": "Children under 8 must be in an appropriate car seat/booster in the rear seat unless exceptions apply."}, {"q": "White curb means:", "options": ["Stop only long enough to pick up or drop off passengers", "Passenger loading and unloading prohibited", "No parking at any time"], "correct": 0, "expl": "White curb allows brief passenger loading/unloading only."}, {"q": "Double solid yellow lines indicate:", "options": ["No passing either direction", "Passing allowed on your side only", "Passing allowed both directions"], "correct": 0, "expl": "Double solid yellows mean no passing in either direction."}, {"q": "When entering a freeway, you should:", "options": ["Enter at a much higher speed", "Match the speed of traffic before merging", "Stop at the end of the ramp"], "correct": 1, "expl": "Use the ramp to accelerate and match traffic speed for a smooth merge."}, {"q": "When approaching a stopped emergency vehicle with flashing lights, you must:", "options": ["Maintain speed", "Move over and/or slow down", "Stop immediately in your lane"], "correct": 1, "expl": "California’s Move Over law: move over or slow down for stopped emergency/Caltrans vehicles."}, {"q": "Bicycles in the roadway are:", "options": ["Allowed only in bike lanes", "Vehicles with the same rights and responsibilities as cars", "Required to ride on sidewalks"], "correct": 1, "expl": "Bicycles are vehicles and share the same rights and duties as other vehicles in the roadway."}, {"q": "Dim your high beams when you are within how many feet of an oncoming vehicle?", "options": ["500 feet", "200 feet", "300 feet"], "correct": 0, "expl": "Dim high beams within 500 feet of oncoming traffic."}, {"q": "Red curb means:", "options": ["Commercial parking allowed", "Stop for passengers only", "No stopping, standing, or parking"], "correct": 2, "expl": "Red curbs indicate no stopping, standing, or parking."}, {"q": "In alleys, the California speed limit is generally:", "options": ["15 mph", "25 mph", "20 mph"], "correct": 0, "expl": "Alley speed limit is 15 mph unless otherwise posted."}, {"q": "If your view is blocked at a blind intersection, the speed limit is usually:", "options": ["35 mph", "25 mph", "15 mph"], "correct": 2, "expl": "At blind intersections, the limit is often 15 mph unless posted otherwise."}, {"q": "A pentagon-shaped sign indicates:", "options": ["School zone or school crossing", "Railroad crossing", "No passing zone"], "correct": 0, "expl": "Pentagon signs mark school zones/crossings."}, {"q": "When parking uphill with no curb, turn your front wheels:", "options": ["Straight ahead", "Away from the shoulder", "Toward the road shoulder"], "correct": 2, "expl": "Without a curb, turn wheels toward the shoulder so the vehicle rolls away from traffic if it moves."}, {"q": "When passing a bicyclist, you must leave at least:", "options": ["1 foot of clearance", "3 feet of clearance", "No minimum distance"], "correct": 1, "expl": "California’s 3-foot rule requires at least three feet of space when passing cyclists."}, {"q": "Use high-beam headlights at night:", "options": ["On open highways when there is no oncoming traffic", "When following another vehicle closely", "In city traffic to see better"], "correct": 0, "expl": "Use high beams on open, unlit roads; dim for oncoming/leading traffic."}, {"q": "What is the minimum safe following distance in ideal conditions?", "options": ["Five seconds", "One second", "Three seconds"], "correct": 2, "expl": "Use the three-second rule in good conditions; increase distance in poor conditions."}, {"q": "At an unmarked crosswalk, you must:", "options": ["Honk and continue", "Proceed; pedestrians must yield", "Yield to pedestrians"], "correct": 2, "expl": "Pedestrians have right-of-way at marked and unmarked crosswalks."}, {"q": "A center two-way left-turn lane may be used for:", "options": ["Passing slower traffic", "Preparing for a left turn or permitted U-turn", "Parking temporarily"], "correct": 1, "expl": "Center left-turn lanes are for left turns or U-turns where permitted—not for passing or parking."}, {"q": "A flashing red light at an intersection means:", "options": ["Stop, then proceed when safe", "Slow down and proceed with caution", "Treat as a green light"], "correct": 0, "expl": "Flashing red is the same as a stop sign: stop fully, then go when safe."}, {"q": "If your brakes fail, you should first:", "options": ["Shift to park", "Pump the brake pedal", "Turn off the engine"], "correct": 1, "expl": "Pumping the brakes can restore hydraulic pressure temporarily."}, {"q": "You approach an uncontrolled intersection at the same time as another car on your right. What must you do?", "options": ["Yield to the car on your right", "Proceed first", "Honk and go"], "correct": 0, "expl": "At uncontrolled intersections, yield to vehicles on your right."}, {"q": "Orange signs on the roadway indicate:", "options": ["Recreational area", "School zone", "Construction or maintenance area"], "correct": 2, "expl": "Orange indicates construction/maintenance zones; slow and follow directions."}, {"q": "Green curb means:", "options": ["Limited time parking", "No stopping or parking", "Commercial loading only"], "correct": 0, "expl": "Green curb indicates time-limited parking; check signs for duration."}, {"q": "For drivers 21 and over, it is illegal to drive with a BAC of:", "options": ["0.08% or higher", "0.10% or higher", "0.05% or higher"], "correct": 0, "expl": "California law sets 0.08% BAC as the per se limit for adults 21+."}, {"q": "When turning right across a bicycle lane, you should:", "options": ["Turn from your lane without merging", "Stop in the bike lane and wait", "Merge into the bike lane within 200 feet before turning"], "correct": 2, "expl": "Merge into the bike lane within 200 feet, then turn right when safe."}, {"q": "When an emergency vehicle approaches with lights and siren, you must:", "options": ["Move left and continue", "Speed up to get out of the way", "Pull to the right edge and stop"], "correct": 2, "expl": "Yield by pulling to the right and stopping until it passes."}, {"q": "On freeways posted at 65 mph, the maximum allowed speed (unless otherwise posted) is:", "options": ["75 mph anywhere", "65 mph only", "70 mph where posted"], "correct": 2, "expl": "Some CA freeways allow 70 mph where posted; otherwise, follow posted limits."}, {"q": "Before changing lanes, you must:", "options": ["Check mirrors, signal, and look over your shoulder", "Honk and move over", "Signal only"], "correct": 0, "expl": "Always mirror-check, signal, and check blind spots before changing lanes."}, {"q": "When a school bus flashes red lights, you must:", "options": ["Stop in both directions until the lights stop", "Proceed slowly", "Stop only if crossing children are visible"], "correct": 0, "expl": "Flashing red bus lights require a full stop until the lights stop flashing (with limited divided-highway exceptions)."}, {"q": "Roads are most slippery:", "options": ["During the first few minutes of rain", "Only during heavy storms", "After an hour of rain"], "correct": 0, "expl": "Oil rises during the first minutes of rainfall, making roads extra slick."}, {"q": "You must turn on headlights when visibility is less than:", "options": ["500 feet", "1 mile", "1,000 feet"], "correct": 2, "expl": "Headlights are required when visibility is poor (about 1,000 feet) or from sunset to sunrise."}, {"q": "Hydroplaning is most likely at speeds above:", "options": ["20 mph on wet roads", "35 mph on wet roads", "50 mph only"], "correct": 1, "expl": "Hydroplaning risk increases around 35 mph and above on wet surfaces."}, {"q": "At a four-way stop, two vehicles arrive at the same time. Who goes first?", "options": ["The driver on your right", "The driver on your left", "The larger vehicle"], "correct": 0, "expl": "At a four-way stop, yield to the driver on your right if you arrive together."}, {"q": "Fines for traffic violations in work zones are generally:", "options": ["Lower than usual", "Higher than usual", "Waived if no workers present"], "correct": 1, "expl": "Work zone fines are typically increased to protect workers."}, {"q": "Yellow curb means:", "options": ["No parking anytime", "Passenger loading only", "Commercial loading zone—stop to load/unload"], "correct": 2, "expl": "Yellow curb is for loading/unloading; driver must stay with the vehicle where required."}, {"q": "If you miss a freeway exit, you should:", "options": ["Make a U-turn through the median", "Stop and reverse on the shoulder", "Continue to the next exit"], "correct": 2, "expl": "Never reverse or U-turn on freeways; take the next exit."}, {"q": "When parking downhill with a curb, turn your front wheels:", "options": ["Straight ahead", "Away from the curb", "Toward the curb"], "correct": 2, "expl": "Downhill with a curb: wheels toward the curb; uphill with a curb: away from the curb."}, {"q": "At a railroad crossing with no warning devices, you should:", "options": ["Stop every time", "Proceed at normal speed", "Slow, look, and listen for trains"], "correct": 2, "expl": "Always slow, look, and listen; stop if a train is near or you cannot see clearly."}, {"q": "An eight-sided red sign always means:", "options": ["Stop", "Do not enter", "Yield"], "correct": 0, "expl": "The octagon shape is reserved for stop signs."}, {"q": "On a two-lane undivided highway, what is the maximum speed limit in California unless posted otherwise?", "options": ["50 mph", "65 mph", "55 mph"], "correct": 2, "expl": "The maximum speed on two-lane undivided highways is typically 55 mph unless posted otherwise."}, {"q": "When entering traffic from a parked position, you should:", "options": ["Signal, check mirrors, and look over your shoulder", "Rely on turn signals only", "Pull out quickly"], "correct": 0, "expl": "Signal and check blind spots before pulling into traffic."}, {"q": "If your vehicle stalls on the tracks and a train is not visible, you should:", "options": ["Wait for help", "Abandon the car immediately", "Shift to neutral and push the car off the tracks"], "correct": 2, "expl": "Get the vehicle off the tracks quickly if safe; if a train is coming, exit and move away at an angle."}, {"q": "Solid white lines between lanes usually mean:", "options": ["Bicycles only", "Discourage lane changes", "Pass with caution"], "correct": 1, "expl": "Solid white lines discourage lane changes—cross only when necessary and safe."}, {"q": "Refusing a chemical test when lawfully arrested for DUI will result in:", "options": ["A warning only", "License suspension", "No consequence"], "correct": 1, "expl": "Refusing a lawful chemical test triggers license suspension (implied consent)."}, {"q": "For drivers under 21, the illegal BAC is:", "options": ["0.08% or higher", "0.01% or higher", "0.05% or higher"], "correct": 1, "expl": "Zero-tolerance law: 0.01% BAC or higher is illegal for under-21 drivers."}, {"q": "If your accelerator sticks, your first action should be:", "options": ["Turn off the ignition immediately", "Shift to neutral and apply brakes", "Pull the parking brake hard"], "correct": 1, "expl": "Shift to neutral to disengage power, then brake and pull over."}, {"q": "At a T-intersection with no signs, who has the right-of-way?", "options": ["The vehicle on the terminating road", "Traffic on the through road", "Whoever enters first"], "correct": 1, "expl": "Traffic on the through road has the right-of-way at a T-intersection."}, {"q": "A red X above your lane on a freeway indicates:", "options": ["The lane is closed—do not drive in it", "Proceed with caution", "HOV only"], "correct": 0, "expl": "A red X means the lane is closed; merge to an open lane."}, {"q": "Use your horn to:", "options": ["Avoid a collision by alerting others", "Express frustration", "Encourage a driver to move faster"], "correct": 0, "expl": "Use the horn only to prevent collisions or alert others to hazards."}, {"q": "When your vehicle starts to skid, you should:", "options": ["Steer sharply the other way", "Brake hard", "Ease off the gas and steer in the direction you want to go"], "correct": 2, "expl": "Steer gently in the desired direction and avoid harsh inputs."}];
+  const KEY = 'dpt_' + (document.title || 'test') + '_idx';
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent) || window.matchMedia('(max-width: 768px)').matches;
+
+  function getIndex() {
+    const v = parseInt(localStorage.getItem(KEY) || '0', 10);
+    return isNaN(v) ? 0 : Math.max(0, Math.min(v, DATA.length - 1));
+  }
+  function setIndex(i) { localStorage.setItem(KEY, String(i)); }
+
+  function setBar(i) {
+    const pct = ((i+1) / DATA.length) * 100;
+    document.getElementById('bar').style.width = pct + '%';
+  }
+
+  function render() {
+    const i = getIndex();
+    const q = DATA[i];
+    document.getElementById('progress').textContent = `Question ${i+1} of ${DATA.length}`;
+    setBar(i);
+    document.getElementById('qtext').textContent = q.q;
+    const list = document.getElementById('choices');
+    list.innerHTML = '';
+    q.options.forEach((t, idx) => {
+      const btn = document.createElement('button');
+      btn.className = 'choice';
+      btn.innerHTML = `<strong>${String.fromCharCode(65+idx)}.</strong> ${t}`;
+      btn.addEventListener('click', () => select(idx, q.correct, q.expl));
+      list.appendChild(btn);
+    });
+    const ex = document.getElementById('ex');
+    ex.style.display = 'none';
+    ex.textContent = '';
+  }
+
+  function select(idx, correct, expl) {
+    document.querySelectorAll('.choice').forEach(el => el.onclick = null);
+    const nodes = document.querySelectorAll('.choice');
+    nodes.forEach((n, i) => {
+      if (i === correct) n.classList.add('correct');
+      if (i === idx && idx !== correct) n.classList.add('incorrect');
+    });
+    const ex = document.getElementById('ex');
+    ex.textContent = 'Explanation: ' + (expl || 'See handbook guidance for details.');
+    ex.style.display = 'block';
+  }
+
+  function next() {
+    let i = getIndex();
+    if (i < DATA.length - 1) {
+      i += 1;
+      setIndex(i);
+      if (isMobile) { location.reload(); } else { render(); }
+    } else {
+      alert('You finished this practice test!');
+      setIndex(0);
+      if (isMobile) location.reload(); else render();
+    }
+  }
+  function reset() { setIndex(0); if (isMobile) location.reload(); else render(); }
+
+  window.addEventListener('DOMContentLoaded', () => { render(); });
+</script>
+</body>
+</html>

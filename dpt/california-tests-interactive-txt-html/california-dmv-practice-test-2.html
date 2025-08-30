@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>California DMV Practice Test 2</title>
+	<meta name="description" content="California DMV Practice Test 2 – One question at a time with instant explanations.">
+	<style>
+		:root {
+			--primary: #1976D2;
+			--accent: #FF7A00;
+			--bg: #F6F8FB;
+			--text: #111827;
+			--muted: #6B7280;
+			--ok: #16A34A;
+			--bad: #EF4444;
+			--border: #E5E7EB;
+		}
+		* { box-sizing: border-box; }
+		body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); }
+		.wrap { max-width: 760px; margin: 24px auto; padding: 16px; }
+		.card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 22px; box-shadow: 0 8px 30px rgba(0,0,0,.05); }
+		h1 { margin: 0 0 8px; font-size: clamp(22px, 3.2vw, 28px); }
+		.sub { color: var(--muted); margin: 0 0 14px; font-size: 14px; }
+		.progress { font-weight: 700; color:#0f172a; margin: 8px 0 10px; }
+		.bar { width: 100%; height: 8px; background:#f3f4f6; border-radius: 999px; overflow: hidden; }
+		.bar > div { height: 100%; background: var(--primary); width: 0%; transition: width .25s ease; }
+		.q { font-size: 18px; font-weight: 700; margin: 14px 0 10px; }
+		.choice { display:block; width:100%; text-align:left; padding:12px 14px; margin:8px 0; border:1px solid var(--border); border-radius:12px; background:#fff; cursor:pointer; line-height:1.4; }
+		.choice:hover { background:#F9FAFB; }
+		.choice.correct { border-color: var(--ok); background:#ECFDF5; }
+		.choice.incorrect { border-color: var(--bad); background:#FEF2F2; }
+		.ex { display:none; margin-top: 12px; padding:12px; background:#F0F9FF; border-left:4px solid var(--primary); border-radius:8px; }
+		.controls { display:flex; gap:10px; margin-top:16px; }
+		.btn { padding:11px 16px; border:0; border-radius:12px; font-weight:800; cursor:pointer; }
+		.btn-next { background: var(--accent); color:#fff; box-shadow: 0 10px 28px rgba(255,122,0,.25); }
+		.btn-reset { background:#EEF2FF; color:#3730A3; }
+		.btn-next:disabled {
+			background: #FFD2A6;
+			cursor: not-allowed;
+			box-shadow: none;
+		}
+		@media (max-width: 640px) {
+			.btn { width: 100%; }
+			.controls { flex-direction: column; }
+		}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="card">
+		<h1>California DMV Practice Test 2</h1>
+		<p class="sub">One question at a time · Instant explanations · Updated for 2025</p>
+		<div class="progress" id="progress">Question 1</div>
+		<div class="bar"><div id="bar"></div></div>
+		<div class="q" id="qtext"></div>
+		<div id="choices"></div>
+		<div class="ex" id="ex"></div>
+		<div class="controls">
+			<button class="btn btn-next" onclick="next()">Next Question</button>
+			<button class="btn btn-reset" onclick="reset()">Restart Test</button>
+		</div>
+	</div>
+</div>
+
+<script>
+	// Question bank
+	const DATA = [
+		// Q1
+		{
+			q: "When approaching an intersection with a stop sign but no stop line, where should you stop?",
+			options: [
+				"Before the crosswalk",
+				"In the middle of the intersection",
+				"Anywhere as long as you look both ways"
+			],
+			correct: 0,
+			expl: "If there is no stop line, you must stop before the crosswalk to allow pedestrians to cross safely."
+		},
+
+// Q2
+		{
+			q: "What is the speed limit in a California school zone when children are present (unless otherwise posted)?",
+			options: [
+				"15 mph",
+				"25 mph",
+				"20 mph"
+			],
+			correct: 1,
+			expl: "In most California school zones, the limit is 25 mph when children are present unless signs indicate otherwise."
+		},
+
+// Q3
+		{
+			q: "If you are involved in a minor accident with no injuries, you should:",
+			options: [
+				"Leave immediately if your car can still drive",
+				"Stop, move your vehicle out of traffic if safe, and exchange information",
+				"Only stop if police are nearby"
+			],
+			correct: 1,
+			expl: "California law requires you to stop and exchange information after any collision, even if there are no injuries."
+		},
+
+// Q4
+		{
+			q: "When can you legally use a turn lane in the center of the road?",
+			options: [
+				"To pass slower vehicles",
+				"To make a left turn or a permitted U-turn",
+				"To park temporarily"
+			],
+			correct: 1,
+			expl: "The center turn lane is only for preparing to turn left or making a permitted U-turn, not for passing or parking."
+		},
+
+// Q5
+		{
+			q: "If you miss your exit on the freeway, you should:",
+			options: [
+				"Back up carefully",
+				"Continue to the next exit",
+				"Stop on the shoulder and reverse"
+			],
+			correct: 1,
+			expl: "Reversing or stopping on the freeway is illegal and dangerous. You must continue to the next exit and circle back."
+		},
+
+// Q6
+		{
+			q: "What should you do if your brakes get wet after driving through water?",
+			options: [
+				"Drive at normal speed",
+				"Pump them gently to test and dry them",
+				"Press the brake pedal hard once"
+			],
+			correct: 1,
+			expl: "Gently pumping the brakes helps dry them and ensures they are working properly."
+		},
+
+// Q7
+		{
+			q: "When parallel parking on a level street, your wheels should be:",
+			options: [
+				"Pointed toward the curb",
+				"Pointed away from the curb",
+				"Turned straight ahead"
+			],
+			correct: 0,
+			expl: "Keeping your wheels toward the curb prevents your vehicle from rolling into traffic."
+		},
+
+// Q8
+		{
+			q: "When driving at night, how should you use your headlights if you are following another vehicle?",
+			options: [
+				"Keep high beams on for better vision",
+				"Use low beams",
+				"Turn headlights off when close"
+			],
+			correct: 1,
+			expl: "Low beams prevent blinding the driver ahead of you and maintain safe visibility."
+		},
+
+// Q9
+		{
+			q: "If you park facing uphill with a curb, how should you position your front wheels?",
+			options: [
+				"Toward the curb",
+				"Away from the curb",
+				"Straight ahead"
+			],
+			correct: 1,
+			expl: "Turning your wheels away from the curb prevents the car from rolling into traffic if the brakes fail."
+		},
+
+// Q10
+		{
+			q: "In California, you must use your headlights:",
+			options: [
+				"Only at night",
+				"30 minutes before sunrise and after sunset, and during low visibility",
+				"Only in rural areas at night"
+			],
+			correct: 1,
+			expl: "Headlights must be on in darkness and whenever visibility is poor, such as in fog, rain, or snow."
+		},
+		// Q11
+		{
+			q: "What is the penalty for not wearing a seat belt in California?",
+			options: [
+				"Warning only",
+				"A fine and possible points on your driving record",
+				"Jail time for repeat offenses"
+			],
+			correct: 1,
+			expl: "California law requires seat belt use; violations can result in a fine and possibly points on your driving record."
+		},
+
+// Q12
+		{
+			q: "If your vehicle starts to skid on ice, you should:",
+			options: [
+				"Turn the wheel in the opposite direction of the skid",
+				"Steer gently in the direction of the skid",
+				"Brake hard immediately"
+			],
+			correct: 1,
+			expl: "Steering in the direction of the skid helps you regain control without spinning further."
+		},
+
+// Q13
+		{
+			q: "When can you legally turn right at a red light in California?",
+			options: [
+				"Anytime, without stopping",
+				"After coming to a complete stop and ensuring it’s safe",
+				"Only if there’s a green arrow"
+			],
+			correct: 1,
+			expl: "California law allows right turns on red after stopping completely, unless signs prohibit it."
+		},
+
+// Q14
+		{
+			q: "If a tire blows out while driving, you should:",
+			options: [
+				"Grip the steering wheel firmly and slow down gradually",
+				"Slam on the brakes",
+				"Turn quickly toward the side of the road"
+			],
+			correct: 0,
+			expl: "Gradual slowing while maintaining control helps avoid accidents when a tire blows."
+		},
+
+// Q15
+		{
+			q: "What is the speed limit in most residential areas in California, unless otherwise posted?",
+			options: [
+				"20 mph",
+				"25 mph",
+				"30 mph"
+			],
+			correct: 1,
+			expl: "The default speed limit in most residential areas is 25 mph unless signs indicate otherwise."
+		},
+
+// Q16
+		{
+			q: "When a school bus stops and flashes yellow lights, you should:",
+			options: [
+				"Pass quickly",
+				"Slow down and prepare to stop",
+				"Stop immediately"
+			],
+			correct: 1,
+			expl: "Flashing yellow lights mean the bus is preparing to stop; slow down and be ready to stop."
+		},
+
+// Q17
+		{
+			q: "If you approach a flashing red traffic signal, you should:",
+			options: [
+				"Slow down and proceed",
+				"Stop completely, then proceed when safe",
+				"Ignore it if no one is around"
+			],
+			correct: 1,
+			expl: "A flashing red light is treated like a stop sign — you must stop completely before proceeding."
+		},
+
+// Q18
+		{
+			q: "When must you use your turn signals in California?",
+			options: [
+				"At least 100 feet before turning",
+				"Only when changing lanes on a freeway",
+				"Only in heavy traffic"
+			],
+			correct: 0,
+			expl: "State law requires signaling at least 100 feet before turning or changing lanes."
+		},
+
+// Q19
+		{
+			q: "What should you do if you’re drowsy while driving?",
+			options: [
+				"Roll down the window and turn up the radio",
+				"Pull over and rest",
+				"Speed up to finish your trip faster"
+			],
+			correct: 1,
+			expl: "The only safe solution for drowsy driving is to stop and rest."
+		},
+
+// Q20
+		{
+			q: "If you see a yield sign, you should:",
+			options: [
+				"Slow down and be prepared to stop if necessary",
+				"Stop every time",
+				"Ignore it if traffic is clear"
+			],
+			correct: 0,
+			expl: "Yield signs require slowing down and stopping if necessary to give right-of-way to others."
+		},
+		{
+			q: "When driving downhill, you should:",
+			options: [
+				"Shift to a lower gear",
+				"Put the car in neutral",
+				"Speed up to avoid brake wear"
+			],
+			correct: 0,
+			expl: "Shifting to a lower gear helps control speed and reduces brake strain when driving downhill."
+		},
+		{
+			q: "If you miss your exit on the freeway, you should:",
+			options: [
+				"Stop and back up carefully",
+				"Continue to the next exit",
+				"Make a U-turn at the median"
+			],
+			correct: 1,
+			expl: "It is illegal and unsafe to back up or make sudden turns; continue to the next exit instead."
+		},
+		{
+			q: "When is it legal to pass another vehicle on the right in California?",
+			options: [
+				"When the vehicle ahead is turning left",
+				"Anytime there’s enough space",
+				"Only on one-way streets"
+			],
+			correct: 0,
+			expl: "You may pass on the right if the vehicle ahead is turning left and there’s enough space to do so safely."
+		},
+		{
+			q: "What is the “basic speed law” in California?",
+			options: [
+				"Never drive faster than 65 mph",
+				"Never drive faster than is safe for current conditions",
+				"Always follow the posted speed limit exactly"
+			],
+			correct: 1,
+			expl: "The basic speed law requires driving at a safe speed for conditions, regardless of the posted limit."
+		},
+		{
+			q: "When approaching a crosswalk where a blind pedestrian is waiting, you should:",
+			options: [
+				"Stop and let them cross",
+				"Honk to let them know you’re there",
+				"Proceed carefully if no cars are behind you"
+			],
+			correct: 0,
+			expl: "You must yield the right-of-way to blind pedestrians using a white cane or guide dog."
+		},
+		{
+			q: "What is the legal speed limit when driving within 500 to 1,000 feet of a school with children present?",
+			options: [
+				"15 mph",
+				"25 mph",
+				"35 mph"
+			],
+			correct: 1,
+			expl: "The school zone speed limit is 25 mph unless otherwise posted."
+		},
+		{
+			q: "If your vehicle stalls on train tracks and a train is approaching, you should:",
+			options: [
+				"Try to restart the car immediately",
+				"Exit the vehicle and run toward the train at an angle",
+				"Call for help and wait inside"
+			],
+			correct: 1,
+			expl: "Running toward the train at an angle keeps you clear of debris if the train hits your vehicle."
+		},
+		{
+			q: "When driving at night, you should dim your high beams when you are within how many feet of an oncoming vehicle?",
+			options: [
+				"300 feet",
+				"500 feet",
+				"600 feet"
+			],
+			correct: 1,
+			expl: "High beams must be dimmed within 500 feet of an oncoming vehicle to prevent glare."
+		},
+		{
+			q: "If another driver cuts you off, you should:",
+			options: [
+				"Honk and tailgate them",
+				"Stay calm and give them space",
+				"Speed up to pass them again"
+			],
+			correct: 1,
+			expl: "Staying calm and giving more space helps avoid road rage and accidents."
+		},
+		{
+			q: "When parking uphill with a curb, your front wheels should be turned:",
+			options: [
+				"Toward the curb",
+				"Away from the curb",
+				"Straight ahead"
+			],
+			correct: 1,
+			expl: "Turning wheels away from the curb prevents rolling into traffic if brakes fail."
+		},
+		{
+			q: "If you see orange signs and cones on a freeway, you should:",
+			options: [
+				"Slow down and be prepared for workers and equipment",
+				"Speed up to get through quickly",
+				"Ignore them if no workers are visible"
+			],
+			correct: 0,
+			expl: "Orange signs indicate construction or maintenance zones where caution is required."
+		},
+		{
+			q: "When entering a roundabout, you must:",
+			options: [
+				"Yield to traffic already in the roundabout",
+				"Enter quickly to avoid slowing down others",
+				"Stop completely before entering"
+			],
+			correct: 0,
+			expl: "Always yield to vehicles already in the roundabout before merging in."
+		},
+		{
+			q: "How far ahead should you signal before changing lanes?",
+			options: [
+				"At least 50 feet",
+				"At least 100 feet",
+				"Only when you start moving over"
+			],
+			correct: 1,
+			expl: "Signaling at least 100 feet before changing lanes gives other drivers time to react."
+		},
+		{
+			q: "When is it legal to cross a double solid yellow line?",
+			options: [
+				"When turning left into or out of a driveway",
+				"Anytime traffic is slow",
+				"When passing another vehicle"
+			],
+			correct: 0,
+			expl: "Crossing double solid yellow lines is only allowed for left turns into driveways or side roads."
+		},
+		{
+			q: "What should you do if your engine overheats?",
+			options: [
+				"Turn off the engine immediately and add water",
+				"Pull over safely and let the engine cool",
+				"Drive faster to cool the engine"
+			],
+			correct: 1,
+			expl: "Overheating requires stopping and letting the engine cool before adding coolant."
+		},
+		{
+			q: "When can you use your horn in California?",
+			options: [
+				"To alert another driver of danger",
+				"To tell someone to hurry up",
+				"Anytime you’re frustrated"
+			],
+			correct: 0,
+			expl: "The horn is meant to warn others of danger, not for aggressive use."
+		},
+		{
+			q: "When are roads most slippery?",
+			options: [
+				"Just after it starts to rain",
+				"After several hours of steady rain",
+				"Only during heavy downpours"
+			],
+			correct: 0,
+			expl: "Oil and dirt mix with the first rain, making roads especially slippery at the start."
+		},
+		{
+			q: "If you are involved in a minor traffic collision, you must:",
+			options: [
+				"Leave the scene if no one is injured",
+				"Stop and exchange information",
+				"Wait for police before moving vehicles"
+			],
+			correct: 1,
+			expl: "You must stop, exchange details, and move vehicles if safe after a minor crash."
+		},
+		{
+			q: "If you plan to tow a trailer in California, you must:",
+			options: [
+				"Have a special endorsement on your license",
+				"Drive only during daylight",
+				"Avoid freeways"
+			],
+			correct: 0,
+			expl: "Certain trailers require a special license endorsement in California."
+		},
+		{
+			q: "When driving in a dust storm, you should:",
+			options: [
+				"Use your high beams",
+				"Slow down, pull over, and turn off your lights",
+				"Keep driving with hazards on"
+			],
+			correct: 1,
+			expl: "Stopping and turning off lights prevents other drivers from following your taillights into danger."
+		},
+		{
+			q: "If a traffic officer directs you to drive through a red light, you should:",
+			options: [
+				"Wait until it turns green",
+				"Follow the officer’s direction",
+				"Ignore the officer"
+			],
+			correct: 1,
+			expl: "Law enforcement instructions override traffic signals."
+		},
+		{
+			q: "When can you park in a disabled parking space?",
+			options: [
+				"Anytime it’s empty",
+				"Only if you display a disabled placard or plates",
+				"For quick stops under 5 minutes"
+			],
+			correct: 1,
+			expl: "Disabled spaces are reserved for vehicles with proper placards or license plates."
+		},
+		{
+			q: "What does a solid green traffic light mean?",
+			options: [
+				"Go, but yield to pedestrians and other vehicles in the intersection",
+				"Go immediately without checking",
+				"Prepare to stop"
+			],
+			correct: 0,
+			expl: "A green light means proceed when safe, yielding to those already in the intersection."
+		},
+		{
+			q: "If your car is equipped with airbags, you should:",
+			options: [
+				"Sit at least 10 inches from the steering wheel",
+				"Sit as close as possible",
+				"Turn off the airbags when driving"
+			],
+			correct: 0,
+			expl: "Sitting at least 10 inches away reduces injury risk if airbags deploy."
+		},
+		{
+			q: "When merging onto a freeway, you should:",
+			options: [
+				"Match the speed of traffic in the right lane",
+				"Enter at any speed and adjust later",
+				"Stop at the end of the ramp"
+			],
+			correct: 0,
+			expl: "Matching speed allows a smooth and safe merge into freeway traffic."
+		},
+		{
+			q: "When can you legally block an intersection?",
+			options: [
+				"Only during rush hour",
+				"Never, unless directed by police",
+				"When waiting to turn left"
+			],
+			correct: 1,
+			expl: "Blocking intersections is prohibited unless instructed by an officer."
+		},
+		{
+			q: "If your headlights fail at night, you should:",
+			options: [
+				"Brake hard and stop immediately",
+				"Try the headlight switch, then use hazards",
+				"Keep driving using streetlights"
+			],
+			correct: 1,
+			expl: "Attempt to restore headlights, use hazards, and pull over if needed."
+		},
+		{
+			q: "A white painted curb means:",
+			options: [
+				"Loading zone only",
+				"Stop only long enough to pick up or drop off passengers",
+				"No parking anytime"
+			],
+			correct: 1,
+			expl: "White curbs allow brief stops for passenger loading/unloading."
+		},
+		{
+			q: "When can you drive in a bicycle lane?",
+			options: [
+				"Anytime there are no cyclists",
+				"Within 200 feet of a turn or driveway",
+				"Only in emergencies"
+			],
+			correct: 1,
+			expl: "You may enter a bike lane only when preparing to turn or enter/exit a driveway."
+		},
+		{
+			q: "What should you do when approaching an uncontrolled intersection?",
+			options: [
+				"Speed through before other vehicles arrive",
+				"Slow down and be prepared to stop",
+				"Stop only if someone honks"
+			],
+			correct: 1,
+			expl: "Uncontrolled intersections require slowing and yielding as necessary."
+		}
+	
+	
+	
+	
+	];
+	// Question bank (DATA) stays the same as you pasted above
+	
+	// Local storage key (separate for each quiz)
+	const KEY = 'dpt_' + (document.title || 'test') + '_idx';
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent) || window.matchMedia('(max-width: 768px)').matches;
+	
+	let score = 0;
+	let answered = false;
+	
+	function getIndex() {
+		const v = parseInt(localStorage.getItem(KEY) || '0', 10);
+		return isNaN(v) ? 0 : Math.max(0, Math.min(v, DATA.length - 1));
+	}
+	function setIndex(i) { localStorage.setItem(KEY, String(i)); }
+	
+	function setBar(i) {
+		const pct = ((i+1) / DATA.length) * 100;
+		document.getElementById('bar').style.width = pct + '%';
+	}
+	
+	function render() {
+		const i = getIndex();
+		const q = DATA[i];
+		document.getElementById('progress').textContent = `Question ${i+1} of ${DATA.length}`;
+		setBar(i);
+		document.getElementById('qtext').textContent = q.q;
+		const list = document.getElementById('choices');
+		list.innerHTML = '';
+		q.options.forEach((t, idx) => {
+			const btn = document.createElement('button');
+			btn.className = 'choice';
+			btn.innerHTML = `<strong>${String.fromCharCode(65+idx)}.</strong> ${t}`;
+			btn.addEventListener('click', () => select(idx, q.correct, q.expl));
+			list.appendChild(btn);
+		});
+		const ex = document.getElementById('ex');
+		ex.style.display = 'none';
+		ex.textContent = '';
+		
+		answered = false;
+		document.querySelector('.btn-next').disabled = true; // disable next until answered
+	}
+	
+	function select(idx, correct, expl) {
+		if (answered) return; // prevent multiple selections
+		answered = true;
+		
+		document.querySelectorAll('.choice').forEach(el => el.onclick = null);
+		const nodes = document.querySelectorAll('.choice');
+		nodes.forEach((n, i) => {
+			if (i === correct) n.classList.add('correct');
+			if (i === idx && idx !== correct) n.classList.add('incorrect');
+		});
+		if (idx === correct) score++;
+		
+		const ex = document.getElementById('ex');
+		ex.textContent = 'Explanation: ' + (expl || 'See handbook guidance for details.');
+		ex.style.display = 'block';
+		
+		// Enable "Next" now
+		document.querySelector('.btn-next').disabled = false;
+	}
+	
+	function next() {
+		let i = getIndex();
+		if (i < DATA.length - 1) {
+			i += 1;
+			setIndex(i);
+			if (isMobile) { location.reload(); } else { render(); }
+		} else {
+			// Show result instead of alert
+			const card = document.querySelector('.card');
+			card.innerHTML = `
+			<h1>Quiz Complete 🎉</h1>
+			<p class="sub">You scored <strong>${score}</strong> out of ${DATA.length}</p>
+			<div class="controls">
+				<button class="btn btn-reset" onclick="reset()">Restart Test</button>
+			</div>
+		`;
+		}
+	}
+	function reset() {
+		setIndex(0);
+		score = 0;
+		if (isMobile) location.reload(); else render();
+	}
+	
+	window.addEventListener('DOMContentLoaded', () => { render(); });
+
+</script>
+</body>
+</html>
