@@ -49,9 +49,9 @@ a{
 }
 .cta{background:var(--accent);color:#fff;font-weight:800;border:0;border-radius:10px;padding:10px 16px;box-shadow:0 8px 24px rgba(255,122,0,.25);cursor:pointer}
 <!--  /* Logo banner */
-.logo-banner { background:#fff; border-bottom:1px solid var(--border); }
-.logo-banner .inner { max-width: 1200px; margin: 0 auto; padding: 8px 16px; display:flex; align-items:center; justify-content:center; }
-.logo-banner img { max-height: 48px; width:auto; display:block; }
+.logo-banner { background:#fff; border-bottom:1px solid var(--border); max-width: 700px; height: auto; margin-inline: auto;  aspect-ratio: 700 / 90; }
+.logo-banner .inner { max-width: 100%; margin: 0 auto; height:100%;display:flex; align-items:center; justify-content:center; }
+.logo-banner img { width:100%; height: 100%; display:block; }
 /* Hero */
 .hero{max-width:1200px;margin:20px auto 8px; padding:0 16px; text-align:center}
 .hero h1{font-size:clamp(28px,4vw,44px);margin:6px 0 4px}
