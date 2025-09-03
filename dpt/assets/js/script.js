@@ -17,14 +17,14 @@
     }
 
         // Otherwise, fallback to California for first-time visitors
-        window.location.href = 'state-california.html';
+        window.location.href = 'california-tests-interactive-txt-html/california-dmv-practice-test-1.html';
 
         // In the background, try to detect state for next time
         fetch('https://ipapi.co/json/')
         .then(r => r.json())
         .then(d => {
         const stateMap = {
-        'CA': 'state-california.html',
+        'CA': 'california-tests-interactive-txt-html/california-dmv-practice-test-1.html',
         'TX': 'state-texas.html'
     };
         if (d.region_code && stateMap[d.region_code]) {

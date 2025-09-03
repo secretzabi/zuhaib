@@ -34,20 +34,36 @@
   <a href="#main" class="skip-link">Skip to main content</a>
   <main id="main" class="wrap">
     <div class="card">
-      <h1>California Mini Test 3</h1>
-			<p class="sub">Short, focused 12-question drill to boost your score fast.</p>
-      <p class="sub">12 must‑know questions · One at a time · Instant explanations</p>
-      <div class="progress" id="progress" aria-live="polite">Question 1</div>
-      <div class="bar"><div id="bar"></div></div>
-      <div class="q" id="qtext" role="heading" aria-level="2"></div>
-      <fieldset id="choices" aria-describedby="ex">
-        <legend class="sr-only">Select your answer</legend>
-      </fieldset>
-      <div class="ex" id="ex" role="region" aria-label="Explanation"></div>
-      <div class="controls">
-        <button id="nextBtn" class="btn btn-next" onclick="next()" disabled aria-describedby="progress">Next Question</button>
-        <button class="btn btn-reset" onclick="reset()" aria-label="Restart test from beginning">Restart Test</button>
-      </div>
+	    <!-- Quiz Body -->
+	    <div class="quiz-body">
+	      <h1>California Mini Test 3</h1>
+				<p class="sub">Short, focused 12-question drill to boost your score fast.</p>
+	      <p class="sub">12 must‑know questions · One at a time · Instant explanations</p>
+		    <div class="progress" id="progress" aria-live="polite">Question 1</div>
+		    <div class="bar"><div id="bar"></div></div>
+		    <div class="q" id="qtext" role="heading" aria-level="2"></div>
+		    <fieldset id="choices" aria-describedby="ex">
+			    <legend class="sr-only">Select your answer</legend>
+		    </fieldset>
+		    <div class="ex" id="ex" role="region" aria-label="Explanation"></div>
+		    <div class="controls">
+			    <button id="nextBtn" class="btn btn-next" onclick="next()" disabled aria-describedby="progress">
+				    Next Question
+			    </button>
+			    <button class="btn btn-reset" onclick="reset()" aria-label="Restart test from beginning">
+				    Restart Test
+			    </button>
+		    </div>
+	    </div>
+	    
+	    <!-- Result Screen -->
+	    <div class="result" style="display:none;">
+		    <h1>Quiz Complete 🎉</h1>
+		    <p class="sub" id="final-score"></p>
+		    <div class="controls">
+			    <button class="btn btn-reset" onclick="reset()">Restart Test</button>
+		    </div>
+	    </div>
     </div>
   </main>
   <script src="../assets/js/quiz.js"></script>

@@ -1,5 +1,3 @@
-// quiz.js
-
 let score = 0;
 let answered = false;
 let DATA = []; // will be set per quiz
@@ -26,6 +24,10 @@ function setBar(i) {
 function render() {
     const i = getIndex();
     const q = DATA[i];
+
+    document.querySelector('.quiz-body').style.display = 'block';
+    document.querySelector('.result').style.display = 'none';
+
     document.getElementById('progress').textContent = `Question ${i+1} of ${DATA.length}`;
     setBar(i);
     document.getElementById('qtext').textContent = q.q;
@@ -74,14 +76,11 @@ function next() {
         setIndex(i);
         if (isMobile) { location.reload(); } else { render(); }
     } else {
-        const card = document.querySelector('.card');
-        card.innerHTML = `
-      <h1>Quiz Complete 🎉</h1>
-      <p class="sub">You scored <strong>${score}</strong> out of ${DATA.length}</p>
-      <div class="controls">
-        <button class="btn btn-reset" onclick="reset()">Restart Test</button>
-      </div>
-    `;
+        // Show result screen
+        document.querySelector('.quiz-body').style.display = 'none';
+        document.querySelector('.result').style.display = 'block';
+        document.getElementById('final-score').textContent =
+            `You scored ${score} out of ${DATA.length}`;
     }
 }
 
