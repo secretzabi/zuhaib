@@ -290,8 +290,9 @@ nav a:hover, nav a:focus {
     }
     header{
         z-index: 100;
-        background: #88888869;
+        background: #123036c2;
         padding-block: 1rem;
+        backdrop-filter: blur(4px);
     }
     .hero .container{
         position: initial;
