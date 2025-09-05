@@ -1,0 +1,339 @@
+/* Reset */
+*, *::before, *::after {margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+    font-family: "Exo 2", sans-serif;
+    line-height: 1.5;
+    color: #222;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:focus, button:focus, input:focus {
+    outline: 1px solid #007bff;
+    outline-offset: 1px;
+}
+
+header {
+    padding: 24px 0rem;
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.container{
+    max-width: 1296px;
+    margin-inline: auto;
+    width: 100%;
+    padding-inline: 1.5rem;
+}
+/* Logo */
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+/* Nav */
+nav {
+    flex: 1;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 4dvw, 2rem);
+}
+nav a {
+    font-size: 14px;
+    color: #fff;
+    transition: color 0.2s ease;
+    font-weight: 600;
+}
+nav a:hover, nav a:focus {
+    color: #007bff;
+}
+
+/* Search */
+.search-box {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-width: 386px;
+    flex-shrink: 0;
+    border-radius: 65px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(37px);
+    padding:4px;
+    padding-left: 13px;
+}
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    flex: 1;
+    min-width: 120px;
+    font-size: 0.9rem;
+    background-color: transparent;
+}
+.search-box input::placeholder{
+    color: #fff;
+}
+.search-icon {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.search-btn {
+    padding: 11px 14px;
+    background: linear-gradient(109deg, #4371DD 0%, #1B4F9E 89.42%);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    border-radius: 25px;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(37px);
+    padding: 12px 10px;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+/* Hero Section */
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 3rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+.hero .container:before{
+    background-image: url("../img/Ellipse.webp");
+    content: "";
+    width: 465px;
+    height: 518px;
+    position: absolute;
+    left: 0;
+    top: -73px;
+}
+.hero{
+    background-image: url('../img/bg.webp');
+    background-repeat: no-repeat;
+    background-position: top center;
+    /*background-size: cover;*/
+    color: #fff;
+    /*height: 87.5dvh;*/
+    padding-top: 70px;
+    background-color: #0b171d;
+}
+.hero-text {
+    flex: 1;
+    max-width: 528px;
+}
+
+.hero-text h1 {
+    font-size: clamp(36px, 4dvw, 48px);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.hero-text p {
+    font-size: clamp(18px, 4dvw, 24px);
+    margin-bottom: 2rem;
+    /*color: #555;*/
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: clamp(18px, 3dvw, 24px);
+    font-weight: 600;
+    transition: background 0.2s ease;
+    border: 1px solid transparent; /* keep transparent to show gradient */
+    border-radius: 6px;
+    background-clip: padding-box; /* ensures inner background respects radius */
+    position: relative;
+    z-index: 1;
+}
+.custom-btn {
+    border-radius: 6px;
+    background: linear-gradient(180deg, #123036 0%, #1A4B50 47.12%);
+    padding: 1px; /* border thickness */
+
+}
+
+.custom-btn .btn-inner {
+    display: block;
+    background: linear-gradient(90deg, #123036 0%, #1A4B50 47.12%);
+    border-radius: 4px; /* slightly smaller */
+    padding: 0.75rem 1.5rem;
+    height: 100%;
+}
+.btn-primary {
+    background: rgba(0, 0, 0, 0.20);
+    color: white;
+    background: linear-gradient(90deg, #123036 0%, #1A4B50 47.12%);
+
+}
+.custom-btn:hover .btn-inner{
+    background: linear-gradient(90deg, #1A4B50 0%, #123036 47.12%);
+}
+.btn-primary:hover {background: #0056b3;}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+.btn-secondary:hover {background: #545b62;}
+
+.hero-img {
+    flex: 1;
+    /*text-align: center;*/
+    /*min-width: 280px;*/
+}
+
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1.995;
+}
+.mini{
+    display: none;
+}
+/* Responsive */
+@media (max-width: 992px) {
+    nav ul {gap: 1rem;}
+}
+
+@media (max-width: 992px) {
+    body:has(.nav.active){
+        overflow: hidden;
+    }
+    nav {
+        display: none;
+        position: absolute;
+        top: 73px;
+        left: 0;
+        right: 0;
+        background: #0b171deb;
+        padding: 1rem 0;
+        z-index: 101;
+        height: 91dvh;
+        backdrop-filter: blur(4px);
+
+    }
+    nav.active {display: block;}
+    nav ul {
+        flex-direction: column;
+        align-items: end;
+        padding-inline: 1.5rem;
+    }
+
+    .hamburger {display: flex;}
+    .search-box {max-width: 100%;}
+}
+@media (max-width: 724px) {
+    .container{
+     padding-inline: 1rem;
+    }
+    .hero{
+        padding-top: 130px;
+    }
+    header{
+        z-index: 100;
+        background: #88888869;
+        padding-block: 1rem;
+    }
+    .hero .container{
+        position: initial;
+
+    }
+    .hero .container:before{
+        /*display: none;*/
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .header-content{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: "logo hamburger" "search-box search-box";
+        gap: 1rem;
+    }
+    .header-content .logo{
+        grid-area: logo;
+    }
+    .header-content .search-box{
+        grid-area: search-box;
+    }
+    .hamburger{
+        width: fit-content;
+        grid-area: hamburger;
+        margin-left: auto;
+    }
+    .hero{
+        background-size: cover;
+    }
+    .logo .main-logo{
+        /*display: none;*/
+    }
+
+    .hero .container{
+        flex-direction: column;
+    }
+    .hero-text{
+        text-align: center;
+    }
+    .btn-group{
+        justify-content: center;
+    }
+}

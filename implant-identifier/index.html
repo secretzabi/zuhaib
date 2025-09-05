@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AI Implant Identifier | Spine & Orthopedic Solutions</title>
+	<meta name="description" content="AI-powered spine and orthopedic implant identification app. Download free on App Store & Play Store.">
+	<meta name="keywords" content="AI Implant Identifier, Orthopedic Implants, Spine Surgery, Medical AI, Healthcare App">
+	<meta name="author" content="Implant Identifier">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<header role="banner">
+	<div class="container header-content">
+		<div class="logo">
+			<a href="/" aria-label="Go to homepage">
+				<img src="assets/img/logo.svg" alt="Implant Identifier Logo" class="main-logo"/>
+<!--				<img src="assets/img/mini-logo.webp" alt="Implant Identifier Logo" class="mini"/>-->
+			</a>
+		</div>
+		<nav role="navigation" aria-label="Main Navigation">
+			<ul>
+				<li><a href="#" aria-current="page">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">How It Works</a></li>
+				<li><a href="#">Library</a></li>
+			</ul>
+		</nav>
+		<form class="search-box" role="search" aria-label="Site Search">
+			<span class="search-icon" aria-hidden="true"><img src="assets/img/search-normal.svg" alt="search icon" width="18" height="18" loading="lazy"></span>
+			<label for="search" class="sr-only">Search Implants</label>
+			<input type="text" id="search" placeholder="Search implants..." aria-label="Search implants">
+			<button class="search-btn" type="submit" aria-label="Search by category">All <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+				<path d="M1.25 1.875L5.5 6.125L9.75 1.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg></button>
+		</form>
+		<button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+			<span></span><span></span><span></span>
+		</button>
+	</div>
+	
+</header>
+
+<main>
+	<section class="hero" aria-labelledby="hero-heading">
+		<div class="container">
+			<div class="hero-text">
+				<h1 id="hero-heading">AI-Powered Spine and Orthopedic Implant Identification
+				</h1>
+				<p>Download the app, free.</p>
+				<div class="btn-group">
+					<a href="#" class="custom-btn btn" aria-label="Download on App Store">
+						<span class="btn-inner">App Store</span>
+					</a>
+					<a href="#" class="custom-btn btn" aria-label="Download on App Store">
+						<span class="btn-inner">Play Store</span>
+					</a>
+				</div>
+			</div>
+			<div class="hero-img">
+				<img src="assets/img/phone1.png" alt="App preview on smartphone" loading="lazy" width="317" height="648" />
+			</div>
+		</div>
+	</section>
+</main>
+
+<script>
+	const hamburger = document.getElementById('hamburger');
+	const nav = document.querySelector('nav');
+	
+	hamburger.addEventListener('click', () => {
+		const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+		hamburger.setAttribute('aria-expanded', !expanded);
+		nav.classList.toggle('active');
+	});
+</script>
+</body>
+</html>
