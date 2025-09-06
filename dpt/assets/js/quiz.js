@@ -2,11 +2,36 @@ let score = 0;
 let answered = false;
 let DATA = []; // will be set per quiz
 let KEY = '';
-const isMobile = /Mobi|Android/i.test(navigator.userAgent) || window.matchMedia('(max-width: 768px)').matches;
+let SCORE_KEY = ''; // key for persisting score
+let DATA_HASH = ''; // to detect different quiz sessions
+const isMobile =
+    /Mobi|Android/i.test(navigator.userAgent) ||
+    window.matchMedia('(max-width: 768px)').matches;
 
 function initQuiz(data, key) {
     DATA = data;
     KEY = key;
+    SCORE_KEY = key + ':score';
+    DATA_HASH = JSON.stringify(DATA).length + '-' + DATA.length; // simple hash
+
+    // check if last hash is different, meaning new quiz started
+    const lastHash = localStorage.getItem(KEY + ':hash');
+    if (lastHash && lastHash !== DATA_HASH) {
+        // different quiz → reset everything
+        localStorage.removeItem(KEY);
+        localStorage.removeItem(SCORE_KEY);
+        localStorage.setItem(KEY + ':hash', DATA_HASH);
+        score = 0;
+        setIndex(0);
+        location.reload(); // 🔑 force reload so quiz always starts fresh
+        return;
+    }
+    localStorage.setItem(KEY + ':hash', DATA_HASH);
+
+    // restore score if available
+    const savedScore = parseInt(localStorage.getItem(SCORE_KEY) || '0', 10);
+    score = isNaN(savedScore) ? 0 : savedScore;
+
     render();
 }
 
@@ -14,10 +39,15 @@ function getIndex() {
     const v = parseInt(localStorage.getItem(KEY) || '0', 10);
     return isNaN(v) ? 0 : Math.max(0, Math.min(v, DATA.length - 1));
 }
-function setIndex(i) { localStorage.setItem(KEY, String(i)); }
+function setIndex(i) {
+    localStorage.setItem(KEY, String(i));
+}
+function setScore(s) {
+    localStorage.setItem(SCORE_KEY, String(s));
+}
 
 function setBar(i) {
-    const pct = ((i+1) / DATA.length) * 100;
+    const pct = ((i + 1) / DATA.length) * 100;
     document.getElementById('bar').style.width = pct + '%';
 }
 
@@ -28,7 +58,9 @@ function render() {
     document.querySelector('.quiz-body').style.display = 'block';
     document.querySelector('.result').style.display = 'none';
 
-    document.getElementById('progress').textContent = `Question ${i+1} of ${DATA.length}`;
+    document.getElementById('progress').textContent = `Question ${
+        i + 1
+    } of ${DATA.length}`;
     setBar(i);
     document.getElementById('qtext').textContent = q.q;
 
@@ -37,7 +69,7 @@ function render() {
     q.options.forEach((t, idx) => {
         const btn = document.createElement('button');
         btn.className = 'choice';
-        btn.innerHTML = `<strong>${String.fromCharCode(65+idx)}.</strong> ${t}`;
+        btn.innerHTML = `<strong>${String.fromCharCode(65 + idx)}.</strong> ${t}`;
         btn.addEventListener('click', () => select(idx, q.correct, q.expl));
         list.appendChild(btn);
     });
@@ -60,10 +92,14 @@ function select(idx, correct, expl) {
         if (i === idx && idx !== correct) n.classList.add('incorrect');
     });
 
-    if (idx === correct) score++;
+    if (idx === correct) {
+        score++;
+        setScore(score); // persist score so it survives mobile reload
+    }
 
     const ex = document.getElementById('ex');
-    ex.textContent = 'Explanation: ' + (expl || 'See handbook guidance for details.');
+    ex.textContent =
+        'Explanation: ' + (expl || 'See handbook guidance for details.');
     ex.style.display = 'block';
 
     document.querySelector('.btn-next').disabled = false;
@@ -74,18 +110,25 @@ function next() {
     if (i < DATA.length - 1) {
         i += 1;
         setIndex(i);
-        if (isMobile) { location.reload(); } else { render(); }
+        if (isMobile) {
+            location.reload();
+        } else {
+            render();
+        }
     } else {
         // Show result screen
         document.querySelector('.quiz-body').style.display = 'none';
         document.querySelector('.result').style.display = 'block';
-        document.getElementById('final-score').textContent =
-            `You scored ${score} out of ${DATA.length}`;
+        document.getElementById(
+            'final-score'
+        ).textContent = `You scored ${score} out of ${DATA.length}`;
     }
 }
 
 function reset() {
     setIndex(0);
     score = 0;
-    if (isMobile) location.reload(); else render();
+    localStorage.removeItem(SCORE_KEY);
+    if (isMobile) location.reload();
+    else render();
 }
