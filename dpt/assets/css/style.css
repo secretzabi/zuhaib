@@ -136,7 +136,8 @@ a{
 .state-page .card h2{
     margin-inline: 0;
 }
-.sponsored{
+.sponsored, .logo-banner, .ad{
+    display: none;
     .pad{
         .ad{
             margin-inline: 0;
