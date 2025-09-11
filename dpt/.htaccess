@@ -1,0 +1,21 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Redirect www to non-www (handles both http and https)
+RewriteCond %{HTTP_HOST} ^www\.drivingpracticetests\.com$ [NC]
+RewriteRule ^(.*)$ https://drivingpracticetests.com/$1 [L,R=301]
+
+# Redirect http to https (only for non-www)
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^drivingpracticetests\.com$ [NC]
+RewriteRule ^(.*)$ https://drivingpracticetests.com/$1 [L,R=301]
+
+# Enable HSTS (forces browsers to use HTTPS only)
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# Basic Content Security Policy
+<IfModule mod_headers.c>
+  Header set Content-Security-Policy "default-src 'self'; img-src 'self' data: https:; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+</IfModule>

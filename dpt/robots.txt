@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.drivingpracticetests.com/sitemap.xml
+
+Sitemap: https://drivingpracticetests.com/sitemap.xml

@@ -10,6 +10,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link	rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"/>
 	<link href="assets/css/style.css" rel="stylesheet" />
 </head>
 <body>
@@ -23,6 +24,16 @@
 			</a>
 		</div>
 		<nav role="navigation" aria-label="Main Navigation">
+			<button class="close-btn" id="close-btn" aria-label="Close navigation menu">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<mask id="mask0_1558_4893" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+						<rect width="24" height="24" fill="#D9D9D9"/>
+					</mask>
+					<g mask="url(#mask0_1558_4893)">
+						<path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="white"/>
+					</g>
+				</svg>
+			</button>
 			<ul>
 				<li><a href="#" aria-current="page">Home</a></li>
 				<li><a href="#">About</a></li>
@@ -39,7 +50,9 @@
 			</svg></button>
 		</form>
 		<button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-			<span></span><span></span><span></span>
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
+				<path d="M0 3.33335V0.666687H24V3.33335H0ZM0 19.3334V16.6667H24V19.3334H0ZM0 11.3334V8.66669H24V11.3334H0Z" fill="white"/>
+			</svg>
 		</button>
 	</div>
 	
@@ -66,17 +79,407 @@
 			</div>
 		</div>
 	</section>
+	<div id="my-keen-slider" class="keen-slider all-implants mb-xl">
+		<div class="keen-slider__slide number-slide1">
+			<div class="bg-primary bg-shadow rounded-6 implant-slider">
+				<a href="" aria-label="spinal implants" title="Spine Implants">
+					<img src="assets/img/icons/spinal.svg" alt="Spinal slide" loading="lazy" width="54" height="54">
+					<p class="fw-700 fs-18">Spine Implants</p>
+				</a>
+			</div>
+		</div>
+		<div class="keen-slider__slide number-slide2">
+			<div class="bg-primary bg-shadow rounded-6 implant-slider">
+				<a href="" aria-label="hip implants" title="Hip Implants">
+					<img src="assets/img/icons/hip.svg" alt="Hip slide" loading="lazy" width="54" height="54">
+					<p class="fw-700 fs-18">Hip Implants</p>
+				</a>
+			</div>
+		</div>
+		<div class="keen-slider__slide number-slide3">
+			<div class="bg-primary bg-shadow rounded-6 implant-slider">
+				<a href="" aria-label="knee implants" title="Knee Implants">
+					<img src="assets/img/icons/knee.svg" alt="Knee slide" loading="lazy" width="54" height="54">
+					<p class="fw-700 fs-18">Knee Implants</p>
+				</a>
+			</div>
+		</div>
+		<div class="keen-slider__slide number-slide4">
+			<div class="bg-primary bg-shadow rounded-6 implant-slider">
+				<a href="" aria-label="shoulder implants" title="Shoulder Implants">
+					<img src="assets/img/icons/shoulder.svg" alt="Shoulder slide" loading="lazy" width="54" height="54">
+					<p class="fw-700 fs-18">Shoulder Implants</p>
+				</a>
+			</div>
+		</div>
+		<div class="keen-slider__slide number-slide5">
+			<div class="bg-primary bg-shadow rounded-6 implant-slider">
+				<a href="" aria-label="trauma implants" title="Trauma Implants">
+					<img src="assets/img/icons/trauma.svg" alt="Trauma slide" loading="lazy" width="54" height="54">
+					<p class="fw-700 fs-18">Trauma Implants</p>
+				</a>
+			</div>
+		</div>
+		<div class="keen-slider__slide number-slide6">
+			<div class="bg-primary bg-shadow rounded-6 implant-slider">
+				<a href="" aria-label="Foot & ankle implants" title="Foot & Ankle Implants">
+					<img src="assets/img/icons/ankle.svg" alt="Foot & Ankle slide" loading="lazy" width="54" height="54">
+					<p class="fw-700 fs-18">Foot & Ankle Implants</p>
+				</a>
+			</div>
+		</div>
+		<div class="keen-slider__slide number-slide7">
+			<div class="bg-primary bg-shadow rounded-6 implant-slider">
+				<a href="" aria-label="Hand implants" title="Hand Implants">
+					<img src="assets/img/icons/hand.svg" alt="Hand slide" loading="lazy" width="54" height="54">
+					<p class="fw-700 fs-18">Hand Implants</p>
+				</a>
+			</div>
+		</div>
+		<div class="keen-slider__slide number-slide8">
+			<div class="bg-primary bg-shadow rounded-6 implant-slider">
+				<a href="" aria-label="All implants" title="All Implants">
+					<p class="fw-700 fs-24">All<br> Implants</p>
+					<div class="text-end">
+						<img src="assets/img/icons/arrow.svg" alt="All implants" loading="lazy" width="60" height="60">
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<section class="power-full-tool mb-xl">
+		<div class="container-1440">
+			<h2 class="section-heading text-center fs-48 fw-400 mb-lg">3 Powerful Tools To Identify <span class="text-theme">Implants</span></h2>
+			<!-- Section 1 -->
+			<div class="tools-list-content ">
+				<div class="tools-list">
+					<div class="text">
+						<div>
+							<h2 class="fs-24 fw-700 ">AI-Identify (available now for hips)</h2>
+							<ul class="fs-24">
+								<li>Upload an unknown hip x-ray and see the top implant matches from our library.</li>
+								<li>Confirm your match to help our AI model improve!</li>
+							</ul>
+						</div>
+					</div>
+					<div class="image">
+						<video width="323" height="660" autoplay muted loop>
+							<source src="assets/img/videos/AI-Identify.webm" type="video/webm">
+						</video>
+					</div>
+				</div>
+				<div class="tools-list">
+					<div class="text">
+						<div>
+							<h2 class="fs-24 fw-700 ">Implant Library with Filters</h2>
+							<ul class="fs-24">
+								<li>Browse and search from hundreds of common spine or orthopedic implant x-rays.</li>
+								<li>Use advanced filters to narrow your search. </li>
+								<li>
+									Tap the company name to see removal information when available.
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="image">
+						<video autoplay muted loop>
+							<source src="assets/img/videos/main-video.webm" type="video/webm">
+						</video>
+					</div>
+				</div>
+				<div class="tools-list">
+					<div class="text">
+						<div>
+							<h2 class="fs-24 fw-700 ">Ask the Community</h2>
+							<ul class="fs-24">
+								<li>Share unknown implant x-rays to the Home Feed.</li>
+								<li>Receive real-time feedback and implant suggestions from other surgeons and reps worldwide.</li>
+								<li>
+									Share your implant suggestions and upvote the best responses to help others in the community.
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="image floating-img">
+						<img src="assets/img/community-img.webp" alt="Community Image" class="img-fluid" loading="lazy" width="527" height="611">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--	-->
+	<section class="mb-xl">
+		<div class="container">
+			<h3 class="section-heading text-center fs-48 fw-400 mb-xl">How It Works </h3>
+			<div class="steps floating-img">
+				<!-- Row 1 -->
+				<div class="row">
+					<!-- Step 1 -->
+					<div class="step">
+						<img src="assets/img/Freebies-001.webp" alt="Step 1" class="phone img-fluid" loading="lazy" width="276" height="566">
+						<div class="text-box">
+							<h2>1. Tap + to begin</h2>
+							<p>Select an image from your gallery or use your camera to take a photo of your implant.<br>
+								Crop your image with 2 fingers, so only the implant is in view.</p>
+						</div>
+					</div>
+					
+					<!-- Arrow right -->
+					<!-- Arrow from step 1 to step 2 -->
+					<div class="arrow right">
+						<svg xmlns="http://www.w3.org/2000/svg" width="376" height="197" viewBox="0 0 376 197" fill="none">
+							<path d="M117 28.9585L117.513 29.8169L117 28.9585ZM375.915 44.2296C376.042 44.7672 375.708 45.3056 375.171 45.4321L366.41 47.4938C365.872 47.6203 365.334 47.287 365.208 46.7495C365.081 46.2119 365.414 45.6735 365.952 45.547L373.739 43.7144L371.907 35.9271C371.78 35.3895 372.113 34.8511 372.651 34.7246C373.188 34.5981 373.727 34.9314 373.853 35.4689L375.915 44.2296ZM1.00019 196.415C0.0709519 196.046 0.0712028 196.045 0.0716661 196.044C0.0720745 196.043 0.0727207 196.041 0.0735366 196.039C0.0751686 196.035 0.0775897 196.029 0.0807968 196.021C0.0871812 196.005 0.09668 195.981 0.109268 195.95C0.134444 195.887 0.171978 195.793 0.221699 195.67C0.3212 195.424 0.469538 195.058 0.66562 194.58C1.05772 193.625 1.64068 192.219 2.40535 190.418C3.93463 186.815 6.19082 181.626 9.10058 175.28C14.9197 162.59 23.3552 145.263 33.8211 126.721C54.7216 89.6934 83.8298 47.6155 116.487 28.1001L117 28.9585L117.513 29.8169C85.3483 49.038 56.4566 90.6883 35.5628 127.704C25.1314 146.185 16.7211 163.459 10.9186 176.114C8.01759 182.441 5.7691 187.611 4.24638 191.199C3.48502 192.993 2.90517 194.391 2.51594 195.34C2.32132 195.814 2.17439 196.176 2.07627 196.419C2.02718 196.54 1.99033 196.632 1.96581 196.693C1.95355 196.724 1.94437 196.747 1.93831 196.762C1.93527 196.77 1.93301 196.775 1.93154 196.779C1.9308 196.781 1.93026 196.782 1.92991 196.783C1.92958 196.784 1.92944 196.784 1.00019 196.415ZM117 28.9585L116.487 28.1001C176.057 -7.49781 240.85 -3.57628 290.657 9.18474C315.568 15.5673 336.761 24.1681 351.726 31.1729C359.21 34.6758 365.139 37.7808 369.2 40.0118C371.231 41.1273 372.794 42.0244 373.852 42.6437C374.381 42.9533 374.783 43.1935 375.054 43.3567C375.19 43.4384 375.292 43.5008 375.361 43.543C375.396 43.5642 375.422 43.5803 375.44 43.5912C375.449 43.5967 375.456 43.6008 375.46 43.6037C375.463 43.6051 375.465 43.6063 375.466 43.6071C375.467 43.6079 375.468 43.6084 374.942 44.4587C374.415 45.309 374.415 45.3088 374.414 45.3084C374.413 45.3078 374.412 45.307 374.41 45.3058C374.406 45.3035 374.4 45.2998 374.392 45.2948C374.376 45.2849 374.352 45.2699 374.319 45.2498C374.253 45.2096 374.154 45.1493 374.022 45.0698C373.758 44.9107 373.363 44.6749 372.841 44.3696C371.799 43.7591 370.251 42.871 368.237 41.7647C364.209 39.552 358.319 36.4669 350.878 32.9843C335.996 26.0182 314.922 17.4664 290.16 11.1221C240.621 -1.57037 176.443 -5.39894 117.513 29.8169L117 28.9585Z" fill="white"/>
+						</svg>
+					</div>
+					
+					<!-- Step 2 -->
+					<div class="step">
+						<img src="assets/img/Freebies-002.webp" alt="Step 2" class="phone img-fluid" loading="lazy" width="276" height="566">
+						<div class="text-box">
+							<h2>2. Select your method</h2>
+							<p>• AI-Identify provides instant library identification when available.<br>
+								• Ask the community to post your implant to the home feed.<br>
+								• Submit new implants to be added to our implant library.</p>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Arrow down from Step 2 -->
+				<div class="arrow down">
+					<svg xmlns="http://www.w3.org/2000/svg" width="228" height="469" viewBox="0 0 228 469" fill="none">
+						<path d="M179.201 381.257L180.011 381.843L179.201 381.257ZM0.305574 462.178C-0.0918187 461.795 -0.103076 461.161 0.280451 460.764L6.53036 454.288C6.91389 453.891 7.54697 453.879 7.94437 454.263C8.34176 454.646 8.35302 455.28 7.96949 455.677L2.414 461.433L8.17044 466.989C8.56783 467.372 8.57909 468.005 8.19556 468.403C7.81204 468.8 7.17896 468.811 6.78157 468.428L0.305574 462.178ZM167.376 0.851562C168.252 0.368527 168.252 0.369674 168.253 0.371677C168.254 0.373488 168.256 0.376349 168.258 0.379967C168.262 0.387203 168.268 0.397857 168.275 0.41191C168.291 0.440016 168.314 0.48172 168.344 0.536882C168.404 0.647206 168.493 0.811361 168.609 1.02822C168.843 1.46195 169.186 2.10651 169.629 2.95293C170.514 4.64573 171.796 7.146 173.387 10.3818C176.57 16.8532 180.988 26.2674 185.938 38.0487C195.836 61.6091 207.863 94.6481 216.376 132.558C233.395 208.345 236.409 303.797 180.011 381.843L179.201 381.257L178.39 380.671C234.292 303.312 231.394 208.561 214.425 132.996C205.944 95.2308 193.96 62.3069 184.094 38.8233C179.161 27.0827 174.76 17.7047 171.593 11.2643C170.009 8.04425 168.734 5.55876 167.856 3.87979C167.417 3.04031 167.078 2.40248 166.848 1.97528C166.733 1.76168 166.646 1.60074 166.587 1.49359C166.558 1.44001 166.536 1.39988 166.522 1.37333C166.514 1.36006 166.509 1.35018 166.505 1.34372C166.504 1.34049 166.502 1.33821 166.501 1.33659C166.501 1.33517 166.5 1.3346 167.376 0.851562ZM179.201 381.257L180.011 381.843C151.622 421.13 106.814 441.265 69.2184 451.586C50.4074 456.751 33.3671 459.468 21.0287 460.894C14.8587 461.608 9.86228 461.999 6.40552 462.211C4.6771 462.317 3.33342 462.379 2.42026 462.414C1.96367 462.432 1.61468 462.443 1.37904 462.45C1.26121 462.453 1.17173 462.455 1.11127 462.456C1.08106 462.457 1.05809 462.458 1.04247 462.458C1.03466 462.458 1.02869 462.458 1.02458 462.458C1.02252 462.458 1.02082 462.458 1.01979 462.458C1.01855 462.458 1.01778 462.458 1.00001 461.458C0.98224 460.459 0.982405 460.459 0.983029 460.459C0.983841 460.459 0.984931 460.459 0.98658 460.459C0.989864 460.459 0.994998 460.458 1.00199 460.458C1.01592 460.458 1.03722 460.458 1.06576 460.457C1.12283 460.456 1.20891 460.453 1.32328 460.45C1.55202 460.444 1.89392 460.433 2.34326 460.416C3.24195 460.381 4.57033 460.32 6.28277 460.215C9.70775 460.004 14.6683 459.616 20.799 458.908C33.0621 457.49 49.9986 454.789 68.6889 449.658C106.096 439.388 150.388 419.422 178.39 380.671L179.201 381.257Z" fill="white"/>
+					</svg>
+				</div>
+				
+				<!-- Row 2 -->
+				<div class="row">
+					<!-- Step 3 -->
+					<div class="step">
+						<img src="assets/img/Freebies-003.webp" alt="Step 3" class="phone img-fluid" loading="lazy" width="276" height="566">
+						<div class="text-box">
+							<h2>3. Confirm your match</h2>
+							<p>Every implant you confirm, helps our AI model improve!</p>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</section>
+<!--	-->
+	<section class="ai-identify-content mb-xl">
+		<div class="container">
+			<div class="text-center">
+				<img src="assets/img/ai-identify.webp" width="229" height="183" loading="lazy" alt="AI-identify" class="img-fluid" />
+				<p class="fs-20">
+					AI-Powered identification is here to stay. Be a part of the revolution!<br>
+					Every image you submit helps us train our deep learning models.
+					Join the mission to <br> create the world’s most intelligent implant identification platform.
+				</p>
+				
+				<div class="app-video">
+					<video autoplay muted loop>
+						<source src="assets/img/videos/main-video.webm" type="video/webm">
+					</video>
+					<picture>
+						<source media="(min-width:650px)" srcset="assets/img/app-bg.webp">
+						<source media="(min-width:465px)" srcset="assets/img/app-bg-mb.webp">
+						<img src="assets/img/app-bg-mb.webp" alt="App video" class="img-fluid" width="1141" height="503" loading="lazy">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--	-->
+	<section class="join-mission mb-xl">
+		<h4 class="section-heading text-center fs-48 fw-400 mb-lg">Join the Mission </h4>
+		<div class="container-1440">
+			<div class="join-mission-content d-flex">
+				<div class="fw-500 fs-24">
+					<p class="mb-24">Implant Identifier is more than just an app — it is a collaborative effort to make implant identification
+						faster and easier for everyone. With your help, we can improve surgical care around the world!</p>
+					<p class="mb-24">Every image submitted helps improve the platform — training our deep
+						learning models and building the world's most comprehensive implant identification database.</p>
+					<p class="mb-24">
+						Whether you're identifying an unknown implant, commenting on a post,
+						or submitting to the library, you're helping build the future of implant identification.
+					</p>
+					<a href="#" class="custom-btn btn custom-btn2" aria-label="Join us now">
+						<span class="btn-inner" >Join us now</span>
+					</a>
+				</div>
+				<img src="assets/img/join-mission-content.webp" class="img-fluid" alt="Join us now" width="518" height="664" loading="lazy" />
+			</div>
+		</div>
+	</section>
+<!---->
+	<section class="download-app mb-xl">
+			<div class="container">
+					<div class="download-app-content d-flex">
+							<div>
+								<div class="fs-48 fw-600 mb-24">Download the app, free!</div>
+								<div class="btn-group">
+									<a href="#" class="custom-btn btn" aria-label="Download on App Store">
+										<span class="btn-inner">App Store</span>
+									</a>
+									<a href="#" class="custom-btn btn" aria-label="Download on App Store">
+										<span class="btn-inner">Play Store</span>
+									</a>
+								</div>
+							</div>
+						<div class="floating-img">
+							<img src="assets/img/Black.webp" class="img-fluid" alt="Black screenshot" width="584" height="772" loading="lazy" />
+						</div>
+					</div>
+			</div>
+	</section>
 </main>
 
+<footer>
+	<div class="container">
+		<div class="d-flex mb-xl">
+			<div class="footer-text">
+				<h5 class="fs-48 fw-400">AI-Powered Spine and Orthopedic Implant Identification
+				</h5>
+			</div>
+			<div class="footer-links d-flex">
+				<div class="links-column">
+					<h6 class="fs-16 mb-16">Company</h6>
+					<p><a href="/blog.html" aria-label="Blogs">Blog</a> </p>
+				</div>
+				<div class="links-column">
+					<h6 class="fs-16 mb-16">Product</h6>
+					<p><a href="/implant-library.html" aria-label="Implant Library">Implant Library</a> </p>
+					<p><a href="/about.html" aria-label="About">About</a> </p>
+					<p><a href="/how-works.html" aria-label="How it Works">How it Works</a> </p>
+				</div>
+				<div class="links-column">
+					<h6 class="fs-16 mb-16">Support</h6>
+					<p><a href="/contact.html" aria-label="Contact Us">Contact Us</a> </p>
+				</div>
+				<div class="links-column">
+					<h6 class="fs-16 mb-16">Legal</h6>
+					<p><a href="/privacy.html" aria-label="Privacy">Privacy</a> </p>
+					<p><a href="/terms.html" aria-label="Terms">Terms</a> </p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="footer-strip d-flex align-center">
+			<div>
+				<img src="assets/img/logo.svg" width="216" height="45" alt="implant identifier" class="img-fluid" loading="lazy" />
+			</div>
+			<div class="social-icons d-flex">
+					<a href="" aria-label="x profile">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21" fill="none">
+							<g clip-path="url(#clip0_1445_1372)">
+								<path d="M7.55 20.4632C16.605 20.4632 21.558 12.9592 21.558 6.45516C21.558 6.24416 21.554 6.02816 21.544 5.81716C22.508 5.12016 23.34 4.25716 24 3.26816C23.102 3.66716 22.15 3.92816 21.174 4.04116C22.201 3.42616 22.971 2.45816 23.339 1.31816C22.373 1.89116 21.316 2.29516 20.213 2.51316C19.471 1.72416 18.489 1.20216 17.42 1.02716C16.35 0.852159 15.253 1.03416 14.298 1.54516C13.342 2.05616 12.582 2.86716 12.134 3.85416C11.686 4.84116 11.575 5.94716 11.819 7.00316C9.862 6.90516 7.948 6.39616 6.2 5.51116C4.452 4.62516 2.91 3.38216 1.673 1.86216C1.044 2.94616 0.852 4.22816 1.135 5.44916C1.418 6.66916 2.155 7.73616 3.196 8.43316C2.415 8.40816 1.65 8.19716 0.966 7.81916V7.88016C0.965 9.01716 1.358 10.1192 2.078 10.9992C2.799 11.8802 3.801 12.4832 4.916 12.7082C4.192 12.9062 3.432 12.9352 2.695 12.7922C3.009 13.7702 3.622 14.6262 4.446 15.2392C5.27 15.8522 6.265 16.1932 7.292 16.2142C5.548 17.5842 3.394 18.3272 1.177 18.3232C0.783 18.3232 0.39 18.2992 0 18.2512C2.253 19.6962 4.874 20.4642 7.55 20.4632Z" fill="white"/>
+							</g>
+							<defs>
+								<clipPath id="clip0_1445_1372">
+									<rect width="24" height="20" fill="white" transform="translate(0 0.5)"/>
+								</clipPath>
+							</defs>
+						</svg>
+					</a>
+				<a href="" aria-label="linked in profile">
+					<svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+						<g clip-path="url(#clip0_1445_1376)">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M2.73613 5.55966C4.17821 5.55966 5.34725 4.39061 5.34725 2.94853C5.34725 1.50644 4.17821 0.337402 2.73613 0.337402C1.29404 0.337402 0.125 1.50644 0.125 2.94853C0.125 4.39061 1.29404 5.55966 2.73613 5.55966ZM21.9279 22.0866V13.85C21.9279 11.4678 21.5666 9.56046 20.3665 8.46886C19.4517 7.63436 18.1859 7.06891 15.7908 7.18764C13.6896 7.29355 12.4349 9.12656 12.2034 9.49897L12.1394 7.49684H7.82422V22.0857H12.3589V14.4411L12.3512 14.213C12.3879 13.5938 12.487 12.7447 12.9107 12.099C13.4231 11.3183 14.4208 11.0484 15.468 11.1594C17.0293 11.3209 17.3659 12.9625 17.3659 13.7296V22.0874L21.9279 22.0866ZM0.44873 7.49779H4.97058V22.0866H0.44873V7.49779Z" fill="white"/>
+						</g>
+						<defs>
+							<clipPath id="clip0_1445_1376">
+								<rect width="22" height="23" fill="white"/>
+							</clipPath>
+						</defs>
+					</svg>
+				</a>
+				<a href="" aria-label="tick tok rofile">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none">
+						<g clip-path="url(#clip0_1445_1381)">
+							<path d="M14.3548 0.695312H10.5027V15.7353C10.5027 17.5274 9.02113 18.9994 7.17739 18.9994C5.33366 18.9994 3.85209 17.5274 3.85209 15.7353C3.85209 13.9753 5.30073 12.5353 7.07864 12.4713V8.69533C3.16069 8.75929 0 11.8633 0 15.7353C0 19.6393 3.22653 22.7753 7.21033 22.7753C11.1941 22.7753 14.4206 19.6073 14.4206 15.7353V8.02329C15.8692 9.04732 17.6471 9.65532 19.5238 9.68734V5.91132C16.6266 5.81531 14.3548 3.51131 14.3548 0.695312Z" fill="white"/>
+						</g>
+						<defs>
+							<clipPath id="clip0_1445_1381">
+								<rect width="20" height="23" fill="white" transform="translate(0 0.5)"/>
+							</clipPath>
+						</defs>
+					</svg>
+				</a>
+				<a href="" aria-label="youtube rofile">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
+						<g clip-path="url(#clip0_1445_1386)">
+							<path d="M23.7609 4.6669C23.7609 4.6669 23.5266 3.10413 22.8047 2.41794C21.8906 1.51481 20.8688 1.51038 20.4 1.45726C17.0438 1.22705 12.0047 1.22705 12.0047 1.22705H11.9953C11.9953 1.22705 6.95625 1.22705 3.6 1.45726C3.13125 1.51038 2.10938 1.51481 1.19531 2.41794C0.473438 3.10413 0.24375 4.6669 0.24375 4.6669C0.24375 4.6669 0 6.50413 0 8.33694V10.0547C0 11.8874 0.239062 13.7247 0.239062 13.7247C0.239062 13.7247 0.473437 15.2874 1.19062 15.9737C2.10469 16.8768 3.30469 16.8458 3.83906 16.9432C5.76094 17.1159 12 17.169 12 17.169C12 17.169 17.0438 17.1601 20.4 16.9344C20.8688 16.8812 21.8906 16.8768 22.8047 15.9737C23.5266 15.2874 23.7609 13.7247 23.7609 13.7247C23.7609 13.7247 24 11.8919 24 10.0547V8.33694C24 6.50413 23.7609 4.6669 23.7609 4.6669ZM9.52031 12.1398V5.76923L16.0031 8.96559L9.52031 12.1398Z" fill="white"/>
+						</g>
+						<defs>
+							<clipPath id="clip0_1445_1386">
+								<rect width="24" height="17" fill="white" transform="translate(0 0.5)"/>
+							</clipPath>
+						</defs>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
 <script>
-	const hamburger = document.getElementById('hamburger');
-	const nav = document.querySelector('nav');
+	var slider = new KeenSlider("#my-keen-slider", {
+		loop: true,
+		mode: "free",
+		slides: {  perView: 4.5, spacing: 24 },
+		range: {
+			min: -5,
+			max: 5,
+		},
+		breakpoints: {
+			"(max-width: 1024px)": {
+				slides: { perView: 3.5, spacing: 20 },
+			},
+			"(max-width: 768px)": {
+				slides: { perView: 2.5, spacing: 16 },
+			},
+			"(max-width: 480px)": {
+				slides: { perView: 1.5, spacing: 12 },
+			},
+		},
+	})
 	
-	hamburger.addEventListener('click', () => {
-		const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-		hamburger.setAttribute('aria-expanded', !expanded);
-		nav.classList.toggle('active');
-	});
+	// autoplay plugin
+	function autoplay(run = true) {
+		let timeout
+		function clearNextTimeout() {
+			clearTimeout(timeout)
+		}
+		function nextTimeout() {
+			clearTimeout(timeout)
+			if (run) {
+				timeout = setTimeout(() => {
+					slider.next()
+				}, 2000) // change every 2s
+			}
+		}
+		
+		slider.on("created", () => {
+			slider.container.addEventListener("mouseover", () => {
+				run = false
+				clearNextTimeout()
+			})
+			slider.container.addEventListener("mouseout", () => {
+				run = true
+				nextTimeout()
+			})
+			nextTimeout()
+		})
+		
+		slider.on("dragStarted", clearNextTimeout)
+		slider.on("animationEnded", nextTimeout)
+		slider.on("updated", nextTimeout)
+	}
+	
+	autoplay()
 </script>
+
 </body>
 </html>

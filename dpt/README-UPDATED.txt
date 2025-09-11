@@ -14,8 +14,8 @@ How to deploy
    - Rename state-california-pro-typography.html -> state-california-pro.html (or copy contents into your existing file).
 
 3) Place robots.txt and sitemap.xml in your site root:
-   - https://www.drivingpracticetests.com/robots.txt
-   - https://www.drivingpracticetests.com/sitemap.xml
+   - https://drivingpracticetests.com/robots.txt
+   - https://drivingpracticetests.com/sitemap.xml
 
 4) Ensure the six CA test pages exist with these exact filenames in your site root:
    - california-dmv-practice-test-1.html
