@@ -726,14 +726,17 @@ nav a:hover, nav a:focus {
     position: relative;
     padding-top: 120px;
     margin-top: 2rem;
-    video{
-        max-width: 311px;
+    .gif-video{
+        max-width: 260px;
         height: auto;
         width: 100%;
         position: absolute;
         inset-inline: 0;
         margin-inline: auto;
         top: 0;
+        img{
+            width: 100%;
+        }
     }
 }
 .ai-identify-content{
@@ -1324,7 +1327,7 @@ footer{
         }
     }
     .app-video {
-        video {
+        .gif-video {
             max-width: 250px;
         }
     }
@@ -1832,8 +1835,8 @@ footer{
         position: relative;
         padding-top: 90px;
         margin-top: 2rem;
-        video{
-            max-width: 200px;
+        .gif-video{
+            max-width: 190px;
             position: absolute;
             inset-inline: 0;
             margin-inline: auto;
