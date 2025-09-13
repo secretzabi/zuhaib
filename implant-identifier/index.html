@@ -18,8 +18,8 @@
 <header role="banner">
 	<div class="container header-content">
 		<div class="logo">
-			<a href="/" aria-label="Go to homepage">
-				<img src="assets/img/logo.svg" alt="Implant Identifier Logo" class="main-logo" width="216" height="46"/>
+			<a href="index.html" aria-label="Go to homepage">
+				<img src="assets/img/logo.webp" alt="Implant Identifier Logo" class="main-logo" width="216" height="46" />
 <!--				<img src="assets/img/mini-logo.webp" alt="Implant Identifier Logo" class="mini"/>-->
 			</a>
 		</div>
@@ -35,10 +35,10 @@
 				</svg>
 			</button>
 			<ul>
-				<li><a href="#" aria-current="page">Home</a></li>
-				<li><a href="#">About</a></li>
+				<li><a href="index.html" aria-current="page" class="active">Home</a></li>
+				<li><a href="about.html">About</a></li>
 				<li><a href="#">How It Works</a></li>
-				<li><a href="#">Library</a></li>
+				<li><a href="implant-library.html"> Implant Library</a></li>
 			</ul>
 		</nav>
 		<form class="search-box" role="search" aria-label="Site Search">
@@ -48,6 +48,49 @@
 			<button class="search-btn" type="submit" aria-label="Search by category">All <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
 				<path d="M1.25 1.875L5.5 6.125L9.75 1.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 			</svg></button>
+			
+			<div class="search-dropdown-content" style="display: none">
+				<div class="search-dropdown-item">
+					<a href="#" aria-current="page" class="d-flex">
+						<img src="assets/img/Stryker.png" alt="Stryker" width="50" height="100" loading="lazy" />
+						     <div>
+							     <div class="fw-700">Stryker</div>
+							     <p>Thriatlon</p>
+						     </div>
+						
+					</a>
+				</div>
+				<div class="search-dropdown-item">
+					<a href="#" aria-current="page" class="d-flex">
+						<img src="assets/img/Stryker.png" alt="Stryker" width="50" height="100" loading="lazy" />
+						<div>
+							<div class="fw-700">Stryker</div>
+							<p>Thriatlon</p>
+						</div>
+					
+					</a>
+				</div>
+				<div class="search-dropdown-item">
+					<a href="#" aria-current="page" class="d-flex">
+						<img src="assets/img/Stryker.png" alt="Stryker" width="50" height="100" loading="lazy" />
+						<div>
+							<div class="fw-700">Stryker</div>
+							<p>Thriatlon</p>
+						</div>
+					
+					</a>
+				</div>
+				<div class="search-dropdown-item">
+					<a href="#" aria-current="page" class="d-flex">
+						<img src="assets/img/Stryker.png" alt="Stryker" width="50" height="100" loading="lazy" />
+						<div>
+							<div class="fw-700">Stryker</div>
+							<p>Thriatlon</p>
+						</div>
+					
+					</a>
+				</div>
+			</div>
 		</form>
 		<button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
@@ -59,6 +102,7 @@
 </header>
 
 <main>
+	
 	<section class="hero" aria-labelledby="hero-heading">
 		<div class="container">
 			<div class="hero-text">
@@ -75,7 +119,12 @@
 				</div>
 			</div>
 			<div class="hero-img">
-				<img src="assets/img/phone1.png" alt="App preview on smartphone" loading="lazy" width="317" height="648" />
+				<div class="desktop-video animated-video">
+					<video id="heroVideo" width="323" height="660" autoplay muted loop>
+						<source src="assets/img/videos/main-video.webm" type="video/webm">
+					</video>
+				</div>
+				<img src="assets/img/mobile-hero.gif" alt="App preview on smartphone" class="mobile-hero" loading="lazy" width="317" height="648" />
 			</div>
 		</div>
 	</section>
@@ -304,8 +353,8 @@
 						Whether you're identifying an unknown implant, commenting on a post,
 						or submitting to the library, you're helping build the future of implant identification.
 					</p>
-					<a href="#" class="custom-btn btn custom-btn2" aria-label="Join us now">
-						<span class="btn-inner" >Join us now</span>
+					<a href="#" class="secondary-btn" aria-label="Join us now">
+						Join us now
 					</a>
 				</div>
 				<img src="assets/img/join-mission-content.webp" class="img-fluid" alt="Join us now" width="518" height="664" loading="lazy" />
@@ -422,7 +471,6 @@
 		</div>
 	</div>
 </footer>
-<script src="assets/js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
 <script>
 	var slider = new KeenSlider("#my-keen-slider", {
@@ -480,6 +528,44 @@
 	
 	autoplay()
 </script>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const video = document.getElementById("heroVideo");
+		const animatedVideo = document.querySelector(".animated-video");
+		
+		// Timing
+		const startTime = 2.8;   // start moving right
+		const stopTime  = 4.8;   // fully right
+		const endTime   = 6.8;   // return back
+		const maxShift  = 200;   // px distance to move right
+		
+		function update() {
+			const t = video.currentTime;
+			let offset = 0;
+			
+			if (t >= startTime && t <= stopTime) {
+				// Moving right
+				const progress = (t - startTime) / (stopTime - startTime);
+				offset = progress * maxShift;
+			} else if (t > stopTime && t <= endTime) {
+				// Moving left
+				const progress = (t - stopTime) / (endTime - stopTime);
+				offset = maxShift * (1 - progress);
+			} else if (t > endTime) {
+				offset = 0;
+			}
+			
+			animatedVideo.style.transform = `translateX(${offset}px)`;
+			requestAnimationFrame(update);
+		}
+		
+		video.addEventListener("play", () => {
+			requestAnimationFrame(update);
+		});
+	});
+</script>
+<script src="assets/js/main.js"></script>
+
 
 </body>
 </html>
