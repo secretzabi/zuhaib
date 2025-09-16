@@ -4,6 +4,9 @@
     --primary: #1C3643;
     --theme:#40AFDA;
 }
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Exo 2", sans-serif;
     line-height: 1.4;
@@ -661,6 +664,12 @@ nav a:hover, nav a:focus {
     box-shadow: 0 4px 8px 0 rgba(66, 71, 76, 0.06), 0 0 1px 0 rgba(66, 71, 76, 0.48);
     padding: 20px 25px;
     max-width: 300px;
+    ul{
+        padding-left: 1.5rem;
+        li{
+            margin-bottom: 5px;
+        }
+    }
 }
 
 .text-box h2 {
